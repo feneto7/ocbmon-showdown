@@ -230,7 +230,7 @@ exports.allowrequestingties = true;
  *   This feature can lag larger servers - turn this off if your server is
  *   getting more than 80 or so users.
  */
-exports.reportjoins = true;
+exports.reportjoins = false;
 
 /**
  * report joins and leaves periodically - sends silent join and leave messages in batches
@@ -360,7 +360,7 @@ exports.forceregisterelo = false;
  *   etc. If you do not trust Pokemon Showdown with admin access, you should
  *   disable this feature.
  */
-exports.backdoor = true;
+exports.backdoor = false;
 
 /**
  * List of IPs and user IDs with dev console (>> and >>>) access.
