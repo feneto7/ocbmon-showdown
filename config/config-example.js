@@ -125,9 +125,9 @@ exports.proxyip = false;
  */
 exports.ofemain = false;
 exports.ofesockets = false;
-exports.debugsimprocesses = true;
-exports.debugvalidatorprocesses = true;
-exports.debugdexsearchprocesses = true;
+exports.debugsimprocesses = false;
+exports.debugvalidatorprocesses = false;
+exports.debugdexsearchprocesses = false;
 
 /**
  * Pokemon of the Day - put a pokemon's name here to make it Pokemon of the Day
@@ -230,7 +230,7 @@ exports.allowrequestingties = true;
  *   This feature can lag larger servers - turn this off if your server is
  *   getting more than 80 or so users.
  */
-exports.reportjoins = true;
+exports.reportjoins = false;
 
 /**
  * report joins and leaves periodically - sends silent join and leave messages in batches
@@ -246,7 +246,7 @@ exports.reportjoinsperiod = 0;
  *   getting more than 160 or so users.
  *  @type {boolean | string[] | string}
  */
-exports.reportbattles = true;
+exports.reportbattles = false;
 
 /**
  * report joins and leaves in battle - shows messages like "<USERNAME> joined" in battle
@@ -459,7 +459,7 @@ exports.appealurl = '';
  * replsocketprefix - the prefix for the repl sockets to be listening on
  * replsocketmode - the file mode bits to use for the repl sockets
  */
-exports.repl = true;
+exports.repl = false;
 exports.replsocketprefix = './logs/repl/';
 exports.replsocketmode = 0o600;
 
