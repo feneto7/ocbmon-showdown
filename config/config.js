@@ -125,9 +125,9 @@ exports.proxyip = false;
  */
 exports.ofemain = false;
 exports.ofesockets = false;
-exports.debugsimprocesses = true;
-exports.debugvalidatorprocesses = true;
-exports.debugdexsearchprocesses = true;
+exports.debugsimprocesses = false;
+exports.debugvalidatorprocesses = false;
+exports.debugdexsearchprocesses = false;
 
 /**
  * Pokemon of the Day - put a pokemon's name here to make it Pokemon of the Day
@@ -246,14 +246,14 @@ exports.reportjoinsperiod = 0;
  *   getting more than 160 or so users.
  *  @type {boolean | string[] | string}
  */
-exports.reportbattles = true;
+exports.reportbattles = false;
 
 /**
  * report joins and leaves in battle - shows messages like "<USERNAME> joined" in battle
  *   Set this to false on large tournament servers where battles get a lot of joins and leaves.
  *   Note that the feature of turning this off is deprecated.
  */
-exports.reportbattlejoins = true;
+exports.reportbattlejoins = false;
 
 /**
  * notify staff when users have a certain amount of room punishments.
@@ -261,7 +261,7 @@ exports.reportbattlejoins = true;
  *   the required amount of room punishments.
  *   Set this to 0 to turn the monitor off.
  */
-exports.monitorminpunishments = 3;
+exports.monitorminpunishments = 0; // Desabilitar monitor de punições para economizar memória
 
 /**
  * Turns off all time-based throttles - rename, challenges, laddering, etc.
@@ -382,7 +382,7 @@ exports.consoleips = ['127.0.0.1'];
  * This can be used to change some settings using a text editor on
  * the server.
  */
-exports.watchconfig = true;
+exports.watchconfig = false;
 
 /**
  * logchat - whether to log chat rooms.
@@ -398,7 +398,7 @@ exports.logchallenges = false;
  * loguserstats - how often (in milliseconds) to write user stats to the
  * lobby log. This has no effect if `logchat` is disabled.
  */
-exports.loguserstats = 1000 * 60 * 10; // 10 minutes
+exports.loguserstats = 1000 * 60 * 30; // 30 minutes - reduzir frequência de logs
 
 /**
  * validatorprocesses - the number of processes to use for validating teams
@@ -413,7 +413,7 @@ exports.simulatorprocesses = 1;
  * inactiveuserthreshold - how long a user must be inactive before being pruned
  * from the `users` array. The default is 1 hour.
  */
-exports.inactiveuserthreshold = 1000 * 60 * 60;
+exports.inactiveuserthreshold = 1000 * 60 * 5; // 5 minutos em vez de 1 hora
 
 /**
  * autolockdown - whether or not to automatically kill the server when it is
@@ -459,7 +459,7 @@ exports.appealurl = '';
  * replsocketprefix - the prefix for the repl sockets to be listening on
  * replsocketmode - the file mode bits to use for the repl sockets
  */
-exports.repl = true;
+exports.repl = false;
 exports.replsocketprefix = './logs/repl/';
 exports.replsocketmode = 0o600;
 

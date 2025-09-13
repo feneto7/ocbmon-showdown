@@ -253,7 +253,7 @@ exports.reportbattles = false;
  *   Set this to false on large tournament servers where battles get a lot of joins and leaves.
  *   Note that the feature of turning this off is deprecated.
  */
-exports.reportbattlejoins = true;
+exports.reportbattlejoins = false;
 
 /**
  * notify staff when users have a certain amount of room punishments.
@@ -261,7 +261,7 @@ exports.reportbattlejoins = true;
  *   the required amount of room punishments.
  *   Set this to 0 to turn the monitor off.
  */
-exports.monitorminpunishments = 3;
+exports.monitorminpunishments = 0; // Desabilitar monitor de punições para economizar memória
 
 /**
  * Turns off all time-based throttles - rename, challenges, laddering, etc.
@@ -382,7 +382,7 @@ exports.consoleips = ['127.0.0.1'];
  * This can be used to change some settings using a text editor on
  * the server.
  */
-exports.watchconfig = true;
+exports.watchconfig = false;
 
 /**
  * logchat - whether to log chat rooms.
@@ -398,7 +398,7 @@ exports.logchallenges = false;
  * loguserstats - how often (in milliseconds) to write user stats to the
  * lobby log. This has no effect if `logchat` is disabled.
  */
-exports.loguserstats = 1000 * 60 * 10; // 10 minutes
+exports.loguserstats = 1000 * 60 * 30; // 30 minutes - reduzir frequência de logs
 
 /**
  * validatorprocesses - the number of processes to use for validating teams
@@ -413,7 +413,7 @@ exports.simulatorprocesses = 1;
  * inactiveuserthreshold - how long a user must be inactive before being pruned
  * from the `users` array. The default is 1 hour.
  */
-exports.inactiveuserthreshold = 1000 * 60 * 60;
+exports.inactiveuserthreshold = 1000 * 60 * 5; // 5 minutos em vez de 1 hora
 
 /**
  * autolockdown - whether or not to automatically kill the server when it is
