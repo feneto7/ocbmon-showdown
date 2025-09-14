@@ -285,7 +285,7 @@ exports.noipchecks = false;
  *
  * @type {boolean | 'psbattletools'}
  */
-exports.nobattlesearch = false;
+exports.nobattlesearch = true; // Desabilitar busca de batalhas para economizar memória
 
 /**
  * allow punishmentmonitor to lock users with multiple roombans.
@@ -406,8 +406,9 @@ exports.loguserstats = 1000 * 60 * 30; // 30 minutes - reduzir frequência de lo
  * You should leave both of these at 1 unless your server has a very large
  * amount of traffic (i.e. hundreds of concurrent battles).
  */
-exports.validatorprocesses = 1;
+exports.validatorprocesses = 0; // Desabilitar validação de equipes para economizar memória
 exports.simulatorprocesses = 1;
+exports.chatdbprocesses = 0; // Desabilitar processo de banco de dados do chat
 
 /**
  * inactiveuserthreshold - how long a user must be inactive before being pruned
@@ -497,6 +498,8 @@ exports.lastfmkey = '';
  * @type {'ripgrep' | 'fs'}
  */
 exports.chatlogreader = 'fs';
+exports.limitdexsearch = true; // Limitar busca de dados para economizar memória
+exports.limitdataprocesses = true; // Limitar processos de dados
 /**
  * permissions and groups:
  *   Each entry in `grouplist` is a seperate group. Some of the members are "special"
