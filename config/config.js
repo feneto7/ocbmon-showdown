@@ -125,9 +125,9 @@ exports.proxyip = false;
  */
 exports.ofemain = false;
 exports.ofesockets = false;
-exports.debugsimprocesses = false;
-exports.debugvalidatorprocesses = false;
-exports.debugdexsearchprocesses = false;
+exports.debugsimprocesses = true;
+exports.debugvalidatorprocesses = true;
+exports.debugdexsearchprocesses = true;
 
 /**
  * Pokemon of the Day - put a pokemon's name here to make it Pokemon of the Day
@@ -230,7 +230,7 @@ exports.allowrequestingties = true;
  *   This feature can lag larger servers - turn this off if your server is
  *   getting more than 80 or so users.
  */
-exports.reportjoins = false;
+exports.reportjoins = true;
 
 /**
  * report joins and leaves periodically - sends silent join and leave messages in batches
@@ -246,14 +246,14 @@ exports.reportjoinsperiod = 0;
  *   getting more than 160 or so users.
  *  @type {boolean | string[] | string}
  */
-exports.reportbattles = false;
+exports.reportbattles = true;
 
 /**
  * report joins and leaves in battle - shows messages like "<USERNAME> joined" in battle
  *   Set this to false on large tournament servers where battles get a lot of joins and leaves.
  *   Note that the feature of turning this off is deprecated.
  */
-exports.reportbattlejoins = false;
+exports.reportbattlejoins = true;
 
 /**
  * notify staff when users have a certain amount of room punishments.
@@ -261,7 +261,7 @@ exports.reportbattlejoins = false;
  *   the required amount of room punishments.
  *   Set this to 0 to turn the monitor off.
  */
-exports.monitorminpunishments = 0; // Desabilitar monitor de punições para economizar memória
+exports.monitorminpunishments = 3;
 
 /**
  * Turns off all time-based throttles - rename, challenges, laddering, etc.
@@ -285,7 +285,7 @@ exports.noipchecks = false;
  *
  * @type {boolean | 'psbattletools'}
  */
-exports.nobattlesearch = true; // Desabilitar busca de batalhas para economizar memória
+exports.nobattlesearch = false;
 
 /**
  * allow punishmentmonitor to lock users with multiple roombans.
@@ -382,7 +382,7 @@ exports.consoleips = ['127.0.0.1'];
  * This can be used to change some settings using a text editor on
  * the server.
  */
-exports.watchconfig = false;
+exports.watchconfig = true;
 
 /**
  * logchat - whether to log chat rooms.
@@ -398,7 +398,7 @@ exports.logchallenges = false;
  * loguserstats - how often (in milliseconds) to write user stats to the
  * lobby log. This has no effect if `logchat` is disabled.
  */
-exports.loguserstats = 1000 * 60 * 30; // 30 minutes - reduzir frequência de logs
+exports.loguserstats = 1000 * 60 * 10; // 10 minutes
 
 /**
  * validatorprocesses - the number of processes to use for validating teams
@@ -406,15 +406,14 @@ exports.loguserstats = 1000 * 60 * 30; // 30 minutes - reduzir frequência de lo
  * You should leave both of these at 1 unless your server has a very large
  * amount of traffic (i.e. hundreds of concurrent battles).
  */
-exports.validatorprocesses = 0; // Desabilitar validação de equipes para economizar memória
+exports.validatorprocesses = 1;
 exports.simulatorprocesses = 1;
-exports.chatdbprocesses = 0; // Desabilitar processo de banco de dados do chat
 
 /**
  * inactiveuserthreshold - how long a user must be inactive before being pruned
  * from the `users` array. The default is 1 hour.
  */
-exports.inactiveuserthreshold = 1000 * 60 * 5; // 5 minutos em vez de 1 hora
+exports.inactiveuserthreshold = 1000 * 60 * 60;
 
 /**
  * autolockdown - whether or not to automatically kill the server when it is
@@ -460,7 +459,7 @@ exports.appealurl = '';
  * replsocketprefix - the prefix for the repl sockets to be listening on
  * replsocketmode - the file mode bits to use for the repl sockets
  */
-exports.repl = false;
+exports.repl = true;
 exports.replsocketprefix = './logs/repl/';
 exports.replsocketmode = 0o600;
 
@@ -498,8 +497,6 @@ exports.lastfmkey = '';
  * @type {'ripgrep' | 'fs'}
  */
 exports.chatlogreader = 'fs';
-exports.limitdexsearch = true; // Limitar busca de dados para economizar memória
-exports.limitdataprocesses = true; // Limitar processos de dados
 /**
  * permissions and groups:
  *   Each entry in `grouplist` is a seperate group. Some of the members are "special"
