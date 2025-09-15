@@ -324,7 +324,6 @@
     }
   ]
 }
-
 /*
 REGEXFREE SOURCE FOR IGNOREPATTERN: https://zarel.github.io/regexfree/
 
@@ -357,3 +356,4 @@ REGEXFREE SOURCE FOR IGNOREPATTERN: https://zarel.github.io/regexfree/
   # start of string or regex
   ['"`\/]
 */
+
