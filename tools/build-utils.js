@@ -24,19 +24,32 @@ const shouldBeCompiled = file => {
 
 const findFilesForPath = path => {
 	const out = [];
-	const files = fs.readdirSync(path);
-	for (const file of files) {
-		const cur = `${path}/${file}`;
-		// HACK: Logs and databases exclusions are a hack. Logs is too big to
-		// traverse, databases adds/removes files which can lead to a filesystem
-		// race between readdirSync and statSync. Please, at some point someone
-		// fix this function to be more robust.
-		if (cur.includes('node_modules') || cur.includes("/logs") || cur.includes("/databases")) continue;
-		if (fs.statSync(cur).isDirectory()) {
-			out.push(...findFilesForPath(cur));
-		} else if (shouldBeCompiled(cur)) {
-			out.push(cur);
+	try {
+		const files = fs.readdirSync(path);
+		for (const file of files) {
+			const cur = `${path}/${file}`;
+			// HACK: Logs and databases exclusions are a hack. Logs is too big to
+			// traverse, databases adds/removes files which can lead to a filesystem
+			// race between readdirSync and statSync. Please, at some point someone
+			// fix this function to be more robust.
+			if (cur.includes('node_modules') || cur.includes("/logs") || cur.includes("/databases") || 
+			    cur.includes('.venv') || cur.includes('.git') || cur.includes('.DS_Store') ||
+			    cur.includes('.pyc') || cur.includes('.pyo') || cur.includes('__pycache__')) continue;
+			
+			try {
+				if (fs.statSync(cur).isDirectory()) {
+					out.push(...findFilesForPath(cur));
+				} else if (shouldBeCompiled(cur)) {
+					out.push(cur);
+				}
+			} catch (err) {
+				// Skip files that can't be accessed
+				console.warn(`Skipping inaccessible file: ${cur}`);
+				continue;
+			}
 		}
+	} catch (err) {
+		console.warn(`Cannot read directory: ${path}`);
 	}
 	return out;
 };

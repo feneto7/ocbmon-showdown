@@ -14,6 +14,10 @@ class ArtemisStream extends Streams.ObjectReadWriteStream<string> {
 	private process: child_process.ChildProcessWithoutNullStreams;
 	constructor() {
 		super();
+		if (Config.disableartemis) {
+			console.log('Artemis AI disabled in config');
+			return;
+		}
 		this.process = child_process.spawn('python3', [
 			'-u', FS('server/artemis/model.py').path, Config.debugartemisprocesses ? "debug" : "",
 		].filter(Boolean));

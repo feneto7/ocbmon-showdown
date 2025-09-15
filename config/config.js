@@ -249,6 +249,12 @@ exports.reportjoinsperiod = 0;
 exports.reportbattles = true;
 
 /**
+ * Artemis AI - disable to avoid Python dependency issues on deployment
+ */
+exports.debugartemisprocesses = false;
+exports.disableartemis = true;
+
+/**
  * report joins and leaves in battle - shows messages like "<USERNAME> joined" in battle
  *   Set this to false on large tournament servers where battles get a lot of joins and leaves.
  *   Note that the feature of turning this off is deprecated.
