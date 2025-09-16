@@ -1,0 +1,7 @@
+/* Custom CSS for OCBmon Showdown */
+/* Este arquivo permite personalizações customizadas do cliente */
+
+/* Exemplo de customização - pode ser removido se não necessário */
+.header .logo {
+    filter: hue-rotate(120deg); /* Muda a cor do logo para verde */
+}

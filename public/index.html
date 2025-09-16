@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OCBmon Showdown!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(0, 255, 0, 0.2);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+        .info {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OCBmon Showdown!</h1>
+        <p>Servidor Pokemon Showdown personalizado com Clover e Wack mods</p>
+        
+        <div class="status">
+            ✅ Servidor Online e Funcionando!
+        </div>
+        
+        <div class="buttons">
+            <a href="/client/" class="btn">🎮 Jogar Agora</a>
+            <a href="https://feneto7.github.io/ocbmon-showdown-client/public/" class="btn">🌐 Cliente GitHub Pages</a>
+        </div>
+        
+        <div class="info">
+            <p><strong>Recursos Disponíveis:</strong></p>
+            <p>• Clover Pokemon Mod<br>
+            • Wack OMs Format<br>
+            • Gen 9 Random Battles<br>
+            • Custom Game Modes</p>
+            
+            <p><strong>Conexão:</strong> <span id="server-status">Verificando...</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Verifica status do servidor
+        function checkServerStatus() {
+            const status = document.getElementById('server-status');
+            
+            // Testa conexão WebSocket
+            try {
+                const ws = new WebSocket('wss://ocbmon-showdown.onrender.com/showdown');
+                
+                ws.onopen = function() {
+                    status.textContent = '🟢 WebSocket Conectado';
+                    status.style.color = '#00ff00';
+                    ws.close();
+                };
+                
+                ws.onerror = function() {
+                    status.textContent = '🔴 WebSocket Offline';
+                    status.style.color = '#ff0000';
+                };
+                
+                // Timeout após 5 segundos
+                setTimeout(() => {
+                    if (ws.readyState === WebSocket.CONNECTING) {
+                        status.textContent = '🟡 Conectando...';
+                        status.style.color = '#ffff00';
+                        ws.close();
+                    }
+                }, 5000);
+                
+            } catch (error) {
+                status.textContent = '🔴 Erro de Conexão';
+                status.style.color = '#ff0000';
+            }
+        }
+        
+        // Verifica status quando a página carrega
+        checkServerStatus();
+        
+        // Verifica novamente a cada 30 segundos
+        setInterval(checkServerStatus, 30000);
+    </script>
+</body>
+</html>

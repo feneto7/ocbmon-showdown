@@ -1,0 +1,1 @@
+exports.BattleFormatsData = {woot:{tier:"Illegal",isNonstandard:"Future"},woodie:{tier:"Illegal",isNonstandard:"Future"},arbrood:{tier:"Illegal",isNonstandard:"Future"},maggie:{tier:"Illegal",isNonstandard:"Future"}};

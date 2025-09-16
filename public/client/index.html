@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OCBmon Showdown - Cliente Integrado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #2c5530;
+            color: white;
+        }
+        
+        .header {
+            background: #1a3a1e;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #4a7c59;
+        }
+        
+        .logo {
+            height: 44px;
+            width: auto;
+        }
+        
+        .main-container {
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            width: 250px;
+            background: #1e4d23;
+            padding: 20px;
+            border-right: 2px solid #4a7c59;
+            overflow-y: auto;
+        }
+        
+        .main-content {
+            flex: 1;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23228B22" width="100" height="100"/><circle cx="50" cy="50" r="30" fill="%2332CD32" opacity="0.3"/></svg>') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .status-card {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+            margin: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4CAF50;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .format-list {
+            margin-top: 20px;
+        }
+        
+        .format-item {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .format-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .connection-status {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .connected { background: #4CAF50; }
+        .connecting { background: #FF9800; }
+        .disconnected { background: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>OCBmon Showdown</h1>
+        <div class="connection-status" id="connection-status">Conectando...</div>
+    </div>
+    
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Formatos Disponíveis</h3>
+            <div id="format-list" class="format-list">
+                <div class="loading"></div>
+                <p>Carregando formatos...</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="status-card">
+                <h2>🎮 Cliente Pokemon Showdown</h2>
+                <p id="status-message">Inicializando conexão com o servidor...</p>
+                
+                <div id="action-buttons">
+                    <button class="btn" onclick="connectToServer()" id="connect-btn">
+                        <span class="loading" id="loading-icon" style="display: none;"></span>
+                        Conectar ao Servidor
+                    </button>
+                    <button class="btn" onclick="loadLocalFormats()" id="local-btn">
+                        Usar Formatos Locais
+                    </button>
+                </div>
+                
+                <div id="battle-options" style="display: none; margin-top: 20px;">
+                    <button class="btn" onclick="findBattle()">Buscar Batalha</button>
+                    <button class="btn" onclick="openTeambuilder()">Team Builder</button>
+                    <button class="btn" onclick="watchBattle()">Assistir Batalha</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ws = null;
+        let connected = false;
+        let formats = [];
+        
+        // Formatos locais como fallback
+        const localFormats = [
+            { id: 'gen9randombattle', name: '[Gen 9] Random Battle' },
+            { id: 'gen8wackonly', name: '[Gen 8 Wack Only] Random Battle' },
+            { id: 'gen8wackcustom', name: '[Gen 8 Wack Only] Custom Game' },
+            { id: 'gen8wackffa', name: '[Gen 8 Wack Only] FFA Battle' },
+            { id: 'gen8wackmulti', name: '[Gen 8 Wack Only] Multi Battle' },
+            { id: 'gen9ffarandom', name: '[Gen 9] Free-For-All Random Battle' }
+        ];
+        
+        // Atualiza status da conexão
+        function updateConnectionStatus(status, message) {
+            const statusEl = document.getElementById('connection-status');
+            const messageEl = document.getElementById('status-message');
+            
+            statusEl.className = 'connection-status ' + status;
+            statusEl.textContent = message;
+            
+            if (messageEl) {
+                messageEl.textContent = message;
+            }
+        }
+        
+        // Conecta ao servidor WebSocket
+        function connectToServer() {
+            const connectBtn = document.getElementById('connect-btn');
+            const loadingIcon = document.getElementById('loading-icon');
+            
+            connectBtn.disabled = true;
+            loadingIcon.style.display = 'inline-block';
+            
+            updateConnectionStatus('connecting', 'Conectando ao servidor...');
+            
+            try {
+                // Tenta conectar via WebSocket
+                ws = new WebSocket('wss://ocbmon-showdown.onrender.com/showdown');
+                
+                ws.onopen = function() {
+                    connected = true;
+                    updateConnectionStatus('connected', '✅ Conectado ao servidor!');
+                    
+                    connectBtn.textContent = 'Conectado!';
+                    loadingIcon.style.display = 'none';
+                    
+                    // Solicita lista de formatos
+                    ws.send('|/cmd formats');
+                    
+                    // Mostra opções de batalha
+                    document.getElementById('battle-options').style.display = 'block';
+                };
+                
+                ws.onmessage = function(event) {
+                    handleServerMessage(event.data);
+                };
+                
+                ws.onerror = function() {
+                    handleConnectionError();
+                };
+                
+                ws.onclose = function() {
+                    connected = false;
+                    updateConnectionStatus('disconnected', '❌ Desconectado do servidor');
+                    
+                    connectBtn.disabled = false;
+                    connectBtn.textContent = 'Reconectar';
+                    loadingIcon.style.display = 'none';
+                };
+                
+                // Timeout após 10 segundos
+                setTimeout(() => {
+                    if (ws.readyState === WebSocket.CONNECTING) {
+                        ws.close();
+                        handleConnectionError();
+                    }
+                }, 10000);
+                
+            } catch (error) {
+                handleConnectionError();
+            }
+        }
+        
+        // Trata erro de conexão
+        function handleConnectionError() {
+            updateConnectionStatus('disconnected', '❌ Falha na conexão - usando formatos locais');
+            
+            const connectBtn = document.getElementById('connect-btn');
+            const loadingIcon = document.getElementById('loading-icon');
+            
+            connectBtn.disabled = false;
+            connectBtn.textContent = 'Tentar Novamente';
+            loadingIcon.style.display = 'none';
+            
+            // Carrega formatos locais automaticamente
+            loadLocalFormats();
+        }
+        
+        // Carrega formatos locais
+        function loadLocalFormats() {
+            formats = localFormats;
+            updateFormatList();
+            updateConnectionStatus('disconnected', '🔄 Usando formatos locais');
+            
+            // Mostra opções limitadas
+            document.getElementById('battle-options').style.display = 'block';
+        }
+        
+        // Atualiza lista de formatos
+        function updateFormatList() {
+            const formatList = document.getElementById('format-list');
+            
+            if (formats.length === 0) {
+                formatList.innerHTML = '<p>Nenhum formato disponível</p>';
+                return;
+            }
+            
+            let html = '';
+            formats.forEach(format => {
+                html += `<div class="format-item" onclick="selectFormat('${format.id}')">${format.name}</div>`;
+            });
+            
+            formatList.innerHTML = html;
+        }
+        
+        // Seleciona um formato
+        function selectFormat(formatId) {
+            const format = formats.find(f => f.id === formatId);
+            if (format) {
+                alert(`Formato selecionado: ${format.name}\n\nEm breve: funcionalidade completa de batalha!`);
+            }
+        }
+        
+        // Trata mensagens do servidor
+        function handleServerMessage(data) {
+            console.log('Mensagem do servidor:', data);
+            
+            // Processa lista de formatos
+            if (data.includes('|formats|')) {
+                const formatData = data.split('|formats|')[1];
+                if (formatData) {
+                    parseServerFormats(formatData);
+                }
+            }
+        }
+        
+        // Processa formatos do servidor
+        function parseServerFormats(data) {
+            try {
+                const formatLines = data.split('\n');
+                formats = [];
+                
+                formatLines.forEach(line => {
+                    if (line && !line.startsWith(',') && line.includes('|')) {
+                        const parts = line.split('|');
+                        if (parts.length >= 2) {
+                            formats.push({
+                                id: parts[0],
+                                name: parts[1]
+                            });
+                        }
+                    }
+                });
+                
+                updateFormatList();
+                console.log('Formatos carregados do servidor:', formats.length);
+                
+            } catch (error) {
+                console.error('Erro ao processar formatos:', error);
+                loadLocalFormats();
+            }
+        }
+        
+        // Funções placeholder para futuras implementações
+        function findBattle() {
+            if (!connected) {
+                alert('Conecte-se ao servidor primeiro para buscar batalhas online!');
+                return;
+            }
+            alert('Função em desenvolvimento: Buscar Batalha');
+        }
+        
+        function openTeambuilder() {
+            alert('Função em desenvolvimento: Team Builder');
+        }
+        
+        function watchBattle() {
+            if (!connected) {
+                alert('Conecte-se ao servidor primeiro para assistir batalhas!');
+                return;
+            }
+            alert('Função em desenvolvimento: Assistir Batalha');
+        }
+        
+        // Inicialização
+        window.addEventListener('load', function() {
+            // Tenta conectar automaticamente
+            setTimeout(connectToServer, 1000);
+            
+            // Carrega formatos locais como fallback após 10 segundos
+            setTimeout(() => {
+                if (!connected && formats.length === 0) {
+                    loadLocalFormats();
+                }
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
