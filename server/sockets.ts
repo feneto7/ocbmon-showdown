@@ -18,6 +18,8 @@ import * as path from 'path';
 import {crashlogger, ProcessManager, Streams, Repl} from '../lib';
 import {IPTools} from './ip-tools';
 import {ChannelID, extractChannelMessages} from '../sim/battle';
+import {serveStaticFile, staticFileMiddleware} from './static-files';
+import {applyCorsHeaders} from './cors-middleware';
 
 type StreamWorker = ProcessManager.StreamWorker;
 
@@ -385,10 +387,19 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 				});
 			};
 
-			// Handle action.php requests e ignorar rotas do SockJS
+			// Handle all HTTP requests
 			this.server.on('request', (req: http.IncomingMessage, res: http.ServerResponse) => {
+				// Aplica headers CORS
+				applyCorsHeaders(req, res);
+				
 				// deixe o SockJS lidar com tudo sob "/showdown"
 				if (req.url && req.url.startsWith('/showdown')) return;
+				
+				// Tenta servir arquivos estáticos primeiro
+				if (serveStaticFile(req, res)) {
+					return;
+				}
+				
 				if (req.url === '/action.php' && req.method === 'POST') {
 					// Handle login/authentication requests
 					let body = '';
@@ -419,7 +430,8 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 					});
 					return;
 				}
-				// Otherwise use the static handler
+				
+				// Se nada mais funcionou, usa o static handler original
 				staticRequestHandler(req, res);
 			});
 			if (this.serverSsl) this.serverSsl.on('request', staticRequestHandler);
