@@ -344,7 +344,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 			const stickerServer = new StaticServer('./config/stickers');
 			const userServer = new StaticServer('./config/users');
 			const spritesServer = new StaticServer('../ocbmon-showdown-assets');
-			const staticServer = new StaticServer('../ocbmon-showdown-client');
+			// const staticServer = new StaticServer('../ocbmon-showdown-client'); // Desabilitado para deploy no Render
 			const staticRequestHandler = (req: http.IncomingMessage, res: http.ServerResponse) => {
 				// console.log(`static rq: ${req.socket.remoteAddress}:${req.socket.remotePort} -> ${req.socket.localAddress}:${req.socket.localPort} - ${req.method} ${req.url} ${req.httpVersion} - ${req.rawHeaders.join('|')}`);
 				req.resume();
@@ -354,7 +354,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 						return;
 					}
 
-					let server = staticServer;
+					let server = cssServer; // Servidor padrão
 					if (req.url) {
 						if (req.url === '/custom.css') {
 							server = cssServer;
@@ -381,11 +381,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 						}
 					}
 
-					server.serve(req, res, e => {
-						if (e && (e as any).status === 404) {
-							staticServer.serveFile('404.html', 404, {}, req, res);
-						}
-					});
+					server.serve(req, res);
 				});
 			};
 

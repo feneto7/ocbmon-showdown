@@ -152,7 +152,7 @@ exports.crashguard = true;
  *   This is the URL of the user database and ladder mentioned earlier.
  *   Don't change this setting - there aren't any other login servers right now
  */
-exports.loginserver = 'http://localhost:8000/';
+exports.loginserver = 'https://ocbmon-showdown.onrender.com/';
 exports.loginserverkeyalgo = "RSA-SHA1";
 exports.loginserverpublickeyid = 4;
 exports.loginserverpublickey = `-----BEGIN PUBLIC KEY-----
@@ -175,10 +175,10 @@ J1lK6leTmz5vV6rAUBDL1DMCAwEAAQ==
  *   Don't change this setting - there aren't any other options right now
  */
 exports.routes = {
-	root: 'localhost:8000',
-	client: 'localhost:4280',
-	dex: 'localhost:8000',
-	replays: 'localhost:8000',
+	root: 'ocbmon-showdown.onrender.com',
+	client: 'feneto7.github.io/ocbmon-showdown-client',
+	dex: 'ocbmon-showdown.onrender.com',
+	replays: 'ocbmon-showdown.onrender.com',
 };
 
 /**
@@ -439,6 +439,23 @@ exports.autolockdown = true;
  * no authority. You cannot log into a trusted (g+/r%) user account this way.
  */
 exports.noguestsecurity = true;
+
+/**
+ * CORS Configuration for GitHub Pages
+ * Permite conexões do cliente hospedado no GitHub Pages
+ */
+exports.allowcors = true;
+exports.corsorigins = [
+	'https://feneto7.github.io',
+	'https://feneto7.github.io/ocbmon-showdown-client',
+	'https://feneto7.github.io/ocbmon-showdown-client/public'
+];
+
+/**
+ * Debug settings for connection troubleshooting
+ */
+exports.debugsockets = true;
+exports.debugconnections = true;
 
 /**
  * tourroom - specify a room to receive tournament announcements (defaults to
