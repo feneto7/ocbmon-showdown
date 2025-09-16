@@ -32,17 +32,16 @@ export function serveStaticFile(req: http.IncomingMessage, res: http.ServerRespo
 	const parsedUrl = url.parse(req.url || '');
 	let pathname = parsedUrl.pathname || '/';
 	
-	// Redireciona raiz para /client/
+	// Redireciona raiz para index.html da pasta public
 	if (pathname === '/') {
-		res.writeHead(302, { 'Location': '/client/' });
-		res.end();
-		return true;
+		return serveFile(req, res, '/public/index.html');
 	}
 	
 	// Serve arquivos do cliente
 	if (pathname.startsWith('/client/')) {
-		const filePath = pathname.replace('/client/', '/public/');
-		return serveFile(req, res, filePath);
+		// Remove /client/ e adiciona /public/client/
+		const clientPath = pathname.replace('/client/', '/public/client/');
+		return serveFile(req, res, clientPath);
 	}
 	
 	// Serve arquivos públicos diretamente
@@ -50,7 +49,8 @@ export function serveStaticFile(req: http.IncomingMessage, res: http.ServerRespo
 		return serveFile(req, res, pathname);
 	}
 	
-	return false;
+	// Para outros caminhos, tenta servir da pasta public
+	return serveFile(req, res, '/public' + pathname);
 }
 
 /**
@@ -67,13 +67,18 @@ function serveFile(req: http.IncomingMessage, res: http.ServerResponse, pathname
 		// Caminho completo do arquivo
 		const filePath = path.join(__dirname, '..', safePath);
 		
+		// Log para debug
+		console.log(`Tentando servir: ${pathname} -> ${filePath}`);
+		
 		// Se é um diretório, tenta servir index.html
 		if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+			console.log(`Diretório encontrado, tentando index.html: ${filePath}`);
 			return serveFile(req, res, path.join(safePath, 'index.html'));
 		}
 		
 		// Verifica se o arquivo existe
 		if (!fs.existsSync(filePath)) {
+			console.log(`Arquivo não encontrado: ${filePath}`);
 			return false;
 		}
 		
