@@ -21,6 +21,62 @@ import {ChannelID, extractChannelMessages} from '../sim/battle';
 import {serveStaticFile, staticFileMiddleware} from './static-files';
 import {applyCorsHeaders} from './cors-middleware';
 
+// Função para lidar com requisições action.php
+function handleActionPHP(req: http.IncomingMessage, res: http.ServerResponse, body: string) {
+	// Parse the form data
+	const params = new URLSearchParams(body);
+	const act = params.get('act');
+	
+	// Log para debug
+	console.log(`Action.php request: act=${act}, method=${req.method}`);
+	
+	// Return appropriate response based on action
+	if (act === 'login') {
+		// For login, return just the assertion string
+		res.writeHead(200, { 
+			'Content-Type': 'text/plain',
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+			'Access-Control-Allow-Headers': 'Content-Type'
+		});
+		res.end('guest-' + Date.now());
+	} else if (act === 'getassertion') {
+		// For getassertion, return just the assertion string
+		res.writeHead(200, { 
+			'Content-Type': 'text/plain',
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+			'Access-Control-Allow-Headers': 'Content-Type'
+		});
+		res.end('guest-' + Date.now());
+	} else if (act === 'upkeep') {
+		// For upkeep, return JSON response
+		res.writeHead(200, { 
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+			'Access-Control-Allow-Headers': 'Content-Type'
+		});
+		res.end(JSON.stringify({
+			actionsuccess: true,
+			loggedin: false,
+			username: '',
+			assertion: ''
+		}));
+	} else {
+		// For other actions, return JSON
+		res.writeHead(200, { 
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+			'Access-Control-Allow-Headers': 'Content-Type'
+		});
+		res.end(JSON.stringify({
+			actionsuccess: true
+		}));
+	}
+}
+
 type StreamWorker = ProcessManager.StreamWorker;
 
 export const Sockets = new class {
@@ -395,35 +451,25 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 				// deixe o SockJS lidar com tudo sob "/showdown"
 				if (req.url && req.url.startsWith('/showdown')) return;
 				
-				// Handle action.php requests
+				// Handle action.php requests - aceita tanto GET quanto POST
 				if (req.url && req.url.includes('/action.php')) {
 					// Handle login/authentication requests
 					let body = '';
-					req.on('data', (chunk) => {
-						body += chunk.toString();
-					});
-					req.on('end', () => {
-						// Parse the form data
-						const params = new URLSearchParams(body);
-						const act = params.get('act');
-						
-						// Return appropriate response based on action
-						if (act === 'login') {
-							// For login, return just the assertion string
-							res.writeHead(200, { 'Content-Type': 'text/plain' });
-							res.end('guest-' + Date.now());
-						} else if (act === 'getassertion') {
-							// For getassertion, return just the assertion string
-							res.writeHead(200, { 'Content-Type': 'text/plain' });
-							res.end('guest-' + Date.now());
-						} else {
-							// For other actions, return JSON
-							res.writeHead(200, { 'Content-Type': 'application/json' });
-							res.end(JSON.stringify({
-								actionsuccess: true
-							}));
-						}
-					});
+					
+					// Para requisições POST, coleta o body
+					if (req.method === 'POST') {
+						req.on('data', (chunk) => {
+							body += chunk.toString();
+						});
+						req.on('end', () => {
+							handleActionPHP(req, res, body);
+						});
+					} else {
+						// Para requisições GET, usa query string
+						const url = new URL(req.url, `http://${req.headers.host}`);
+						const searchParams = url.searchParams;
+						handleActionPHP(req, res, searchParams.toString());
+					}
 					return;
 				}
 				
