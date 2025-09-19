@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../data/formats-data.ts"],
+  "sourcesContent": ["export const FormatsData: { [k: string]: SpeciesFormatsData } = {\r\n\t\r\n\twoot: {\r\n\t\ttier: \"Illegal\",\r\n\t\tisNonstandard: \"Future\",\r\n\t},\r\n\twoodie: {\r\n\t\ttier: \"Illegal\",\r\n\t\tisNonstandard: \"Future\",\r\n\t},\r\n\tarbrood: {\r\n\t\ttier: \"Illegal\",\r\n\t\tisNonstandard: \"Future\",\r\n\t},\r\n\tmaggie: {\r\n\t\ttier: \"Illegal\",\r\n\t\tisNonstandard: \"Future\",\r\n\t}\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,cAAmD;AAAA,EAE/D,MAAM;AAAA,IACL,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AAAA,EACA,QAAQ;AAAA,IACP,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AAAA,EACA,SAAS;AAAA,IACR,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AAAA,EACA,QAAQ;AAAA,IACP,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AACD;",
+  "names": []
+}

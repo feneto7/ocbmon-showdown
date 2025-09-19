@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/wipmons/scripts.ts"],
+  "sourcesContent": ["export const Scripts: ModdedBattleScriptsData = {\r\n\tinherit: 'clover',\r\n\tpokemon: {\r\n\t\tignoringItem() {\r\n\t\t\tconst enemyUnnerving = this.foes().some((foe) => foe.hasAbility('unnerve'));\r\n\t\t\tconst recoveryFoods = ['berryjuice', 'leftovers'];\r\n\r\n\t\t\treturn !!(\r\n\t\t\t\tthis.itemState.knockedOff || // Gen 3-4\r\n\t\t\t\t(this.battle.gen >= 5 && !this.isActive) ||\r\n\t\t\t\t(!this.getItem().ignoreKlutz && this.hasAbility(['klutz', 'originalsin'])) ||\r\n\t\t\t\t(enemyUnnerving && recoveryFoods.includes(this.item)) ||\r\n\t\t\t\tthis.volatiles['embargo'] || this.battle.field.pseudoWeather['magicroom']\r\n\t\t\t);\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,UAAmC;AAAA,EAC/C,SAAS;AAAA,EACT,SAAS;AAAA,IACR,eAAe;AACd,YAAM,iBAAiB,KAAK,KAAK,EAAE,KAAK,CAAC,QAAQ,IAAI,WAAW,SAAS,CAAC;AAC1E,YAAM,gBAAgB,CAAC,cAAc,WAAW;AAEhD,aAAO,CAAC,EACP,KAAK,UAAU,cACd,KAAK,OAAO,OAAO,KAAK,CAAC,KAAK,YAC9B,CAAC,KAAK,QAAQ,EAAE,eAAe,KAAK,WAAW,CAAC,SAAS,aAAa,CAAC,KACvE,kBAAkB,cAAc,SAAS,KAAK,IAAI,KACnD,KAAK,UAAU,SAAS,KAAK,KAAK,OAAO,MAAM,cAAc,WAAW;AAAA,IAE1E;AAAA,EACD;AACD;",
+  "names": []
+}

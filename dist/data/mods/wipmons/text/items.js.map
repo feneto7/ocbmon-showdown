@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../data/mods/wipmons/text/items.ts"],
+  "sourcesContent": ["export const ItemsText: {[k: string]: ModdedItemText} = {\r\n\tluckypunch: {\r\n\t\tinherit: true,\r\n\t\tdesc: \"If held by a Chansey or Fucker, its critical hit ratio is raised by 2 stages.\",\r\n\t\tshortDesc: \"If held by a Chansey or Fucker, its critical hit ratio is raised by 2 stages.\",\r\n\t\tgen2: {\r\n\t\t\tdesc: \"If held by a Chansey or Fucker, its critical hit ratio is always at stage 2. (25% crit rate)\",\r\n\t\t\tshortDesc: \"If held by a Chansey or Fucker, its critical hit ratio is always at stage 2. (25% crit rate)\",\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,YAA2C;AAAA,EACvD,YAAY;AAAA,IACX,SAAS;AAAA,IACT,MAAM;AAAA,IACN,WAAW;AAAA,IACX,MAAM;AAAA,MACL,MAAM;AAAA,MACN,WAAW;AAAA,IACZ;AAAA,EACD;AACD;",
+  "names": []
+}

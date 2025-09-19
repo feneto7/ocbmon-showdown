@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../data/text/pokedex.ts"],
+  "sourcesContent": ["export const PokedexText: {[k: string]: PokedexText} = {\r\n\t\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,cAA0C,CAEvD;",
+  "names": []
+}

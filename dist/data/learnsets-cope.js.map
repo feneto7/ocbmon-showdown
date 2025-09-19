@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../data/learnsets-cope.ts"],
+  "sourcesContent": ["export const Learnsets: {[k: string]: LearnsetData} = {\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,YAAyC,CACtD;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/wack/learnsets.ts"],
+  "sourcesContent": ["export const Learnsets: {[k: string]: ModdedLearnsetData} = {\r\n\t\r\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,YAA+C,CAE5D;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/cloverblobboscap/conditions.ts"],
+  "sourcesContent": ["export const Conditions: {[k: string]: ModdedConditionData} = {\r\n\tpartiallytrapped: {\r\n\t\tinherit: true,\r\n\t\tonStart(pokemon, source) {\r\n\t\t\tthis.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);\r\n\t\t\tthis.effectState.boundDivisor = source.hasItem('bindingband') || source.hasAbility('constrictor') ? 6 : 8;\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,aAAiD;AAAA,EAC7D,kBAAkB;AAAA,IACjB,SAAS;AAAA,IACT,QAAQ,SAAS,QAAQ;AACxB,WAAK,IAAI,aAAa,SAAS,WAAW,KAAK,YAAY,cAAc,UAAU,MAAM;AACzF,WAAK,YAAY,eAAe,OAAO,QAAQ,aAAa,KAAK,OAAO,WAAW,aAAa,IAAI,IAAI;AAAA,IACzG;AAAA,EACD;AACD;",
+  "names": []
+}

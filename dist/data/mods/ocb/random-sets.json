@@ -1,0 +1,10584 @@
+{
+  "abfilth": {   
+    "sets": [
+      {
+        "abilities": [   
+          "poisonpoint",
+          "moody"
+        ],
+        "items": [
+          "blacksludge", 
+          "vrheadset"
+        ],
+        "moves": [     
+          "eldritchgoop",    
+          "avasculate",
+          "aciddrip",
+          "nastyplot",
+          "psychic",
+          "earthpower"
+        ],
+        "lockedMoves": [   
+          "trickroom",
+          "filthbomb"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "abomizzard": {   
+    "sets": [
+      {
+        "abilities": [   
+          "snowwarning"
+        ],
+        "items": [
+          "leftovers", 
+          "lifeorb",
+          "nevermeltice",
+          "packagedcurry"
+        ],
+        "moves": [     
+          "gigadrain",    
+          "leechseed",
+          "freezingwave",
+          "iceshard",
+          "iciclecrash",
+          "permafrost",
+          "woodhammer",
+          "cooldown",
+          "grasswhistle",
+          "protect",
+          "energyball"
+        ],
+        "lockedMoves": [   
+          "blizzard"
+        ],
+        "level": 84
+      }
+    ]
+  }, 
+"acacturne": {   
+    "sets": [
+      {
+        "abilities": [   
+          "furcoat"
+        ],
+        "items": [
+          "leftovers", 
+          "lumberry"
+        ],
+        "moves": [     
+          "haunt",    
+          "strengthsap",
+          "suckerpunch",
+          "rend",
+          "destinybond",
+          "grasswhistle",
+          "thunderpunch",
+          "counter",
+          "revenge",
+          "teeterdance"
+        ],
+        "lockedMoves": [   
+          "spikes"
+        ],
+        "level": 84       
+      }
+    ]
+  }, 
+
+  "acasmoc": {   
+    "sets": [
+      {
+        "abilities": [   
+          "magicguard"
+        ],
+        "items": [
+          "focussash" 
+        ],
+        "moves": [     
+          "fierydance",    
+          "voidsmaw",
+          "chaosrift",
+          "invocation",
+          "blackhole",
+          "astronomy"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+"aelectrode": {   
+    "sets": [
+      {
+        "abilities": [   
+          "voltabsorb",
+          "aftermath"
+        ],
+        "items": [
+          "choicescarf", 
+          "choiceband",
+          "normalgem",
+          "c4",
+          "assaultvest"
+        ],
+        "moves": [     
+          "liquidation",    
+          "torpedo",
+          "slipaway",
+          "blackout"
+        ],
+        "lockedMoves": [   
+          "explosion"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "alterlanta": {
+    "nicknames": [
+      "Alterlanta"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "berserker"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "cbt",
+          "tauroskiathermokrasia",
+          "extremespeed"
+        ],
+        "lockedMoves": [
+          "agility"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "arceus": {
+    "nicknames": [
+      "Arceus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multitype"
+        ],
+        "items": [
+          "agesplate",
+          "angelplate",
+          "arcaneplate",
+          "artplate",
+          "crystalplate",
+          "demonicplate",
+          "digitalplate",
+          "dracoplate",
+          "dreadplate",
+          "earthplate",
+          "elasticplate",
+          "emotionplate",
+          "fatplate",
+          "fistplate",
+          "flameplate",
+          "glassplate",
+          "ichorplate",
+          "icicleplate",
+          "infectionplate",
+          "infoplate",
+          "insectplate",
+          "ironplate",
+          "lavaplate",
+          "lumberplate",
+          "lusterplate",
+          "machineplate",
+          "meadowplate",
+          "mindplate",
+          "onionplate",
+          "paperplate",
+          "phobiaplate",
+          "pixieplate",
+          "plasticplate",
+          "radiationplate",
+          "skyplate",
+          "spaceplate",
+          "splashplate",
+          "spookyplate",
+          "stoneplate",
+          "tornadoplate",
+          "toxicplate",
+          "undeadplate",
+          "vaporplate",
+          "zapplate"
+        ],
+        "moves": [
+          "multiattack",
+          "metronome",
+          "assist",
+          "mefirst",
+          "mirrormove"
+        ],
+        "lockedMoves": [
+          "judgment"
+        ],
+        "level": 70
+      }
+    ]
+  },
+  "beeabee": {
+    "nicknames": [
+      "Beeabee"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "moxie"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "firstblood",
+          "aerialrace",
+          "sludgehammer"
+        ],
+        "lockedMoves": [
+          "xscissor"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "betalapras": {
+    "nicknames": [
+      "Beta Lrn2swim"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb",
+          "drizzle"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "cooldown",
+          "mysticdance",
+          "thunderbolt",
+          "soulchill",
+          "sonar"
+        ],
+        "lockedMoves": [
+          "freezingwave"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "blumineon": {
+    "nicknames": [
+      "Beta than Nothen"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stormdrain",
+          "serenegrace"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "uturn",
+          "moonblast",
+          "icebeam",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "scald",
+          "enlighten"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bewdragon": {
+    "nicknames": [
+      "Blue Eyes"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pressure",
+          "roughskin"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "dracoplate"
+        ],
+        "moves": [
+          "shimmerstrike",
+          "chargebeam",
+          "lenience"
+        ],
+        "lockedMoves": [
+          "burststream"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bbattora": {
+    "nicknames": [
+      "Bbattora"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy",
+          "sadist"
+        ],
+        "items": [
+          "lumberry",
+          "chaosdust"
+        ],
+        "moves": [
+          "knockoff",
+          "madepiphany"
+        ],
+        "lockedMoves": [
+          "lunatictime",
+          "blacktruth",
+          "avarice"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bloodoom": {
+    "nicknames": [
+      "Bloodoom"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hydration",
+          "cursedbody"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "hex",
+          "scald",
+          "sludgebomb"
+        ],
+        "lockedMoves": [
+          "bloodpump"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "carmillapire": {
+    "nicknames": [
+      "Carmillapire"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "siphon"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "bloodsiphon",
+          "gigadrain",
+          "vampirebite"
+        ],
+        "lockedMoves": [
+          "bloodbite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cheezipake": {
+    "nicknames": [
+      "Cheezipake"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "berserker"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "pastalavista",
+          "pizzaspin",
+          "blurryblast",
+          "searingsauce",
+          "infooverload",
+          "meatmash"
+        ],
+        "lockedMoves": [
+          "replicate"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "christree": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "snowwarning"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "cooldown",
+          "snowfort",
+          "tailglow",
+          "pulpblast",
+          "freezingwave"
+        ],
+        "lockedMoves": [
+          "mistletoe",
+          "blizzard"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cmstantler": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "snowrush"
+        ],
+        "items": [
+          "assaultvest",
+          "choicescarf",
+          "choiceband"
+        ],
+        "moves": [
+          "sledrush",
+          "megahorn",
+          "hornleech",
+          "pulpblast",
+          "freezingwave"
+        ],
+        "lockedMoves": [
+          "arcticcrash",
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cmtorterra": {
+    "sets": [
+      {
+        "abilities": [
+          "snowwarning"
+        ],
+        "items": [
+          "safetyhelmet"
+        ],
+        "moves": [
+          "synthesis",
+          "terrahammer",
+          "headsmash"
+        ],
+        "lockedMoves": [
+          "arcticcrash",
+          "woodhammer"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cmserperior": {
+    "sets": [
+      {
+        "abilities": [
+          "contrary"
+        ],
+        "items": [
+          "snowycapsule"
+        ],
+        "moves": [
+          "dracometeor",
+          "present",
+          "flamethrower",
+          "blizzard"
+        ],
+        "lockedMoves": [
+          "leafstorm"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "coommate": {
+    "nicknames": [
+      "Coommate"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "berserker"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "warpaway",
+          "odynocharge",
+          "burningpassion"
+        ],
+        "lockedMoves": [
+          "invasion"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "corsola": {
+    "nicknames": [
+      "corsola"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "naturalcure"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "rest",
+          "stealthrock",
+          "rockgather",
+          "scald"
+        ],
+        "lockedMoves": [
+          "coralreef",
+          "powergem"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cubaoop": {
+    "nicknames": [
+      "Cubaoop"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "adaptability",
+          "filter"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots",
+          "plasticplate",
+          "greasygem"
+        ],
+        "moves": [
+          "oilskin",
+          "lubricate",
+          "bloodseal",
+          "flamethrower",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "meltedplastic",
+          "greasepump"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dracelium": {
+    "nicknames": [
+      "Draccelium"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "acidrush"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "fortuneray",
+          "decaylimbs",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "eggbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dragurve": {
+    "nicknames": [
+      "Dragurve"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "spacialrend",
+          "voltswitch",
+          "thunderwave",
+          "trickroom"
+        ],
+        "lockedMoves": [
+          "dracometeor"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "drgnchamber": {
+    "nicknames": [
+      "Chambermaid"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "serenegrace"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "steamclean",
+          "springcleaning"
+          
+        ],
+        "lockedMoves": [
+          "dusttornado",
+          "sewing",
+          "yatanokagami"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "drownskel": {  
+    "nicknames": [
+      "Drownskel"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "isolation"
+        ],
+        "items": [
+          "leftovers", 
+          "lifeorb"
+        ],
+        "moves": [     
+          "riptide",    
+          "corpsewave",
+          "nightshade",
+          "brine",
+          "zombind"
+        ],
+        "lockedMoves": [   
+          "recover"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "eeeee": {
+    "nicknames": [
+      "EEeEE"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sadist"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "buzzybuzz",
+          "bouncybubble",
+          "sizzlyslide",
+          "achillesheel"
+        ],
+        "lockedMoves": [
+          "bloodbathe"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "elias": {
+    "nicknames": [
+      "Elias"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "justified",
+          "insomnia"
+        ],
+        "items": [
+          "stickybarb"
+        ],
+        "moves": [
+          "swordsedge",
+          "sacredsword"
+        ],
+        "lockedMoves": [
+          "soulsword"
+        ],
+        "level": 74
+      }
+    ]
+  },
+  "elsnow": {
+    "nicknames": [
+      "Let It Go"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "snowwarning"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "venusburst",
+          "coldheart"
+        ],
+        "lockedMoves": [
+          "glacialrend",
+          "subzerowail"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "endragon": {   
+    "nicknames": [   
+      "steve",    
+      "the end"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "regenerator"
+        ],
+        "items": [
+          "leftovers",
+          "lifeorb", 
+          "dragongem",
+          "choicescarf"
+        ],
+        "moves": [     
+          "teleportaway",
+          "warpaway", 
+          "warpaway", 
+          "warpaway",    
+          "dragonclaw",
+          "glare",
+          "dracometeor", 
+          "closeencounter", 
+          "outrage", 
+          "fly"
+        ],
+        "lockedMoves": [   
+          "warpaway"
+        ],
+        "level": 84         
+      }
+    ]
+  },
+  "eobstagoon": {
+    "nicknames": [
+      "Eobstagoon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "sludgehammer",
+          "waterfall",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "electroncrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "fissiom": {
+    "nicknames": [
+      "Fissiom"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "toxicboost"
+        ],
+        "items": [
+          "toxicorb"
+        ],
+        "moves": [
+          "technoray",
+          "thunderbolt",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "slitwrists",
+          "atombomb",
+          "heatseekmissile"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "formspawn": {
+    "nicknames": [
+      "Formspawn"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "lubricate",
+          "oilskin",
+          "oilyterrain",
+          "earthquake",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "greasygrasp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "grumboar": {
+    "nicknames": [
+      "Grumboar"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce",
+          "thickfat"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "bodyboost",
+          "lazyday"
+        ],
+        "lockedMoves": [
+          "rest",
+          "mania"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "shadowhedgehog": {
+    "nicknames": [
+      "Shadowhedgehog"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rapidspin",
+          "taunt",
+          "torment",
+          "shadowball",
+          "extremespeed",
+          "machinegun"
+        ],
+        "lockedMoves": [
+          "darkpulse"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "kamisama": {
+    "nicknames": [
+      "Kamisama"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "noguard"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "pray"
+        ],
+        
+        "level": 76
+      }
+    ]
+  },
+  "mancubus": {
+    "nicknames": [
+      "Mancubus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat",
+          "filter"
+        ],
+        "items": [
+          "heavydutyboots",
+          "sitrusberry"
+        ],
+        "moves": [
+          "corrupt",
+          "selffatten",
+          "shadowball",
+          "fireball"
+        ],
+        "lockedMoves": [
+          "chaosbolt"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mcorsola": {
+    "nicknames": [
+      "Mega-Corsola"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "graze"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "stealthrock",
+          "rockgather",
+          "earthpower",
+          "scald"
+        ],
+        "lockedMoves": [
+          "coralreef",
+          "powergem"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mothmowl": {
+    "nicknames": [
+      "Mothmowl"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "cryptid",
+          "paranoia",
+          "bravebird"
+        ],
+        "lockedMoves": [
+          "purefear"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ndragonite": {
+    "nicknames": [
+      "N Tower Meltdown"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "playrough",
+          "chemotherapy",
+          "apexmutation"
+        ],
+        "lockedMoves": [
+          "atombomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pollugong": {
+    "nicknames": [
+      "Pollugong"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "acidcloudburst"
+        ],
+        "items": [
+          "heavydutyboots",
+          "greasygem"
+        ],
+        "moves": [
+          "oilyterrain",
+          "oilskin",
+          "oilup"
+        ],
+        "lockedMoves": [
+          "greasepump",
+          "sludgewave"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pumpjackbird": {
+    "nicknames": [
+      "Pumpjackbird"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb"
+        ],
+        "items": [
+          "heavydutyboots",
+          "techgem"
+        ],
+        "moves": [
+          "construction",
+          "oildrill",
+          "oilup",
+          "woodhammer",
+          "plastichammer",
+          "drillrun"
+        ],
+        "lockedMoves": [
+          "pumpjack"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "krisiel": {
+    "nicknames": [
+      "Krisiel"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "berserk",
+          "filter"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "angelburst",
+          "beacon",
+          "powergem",
+          "ritual"
+        ],
+        "lockedMoves": [
+          "deliverance",
+          "crystalray"
+        ],
+        "level": 84
+      }
+    ]
+  },
+ 
+  "reeficoral": {
+    "nicknames": [
+      "Reeficoral"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "oblivious"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "coralgraze",
+          "curse",
+          "firewhip",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "coralreef",
+          "coralbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "regifight": {
+    "nicknames": [
+      "Regifight"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "earthquake",
+          "bulkup",
+          "rockslide"
+        ],
+        "lockedMoves": [
+          "drainpunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Kickkecleon": {
+    "nicknames": [
+      "Kickkecleon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "furiousfeet",
+          "protean"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "blunderpolicy"
+        ],
+        "moves": [
+          "dustkick",
+          "elastickick",
+          "blazekick",
+          "bugkick",
+          "holykick",
+          "frostkick",
+          "seismickick",
+          "voltkick"
+        ],
+        "lockedMoves": [
+          "drainpunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "regiweather": {
+    "nicknames": [
+      "Regiweather"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "gravitycapsule"
+        ],
+        "moves": [
+          "surf",
+          "thunder",
+          "volcaniceruption",
+          "hurricane"
+        ],
+        "level": 72
+      }
+    ]
+  },
+  "kerkecleon": {
+    "nicknames": [
+      "Kerkecleon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "blunderpolicy"
+        ],
+        "moves": [
+          "achillesheel",
+          "bask",
+          "suckerpunch",
+          "dynamicpunch",
+          "shadowclaw"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "scorpiofree": {  
+    "nicknames": [
+      "Free Win"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "tempestcapsule", 
+          "invertedcapsule",
+          "gravitycapsule",
+          "acidycapsule"
+        ],
+        "moves": [     
+          "lunge",    
+          "nectartap",
+          "tailwind"
+        ],
+        "lockedMoves": [   
+          "powderveil",
+          "befuddlepowder"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "sarieangel": {
+    "nicknames": [
+      "Sarieangel"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "zenmode"
+        ],
+        "items": [
+          "lumberry",
+          "chaosdust"
+        ],
+        "moves": [
+          "equalize",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "pray",
+          "invocation"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santaltah": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush"
+        ],
+        "items": [
+          "snowycapsule"
+        ],
+        "moves": [
+          "swordsedge",
+          "present",
+          "sacredsword",
+          "mount"
+        ],
+        "lockedMoves": [
+          "vortigern",
+          "slushcrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santacirno": {
+    "sets": [
+      {
+        "abilities": [
+          "icebody"
+        ],
+        "items": [
+          "snowycapsule"
+        ],
+        "moves": [
+          "freezingwave",
+          "present",
+          "mistletoe",
+          "knockoff",
+          "icegatling"
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santaparsee": {
+    "sets": [
+      {
+        "abilities": [
+          "unaware",
+          "competitive",
+          "icebody"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "painsplit",
+          "mistletoe",
+          "disable"
+        ],
+        "lockedMoves": [
+          "enviousburst",
+          "enviousheart"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santakisume": {
+    "sets": [
+      {
+        "abilities": [
+          "snowcloak",
+          "sturdy",
+          "icebody"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "carpetburn",
+          "earthpower",
+          "energyball",
+          "toxic",
+          "destinybond",
+          "firespin"
+        ],
+        "lockedMoves": [
+          "rapidspin",
+          "icebeam",
+          "flamethrower"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santajoon": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "ironfist"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "insultandinjury",
+          "brassknuckle",
+          "bulkup"
+        ],
+        "lockedMoves": [
+          "icepunch",
+          "extortionpummel"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santajynx": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "filter"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "mistletoe",
+          "aurasphere",
+          "lovelykiss",
+          "calmmind"
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "coldfront"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santamystia": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "snowcloak"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "mistletoe",
+          "tuning",
+          "darksweets",
+          "nightsparrowsong",
+          "calmmind",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "sorrowfultune",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santarumia": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "icebody",
+          "moldbreaker"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule",
+          "murkycapsule"
+        ],
+        "moves": [
+          "mistletoe",
+          "powergem",
+          "thunderbolt",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "darksweets",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santashion": {
+    "sets": [
+      {
+        "abilities": [
+          "prankster",
+          "snowwarning"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "murkycapsule"
+        ],
+        "moves": [
+          "leechseed",
+          "present",
+          "strengthsap",
+          "disable",
+          "curse"
+        ],
+        "lockedMoves": [
+          "destitutiondrain"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santawriggle": {
+    "sets": [
+      {
+        "abilities": [
+          "compoundeyes"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "powerwhip",
+          "veryhijumpkick",
+          "rocketkick",
+          "voltkick",
+          "nectartap"
+        ],
+        "lockedMoves": [
+          "bugkick",
+          "frostkick"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "icevictini": {
+    "sets": [
+      {
+        "abilities": [
+          "victorystar"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "glaciate",
+          "sledrush",
+          "shotgunblast"
+        ],
+        "lockedMoves": [
+          "encycloray",
+          "vcreate"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "agyarados": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "intimidate",
+          "moxie"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "slipaway",
+          "sledrush",
+          "iceburg"
+        ],
+        "lockedMoves": [
+          "aquatail",
+          "arcticcrash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "noseer": {
+    "sets": [
+      {
+        "abilities": [
+          "illuminate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "uturn",
+          "swordsdance",
+          "hornleech",
+          "megahorn",
+          "doubleedge",
+          "closecombat",
+          "odynocharge"
+        ],
+        "lockedMoves": [
+          "slushcrush",
+          "achillesheel"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sweateryeti": {
+    "sets": [
+      {
+        "abilities": [
+          "furcoat"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "knockoff",
+          "slushcrush"
+        ],
+        "lockedMoves": [
+          "sweaterslam",
+          "cooldown"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ghift": {
+    "sets": [
+      {
+        "abilities": [
+          "furcoat"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "uturn",
+          "rapidspin",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "freezingwave",
+          "cooldown"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "krampusird": {
+    "sets": [
+      {
+        "abilities": [
+          "slushrush"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "fakeout",
+          "rapidspin",
+          "meatmash",
+          "cooldown",
+          "spicypowder"
+        ],
+        "lockedMoves": [
+          "playrough",
+          "coalthrow"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "krampird": {
+    "sets": [
+      {
+        "abilities": [
+          "slushrush"
+        ],
+        "items": [
+          "eviolate",
+          "eviocicle"
+        ],
+        "moves": [
+          "fakeout",
+          "rapidspin",
+          "meatmash",
+          "cooldown",
+          "spicypowder"
+        ],
+        "lockedMoves": [
+          "playrough",
+          "coalthrow"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "delidelibird": {
+    "sets": [
+      {
+        "abilities": [
+          "insomnia"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "bravebird",
+          "destinybond",
+          "spicypowder",
+          "foodray"
+        ],
+        "lockedMoves": [
+          "meatmash",
+          "icepunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "swallice": {
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "icecreambeam",
+          "icicles",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "essencedrain",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "stalagcola": {
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush",
+          "waterabsorb"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "fruityburst",
+          "hydropump",
+          "powergem"
+        ],
+        "lockedMoves": [
+          "muddywater",
+          "iciclecrash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "colorspace": {
+    "sets": [
+      {
+        "abilities": [
+          "cursedbody"
+        ],
+        "items": [
+          "starfieldcapsule",
+          "gallerycapsule"
+        ],
+        "moves": [
+          "thermochromia",
+          "leechseed"
+        ],
+        "lockedMoves": [
+          "cosmichorror",
+          "unknowncolor"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dglalie": {  
+    "nicknames": [
+      "Dark Glalie"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "filter",
+          "sandforce"
+        ],
+        "items": [
+          "murkycapsule", 
+          "sandycapsule"
+        ],
+        "moves": [     
+          "explosion",    
+          "headsmash",
+          "stoneedge",
+          "earthquake",
+          "swordsdance",
+          "suckerpunch",
+          "stealthrock",
+          "spikes",
+          "darkgather"
+        ],
+        "lockedMoves": [   
+          "darksport",
+          "devastate"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "remilire": {  
+    "nicknames": [
+      "Remilire"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "pride",
+          "moxie",
+          "dryskin"
+        ],
+        "items": [
+          "murkycapsule", 
+          "gouraberry"
+        ],
+        "moves": [     
+          "earthquake",    
+          "uturn",
+          "draculacradle",
+          "energyball",
+          "fireblast",
+          "vampirebite",
+          "painsplit"
+        ],
+        "lockedMoves": [   
+          "scarletmist",
+          "bloodgungnir"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "rogyst": {
+    "nicknames": [
+      "Rogyst"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "autotomize",
+          "fossilize",
+          "ironhead",
+          "hammerarm"
+        ],
+        "lockedMoves": [
+          "crystaledge",
+          "stoneedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "spacird": {
+    "nicknames": [
+      "Spacelizard"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "vacuum"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "bravebird",
+          "shuttlelaunch",
+          "explosion"
+        ],
+        "lockedMoves": [
+          "meteorcrash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bomberman": {
+    "nicknames": [
+      "Bomberman"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "detonator"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "steambomb",
+          "fieryexplosion",
+          "explosion"
+        ],
+        "lockedMoves": [
+          "cannonball"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "seahog": {
+    "nicknames": [
+      "Seahog"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "gooey"
+        ],
+        "items": [
+          "rainycapsule",
+          "angelpowder",
+          "heavydutyboots",
+          "greasygem"
+        ],
+        "moves": [
+          "oilskin",
+          "lubricate",
+          "oilyterrain",
+          "clearsmog",
+          "aquaring"
+        ],
+        "lockedMoves": [
+          "osmosis",
+          "greasepump"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Sprite007": {   
+    "nicknames": [   
+      "Clifford",    
+      "Michael"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "speedboost"
+        ],
+        "items": [
+          "focussash",
+          "focusband", 
+          "chaosdust",
+          "choiceband"
+        ],
+        "moves": [     
+          "insanity",
+          "closecombat",    
+          "demonicclaws",
+          "crunch",
+          "icefang", 
+          "pursuit", 
+          "playrough", 
+          "firepunch", 
+          "cbt",  
+          "crazytackle",     
+          "gigaimpact",
+          "lastresort", 
+          "crushclaw",            
+          "lick"
+        ],
+        "lockedMoves": [   
+          "reversal",
+          "insanity"
+        ],
+        "level": 88         
+      },  
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "focussash"    
+        ],
+        "lockedMoves": [
+          "yawn",
+          "crunch",
+          "insanity",
+          "vibecheck"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sularcl": {
+    "nicknames": [
+      "Sularcl"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "greasygem"
+        ],
+        "moves": [
+          "lubricate",
+          "oilskin",
+          "oilyterrain"
+        ],
+        "lockedMoves": [
+          "greasygrasp",
+          "stalagbite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "weepinbarf": {
+    "nicknames": [
+      "Weepinbarf"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "poisonheal"
+        ],
+        "items": [
+          "acidycapsule",
+          "angelpowder",
+          "heavydutyboots",
+          "greasygem"
+        ],
+        "moves": [
+          "greasesplat",
+          "energyball",
+          "knockoff",
+          "synthesis",
+          "vomit",
+          "acidtrap"
+        ],
+        "lockedMoves": [
+          "greasepump"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "giantwoman": {
+    "nicknames": [
+      "Giant Woman"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hugepower"
+        ],
+        "items": [
+          "spikedboots",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "crushgrip",
+          "earthquake",
+          "heavyslam",
+          "teeterdance",
+          "focuspunch"
+        ],
+        "lockedMoves": [
+          "stomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "gigagigerth": {
+    "nicknames": [
+      "Gerth"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "shatteringhammer",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "stealthrock",
+          "toxic",
+          "earthquake",
+          "elastickick",
+          "highhorsepower"
+        ],
+        "lockedMoves": [
+          "rockblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sudorokku": {   
+    "sets": [
+      {
+        "abilities": [   
+          "rockhead"
+        ],
+        "items": [
+          "leftovers", 
+          "lifeorb"
+        ],
+        "moves": [     
+          "stealthrock",    
+          "headsmash",
+          "leechseed",
+          "woodhammer",
+          "suckerpunch"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "israfel": {
+    "nicknames": [
+      "Israfel"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "soundproof"
+        ],
+        "items": [
+          "divinedust",
+          "chaosdust"
+        ],
+        "moves": [
+          "bonemerang",
+          "fierydance"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "avengergorgon": {
+    "nicknames": [
+      "Avengergorgon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "divinedust",
+          "chaosdust"
+        ],
+        "moves": [
+          "anchorshot",
+          "darkpulse",
+          "balmscour"
+        ],
+        "lockedMoves": [
+          "bloodandromeda",
+          "pandemoniumcetus"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "saberlion": {
+    "nicknames": [
+      "Saberlion"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "gluttony"
+        ],
+        "items": [
+          "invertedcapsule"
+        ],
+        "moves": [
+          "slackoff",
+          "crazytackle",
+          "meatcalibur"
+        ],
+        "lockedMoves": [
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "qwilshark": {
+    "nicknames": [
+      "Qwilshark"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "swiftswim",
+          "poisonpoint",
+          "roughskin"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "sludgehammer",
+          "cbt",
+          "throatchop",
+          "explosion",
+          "haze",
+          "spikes"
+        ],
+        "lockedMoves": [
+          "torpedo"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "memaster": {
+    "nicknames": [
+      "Memaster"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "infoplate"
+        ],
+        "moves": [
+          "infooverload",
+          "nastyplot",
+          "memento",
+          "sonar",
+          "zapcannon"
+        ],
+        "lockedMoves": [
+          "risinginfo"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "muschum": {   
+    "nicknames": [   
+      "Brutus",    
+      "Charger"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "reckless",
+          "graze"
+        ],
+        "items": [
+          "lifeorb",
+          "safetyhelmet", 
+          "riotshield",
+          "choiceband",
+          "assaultvest"
+        ],
+        "moves": [     
+          "takedown",
+          "doubleedge",    
+          "submission",
+          "headsmash"
+        ],
+        "level": 84         
+      }
+    ]
+  }, 
+  "papyrousle": {   
+    "nicknames": [   
+      "RiddleMeBonez"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "steadfast"
+        ],
+        "items": [
+          "angelpowder",    
+          "lifeorb"
+        ],
+        "moves": [     
+          "snowfort",
+          "noodlewhip",
+          "cooldown",
+          "superpower",
+          "iciclespear",
+          "iciclecrash",
+          "carcrash",
+          "taunt",
+          "icecage",
+          "protect",
+          "spagettiwrap",
+          "icecage",
+          "detect",
+          "macabredance",
+          "curse",
+          "quickattack",
+          "doubleedge",
+          "synchronoise",
+          "bonesword"    
+
+        ],
+        "lockedMoves": [   
+          "springcleaning",
+          "yourebluenow"
+        ],
+        "level": 84        
+      },   
+      {
+        "abilities": [
+          "builder"
+        ],
+        "items": [
+          "loadeddice"    
+        ],
+        "lockedMoves": [
+          "lightscreen",
+          "reflect",
+          "bonesmash",
+          "spaghettiwrap"
+        ],
+        "level": 84        
+      },   
+      {
+        "abilities": [
+          "steadfast"
+        ],
+        "items": [
+          "brittlebones"    
+        ],
+        "lockedMoves": [
+          "macabredance",
+          "bonemerang",
+          "noodlewhip",
+          "yourebluenow"
+        ],
+        "level": 88        
+      },   
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "leftovers"    
+        ],
+        "lockedMoves": [
+          "wish",
+          "protect",
+          "batonpass",
+          "bonemerang"
+           ],
+        "level": 98  
+      }   
+    ]
+  },
+  "anglereist": {
+    "nicknames": [
+      "Anglereist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected",
+          "adaptability"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "undeadplate",
+          "heavydutyboots",
+          "choiceband",
+          "choicescarf",
+          "assaultvest"
+        ],
+        "moves": [
+          "zombiebite",
+          "riptide",
+          "soulhound",
+          "shadowsneak",
+          "leechlife"
+        ],
+        "lockedMoves": [
+          "rigormortis"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "babbaster": {
+    "nicknames": [
+      "Babbaster"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "isolation"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "machineplate",
+          "vaporplate",
+          "heavydutyboots"
+          
+        ],
+        "moves": [
+          "energyshield",
+          "steamclean",
+          "sauna",
+          "techsavvy",
+          "steamup"
+        ],
+        "lockedMoves": [
+          "technoray",
+          "dimensionofsteam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rayman": {
+    "nicknames": [
+      "Raymain"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unburden"
+        ],
+        "items": [
+          "whiteherb"
+          
+        ],
+        "moves": [
+          "brassknuckle",
+          "knockoff",
+          "gunkshot",
+          "grapple"
+        ],
+        "lockedMoves": [
+          "curse",
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rlimshaikworm": {
+    "nicknames": [
+      "Rlimshaikworm"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "liquidooze"
+        ],
+        "items": [
+          "heavydutyboots",
+          "lifeorb"
+          
+        ],
+        "moves": [
+          "haze",
+          "bloodseal",
+          "bloodshower",
+          "bloodrain",
+          "wringout"
+        ],
+        "lockedMoves": [
+          "pukeblood",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "eihortli": {
+    "nicknames": [
+      "Eihortli"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "focus"
+        ],
+        "items": [
+          "heavydutyboots",
+          "leftovers"
+          
+        ],
+        "moves": [
+          "invokedread",
+          "leechseed",
+          "insanitybolt"
+        ],
+        "lockedMoves": [
+          "bloodsiphon",
+          "devildeal"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nukrylic": {
+    "nicknames": [
+      "Nukrylic"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "colorchange"
+        ],
+        "items": [
+          "gallerycapsule",
+          "whiteherb"         
+        ],
+        "moves": [
+          "shellsmash",
+          "sketch"
+        ],
+        "lockedMoves": [
+          "bucketbomb",
+          "atombomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "painter": {
+    "nicknames": [
+      "Literally Hitler"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "colorchange"
+        ],
+        "items": [
+          "gallerycapsule",
+          "whiteherb"         
+        ],
+        "moves": [
+          "cubism",
+          "thermochromia"
+        ],
+        "lockedMoves": [
+          "bucketbomb",
+          "atombomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "glassbol": {
+    "nicknames": [
+      "Glassbol"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "weakarmor",
+          "clearbody"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"         
+        ],
+        "moves": [
+          "wringout",
+          "glassdefense"
+        ],
+        "lockedMoves": [
+          "glasssparkle",
+          "glasscannon"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "maglamp": {
+    "nicknames": [
+      "Maglamp"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor",
+          "solarpower"
+        ],
+        "items": [
+          "whiteherb",
+          "heavydutyboots",
+          "angelpowder"         
+        ],
+        "moves": [
+          "recover",
+          "beacon",
+          "gasoline",
+          "flameburst"
+        ],
+        "lockedMoves": [
+          "magmastorm",
+          "prismray"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "kasanova": {
+    "nicknames": [
+      "Kasanova"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shielddust"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder",
+          "sitrusberry"        
+        ],
+        "moves": [
+          "bellydrum",
+          "stunspore",
+          "bulkup",
+          "rockslide",
+          "uturn",
+          "swordsdance"
+        ],
+        "lockedMoves": [
+          "lunge",
+          "antennatracker"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "atogekiss": {
+    "nicknames": [
+      "A Togekiss"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shielddust"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder",
+          "sitrusberry"        
+        ],
+        "moves": [
+          "dragonpulse",
+          "aurasphere",
+          "ancientpower",
+          "wish",
+          "batonpass"
+        ],
+        "lockedMoves": [
+          "airslash",
+          "dragonbreath"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "whitedoor": {
+    "nicknames": [
+      "White Door"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blaze"
+        ],
+        "items": [
+          "blunderpolicy"  
+        ],
+        "moves": [
+          "heatmirage",
+          "toxic",
+          "mirrorcoat",
+          "counter",
+          "luckychant",
+          "insanity"
+        ],
+        "lockedMoves": [
+          "sunburn",
+          "inferno"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ahchah": {
+    "nicknames": [
+      "Ahchah"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "heavydutyboots",
+          "lifeorb",
+          "angelpowder"  
+        ],
+        "moves": [
+          "bucketbomb",
+          "gash",
+          "defog",
+          "zombiespread",
+          "mefirst",
+          "coralreef"
+        ],
+        "lockedMoves": [
+          "kanshoubakuya"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "acrylomodo": {
+    "nicknames": [
+      "Acrylomodo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "colorchange"
+        ],
+        "items": [
+          "gallerycapsule"          
+        ],
+        "moves": [
+          "dragondance",
+          "dragonruins",
+          "outrage",
+          "dragonclaw"
+        ],
+        "lockedMoves": [
+          "bucketbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "berserkalot": {
+    "nicknames": [
+      "Berserkalot"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "chaosdust"  
+        ],
+        "moves": [
+          "acrobatics",
+          "mount",
+          "insanity",
+          "honeclaws"
+        ],
+        "lockedMoves": [
+          "dragonslayer",
+          "arondight"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rideusa": {
+    "nicknames": [
+      "Rideusa"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "chaosdust",
+          "divinedust"
+        ],
+        "moves": [
+          "acrobatics",
+          "mount",
+          "lightscreen"
+        ],
+        "lockedMoves": [
+          "bellerophon",
+          "bloodandromeda"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "necrolilith": {
+    "nicknames": [
+      "Necrolilith"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "flamethrower",
+          "healbell",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "blackmagic",
+          "corpsewave"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "necroseel": {
+    "nicknames": [
+      "Necroseel"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "corpsewave",
+          "rottingburst",
+          "eyegouge",
+          "crunch",
+          "shamble",
+          "icefang"
+        ],
+        "lockedMoves": [
+          "zombiebite",
+          "aquacrunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+ 
+  "nexaphago": {
+    "nicknames": [
+      "Nexaphago"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "chaosdust",
+          "divinedust"
+        ],
+        "moves": [
+          "mindcontrol",
+          "foulplay",
+          "anaphylacticshock",
+          "nastyplot",
+          "leechseed",
+          "extrachromosome",
+          "virus"
+        ],
+        "lockedMoves": [
+          "ebola"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "austisma": {
+    "nicknames": [
+      "Autisma"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "irradiated"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "playrough",
+          "healbell",
+          "attract",
+          "extrachromosome",
+          "healpulse",
+          "sweetkiss",
+          "virus"
+        ],
+        "lockedMoves": [
+          "cbt",
+          "numbinginjection"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nursebola": {
+    "nicknames": [
+      "Nursebola"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "irradiated",
+          "safeshield"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "bloodpump",
+          "foulnote",
+          "attract",
+          "extrachromosome",
+          "healpulse",
+          "sweetkiss",
+          "virus",
+          "contaminate"
+        ],
+        "lockedMoves": [
+          "ebola",
+          "fever"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ballough": {
+    "nicknames": [
+      "Ballough"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cutecharm"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "selffatten",
+          "anaphylacticshock",
+          "cakewalk"
+        ],
+        "lockedMoves": [
+          "nutrientdrain",
+          "fever"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "splague": {
+    "nicknames": [
+      "Splague"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "anaphylacticshock",
+          "wormhole",
+          "viruspropogate",
+          "contaminate",
+          "memento"
+        ],
+        "lockedMoves": [
+          "infestation",
+          "spacevirus"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "slugeongoo": {   
+    "sets": [
+      {
+        "abilities": [   
+          "hydration"
+        ],
+        "items": [
+          "leftovers",
+          "angelpowder", 
+          "greasygem",
+          "lifeorb"
+        ],
+        "moves": [        
+          "dragonpulse",
+          "breakingswipe",
+          "acidspray", 
+          "chargedgrease", 
+          "dragonpulse", 
+          "dracometeor"
+        ],
+        "lockedMoves": [   
+          "acidtrap",
+          "aciddrip"
+        ],
+        "level": 84       
+      },  
+      {
+        "abilities": [
+          "simple"
+        ],
+        "items": [
+          "leftovers"    
+        ],
+        "lockedMoves": [
+          "goodluck",
+          "dragonpulse",
+          "chargedgrease",
+          "acidtrap"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "scpee049": {
+    "nicknames": [
+      "Scpee049"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "effectspore",
+          "naturalcure"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "avasculate",
+          "decaytouch",
+          "thecure"
+        ],
+        "lockedMoves": [
+          "anaphylacticshock",
+          "zombievirus"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "mumenrider": {
+    "nicknames": [
+      "MumenRider"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "silkscarf",
+          "blackglasses"
+          
+        ],
+        "moves": [
+          "taunt",
+          "knockoff",
+          "partingshot"
+        ],
+        "lockedMoves": [
+          "driveby",
+          "justicecrash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "black": {
+    "nicknames": [
+      "Black"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "souleater"
+        ],
+        "items": [
+          "sitrusberry"
+          
+        ],
+        "moves": [
+          "midnight",
+          "curse",
+          "channel"
+        ],
+        "lockedMoves": [
+          "shinigamieyes",
+          "shadowball"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bleedtoise": {
+    "nicknames": [
+      "Bleedtoise"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected"
+        ],
+        "items": [
+          "murkycapsule",
+          "acidycapsule",
+          "rainycapsule"
+        ],
+        "moves": [
+          "primalnoise"
+        ],
+        "lockedMoves": [
+          "corpsewave",
+          "bloodpump",
+          "hydropump"
+
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ghost": {
+    "nicknames": [
+      "Ghost"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "superluck"
+        ],
+        "items": [
+          "sitrusberry"
+          
+        ],
+        "moves": [
+          "midnight",
+          "curse",
+          "nightshade",
+          "ectoblast"
+        ],
+        "lockedMoves": [
+          "shinigamieyes",
+          "shadowball"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cakebowser": {
+    "nicknames": [
+      "Cake Bowser"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "sitrusberry"          
+        ],
+        "moves": [
+          "painsplit",
+          "knockoff",
+          "nastyplot",
+          "foodray",
+          "dragontail"
+        ],
+        "lockedMoves": [
+          "spacialrend"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "canyou": {
+    "nicknames": [
+      "Canyou"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "swiftswim"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lumberplate",
+          "lifeorb"
+        ],
+        "moves": [
+          "clobberclub",
+          "barkskin",
+          "woodhammer",
+          "torpedo"
+        ],
+        "lockedMoves": [
+          "boatbash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "charund": {
+    "nicknames": [
+      "Charund"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "reckless"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"          
+        ],
+        "moves": [
+          "brutal",
+          "streamline",
+          "woodhammer",
+          "boltin",
+          "metalcrash",
+          "infect"
+        ],
+        "lockedMoves": [
+          "zombieram"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "conix": {   
+     "nicknames": [   
+      "The blue wall",
+      "Onix but good"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "rockhead",
+          "sturdy"
+        ],
+        "items": [
+          "eviolite",    
+          "angelpowder"
+        ],
+        "moves": [     
+          "rest",
+          "coil",
+          "crystalize",
+          "gravityshift",
+          "cavein",
+          "stealthrock",
+          "doubleedge",
+          "earthquake"
+        ],
+        "lockedMoves": [   
+          "crystaledge"
+        ],
+        "level": 84        
+      },
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "eviolite"    
+        ],
+        "lockedMoves": [
+          "dragontail",
+          "coil",
+          "waterfall",
+          "crystaledge"
+        ],
+        "level": 84        
+      },
+     {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "eviolate"    
+        ],
+        "lockedMoves": [
+          "crystaledge",
+          "crystalize",
+          "waterfall",
+          "earthquake"
+        ],
+        "level": 84        
+      }, 
+     {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "eviolite"    
+        ],
+        "lockedMoves": [
+          "solidify",
+          "toxic",
+          "rest",
+          "crystalslide"
+        ],
+        "level": 84        
+      } 
+    ]
+  }, 
+  "archville": {
+    "nicknames": [
+      "Archville"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pride"
+        ],
+        "items": [
+          "loadeddice"    
+        ],
+        "moves": [
+          "nastyplot",
+          "summonspirits",
+          "realityrift",
+          "summonminions",
+          "darkpulse",
+          "flameburst"
+        ],
+        "lockedMoves": [
+          "summonundead"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hyonix": {   
+    "sets": [
+      {
+        "abilities": [   
+          "poisonpoint",
+          "sturdy"
+        ],
+        "items": [
+          "angelpowder",
+          "eviolite",
+          "eviolate",
+          "eviocicle"
+        ],
+        "moves": [     
+          "ironhead",    
+          "scrapmetal",
+          "stealthrock",
+          "coil",
+          "stoneedge",
+          "dragontail",
+          "earthquake",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "irontail"
+        ],
+        "level": 84       
+      }
+    ]
+  }, 
+  "exeggutor": {   
+     "nicknames": [   
+      "infernum",
+      "eggman"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "harvest"
+        ],
+        "items": [
+          "sitrusberry",    
+          "apicotberry",
+          "starfberry"
+        ],
+        "moves": [     
+          "calmmind",
+          "gigadrain",
+          "softboiled",
+          "sleeppowder",
+          "psychic",
+          "lightscreen",
+          "sunnyday",
+          "explosion"
+        ],
+        "lockedMoves": [   
+          "leechseed"
+        ],
+        "level": 84        
+      },
+      {
+        "abilities": [
+          "harvest"
+        ],
+        "items": [
+          "lumberry"    
+        ],
+        "lockedMoves": [
+          "rest",
+          "sunnyday",
+          "gigadrain",
+          "psychic"
+        ],
+        "level": 84        
+      }   
+    ]
+  },
+  "huonix": {   
+     "nicknames": [   
+      "coonix"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "weakarmor",
+          "sturdy"
+        ],
+        "items": [
+          "choiceband",
+          "mercuryorb",
+          "angelpowder",
+          "choicescarf"
+        ],
+        "moves": [     
+          "slingshot",    
+          "flintstrike",
+          "iron tail",
+          "cbt",
+          "stoneedge",
+          "coil"
+        ],
+        "lockedMoves": [
+          "earthquake"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "jcursola": {
+    "nicknames": [
+      "Jcursola"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "naturalcure"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "rest",
+          "stealthrock",
+          "rockgather",
+          "scald"
+        ],
+        "lockedMoves": [
+          "coralreef",
+          "powergem"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rhyperior": {
+    "nicknames": [
+      "Rhyperior"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "moldbreaker",
+          "solidrock"
+        ],
+        "items": [
+          "softsand",
+          "rockyhelmet",
+          "stoneplate"
+        ],
+        "moves": [
+          "accelerock",
+          "bodypress",
+          "batteringram",
+          "boulderbash",
+          "flintstrike",
+          "heatcrash",
+          "megadrill",
+          "piercinghorn",
+          "earthquake",
+          "rockpolish",
+          "stealthrock",
+          "swordsdance"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rotree": { 
+    "nicknames": [
+      "Rootree"
+    ],  
+    "sets": [
+      {
+        "abilities": [   
+          "flashfire",
+          "clearbody",
+          "competitive"
+        ],
+        "items": [
+          "leftovers", 
+          "bigroot"
+        ],
+        "moves": [     
+          "barkskin",
+          "gigadrain",
+          "arboreum", 
+          "cosmicpower"
+        ],
+        "lockedMoves": [   
+          "blackhole",
+          "rootdrain"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "skylax": {
+    "nicknames": [
+      "Skylax"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "immunity",
+          "bulletproof",
+          "thickfat"
+        ],
+        "items": [
+          "normalgem"
+        ],
+        "moves": [
+          "highhorsepower",
+          "heatcrash",
+          "heavyslam",
+          "encore",
+          "darkestlariat",
+          "gastroacid"
+        ],
+        "lockedMoves": [
+          "bodyslam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ac0": {
+    "nicknames": [
+      "Ac0"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "wonderskin",
+          "superluck"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "selfdestruct",
+          "wrap",
+          "eggbomb",
+          "hypnosis"
+        ],
+        "lockedMoves": [
+          "superglitch"
+        ],
+        "level": 90
+      }
+    ]
+  },
+  "onix": {   
+    "sets": [
+      {
+        "abilities": [   
+          "weakarmor",
+          "sturdy"
+        ],
+        "items": [
+          "eviolite",
+          "martianorb",
+          "eviolate",
+          "eviocicle"
+        ],
+        "moves": [     
+          "slingshot",    
+          "flintstrike",
+          "iron head",
+          "crystalize",
+          "stealthrock"
+        ],
+        "lockedMoves": [
+          "whet",
+          "precipiceblades"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "paperbowser": {
+    "nicknames": [
+      "Paper Bowser"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "roughskin"
+        ],
+        "items": [
+          "rockyhelmet",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "papersharpening",
+          "flamecharge",
+          "earthquake",
+          "aquatail",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "papercharge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "armisy": {
+    "nicknames": [
+      "Armisy"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unaware",
+          "protean"
+        ],
+        "items": [
+          "rockyhelmet",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "angelburst",
+          "deliverance",
+          "holysacrifice",
+          "powerswap"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "bowserjr": {
+    "nicknames": [
+      "Bowser Jr."
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unburden"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "mines",
+          "carcrash",
+          "cannonball",
+          "explosion"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  
+  "skeleton": {
+    "nicknames": [
+      "Skeleton"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "defeatist"
+        ],
+        "items": [
+          "icegem"
+        ],
+        "moves": [
+          "gasterblaster",
+          "bonemerang",
+          "blizzard",
+          "throatchop"
+        ],
+        
+        "level": 78
+      }
+    ]
+  },
+  "skulloton": {
+    "nicknames": [
+      "Skulloton"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "machpunch",
+          "bonecrusher",
+          "knockoff",
+          "geargrind",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "bonemerang"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bonemadio": {
+    "nicknames": [
+      "Bonemadio"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost",
+          "skilllink",
+          "levitate"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "bonerush",
+          "glare",
+          "beatup",
+          "hypnosis"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "kenchukuo": {
+    "nicknames": [
+      "Kenchukuo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "sharpbeak",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "cometpunch",
+          "shadowclaw",
+          "triplekick"
+        ],
+        "lockedMoves": [
+          "skyattack"
+        ],
+        "level": 72
+      }
+    ]
+  },
+  "kingdedede": {
+    "nicknames": [
+      "King Dededede"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "sledgehammer",
+          "woodhammer",
+          "hammerarm",
+          "oilup"
+        ],
+        "lockedMoves": [
+          "fatslam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "altarule": {
+    "nicknames": [
+      "Altarule"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pixilate"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "return",
+          "earthquake",
+          "flamethrower"
+        ],
+        "lockedMoves": [
+          "outrage"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "waluigi": {
+    "nicknames": [
+      "Waluigi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unburden"
+        ],
+        "items": [
+          "boisonberry"
+        ],
+        "moves": [
+          "boomburst",
+          "focusblast",
+          "darkpulse"
+        ],
+        "lockedMoves": [
+          "sludgebomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wymaiden": {
+    "nicknames": [
+      "Wymaiden"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pickpocket"
+        ],
+        "items": [
+          "dragongem"
+        ],
+        "moves": [
+          "knockoff",
+          "cbt"
+        ],
+        "lockedMoves": [
+          "dragonvenom",
+          "loveburst",
+          "raid"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "meatko": {
+    "nicknames": [
+      "Meatko"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "berserker"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "guro",
+          "nightslash",
+          "stockpile"
+        ],
+        "lockedMoves": [
+          "bloodbath"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hulklear": {
+    "nicknames": [
+      "Hulklear"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "lowkick",
+          "knockoff",
+          "firepunch"
+        ],
+        "lockedMoves": [
+          "atomicrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hombeast": {
+    "nicknames": [
+      "Hombeast"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "crabhammer",
+          "dragonclaw",
+          "shadowclaw"
+        ],
+        "lockedMoves": [
+          "rockblast"
+        ],
+        "level": 91
+      }
+    ]
+  },
+  "entrailgrowth": {
+    "nicknames": [
+      "Entrailgrowth"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sadist"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "gorgoneye",
+          "knockoff",
+          "sadistwhip",
+          "purefear",
+          "bloodbathe",
+          "brambles",
+          "zombieacid"
+
+        ],
+        "lockedMoves": [
+          "bloodboil"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "orderymid": {
+    "nicknames": [
+      "Orderymid"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "blunderpolicy"
+        ],
+        "moves": [
+          "stoneedge",
+          "earthquake",
+          "stealthrock"
+        ],
+        "lockedMoves": [
+          "osirisflail"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "spiombie": {
+    "nicknames": [
+      "Spiombie"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "merciless"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "moves": [
+          "sludgebomb",
+          "corrode",
+          "toxicspikes"
+        ],
+        "lockedMoves": [
+          "zombiespit"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ultirus": {
+    "nicknames": [
+      "Ultirus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "choicescarf"
+        ],
+        "moves": [
+          "psychic",
+          "thunderbolt",
+          "grassknot"
+        ],
+        "lockedMoves": [
+          "viraloverdrive"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "charizardo": {
+    "nicknames": [
+      "Charizardo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "memetic"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "flamethrower",
+          "firespin",
+          "primalnoise"
+        ],
+        "lockedMoves": [
+          "toxicinfo"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mspain": {
+    "nicknames": [
+      "Monster Pain"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "chaosdust",
+          "divinedust"
+        ],
+        "moves": [
+          "insanitybolt",
+          "inkblast",
+          "woodball",
+          "fireblast",
+          "energyball",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "paintprint",
+          "bloodystorm"
+        ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "breakdown"
+        ],
+        "items": [
+          "gallerycapsule"    
+        ],
+        "lockedMoves": [
+          "slitwrists",
+          "inkblast",
+          "bloodystorm",
+          "flamethrower"
+        ],
+        "level": 84        
+      }
+    ]
+  },
+  "mspinda": {
+    "nicknames": [
+      "Mega Spinda"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "contrary"
+        ],
+        "items": [
+          "chaosdust"
+        ],
+        "moves": [
+          "madepiphany",
+          "schizoboost",
+          "doubleedge"
+        ],
+        "lockedMoves": [
+          "lunatictime"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "standobadcompany": {
+    "nicknames": [
+      "Bad Company"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "bulletseed",
+          "iciclespear",
+          "rockblast",
+          "fireworks",
+          "flashvolley",
+          "paperseal",
+          "swordsdance",
+          "healorder"
+        ],
+        "lockedMoves": [
+          "micromissiles"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoskyhigh": {
+    "nicknames": [
+      "Sky High"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "defiant"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "tailwind",
+          "reflect"
+        ],
+        "lockedMoves": [
+          "defog",
+          "airbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standocmoon": {
+    "nicknames": [
+      "CMoon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "contrary"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "villainpower",
+          "galacticforce",
+          "topsyturvy"
+        ],
+        "lockedMoves": [
+          "superpower"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standocrazydiamond": {
+    "nicknames": [
+      "Crazy Diamond"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "healer"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "wish",
+          "healingwish"
+        ],
+        "lockedMoves": [
+          "couragerush",
+          "closecombat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoenigma": {
+    "nicknames": [
+      "Enigma"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cursedbody"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "fold",
+          "jumpscare",
+          "insanitybolt",
+          "swordsdance",
+          "workup",
+          "paperseal"
+        ],
+        "lockedMoves": [
+          "papercut"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standostonefree": {
+    "nicknames": [
+      "StoneFree"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "constrictor"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "starfinger",
+          "taunt",
+          "bulletpunch",
+          "brickbreak"
+        ],
+        "lockedMoves": [
+          "stringrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  
+  "Standokhnum": {
+    "nicknames": [
+      "Khuumer"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "imposter"
+        ],
+        "items": [
+          "choicescarf"
+        ],
+        "moves": [
+          "shadowstrike",
+          "swrdsdance",
+          "drainpunch"
+        ],
+        "lockedMoves": [
+          "dynamicrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standostraycat": {
+    "nicknames": [
+      "StrayCat"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "chlorophyll"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "sunnyday",
+          "nastyplot",
+          "synthesis",
+          "gigadrain"
+        ],
+        "lockedMoves": [
+          "airbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoatum": {
+    "nicknames": [
+      "Stum"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicguard"
+        ],
+        "items": [
+          "angelpowder",
+          "lifeorb"
+        ],
+        "moves": [
+          "energyshield",
+          "painsplit",
+          "shadowball",
+          "flashcannon",
+          "focusblast",
+          "chargebeam",
+          "calmmind"
+        ],
+        "lockedMoves": [
+          "technoray"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standotenoresax": {
+    "nicknames": [
+      "Tenore Sax"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "illusion"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "trickroom",
+          "roar",
+          "curse"
+        ],
+        "lockedMoves": [
+          "transform"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standohangedman": {
+    "nicknames": [
+      "Hanged Man"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "whiteherb"
+        ],
+        "moves": [
+          "shamble",
+          "shatter",
+          "noose"
+        ],
+        "lockedMoves": [
+          "cryptblade",
+          "glassblade"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standobabyface": {
+    "nicknames": [
+      "Babby Face"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "download"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "foulplay",
+          "earthquake",
+          "defragment",
+          "deviationdown"
+        ],
+        "lockedMoves": [
+          "cyberboost",
+          "dnabeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoratt": {
+    "nicknames": [
+      "Ratt"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "compoundeyes"
+        ],
+        "items": [
+          "powerherb"
+        ],
+        "moves": [
+          "focusblast",
+          "stoneedge",
+          "focusenergy",
+          "thunderwave",
+          "earthquake",
+          "shadowclaw"
+        ],
+        "lockedMoves": [
+          "bloodpump",
+          "megamissile"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  
+  "standobluenight": {
+    "nicknames": [
+      "BlueNight"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "plague",
+          "virus",
+          "quarantinevirus",
+          "painsplit",
+          "taunt"
+
+        ],
+        "lockedMoves": [
+          "taintedwater"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "steamingo": {
+    "nicknames": [
+      "Steamingo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "steamengine"
+        ],
+        "items": [
+          "heavydutyboots",
+          "lifeorb",
+          "angelpowder"
+        ],
+        "moves": [
+          "jumpkick",
+          "liquidation",
+          "sauna"
+        ],
+        "lockedMoves": [
+          "quicksteamer",
+          "bravebird"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "saunarilla": {
+    "nicknames": [
+      "Saunarilla"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "evaporate"
+        ],
+        "items": [
+          "heavydutyboots",
+          "lifeorb",
+          "angelpowder"
+        ],
+        "moves": [
+          "earthpower",
+          "scald",
+          "overheat"
+        ],
+        "lockedMoves": [
+          "junglesong",
+          "boomburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "alexandredumas": {
+    "nicknames": [
+      "Alexandre Dumas"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "friendguard",
+          "pickup"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "foulplay",
+          "achillesheel",
+          "studynotes"
+
+        ],
+        "lockedMoves": [
+          "rewrite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cencyclodia": {
+    "nicknames": [
+      "C Encyclodia"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pride"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "psychoboost",
+          "encycloray",
+          "toxic",
+          "focusblast",
+          "grassknot"
+
+        ],
+        "lockedMoves": [
+          "duedate"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wbraviary": {
+    "nicknames": [
+      "WBraviary"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "defog",
+          "uturn",
+          "tailwind",
+          "roost"
+        ],
+        "lockedMoves": [
+          "meteormash",
+          "closecombat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "coraut": {
+    "nicknames": [
+      "Coraut"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "choicescarf"
+        ],
+        "moves": [
+          "focusblast",
+          "glare",
+          "knockoff",
+          "roost"
+        ],
+        "lockedMoves": [
+          "chaosrift",
+          "aerialrace"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ningenice": {
+    "nicknames": [
+      "Ningenice"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate",
+          "waterabsorb"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "choicescarf"
+        ],
+        "moves": [
+          "anxiety",
+          "aquatail",
+          "knockoff",
+          "ironhead",
+          "leechlife",
+          "madness"
+        ],
+        "lockedMoves": [
+          "cryptid",
+          "arcticcrash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "brampardos": {
+    "nicknames": [
+      "Betardos"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rockhead"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "moves": [
+          "earthquake",
+          "flareblitz",
+          "rockpolish"
+        ],
+        "lockedMoves": [
+          "headsmash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cultulzu": {   
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [     
+          "darkvoid",    
+          "sanityleech",
+          "scald",
+          "icebeam",
+          "bulkup",
+          "recover",
+          "earthquake"
+        ],
+        "lockedMoves": [   
+          "cosmichorror"
+        ],
+        "level": 84       
+      },
+         {
+        "abilities": [
+          "baddreams"
+        ],
+        "items": [
+          "angelpowder"    
+        ],
+        "lockedMoves": [
+          "darkvoid",
+          "rest",
+          "cosmichorror",
+          "nightmare"
+        ],
+        "level": 93        
+      } 
+    ]
+  },
+  "chunli": {   
+    "nicknames": [   
+      "letsgojustin",       
+      "thunderthighs"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "steadfast",
+          "furiousfeet"
+        ],
+        "items": [
+          "lifeorb",
+          "expertbelt",    
+          "choiceband"          
+        ],
+        "moves": [     
+          "poisonjab",   
+          "megakick",   
+          "blazekick",
+          "stompingtantrum",
+          "return",
+          "rapidspin",
+          "stoneedge",
+          "rockslide",
+          "hijumpkick"
+        ],
+        "lockedMoves": [   
+          "jumpkick",
+          "knockoff"
+        ],
+        "level": 84         
+      },   
+      {
+        "abilities": [
+          "furiousfeet"
+        ],
+        "items": [
+          "spikedboots"
+        ],
+        "lockedMoves": [
+          "hijumpkick",
+          "blazekick",
+          "cbt",
+          "megakick"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "gyaoon": {
+    "nicknames": [
+      "gaygoon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "brickbreak",
+          "crunch",
+          "explosion",
+          "earthquake",
+          "firefang",
+          "gunkshot",
+          "aquatail"
+        ],
+        "lockedMoves": [
+          "facade"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "huntorror": {   
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "angelpowder",
+          "sausages" 
+        ],
+        "moves": [     
+          "glare",    
+          "knockoff",
+          "retaliate",
+          "roost",
+          "waterfall",
+          "divebomb",
+          "honeclaws",
+          "uturn"
+        ],
+        "lockedMoves": [   
+          "madness",
+          "taunt"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "hecatiaology": {   
+    "sets": [
+      {
+        "abilities": [   
+          "protean"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "triattack",    
+          "fireblast",
+          "hydropump",
+          "psyshock"
+        ],
+        "lockedMoves": [   
+          "arcanebolt"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "enkiduvine": {   
+    "sets": [
+      {
+        "abilities": [   
+          "protean"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "trickroom",    
+          "equalize",
+          "acupressure"
+        ],
+        "lockedMoves": [   
+          "ageofbabylon"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "eldreye": {   
+    "sets": [
+      {
+        "abilities": [   
+          "levitate",
+          "souleater"
+        ],
+        "items": [
+          "choicescarf",
+          "gravitycapsule",
+          "focussash" 
+        ],
+        "moves": [     
+          "deliverance",    
+          "psybolt",
+          "beacon",
+          "insanitybolt",
+          "hurricane"
+        ],
+        "lockedMoves": [   
+          "chaosrift"
+        ],
+        "level": 84       
+      },
+         {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "powerherb"    
+        ],
+        "lockedMoves": [
+          "ritual",
+          "hyperspacehole",
+          "beacon",
+          "chaosrift"
+        ],
+        "level": 84        
+      } 
+    ]
+  }, 
+  "clamppelo": {
+    "nicknames": [
+      "The Clamps"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "icefang",
+          "thunderfang",
+          "sewing",
+          "wrapped"
+        ],
+        "lockedMoves": [
+          "crunch",
+          "artificiaslam",
+          "carpetburn"
+        ],
+        "level": 84
+      }
+    ]
+  },
+"Clownpairy": {   
+    "sets": [
+      {
+        "abilities": [   
+          "colorchange"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "moonblast",    
+          "painsplit",
+          "lunatictime"
+        ],
+        "lockedMoves": [   
+          "purgatoryflicker"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "wcanvast": {   
+    "sets": [
+      {
+        "abilities": [   
+          "colorchange"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "fusionbolt",    
+          "fusionflare",
+          "thermochromia"
+        ],
+        "lockedMoves": [   
+          "envelope"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "nitegant": {   
+    "sets": [
+      {
+        "abilities": [   
+          "prankster",
+          "intimidate"
+        ],
+        "items": [
+          "eviolite" 
+        ],
+        "moves": [     
+          "glare",    
+          "knockoff",
+          "madness",
+          "taunt",
+          "confuseray",
+          "divebomb",
+          "zenheadbutt",
+          "pursuit",
+          "uturn"
+        ],
+        "lockedMoves": [   
+          "roost"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "standopurplehaze": {
+    "nicknames": [
+      "Stando-PurpleHaze"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "poisonheal"
+        ],
+        "items": [
+          "toxicorb"
+        ],
+        "moves": [
+          "drainpunch",
+          "protect",
+          "poisonjab",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "purplehaze",
+          "plaguefrenzy"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standohorus": {
+    "nicknames": [
+      "Stando-Horus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "compoundeyes"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "focusblast",
+          "stoneedge",
+          "taunt",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "iciclecrash",
+          "bravebird"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dmcdante": {
+    "nicknames": [
+      "Dmcdante",
+      "Dante Must Die"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "knockoff",
+          "toxic",
+          "taunt",
+          "thunderwave",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "pizzaspin",
+          "swordsedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "btyranitar": {
+    "nicknames": [
+      "beta AF"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sandstream"
+        ],
+        "items": [
+          "chopleberry"
+        ],
+        "moves": [
+          "flintstrike",
+          "fireblast",
+          "stealthrock",
+          "thunderbolt",
+          "hydropump",
+          "icebeam",
+          "thunderwave"
+        ],
+        "lockedMoves": [
+          "earthquake"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wackchad": {
+    "nicknames": [
+      "cahd"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "choicescarf"
+        ],
+        "moves": [
+          "playrough",
+          "pursuit",
+          "bloodhound",
+          "firefang",
+          "crunch"
+        ],
+        "lockedMoves": [
+          "cbt",
+          "closecombat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wackvirgin": {
+    "nicknames": [
+      "virgina"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rattled"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "choicescarf"
+        ],
+        "moves": [
+          "paintprint",
+          "retaliate"
+        ],
+        "lockedMoves": [
+          "barking",
+          "bucketbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wacklunabbit": {
+    "nicknames": [
+      "Lunabbit"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicguard"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder"
+        ],
+        "moves": [
+          "stealthrock",
+          "moonlight",
+          "encore",
+          "psychic",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "moonblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bigmallow": {
+    "nicknames": [
+      "Bigmallow"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "safeshield",
+          "thickfat"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "focussash"
+        ],
+        "moves": [
+          "seismictoss",
+          "healingwish",
+          "fattenup"
+        ],
+        "lockedMoves": [
+          "counter",
+          "mirrorcoat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bigthecat": {
+    "nicknames": [
+      "Big The Cat"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "furcoat"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "cbt",
+          "earthquake",
+          "fishingrod"
+        ],
+        "lockedMoves": [
+          "bodyslam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "astrolotl": {  
+    "nicknames": [
+      "Asstrolotlel"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "regenerator"
+        ],
+        "items": [
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "firelash",    
+          "knockoff",
+          "dragontail",
+          "magiccoat",
+          "defog",
+          "toxic"
+        ],
+        "lockedMoves": [   
+          "explosion"
+        ],
+        "level": 100       
+      }
+    ]
+  },
+  "birthdayraticate": {
+    "nicknames": [
+      "Birthday Raticate"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "graze"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder"
+        ],
+        "moves": [
+          "celebrate",
+          "lastresort"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "warshin": {
+    "nicknames": [
+      "Warshin"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "swiftswim",
+          "drizzle"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "choicescarf"
+        ],
+        "moves": [
+          "knockoff",
+          "icebeam",
+          "crosschop"
+        ],
+        "lockedMoves": [
+          "sharkbite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mylph": {
+    "nicknames": [
+      "Mylph"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "milkdrink",
+          "thunderwave",
+          "moonblast",
+          "healbell",
+          "foulplay"
+        ],
+        "lockedMoves": [
+          "venusburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "knood": {
+    "nicknames": [
+      "Knood"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "battlearmor"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "armorburst",
+          "bodypress",
+          "ironroot",
+          "synthesis",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "armorcrash",
+          "barkpress"
+        ],
+        "level": 84
+      },{
+        "abilities": [
+          "battlearmor"
+        ],
+        "items": [
+          "angelpowder"    
+        ],
+        "lockedMoves": [
+          "barkpress",
+          "armorcrash",
+          "bodypress",
+          "barkskin"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "swanaper": {
+    "nicknames": [
+      "Swanaper"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "serenegrace",
+          "roughskin"
+        ],
+        "items": [
+          "rockyhelmet",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "swordsdance",
+          "painsplit",
+          "leafblade",
+          "drillrun",
+          "tailwind"
+        ],
+        "lockedMoves": [
+          "aerialrace"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "doita": {
+    "nicknames": [
+      "Doita"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "victorystar",
+          "pride"
+        ],
+        "items": [
+          "assaultvest",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "abruption",
+          "boomburst",
+          "flamecharge",
+          "scald",
+          "heatwave"
+        ],
+        "lockedMoves": [
+          "bassdrop"
+        ],
+        "level": 84
+      }
+    ]
+  },
+ "doomsayw": {
+    "nicknames": [
+      "Doomsay"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "forewarn"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "haunt",
+          "madprophecy",
+          "shadow",
+          "graverob",
+          "shamble",
+          "ritual"
+        ],
+        "lockedMoves": [
+          "rottenclaw",
+          "shadowclaw"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "neonazi": {
+    "nicknames": [
+      "Neonazi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "lifeorb",
+          "assaultvest"
+        ],
+        "moves": [
+          "flamethrower",
+          "flashcannon",
+          "focusblast",
+          "energyball",
+          "voltswitch",
+          "thunderbolt",
+          "powergem",
+          "signalbeam",
+          "psychic",
+          "flashball"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "eldragon": {
+    "nicknames": [
+      "Derp Dragon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "gunkshot",
+          "superpower",
+          "insanity"
+        ],
+        "lockedMoves": [
+          "outrage"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "aarcanine": {
+    "nicknames": [
+      "Dripcanine"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "choicescarf",
+          "assaultvest",
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "flareblitz",
+          "aeroblast",
+          "closecombat"
+        ],
+        "lockedMoves": [
+          "originpulse"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "barkanite": {
+    "nicknames": [
+      "Zapanine"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "ionate"
+        ],
+        "items": [
+          "choicescarf",
+          "assaultvest",
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "explosion",
+          "agility",
+          "facade"
+        ],
+        "lockedMoves": [
+          "gigaimpact"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "baxbak": {
+    "nicknames": [
+      "Baxbak"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "siphon",
+          "graze"
+        ],
+        "items": [
+          "murkycapsule",
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "arcticcrash",
+          "rotfangs",
+          "hornleech"
+        ],
+        "lockedMoves": [
+          "zombiespread",
+          "cannibalize"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "buzzjaw": {
+    "nicknames": [
+      "Buzzjaw"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hypercutter"
+        ],
+        "items": [
+          "expertbelt"
+        ],
+        "moves": [
+          "glitzblitz",
+          "stoneedge",
+          "infernalblade"
+        ],
+        "lockedMoves": [
+          "swordsedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mantastorm": {
+    "nicknames": [
+      "Mantastorm"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stormdrain"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "earthpower",
+          "shoreup",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "thunderbolt"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nucleshark": {
+    "nicknames": [
+      "Nucleshark"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "poisontouch"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "overheat",
+          "cannonball",
+          "explosion"
+        ],
+        "lockedMoves": [
+          "atomicrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "skelossil": {
+    "nicknames": [
+      "Skelossil"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "toughclaws"
+        ],
+        "items": [
+          "blunderpolicy"
+        ],
+        "moves": [
+          "haunt",
+          "stompingtantrum",
+          "stoneedge"
+        ],
+        "lockedMoves": [
+          "bonerush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "x32763": {
+    "nicknames": [
+      "x32763"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "C4"
+        ],
+        "moves": [
+          "discharge",
+          "datastorm",
+          "hyperbeam"
+        ],
+        "lockedMoves": [
+          "ironhead"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "minecraftsteve": {
+    "nicknames": [
+      "Steve"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "metalworker"
+        ],
+        "items": [
+          "razorclaw"
+        ],
+        "moves": [
+          "explosion",
+          "spikes",
+          "stealthrock"
+        ],
+        "lockedMoves": [
+          "ironsword"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bonaflatuen": {
+    "nicknames": [
+      "Bonaflatuen"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stench"
+        ],
+        "items": [
+          "blunderpolicy"
+        ],
+        "moves": [
+          "toxicwind",
+          "toxic",
+          "hurricane"
+        ],
+        "lockedMoves": [
+          "stinkburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "stingscorp": {
+    "nicknames": [
+      "Stingscorp"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "merciless"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "moves": [
+          "toxicspikes",
+          "poisonjab",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "megahorn"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  
+  "demonig": {
+    "nicknames": [
+      "Demonig"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sandforce"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "doom",
+          "crunch",
+          "ironchomp"
+        ],
+        "lockedMoves": [
+          "earthchomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cracholiath": {
+    "nicknames": [
+      "Cracholiath"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "stealthrock",
+          "spikes",
+          "memento",
+          "pursuit",
+          "blackout"
+        ],
+        "lockedMoves": [
+          "earthchomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dooworm": {
+    "nicknames": [
+      "Dooworm"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator",
+          "sheerforce"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "assaultvest",
+          "choiceband",
+          "choicescarf"
+        ],
+        "moves": [
+          "fireblast",
+          "thunderbolt",
+          "tunnelaway",
+          "leechlife"
+        ],
+        "lockedMoves": [
+          "earthchomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "castedea": {
+    "nicknames": [
+      "Castedea"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "summondragons",
+          "summonminions",
+          "ceremony",
+          "rainoflight"
+        ],
+        "lockedMoves": [
+          "rulebreaker"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nurserhyme": {
+    "nicknames": [
+      "Nurserhyme"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "synchronize"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "jabberwock",
+          "queensglassgame",
+          "nastyplot",
+          "rewrite",
+          "pixiedust"
+        ],
+        "lockedMoves": [
+          "nurseryrhyme"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "kaijutoucannon": {
+    "nicknames": [
+      "Kaiju Toucannnon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "flock",
+          "bulletseed",
+          "explosion"
+        ],
+        "lockedMoves": [
+          "spikecannon"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "lobautomous": {
+    "nicknames": [
+      "Lobautomous"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "viruspropogate",
+          "painsplit",
+          "infooverload"
+        ],
+        "lockedMoves": [
+          "memeticfang",
+          "gnashteeth"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "fmagicstones": {
+    "nicknames": [
+      "Fmagicstones"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat",
+          "graze"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet",
+          "angelpowder"
+        ],
+        "moves": [
+          "recover",
+          "magiccoat",
+          "calmmind"
+        ],
+        "lockedMoves": [
+          "arcaneenergy"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "harcanine": {
+    "nicknames": [
+      "Rockanine"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "choicescarf",
+          "assaultvest",
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "sacredfire",
+          "playrough",
+          "doubleedge",
+          "wildcharge"
+        ],
+        "lockedMoves": [
+          "stoneedge",
+          "flareblitz"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "herculecross": {
+    "nicknames": [
+      "Herculecross"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "armthrust",
+          "bulletseed",
+          "rockblast"
+        ],
+        "lockedMoves": [
+          "pinmissile"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ionnine": {
+    "nicknames": [
+      "Shitcanine"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "ionate"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "morningsun",
+          "toxic",
+          "closecombat",
+          "flareblitz",
+          "gigaimpact",
+          "extremespeed",
+          "doubleedge",
+          "facade"
+        ],
+        "lockedMoves": [
+          "barking"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nonhumanoid": {
+    "nicknames": [
+      "Nonhumanoid"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pressure"
+        ],
+        "items": [
+          "choicespecs",
+          "choicescarf"
+        ],
+        "moves": [
+          "darkpulse",
+          "psychic",
+          "muddywater"
+        ],
+        "lockedMoves": [
+          "frigofear"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "adragonite": {
+    "nicknames": [
+      "Sigma Beta"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "fireblast",
+          "thunder",
+          "blizzard"
+        ],
+        "lockedMoves": [
+          "dracometeor"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ashiftry": {
+    "nicknames": [
+      "Just A Shiftry"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "bellows"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "defog",
+          "seedflare",
+          "pollenseason",
+          "pulpblast"
+        ],
+        "lockedMoves": [
+          "typhoon"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "baronofhell": {
+    "nicknames": [
+      "Baron of Hell"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "bellows"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "arcanebolt",
+          "fireball",
+          "plasmaball"
+        ],
+        "lockedMoves": [
+          "nastyplot",
+          "chaosrift"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "amantine": {
+    "nicknames": [
+      "A Mantine"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "roost",
+          "haze",
+          "hydropump"
+        ],
+        "lockedMoves": [
+          "discharge"
+        ],
+        "level": 84
+      },
+
+      {
+        "abilities": [    
+          "swiftswim"
+        ],
+        "items": [
+          "lifeorb",    
+          "damprock"
+        ],
+        "moves": [     
+          "hurricane",   
+          "hydropump",   
+          "powersurge"
+        ],
+        "lockedMoves": [   
+          "raindance"
+        ],
+        "level": 84         
+      }
+    ]
+  },
+  "bregigigas": {
+    "nicknames": [
+      "Beta Rindset"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "normalize"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "heavyslam",
+          "retaliate",
+          "antiectpunch",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "fling"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bspearow": {
+    "nicknames": [
+      "Beta deznuts"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sniper"
+        ],
+        "items": [
+          "razorclaw"
+        ],
+        "moves": [
+          "return",
+          "drillpeck",
+          "drillrun"
+        ],
+        "lockedMoves": [
+          "uturn"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "bhooh": {
+    "nicknames": [
+      "Beta Hoe"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "sacredfire",
+          "wish",
+          "scaryface"
+        ],
+        "lockedMoves": [
+          "aeroblast"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "sloggeroth": {
+    "nicknames": [
+      "Sloggeroth"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "divinedust",
+          "chaosdust"
+        ],
+        "moves": [
+          "earthpower",
+          "sludgebomb",
+          "roar"
+        ],
+        "lockedMoves": [
+          "voidsmaw",
+          "patchworkdeluge"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "slugia": {
+    "nicknames": [
+      "Shadow the Lughog"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shadowcall"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "earthquake",
+          "waterfall",
+          "whirlpool"
+        ],
+        "lockedMoves": [
+          "aeroblast",
+          "galeofdarkness"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "lhooh": {
+    "nicknames": [
+      "Light Hoe"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "sacredfire",
+          "everlastinglight",
+          "futuresight"
+        ],
+        "lockedMoves": [
+          "bravebird"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "drought"
+        ],
+        "items": [
+          "rockyhelmet"
+        ],
+        "moves": [
+          "sacredfire",
+          "everlastinglight",
+          "futuresight"
+        ],
+        "lockedMoves": [
+          "sunset"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "skittigang": {   
+    "nicknames": [   
+      "wewuzza",    
+      "skittikang",
+      "pudding",  
+      "cutikitty"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "sniper"
+        ],
+        "items": [
+          "choicespecs",    
+          "choicescarf"
+        ],
+        "moves": [     
+          "plasmacannon",   
+          "batonpass",   
+          "explosion"
+        ],
+        "lockedMoves": [   
+          "flashcannon",
+          "uproar"
+        ],
+        "level": 84         
+      }, 
+        
+      {
+        "abilities": [
+          "sniper",
+          "noguard"
+        ],
+        "items": [
+          "lifeorb"    
+        ],
+        "lockedMoves": [
+          "fakeout",
+          "doubleedge",
+          "suckerpunch",
+          "glitzblitz"
+        ],
+        "level": 91
+      }
+    ]
+  },
+  "zangief": {   
+    "nicknames": [   
+      "potemkin",       
+      "diagoat"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "guts"
+        ],
+        "items": [
+          "infernoorb"   
+        ],
+        "moves": [     
+          "earthquake",  
+          "facade",   
+          "darkestlariat",
+          "rapidspin",
+          "thunderpunch",
+          "brickbreak",
+          "stoneedge",
+          "toxic"
+        ],
+        "lockedMoves": [  
+          "protect",
+          "closecombat"
+        ],
+        "level": 84 
+      },  
+      {
+        "abilities": [
+          "guts",
+          "innerfocus"
+        ],
+        "items": [
+          "angelpowder"    
+        ],
+        "lockedMoves": [
+          "bulkup",
+          "darkestlariat",
+          "superpower",
+          "taunt"
+        ],
+        "level": 87
+      }
+    ]
+  },
+  "solidsnake": {   
+  "nicknames": [   
+    "metalslug",       
+    "liquidsnail"
+  ],
+  "sets": [
+    {
+      "abilities": [   
+        "unburden"
+      ],
+      "items": [
+        "normalgem"   
+      ],
+      "moves": [     
+        "darkpulse",   
+        "heatseekmissile",   
+        "ambush",
+        "uturn",
+        "knockoff",
+        "lowkick",
+        "pursuit",
+        "foulplay",
+        "snipershot",
+        "suckerpunch"
+      ],
+      "lockedMoves": [  
+        "fakeout",
+        "acrobatics"
+      ],
+      "level": 84         
+    },   
+    {
+      "abilities": [
+        "technician",
+        "infiltrator"
+      ],
+      "items": [
+        "sitrusberry"    
+      ],
+      "lockedMoves": [
+        "snipershot",
+        "honeclaws",
+        "chokehold",
+        "foulplay"
+      ],
+      "level": 84
+    }
+  ]
+},
+    "storshard": {
+      "nicknames": [
+        "Storshard"
+      ],
+      "sets": [
+        {
+          "abilities": [
+            "magicguard",
+            "levitate"
+          ],
+          "items": [
+            "widelens",
+            "blunderpolicy"
+          ],
+          "moves": [
+            "cyclone",
+            "fellcrystal",
+            "schizoboost"
+          ],
+          "lockedMoves": [
+            "setsshadows",
+            "crystalray"
+          ],
+          "level": 84
+        }
+      ]
+    },
+    "mladee": {
+      "nicknames": [
+        "Mladee"
+      ],
+      "sets": [
+        {
+          "abilities": [
+            "skeptic",
+            "oblivious"
+          ],
+          "items": [
+            "widelens",
+            "blunderpolicy"
+          ],
+          "moves": [
+            "coffeedrink",
+            "hatspin",
+            "knockoff",
+            "stealthrock",
+            "spikes",
+            "swordsedge",
+            "blackout",
+            "scrapmetal",
+            "darkgather",
+            "enlighten",
+            "tipfedora"
+          ],
+          "lockedMoves": [
+            "fabricblast"
+          ],
+          "level": 84
+        }
+      ]
+    },
+    "momummy": {
+      "nicknames": [
+        "Muh Muhmmy"
+      ],
+      "sets": [
+        {
+          "abilities": [
+            "cursedbody"
+          ],
+          "items": [
+            "angelpowder",
+            "heavydutyboots",
+            "riotshield",
+            "assaultvest"
+          ],
+          "moves": [
+            "lifesap",
+            "avasculate",
+            "magicsand",
+            "corpsewave"
+          ],
+          "lockedMoves": [
+            "paperseal"
+          ],
+          "level": 84
+        }
+      ]
+    },
+    "plux": {
+      "nicknames": [
+        "Plux"
+      ],
+      "sets": [
+        {
+          "abilities": [
+            "moldbreaker"
+          ],
+          "items": [
+            "angelpowder",
+            "heavydutyboots",
+            "riotshield",
+            "assaultvest"
+          ],
+          "moves": [
+            "angelrush",
+            "closecombat",
+            "earthquake",
+            "ribcage"
+          ],
+          "lockedMoves": [
+            "crosscutter"
+          ],
+          "level": 84
+        }
+      ]
+    },
+  "rotting": {
+    "nicknames": [
+      "Rotting"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "lowkick",
+          "shadowclaw",
+          "gunkshot"
+        ],
+        "lockedMoves": [
+          "earthquake"
+        ],
+        "level": 84
+      }
+    ]
+  },
+ 
+  "marbrood": {
+    "nicknames": [
+      "Marbrood"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rockhead"
+        ],
+        "items": [
+          "expertbelt"
+        ],
+        "moves": [
+          "bravebird",
+          "woodhammer",
+          "headsmash"
+        ],
+        "lockedMoves": [
+          "woodrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "loyaland": {
+    "nicknames": [
+      "Loyaland"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "dragondance",
+          "superfang",
+          "firefang",
+          "psychicfangs",
+          "icefang",
+          "thunderfang",
+          "swordsdance"
+        ],
+        "lockedMoves": [
+          "crunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "slimex": {
+    "nicknames": [
+      "Slimex"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "imposter"
+        ],
+        "items": [
+          "choicescarf"
+        ],
+        "moves": [
+          "fireblast",
+          "hydropump",
+          "scald"
+        ],
+        "lockedMoves": [
+          "transform"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "backscorpion": {
+    "nicknames": [
+      "Backscorpion"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "twineedle",
+          "pursuit",
+          "poisontail"
+        ],
+        "lockedMoves": [
+          "techsting"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "keewee": {
+    "nicknames": [
+      "Keewee"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unnerve"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "grassknot",
+          "psychic",
+          "lowkick",
+          "calmmind"
+        ],
+        "lockedMoves": [
+          "synthesis"
+        ],
+        "level": 92
+      }
+    ]
+  },
+  "birbutter": {
+    "nicknames": [
+      "Birbutter"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "bodyslam",
+          "fatslam",
+          "heavyslam"
+        ],
+        "lockedMoves": [
+          "selffatten"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bgarchomp": {
+    "nicknames": [
+      "Beta 4life"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sandrush"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "outrage",
+          "earthquake",
+          "ironhead"
+        ],
+        "lockedMoves": [
+          "sharkbite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "demiurge": {
+    "nicknames": [
+      "Demiurge"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "explosion",
+          "invocation",
+          "spacialrend",
+          "return"
+        ],
+        "lockedMoves": [
+          "lunatictime"
+        ],
+        "level": 72
+      }
+    ]
+  },
+  "regishark": {
+    "nicknames": [
+      "Regishark"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "clearbody"
+        ],
+        "items": [
+          "normalgem"
+        ],
+        "moves": [
+          "crunch",
+          "explosion",
+          "hammerarm"
+        ],
+        "lockedMoves": [
+          "sharkbite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "smokomodo": {
+    "nicknames": [
+      "Smokomodo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blaze"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "morningsun",
+          "earthquake",
+          "machpunch"
+        ],
+        "lockedMoves": [
+          "flareblitz"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bashkull": {
+    "nicknames": [
+      "Bashkull"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rockhead"
+        ],
+        "items": [
+          "choicescarf"
+        ],
+        "moves": [
+          "earthquake",
+          "outrage",
+          "irontail"
+        ],
+        "lockedMoves": [
+          "headsmash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  
+  "raichu": {   
+    "sets": [
+      {
+        "abilities": [   
+          "static"
+        ],
+        "items": [
+          "magnet",
+          "lifeorb",
+          "angelpowder" 
+        ],
+        "moves": [     
+          "encore",    
+          "aimforthehorn",
+          "maxvoltcrash",
+          "fakeout",
+          "toxic",
+          "uturn",
+          "knockoff",
+          "surf",
+          "protect"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "warwolf": {
+    "nicknames": [
+      "Warwolf"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "toughclaws"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "iciclecrash",
+          "lowkick",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "earthquake"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "shutendoji": {
+    "nicknames": [
+      "Shutendoji"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "widelens"
+        ],
+        "moves": [
+          "sakesplash",
+          "flamethrower",
+          "suckerpunch"
+        ],
+        "lockedMoves": [
+          "senshibankou"
+        ],
+        "level": 72
+      }
+    ]
+  },
+  "ancienkrab": {
+    "nicknames": [
+      "Ancienkrab"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "toughclaws"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "clobberclub",
+          "highhorsepower",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "foamburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hunballun": {
+    "nicknames": [
+      "Hunballun"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat",
+          "graze"
+        ],
+        "items": [
+          "leftovers",
+          "saunacapsule"
+        ],
+        "moves": [
+          "steamup",
+          "steamclean",
+          "fart",
+          "delivery"
+        ],
+        "lockedMoves": [
+          "selffatten",
+          "steamblast"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "huweedle": {
+    "nicknames": [
+      "Huweedle"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shielddust"
+        ],
+        "items": [
+          "choicespecs"
+        ],
+        "moves": [
+          "edging",
+          "bugbite",
+          "poisontail"
+        ],
+        "lockedMoves": [
+          "finalsting"
+        ],
+        "level": 99
+      }
+    ]
+  },
+  "boxiking": {
+    "nicknames": [
+      "Boxiking"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rockhead"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "submission",
+          "headsmash",
+          "woodhammer"
+        ],
+        "lockedMoves": [
+          "papercharge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "noofr": {
+    "nicknames": [
+      "Noofr"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hugepower"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "moves": [
+          "bulletpunch",
+          "machpunch",
+          "pursuit"
+        ],
+        "lockedMoves": [
+          "snipeshot"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "indianelephant": {
+    "nicknames": [
+      "Indianelephant"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "rockyhelmet"
+        ],
+        "moves": [
+          "earthquake",
+          "knockoff",
+          "hydropump"
+        ],
+        "lockedMoves": [
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "donkeykong": {
+    "nicknames": [
+      "Donkey Kong"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "innerfocus",
+          "sapsipper"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "moves": [
+          "earthquake",
+          "bodyslam",
+          "gunkshot",
+          "icepunch",
+          "firepunch",
+          "thunderpunch",
+          "bananarang",
+          "rapidspin",
+          "taunt"
+        ],
+        "lockedMoves": [
+          "closecombat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standohierophantgreen": {
+    "nicknames": [
+      "Stando-HierophantGreen"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "analytic"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "possesion",
+          "diamondstorm",
+          "calmmind",
+          "aurasphere",
+          "rockpolish",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "ectoblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoinasilentway": {
+    "nicknames": [
+      "InASilentWay"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "serenegrace"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "boomburst",
+          "relicsong",
+          "sonicpunch",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "magicsand"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standod4c": {
+    "nicknames": [
+      "D4C"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "dirtydeedsdonedirtcheap",
+          "uturn",
+          "disappear"
+        ],
+        "lockedMoves": [
+          "swordsdance"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "standonotoriousbig": {
+    "nicknames": [
+      "NotoriousB.I.G"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "parasitevirus",
+          "taunt",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "bloodsiphon"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ninetales": {   
+    "sets": [
+      {
+        "abilities": [   
+          "drought"
+        ],
+        "items": [
+          "angelpowder",
+          "charcoal",
+          "packagedcurry"
+        ],
+        "moves": [     
+          "morningsun",    
+          "firebrush",
+          "fireblast",
+          "sunburn",
+          "hex",
+          "encore",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "sunset"
+        ],
+        "level": 84       
+      }
+    ]
+  }, 
+  "clefable": {   
+    "sets": [
+      {
+        "abilities": [   
+          "magicguard",
+          "unaware"
+        ],
+        "items": [
+          "angelpowder",
+          "lifeorb"
+        ],
+        "moves": [     
+          "stealthrock", 
+          "galacticforce",
+          "healbell",
+          "blackhole",
+          "knockoff",
+          "sing",
+          "powertrick",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "softboiled",
+          "lunarwave"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "bclefairy": {   
+    "sets": [
+      {
+        "abilities": [   
+          "magicguard"
+        ],
+        "items": [
+          "angelpowder",
+          "lifeorb"
+        ],
+        "moves": [     
+          "calmmind", 
+          "icebeam",
+          "flamethrower",
+          "thunderbolt",
+          "knockoff",
+          "thunderwave",
+          "psychic"
+        ],
+        "lockedMoves": [
+          "moonlight"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "demohate": {   
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "loverock"
+        ],
+        "moves": [     
+          "cbt",
+          "heartbreak"
+        ],
+        "lockedMoves": [
+          "matingseason", 
+          "loveburst"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "domineko": {   
+    "sets": [
+      {
+        "abilities": [   
+          "guts",
+          "sadist"
+        ],
+        "items": [
+          "loverock"
+        ],
+        "moves": [     
+          "rubberwhip",
+          "playrough"
+        ],
+        "lockedMoves": [
+          "matingseason", 
+          "cbt"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "Phallusaur": {   
+    "sets": [
+      {
+        "abilities": [   
+          "thickfat"
+        ],
+        "items": [
+          "loverock"
+        ],
+        "moves": [     
+          "quartzbeam",
+          "rockgather",
+          "studynotes"
+        ],
+        "lockedMoves": [
+          "matingseason", 
+          "eromangasaurus"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "nidoking": {   
+    "sets": [
+      {
+        "abilities": [   
+          "sheerforce",
+          "hustle"
+        ],
+        "items": [
+          "angelpowder",
+          "lifeorb"
+        ],
+        "moves": [     
+          "earthquake",    
+          "devastate",
+          "poisonjab",
+          "irontail",
+          "flamethrower",
+          "earthpower",
+          "thunderbolt",
+          "sludgewave",
+          "wifebeater"
+        ],
+        "lockedMoves": [
+          "kingsshield"
+        ],
+        "level": 84       
+      }
+    ]
+  },  
+  
+"raticate": {   
+  "sets": [
+    {
+      "abilities": [   
+        "guts",
+        "strongjaw"
+      ],
+      "items": [
+        "boisonberry",
+        "silkscarf",
+        "toxicorb"
+      ],
+      "moves": [     
+        "extremespeed",    
+        "uturn",
+        "sneakyskitter",
+        "closecombat",
+        "sharpeningfang",
+        "psychicfangs",
+        "powertail",
+        "suckerpunch",
+        "icefang",
+        "thunderfang",
+        "firefang",
+        "earthquake",
+        "crunch"
+      ],
+      "lockedMoves": [
+        "facade"
+      ],
+      "level": 84       
+    }
+  ]
+},
+  "machamp": {   
+     "nicknames": [   
+      "Star Platinum",
+      "Gorilla Boosted"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "Noguard",
+          "guts"
+        ],
+        "items": [
+          "expertbelt",    
+          "angelpowder",
+          "muscleband"
+        ],
+        "moves": [     
+          "chistrike",
+          "grapple",
+          "woodhammer",
+          "machpunch",
+          "knockoff",
+          "crosspoison",
+          "stoneedge",
+          "earthquake",
+          "warmupflex",
+          "icepunch",
+          "cyclonepunch",
+          "thunderpunch"
+        ],
+        "level": 84        
+      },
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "infernoorb"    
+        ],
+        "lockedMoves": [
+          "warmupflex",
+          "finishingmove",
+          "knockoff",
+          "crosspoison"
+        ],
+        "level": 84        
+      },
+     {
+        "abilities": [
+          "noguard"
+        ],
+        "items": [
+          "muscleband"    
+        ],
+        "lockedMoves": [
+          "rockpolish",
+          "bulkup",
+          "dynamicpunch",
+          "knockoff"
+        ],
+        "level": 84        
+      } 
+    ]
+  },
+  "paintip": {
+    "nicknames": [
+      "Just the Tip"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "corpsewave",
+          "jyuohanketsu",
+          "aquariusflow"
+        ],
+        "lockedMoves": [
+          "bucketbomb",
+          "thermochromia"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pmrmime": {
+    "nicknames": [
+      "Paint Mr. Mime"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "encore",
+          "batonpass",
+          "artgallery",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "substitute",
+          "inkblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wweezing": {
+    "nicknames": [
+      "Planetary Intergalactic"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "starfieldcapsule"
+        ],
+        "moves": [
+          "leechseed",
+          "stargaze",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "steamblast",
+          "cosmicgas"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "redmist": {
+    "nicknames": [
+      "Red Mist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "static",
+          "whitesmoke"
+        ],
+        "items": [
+          "saunacapsule"
+        ],
+        "moves": [
+          "steam",
+          "invokedread",
+          "darkpulse"
+        ],
+        "lockedMoves": [
+          "steamscald"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pizzaurex": {
+    "nicknames": [
+      "Pizzaurex"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "meatmash",
+          "flareblitz",
+          "seasoning"
+        ],
+        "lockedMoves": [
+          "pizzaspin"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pepperoari": {
+    "nicknames": [
+      "Pepperoari"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "liquidooze",
+          "stickyhold"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "delivery",
+          "flamethrower",
+          "pizzabite"
+        ],
+        "lockedMoves": [
+          "pizzaspin"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pwtgolem": {
+    "nicknames": [
+      "Pwt Golem"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "focus",
+          "marvelscale"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "pulpblast",
+          "bodypress",
+          "arcanebolt",
+          "sapspray"
+        ],
+        "lockedMoves": [
+          "spellorb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachutsuho": {
+    "nicknames": [
+      "Beachutsuho"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drizzle"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "hydropump",
+          "thunder",
+          "apexmutation"
+        ],
+        "lockedMoves": [
+          "abyssnova"
+        ],
+        "level": 76
+      }
+    ]
+  },
+  "coronablat": {
+    "nicknames": [
+      ">:D"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "batbite",
+          "anaphylacticshock",
+          "soopsplash"
+        ],
+        "lockedMoves": [
+          "defog",
+          "coronavirus"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "babamon": {
+    "nicknames": [
+      "Babamon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb"
+        ],
+        "moves": [
+          "dazzlingpetals",
+          "earthpower",
+          "agingcurse",
+          "spikes",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "blackmagic"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bdriftblim": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "cloudnine",
+          "unburden"
+        ],
+        "items": [
+          "flyinggem",
+          "watergem"
+        ],
+        "moves": [
+          "defog",
+          "roost",
+          "energyball"
+        ],
+        "lockedMoves": [
+          "arcrobatics",
+          "scald"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "kijyokoyo": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "infiltrator"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "flamethrower",
+          "thunderbolt",
+          "crunch",
+          "ancientpower"
+        ],
+        "lockedMoves": [
+          "dragondance",
+          "momijigari"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sgolem": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "steamscald",
+          "autotomize",
+          "overheat",
+          "energyball",
+          "focusblast",
+          "surf"
+        ],
+        "lockedMoves": [
+          "steamblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wdgolem": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "rockhead",
+          "filter"
+        ],
+        "items": [
+          "arboreumcapsule"
+        ],
+        "moves": [
+          "woodhammer",
+          "barkskin",
+          "rootcrush"
+        ],
+        "lockedMoves": [
+          "boulderbash",
+          "treesmash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mtorkoal": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "isolation"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "avalanche",
+          "bodypress",
+          "flamethrower",
+          "bask"
+        ],
+        "lockedMoves": [
+          "chargespin"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sbellsprout": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "vastknowledge"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "invokedeity"
+        ],
+        "lockedMoves": [
+          "pray"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Aukomala": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "flamebody",
+          "insomnia"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rapidspin",
+          "burningbranch",
+          "hypervoice",
+          "protect",
+          "firespin"
+        ],
+        "lockedMoves": [
+          "wish",
+          "flamethrower"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "duckhuntdog": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "parentalbond"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "bulletseed",
+          "mines"
+        ],
+        "lockedMoves": [
+          "doubleedge",
+          "boomerang"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mecharbok": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "acidycapsule"
+        ],
+        "moves": [
+          "antivenom",
+          "hallucinogen",
+          "switcheroo"
+        ],
+        "lockedMoves": [
+          "dragontail",
+          "malfunction"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mechaking": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "levitate",
+          "sheerforce"
+        ],
+        "items": [
+          "lifeorb",
+          "acidycapsule"
+        ],
+        "moves": [
+          "kingsshield",
+          "numbinginjection",
+          "acidbath",
+          "earthpower",
+          "primalnoise"
+        ],
+        "lockedMoves": [
+          "poisonjab",
+          "irontail"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "metaletemon": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "filter",
+          "moxie"
+        ],
+        "items": [
+          "assaultvest",
+          "choiceband",
+          "choicescarf"
+        ],
+        "moves": [
+          "sonicpunch",
+          "jumpkick",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "brassknuckle"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "altermew": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "pressure",
+          "unnerve"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "disable",
+          "mimic",
+          "zenheadbutt"
+        ],
+        "lockedMoves": [
+          "crushclaw"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "smewtwo": {
+    "nicknames": [
+      "I am the night,,,"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pressure",
+          "unnerve"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "shadowbolt",
+          "shadowbreak",
+          "shadowfire",
+          "shadowchill"
+        ],
+        "lockedMoves": [
+          "shadownova"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachsakuya": {
+    "nicknames": [
+      "Beach Sakuya"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "solarpower"
+        ],
+        "items": [
+          "heatrock"
+        ],
+        "moves": [
+          "eternalmeek",
+          "tropicalwave"
+        ],
+        "lockedMoves": [
+          "sunnyday",
+          "zawarudo"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachalice": {
+    "nicknames": [
+      "Beach Alice"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "chargebeam",
+          "strugglebug",
+          "magictrap",
+          "mindboost",
+          "dollarmy"
+        ],
+        "lockedMoves": [
+          "arcaneenergy",
+          "waterpulse"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "calcusus": {
+    "nicknames": [
+      "Calcusus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "download"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "nastyplot",
+          "factory",
+          "configure"
+        ],
+        "lockedMoves": [
+          "calculator"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nmuk": {
+    "nicknames": [
+      "Nuked Muk"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "irradiated"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "moves": [
+          "painsplit",
+          "poisonjab",
+          "poweruppunch"
+        ],
+        "lockedMoves": [
+          "hallucinogen"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mukma": {
+    "nicknames": [
+      "Mukafuka"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "painsplit",
+          "shadowsneak",
+          "stompingtantrum",
+          "stealthrock",
+          "hallucinogen"
+        ],
+        "lockedMoves": [
+          "firepunch"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "dillon": {
+    "nicknames": [
+      "Dillon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "owntempo"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "rapidspin",
+          "uturn",
+          "bodypress",
+          "rest"
+        ],
+        "lockedMoves": [
+          "highhorsepower"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "rpboomb1": {
+    "nicknames": [
+      "Rpboomb1"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "bulletproof"
+        ],
+        "items": [
+          "powerherb"
+        ],
+        "moves": [
+          "explosion",
+          "rockslide",
+          "enginecharge",
+          "oilup"
+        ],
+        "lockedMoves": [
+          "dogfight",
+          "megamissile"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "negarman": {
+    "nicknames": [
+      "Negarman"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "whiteherb"
+        ],
+        "moves": [
+          "throatchop",
+          "voidsmaw",
+          "insanitybolt"
+        ],
+        "lockedMoves": [
+          "schizoboost",
+          "thenword",
+          "eldritchgoop"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "yanenvy": {
+    "nicknames": [
+      "Necrolilith"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rivalry"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "cbt",
+          "infernalblade",
+          "samuraiedge"
+        ],
+        "lockedMoves": [
+          "enviousrage",
+          "malaria"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "youkawaii": {
+    "nicknames": [
+      "Youkawaii"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cutecharm"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "hexpunch",
+          "loveburst",
+          "breakup"
+        ],
+        "lockedMoves": [
+          "buttslam",
+          "murmur"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "lustubust": {
+    "nicknames": [
+      "Lustubust"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cutecharm"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "eggbomb",
+          "playrough",
+          "thunderbolt",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "cleavage",
+          "seduction"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "tbreloom": {
+    "nicknames": [
+      "TBreloom"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "aerialace",
+          "swordsdance",
+          "bulldoze",
+          "brutalswing",
+          "lowsweep",
+          "poisontail",
+          "pollenseason"
+        ],
+        "lockedMoves": [
+          "decaytouch",
+          "bulletseed"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "twinztwo": {
+    "nicknames": [
+      "Check Em"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "dualchaos",
+          "dualdivinity",
+          "bonemerang",
+          "doublenote",
+          "chainsawrun",
+          "tictoc"
+        ],
+        "lockedMoves": [
+          "doublehit"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "twinz": {
+    "nicknames": [
+      "Dubus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "geargrind",
+          "dualchop",
+          "doublekick",
+          "elegy",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "doublehit"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "quachildust": {
+    "nicknames": [
+      "Quachildust"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cursedbody"
+        ],
+        "items": [
+          "lifeorb",
+          "rockyhelmet",
+          "angelpowder"
+        ],
+        "moves": [
+          "paranoia",
+          "calmmind",
+          "thunderwave",
+          "invokedread"
+        ],
+        "lockedMoves": [
+          "decaytouch",
+          "dusttodust"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachreimu": {
+    "nicknames": [
+      "Beach Reimu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "exorcise",
+          "earthquake",
+          "recover",
+          "revolvingillusion",
+          "doubleedge"
+        ],
+        "lockedMoves": [
+          "fantasyseal"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "beachpatchi": {
+    "nicknames": [
+      "Beach Patchi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stormdrain"
+        ],
+        "items": [
+          "assaultvest",
+          "choicespecs",
+          "choicescarf"
+        ],
+        "moves": [
+          "pulpblast",
+          "earthpower",
+          "flamethrower",
+          "icebeam",
+          "lunarwave",
+          "sludgewave",
+          "thunderbolt",
+          "tropicalwave",
+          "mercurywave"
+        ],
+        "lockedMoves": [
+          "abyssnova"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standohermitpurple": {
+    "nicknames": [
+      "Stando-HermitPurple"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "taunt",
+          "reflect",
+          "stunspore",
+          "powerwhip",
+          "mania",
+          "uturn"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "standomagiciansred": {
+    "nicknames": [
+      "Stando-MagiciansRed"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "arcanebolt",
+          "healingwish",
+          "kindle",
+          "beacon",
+          "magicflames"
+        ],
+        "lockedMoves": [
+          "crossfirehurricane"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoyellowtemperance": {
+    "nicknames": [
+      "YellowTemperance"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "limber"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "swordsdance",
+          "return",
+          "transform"
+        ],
+        "lockedMoves": [
+          "latexlash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "maryanncer": {
+    "nicknames": [
+      "Maryanncer"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "trace"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "stealthrock",
+          "spikes",
+          "reptize",
+          "summondragons",
+          "thunderdrill",
+          "rockgather",
+          "dragonruins"
+        ],
+        "lockedMoves": [
+          "duriaantiquior"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "marsortured": {
+    "nicknames": [
+      "Marsortured"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "guro",
+          "rustyblade",
+          "spite",
+          "marssword"
+        ],
+        "lockedMoves": [
+          "torturedspike"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "hsalamence": {
+    "nicknames": [
+      "H",
+      "Hellamancoa"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "bloodbath",
+          "schizoboost",
+          "heatcrash",
+          "hydropump",
+          "wyverncry"
+        ],
+        "lockedMoves": [
+          "gash"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "sxsalamence": {
+    "nicknames": [
+      "Aint Gonna Suk Itself"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "dracometeor",
+          "dragonwings",
+          "fireblast",
+          "bask",
+          "solidify"
+        ],
+        "lockedMoves": [
+          "cbt"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "rushedsalamence": {
+    "nicknames": [
+      "meep meep"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "aquajet",
+          "fakeout",
+          "flamecharge",
+          "sneaze",
+          "fly"
+        ],
+        "lockedMoves": [
+          "extremespeed"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "zsalamence": {
+    "nicknames": [
+      "WWZ"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "odynocharge",
+          "raid",
+          "zombiebite"
+        ],
+        "lockedMoves": [
+          "undeadagony"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "salamence": {
+    "nicknames": [
+      "The OG"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "dracometeor",
+          "fireblast",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "outrage"
+        ],
+        "level": 84
+      }
+    ]
+  },
+"shinigazam": {
+    "nicknames": [
+      "Shinigazam"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicguard"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash"
+        ],
+        "moves": [
+          "bloodspikes",
+          "fellblood",
+          "knockoff",
+          "firepunch",
+          "icepunch",
+          "thunderpunch",
+          "guardsplit"
+        ],
+        "lockedMoves": [
+          "gash"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "lilithmon": {
+    "nicknames": [
+      "Lilithmon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "siphon"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "mindfogger",
+          "bloodbite",
+          "vampirebite"
+        ],
+        "lockedMoves": [
+          "darknesslove",
+          "loveburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "azombarill": {
+    "nicknames": [
+      "Azombarill"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hugepower"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "glitzblitz",
+          "knockoff",
+          "shamble"
+        ],
+        "lockedMoves": [
+          "undeadagony",
+          "aquatail"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "ridleyuge": {
+    "nicknames": [
+      "Isridley"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "dracometeor",
+          "fireblast",
+          "meteormash"
+        ],
+        "lockedMoves": [
+          "deepimpact"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ironreaper": {
+    "nicknames": [
+      "Ironreaper"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "pinpoint",
+          "aerialace",
+          "clamp",
+          "rottedclaw"
+        ],
+        "lockedMoves": [
+          "takeflight",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "scizors": {
+    "nicknames": [
+      "Scizors"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rocksmash",
+          "aerialace"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dootbirb": {
+    "nicknames": [
+      "Dooters"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "soundproof"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "bluster",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "sonicpulse",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "choruseph": {
+    "nicknames": [
+      "Choruseph"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "soundproof"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "nightshade",
+          "roost"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Bhoothoot": {
+    "nicknames": [
+      "Beta Watch Out"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "dreamcatcher",
+          "tintedlens"
+        ],
+        "items": [
+          "eviolite"
+        ],
+        "moves": [
+          "fowlplay",
+          "roost"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "flyongolyp": {
+    "nicknames": [
+      "Flyongolyp"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "Turbine"
+        ],
+        "items": [
+          "rainycapsule",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "uturn",
+          "surf",
+          "hurricane",
+          "insanitybolt"
+        ],
+        "lockedMoves": [
+          "typhoon",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Maglamp": {
+    "nicknames": [
+      "Maggy"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "recover",
+          "fireblast",
+          "prismray",
+          "quartzbeam"
+        ],
+        "lockedMoves": [
+          "caldera"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoearthwindandfire": {
+    "nicknames": [
+      "Stando-EarthWindandFire"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "vcreate",
+          "wcreate",
+          "veryhijumpkick",
+          "rottingburst",
+          "kamikaze",
+          "pastalavista"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standohighpriestess": {
+    "nicknames": [
+      "Stando-HighPriestess"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "metalcrash",
+          "earthquake",
+          "headsmash",
+          "stealthrock",
+          "swordsdance"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "amonster": {
+    "nicknames": [
+      "A Monster"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unnerve"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "crosschop",
+          "earthquake",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "triattack"
+        ],
+        "level": 62
+      }
+    ]
+  },
+  "kaguyainbow": {
+    "nicknames": [
+      "Kaguyainbow"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "naturalcure"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "recover",
+          "calmmind",
+          "taunt"
+        ],
+        "lockedMoves": [
+          "5impossiblerequests"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hglalie": {
+    "nicknames": [
+      "Hglalie"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "harvest"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "midnight",
+          "leechseed",
+          "purefear",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "pumpkinbomb",
+          "gasterblaster"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "hfrosslass": {
+    "nicknames": [
+      "HFrosslass"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shadowcall"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "nastyplot",
+          "trickortreat",
+          "gasterblaster",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "purefear",
+          "arcanebolt"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pumpkinopunch": {
+    "nicknames": [
+      "Pumpkinopunch"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "flamebody"
+        ],
+        "items": [
+          "murkycapsule",
+          "flameplate",
+          "firegem"
+        ],
+        "moves": [
+          "haunt",
+          "trickortreat",
+          "pumpkinbomb"
+        ],
+        "lockedMoves": [
+          "kinopunch",
+          "firepunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "gogengar": {
+    "nicknames": [
+      "Go Gengar"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "murkycapsule",
+          "flameplate",
+          "firegem"
+        ],
+        "moves": [
+          "fearpulse",
+          "trickortreat"
+        ],
+        "lockedMoves": [
+          "maxterror",
+          "moonblast"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "gothot": {
+    "nicknames": [
+      "Gothot"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "vespertine"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "copycat",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "seduction",
+          "essencedrain"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wtrevenant": {
+    "nicknames": [
+      "WackTrevor"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "harvest"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "barkskin",
+          "trickortreat",
+          "phantomforce",
+          "leechlife",
+          "woodhammer"
+        ],
+        "lockedMoves": [
+          "rootcrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hexmaniac": {
+    "nicknames": [
+      "Hex Maniac"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shadowcall"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rubberray",
+          "arcanebolt",
+          "necromancy",
+          "milkdrink"
+        ],
+        "lockedMoves": [
+          "ectoblast",
+          "exorcise"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sweetergeist": {
+    "nicknames": [
+      "Sweetergeist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "toxiccopy",
+          "suckercharge"
+        ],
+        "lockedMoves": [
+          "shadowstrike",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "torappu": {
+    "nicknames": [
+      "100% Female"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "constrictor"
+        ],
+        "items": [
+          "bindingband"
+        ],
+        "moves": [
+          "cbt",
+          "odynocharge",
+          "glitzblitz",
+          "hiphiphooray",
+          "bind"
+        ],
+        "lockedMoves": [
+          "seduction",
+          "claustrogrip"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "toyagumon": {
+    "nicknames": [
+      "ToyAgumon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder",
+          "lifeorb"
+        ],
+        "moves": [
+          "legotrap",
+          "technorush",
+          "fireblast"
+        ],
+        "lockedMoves": [
+          "toyflame",
+          "gigabyte"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "trickish": {
+    "nicknames": [
+      "Trickish"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "chlorophyll"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "sunnyday",
+          "moonlight",
+          "spicypowder",
+          "pollenseason"
+        ],
+        "lockedMoves": [
+          "deliverance",
+          "gigadrain"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "gourgeist": {
+    "nicknames": [
+      "Gourgeist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "insomnia"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "shadowsneak",
+          "phantomforce",
+          "flareblitz",
+          "leechseed",
+          "synthesis",
+          "willowisp"
+        ],
+        "lockedMoves": [
+          "trickortreat",
+          "pumpkinbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mimikyu": {
+    "nicknames": [
+      "Mimikyu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "shadowsneak",
+          "woodhammer",
+          "playrough",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "trickortreat",
+          "shadowclaw"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "tmimikyu": {
+    "nicknames": [
+      "MimiT"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "woodhammer",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "playrough",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mimikyufeast": {
+    "nicknames": [
+      "MimiFeast"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "shadowsneak",
+          "painsplit",
+          "honeclaws"
+        ],
+        "lockedMoves": [
+          "shadowclaw",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pumpkapie": {
+    "nicknames": [
+      "Pumpkapie"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "poundcake",
+          "haunt",
+          "pumpkinbomb",
+          "compost"
+        ],
+        "lockedMoves": [
+          "cakeslice",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "whitegengar": {
+    "nicknames": [
+      "Whitoid"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "fearpulse",
+          "curse"
+        ],
+        "lockedMoves": [
+          "shadowball",
+          "trickortreat"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "scizorch": {
+    "nicknames": [
+      "Scizorch"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "Unburden"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "leafblade",
+          "uturn",
+          "firstimpression",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "infernalblade",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rowletpizza": {
+    "nicknames": [
+      "Rowlet Pizza"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "eviolite"
+        ],
+        "moves": [
+          "leafblade",
+          "delivery",
+          "haze"
+        ],
+        "lockedMoves": [
+          "synthesis",
+          "pizzaspin"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Gcorviknight": {
+    "nicknames": [
+      "Gcorviknight"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "parentalbond"
+        ],
+        "items": [
+          "rainycapsule"
+        ],
+        "moves": [
+          "uturn",
+          "flamecharge",
+          "aerialace",
+          "bulletseed",
+          "bulldoze",
+          "dualwingbeat",
+          "rocktomb"
+        ],
+        "lockedMoves": [
+          "defog",
+          "roost"
+        ],
+        "level": 76
+      }
+    ]
+  },
+  "corviknighteen": {
+    "nicknames": [
+      "Corviknighteen"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "battlearmor"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "windrage",
+          "uturn",
+          "bodypress",
+          "knockoff",
+          "swordsedge"
+        ],
+        "lockedMoves": [
+          "defog",
+          "roost"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "hbraviary": {
+    "nicknames": [
+      "HH"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pride",
+          "competitive"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "uturn",
+          "heatwave",
+          "bodyboost",
+          "closecombat",
+          "mania"
+        ],
+        "lockedMoves": [
+          "defog",
+          "bravebird"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "tnoctowl": {
+    "nicknames": [
+      "Mr T"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "tintedlens"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "futureattack",
+          "uturn",
+          "heatwave",
+          "roost",
+          "aeroblast"
+        ],
+        "lockedMoves": [
+          "defog",
+          "yearblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Adrifblim": {
+    "nicknames": [
+      "A Driftblim"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "flashfire"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "typhoon",
+          "clearsmog",
+          "memento"
+        ],
+        "lockedMoves": [
+          "defog",
+          "cremate"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Bdrifblim": {
+    "nicknames": [
+      "Birfday Driftblim"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unburden"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rainycapsule"
+        ],
+        "moves": [
+          "typhoon",
+          "roost",
+          "memento",
+          "scald"
+        ],
+        "lockedMoves": [
+          "defog",
+          "aeroblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "tristanarcher": {
+    "nicknames": [
+      "Tristanarcher"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "keeneye"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "failnaught",
+          "invokedread",
+          "partingshot",
+          "arcanebolt",
+          "chargebeam"
+        ],
+        "lockedMoves": [
+          "defog",
+          "dirge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pyooraffe": {
+    "nicknames": [
+      "Pyooraffe"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "psychic",
+          "energyball",
+          "icebeam",
+          "shadowball",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "defog",
+          "moonblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mammarina": {
+    "nicknames": [
+      "Mammarina"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb",
+          "swiftswim"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rainycapsule"
+        ],
+        "moves": [
+          "whalesong",
+          "thunderbolt",
+          "lifedew"
+        ],
+        "lockedMoves": [
+          "defog",
+          "venusburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "gachamber": {
+    "nicknames": [
+      "Gachamber"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "Evaporate"
+        ],
+        "items": [
+          "acidycapsule"
+        ],
+        "moves": [
+          "clearsmog",
+          "earthpower",
+          "flamethrower",
+          "humidray"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rustegross": {
+    "nicknames": [
+      "Rusty"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "roughskin"
+        ],
+        "items": [
+          "assaultvest",
+          "choiceband"
+        ],
+        "moves": [
+          "knockoff",
+          "thunderpunch",
+          "icepunch"
+        ],
+        "lockedMoves": [
+          "meteormash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sandslash": {   
+    "sets": [
+      {
+        "abilities": [   
+          "sandveil",
+          "sandrush",
+          "sandforce"
+        ],
+        "items": [
+          "angelpowder",
+          "sitrusberry",
+          "mercuryorb"
+        ],
+        "moves": [     
+          "sandstorm",    
+          "sandslash",
+          "cannonball",
+          "shoreup",
+          "spikes",
+          "stoneedge",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "rapidspin"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "brickor": {
+    "nicknames": [
+      "Brickor"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "builder"
+        ],
+        "items": [
+          "lightclay"
+        ],
+        "moves": [
+          "reflect",
+          "lightscreen",
+          "lowkick"
+        ],
+        "lockedMoves": [
+          "boulderbash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "scarlugia": {
+    "nicknames": [
+      "Edgia"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drizzle"
+        ],
+        "items": [
+          "C4"
+        ],
+        "moves": [
+          "aeroblast",
+          "datastorm",
+          "recover"
+        ],
+        "lockedMoves": [
+          "extrasensory"
+        ],
+        "level": 72
+      }
+    ]
+  },
+  "vileplume": {   
+    "sets": [
+      {
+        "abilities": [   
+          "effectspore",
+          "chlorophyll"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [     
+          "aromatherapy",    
+          "gigadrain",
+          "toxic",
+          "sleeppowder",
+          "spicypowder",
+          "foulodor",
+          "pollenseason",
+          "sludgebomb",
+          "strengthsap",
+          "earthpower",
+          "compost",
+          "smellycloud"
+        ],   
+        "level": 84       
+      }
+    ]
+  },
+  "voormisan": {
+    "nicknames": [
+      "Voormisan"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "angerpoint"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "selffatten",
+          "oilskin",
+          "oilyterrain",
+          "rest"
+        ],
+        "lockedMoves": [
+          "fatslam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wacktentaquil": {
+    "nicknames": [
+      "WackTentaquil"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drizzle"
+        ],
+        "items": [
+          "mysticwater"
+        ],
+        "moves": [
+          "hypervoice",
+          "bubblebeam",
+          "hypnosis"
+        ],
+        "lockedMoves": [
+          "downpour"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "whitehand": {
+    "nicknames": [
+      "White Hand"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "souleater"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "brutal",
+          "painsplit",
+          "ghastlyhand",
+          "shadowclaw"
+        ],
+        "lockedMoves": [
+          "fist"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wigglytuff": {   
+    "sets": [
+      {
+        "abilities": [   
+          "frisk",
+          "cutecharm"
+        ],
+        "items": [
+          "angelpowder",
+          "venusorb",
+          "instantnoodles"
+        ],
+        "moves": [     
+          "mysticdance",    
+          "sonar",
+          "drainingkiss",
+          "puffup",
+          "wish",
+          "stealthrock",
+          "healbell",
+          "gravity",
+          "boomburst",
+          "protect"
+        ],
+        "lockedMoves": [
+          "sing"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "ygolonacol": {
+    "nicknames": [
+      "Ygolonacol"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "murkycapsule",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "brainrot",
+          "pastalavista",
+          "trickroom"
+        ],
+        "lockedMoves": [
+          "lunatictime",
+          "knockoff"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "yebus": {
+    "nicknames": [
+      "Yebus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drought"
+        ],
+        "items": [
+          "heavydutyboots",
+          "lifeorb",
+          "angelpowder"
+        ],
+        "moves": [
+          "doom",
+          "flamecharge",
+          "earthquake",
+          "insanitybolt",
+          "thunderbolt",
+          "waterfall",
+          "ironhead",
+          "icebeam",
+          "gunkshot",
+          "knockoff",
+          "energyball",
+          "ritual",
+          "invocation"
+        ],
+        "lockedMoves": [
+          "flareblitz"
+        ],
+        "level": 84
+      }
+    ]
+  }
+  
+}

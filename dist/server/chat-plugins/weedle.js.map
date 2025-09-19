@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../server/chat-plugins/weedle.ts"],
+  "sourcesContent": ["export const chatfilter: Chat.ChatFilter = function (message, user, room) {\r\n\tif (!room || room.roomid !== 'weedle') return message;\r\n\treturn 'weedle';\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,aAA8B,SAAU,SAAS,MAAM,MAAM;AACzE,MAAI,CAAC,QAAQ,KAAK,WAAW;AAAU,WAAO;AAC9C,SAAO;AACR;",
+  "names": []
+}

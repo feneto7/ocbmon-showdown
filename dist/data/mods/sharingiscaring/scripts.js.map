@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/sharingiscaring/scripts.ts"],
+  "sourcesContent": ["export const Scripts: ModdedBattleScriptsData = {\r\n\tgen: 9,\r\n\tinherit: 'gen9',\r\n\tpokemon: {\r\n\t\thasItem(item) {\r\n\t\t\tif (this.ignoringItem()) return false;\r\n\t\t\tif (Array.isArray(item)) return item.some(i => this.hasItem(i));\r\n\t\t\tconst itemid = this.battle.toID(item);\r\n\t\t\treturn this.item === itemid || !!this.volatiles['item:' + itemid];\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,UAAmC;AAAA,EAC/C,KAAK;AAAA,EACL,SAAS;AAAA,EACT,SAAS;AAAA,IACR,QAAQ,MAAM;AACb,UAAI,KAAK,aAAa;AAAG,eAAO;AAChC,UAAI,MAAM,QAAQ,IAAI;AAAG,eAAO,KAAK,KAAK,OAAK,KAAK,QAAQ,CAAC,CAAC;AAC9D,YAAM,SAAS,KAAK,OAAO,KAAK,IAAI;AACpC,aAAO,KAAK,SAAS,UAAU,CAAC,CAAC,KAAK,UAAU,UAAU,MAAM;AAAA,IACjE;AAAA,EACD;AACD;",
+  "names": []
+}

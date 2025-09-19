@@ -75,13 +75,13 @@ function serveFile(req: http.IncomingMessage, res: http.ServerResponse, pathname
 		// Log do caminho completo para debug
 		console.log(`Caminho completo: ${filePath}`);
 		
-	// Log para debug
-	console.log(`Tentando servir: ${pathname} -> ${filePath}`);
-	
-	// Log específico para favicon
-	if (pathname.includes('favicon')) {
-		console.log(`Favicon request: ${pathname}, file exists: ${fs.existsSync(filePath)}`);
-	}
+		// Log para debug
+		console.log(`Tentando servir: ${pathname} -> ${filePath}`);
+		
+		// Log específico para favicon
+		if (pathname.includes('favicon')) {
+			console.log(`Favicon request: ${pathname}, file exists: ${fs.existsSync(filePath)}`);
+		}
 		
 		// Se é um diretório, tenta servir index.html
 		if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {

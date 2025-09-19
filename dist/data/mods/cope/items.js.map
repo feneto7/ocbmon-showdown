@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/cope/items.ts"],
+  "sourcesContent": ["export const Items: {[k: string]: ModdedItemData} = {\r\n\tradishorb: {\r\n\t\tinherit: true,\r\n\t\tisNonstandard: null,\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,QAAuC;AAAA,EACnD,WAAW;AAAA,IACV,SAAS;AAAA,IACT,eAAe;AAAA,EAChB;AACD;",
+  "names": []
+}

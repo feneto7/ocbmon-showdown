@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/cloverblobboscap/pokedex.ts"],
+  "sourcesContent": ["export const Pokedex: {[k: string]: ModdedSpeciesData} = {\r\n\tblobbosforbidden: {\r\n\t\tinherit: true,\r\n\t\tbaseStats: {\r\n\t\t\thp: 89,\r\n\t\t\tatk: 131,\r\n\t\t\tdef: 90,\r\n\t\t\tspa: 133,\r\n\t\t\tspd: 80,\r\n\t\t\tspe: 142,\r\n\t\t},\r\n\t\tabilities: {\r\n\t\t\t0: \"Competitive\",\r\n\t\t\t1: \"Intimidate\",\r\n\t\t\tH: \"Good as Gold\",\r\n\t\t\tS: \"Cursed Body\",\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,UAA4C;AAAA,EACxD,kBAAkB;AAAA,IACjB,SAAS;AAAA,IACT,WAAW;AAAA,MACV,IAAI;AAAA,MACJ,KAAK;AAAA,MACL,KAAK;AAAA,MACL,KAAK;AAAA,MACL,KAAK;AAAA,MACL,KAAK;AAAA,IACN;AAAA,IACA,WAAW;AAAA,MACV,GAAG;AAAA,MACH,GAAG;AAAA,MACH,GAAG;AAAA,MACH,GAAG;AAAA,IACJ;AAAA,EACD;AACD;",
+  "names": []
+}

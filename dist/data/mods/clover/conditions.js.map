@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/clover/conditions.ts"],
+  "sourcesContent": ["export const Conditions: {[k: string]: ModdedConditionData} = {\r\n\t/* Modified conditions */\r\n\tgem: {\r\n\t\tinherit: true,\r\n\t\tonBasePower(basePower, user, target, move) {\r\n\t\t\tthis.debug('Gem Boost');\r\n\t\t\treturn this.chainModify(1.5);\r\n\t\t},\r\n\t},\r\n\thail: {\r\n\t\tinherit: true,\r\n\t\tonModifyDefPriority: 10,\r\n\t\tonModifyDef(def, pokemon) {\r\n\t\t\tif (pokemon.hasType('Ice') && this.field.isWeather('hail')) {\r\n\t\t\t\treturn this.modify(def, 1.5);\r\n\t\t\t}\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,aAAiD;AAAA;AAAA,EAE7D,KAAK;AAAA,IACJ,SAAS;AAAA,IACT,YAAY,WAAW,MAAM,QAAQ,MAAM;AAC1C,WAAK,MAAM,WAAW;AACtB,aAAO,KAAK,YAAY,GAAG;AAAA,IAC5B;AAAA,EACD;AAAA,EACA,MAAM;AAAA,IACL,SAAS;AAAA,IACT,qBAAqB;AAAA,IACrB,YAAY,KAAK,SAAS;AACzB,UAAI,QAAQ,QAAQ,KAAK,KAAK,KAAK,MAAM,UAAU,MAAM,GAAG;AAC3D,eAAO,KAAK,OAAO,KAAK,GAAG;AAAA,MAC5B;AAAA,IACD;AAAA,EACD;AACD;",
+  "names": []
+}

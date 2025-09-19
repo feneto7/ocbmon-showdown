@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/clovertest/moves.ts"],
+  "sourcesContent": ["export const Moves: { [k: string]: ModdedMoveData } = {\r\n\tknockoff: {\r\n\t\tinherit: true,\r\n\t\tonAfterHit(target, source) {\r\n\t\t\tif (source.hp) {\r\n\t\t\t\tconst item = target.takeItem();\r\n\t\t\t\tif (item) {\r\n\t\t\t\t\tthis.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);\r\n\t\t\t\t\tif (item.id === 'firering') {\r\n\t\t\t\t\t\tsource.trySetStatus('brn', target, item);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,QAAyC;AAAA,EACrD,UAAU;AAAA,IACT,SAAS;AAAA,IACT,WAAW,QAAQ,QAAQ;AAC1B,UAAI,OAAO,IAAI;AACd,cAAM,OAAO,OAAO,SAAS;AAC7B,YAAI,MAAM;AACT,eAAK,IAAI,YAAY,QAAQ,KAAK,MAAM,0BAA0B,UAAU,MAAM;AAClF,cAAI,KAAK,OAAO,YAAY;AAC3B,mBAAO,aAAa,OAAO,QAAQ,IAAI;AAAA,UACxC;AAAA,QACD;AAAA,MACD;AAAA,IACD;AAAA,EACD;AACD;",
+  "names": []
+}

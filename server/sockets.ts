@@ -414,6 +414,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 			const StaticServer: typeof import('node-static').Server = require('node-static').Server;
 			const roomidRegex = /^\/(?:[A-Za-z0-9][A-Za-z0-9-]*)\/?$/;
 			const cssServer = new StaticServer('./config');
+			const publicServer = new StaticServer('./public');
 			const avatarServer = new StaticServer('./config/avatars');
 			const badgeServer = new StaticServer('./config/badges');
 			const emojiServer = new StaticServer('./config/emojis');
@@ -430,10 +431,10 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 						return;
 					}
 
-					let server = cssServer; // Servidor padrão
+					let server = publicServer; // Servidor padrão para arquivos públicos
 					if (req.url) {
-						if (req.url === '/custom.css') {
-							server = cssServer;
+						if (req.url === '/custom.css' || req.url === '/manifest.json' || req.url === '/favicon.ico' || req.url.startsWith('/favicon')) {
+							server = publicServer;
 						} else if (req.url.startsWith('/sprites/')) {
 							req.url = req.url.substr(8);
 							server = spritesServer;
@@ -491,12 +492,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 					return;
 				}
 				
-				// Tenta servir arquivos estáticos primeiro
-				if (serveStaticFile(req, res)) {
-					return;
-				}
-				
-				// Se nada mais funcionou, usa o static handler original
+				// Usa o static handler original para todos os outros arquivos
 				staticRequestHandler(req, res);
 			});
 			if (this.serverSsl) this.serverSsl.on('request', staticRequestHandler);

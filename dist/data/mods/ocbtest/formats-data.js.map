@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/ocbtest/formats-data.ts"],
+  "sourcesContent": ["export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {\r\n\tchromox: {\r\n\t\tinherit: true,\r\n\t\ttier: \"OU\",\r\n\t},\r\n\tacufronts: {\r\n\t\tinherit: true,\r\n\t\ttier: \"OU\",\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,cAAyD;AAAA,EACrE,SAAS;AAAA,IACR,SAAS;AAAA,IACT,MAAM;AAAA,EACP;AAAA,EACA,WAAW;AAAA,IACV,SAAS;AAAA,IACT,MAAM;AAAA,EACP;AACD;",
+  "names": []
+}

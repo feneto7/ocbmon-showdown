@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../data/mods/cloverabilities/items.ts"],
+  "sourcesContent": ["export const Items: {[k: string]: ModdedItemData} = {\r\n\tadrenalineorb: {\r\n\t\tinherit: true,\r\n\t\tonAfterBoost(boost, target, source, effect) {\r\n\t\t\tif (effect.id === 'intimidate' || effect.id === 'ability:intimidate') {\r\n\t\t\t\ttarget.useItem();\r\n\t\t\t}\r\n\t\t},\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,QAAuC;AAAA,EACnD,eAAe;AAAA,IACd,SAAS;AAAA,IACT,aAAa,OAAO,QAAQ,QAAQ,QAAQ;AAC3C,UAAI,OAAO,OAAO,gBAAgB,OAAO,OAAO,sBAAsB;AACrE,eAAO,QAAQ;AAAA,MAChB;AAAA,IACD;AAAA,EACD;AACD;",
+  "names": []
+}
