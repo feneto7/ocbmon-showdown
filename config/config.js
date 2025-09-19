@@ -176,7 +176,7 @@ J1lK6leTmz5vV6rAUBDL1DMCAwEAAQ==
  */
 exports.routes = {
 	root: 'ocbmon-showdown.onrender.com',
-	client: 'feneto7.github.io/ocbmon-showdown-client',
+	client: 'feneto7.github.io/ocbmon-showdown-client/public',
 	dex: 'ocbmon-showdown.onrender.com',
 	replays: 'ocbmon-showdown.onrender.com',
 };

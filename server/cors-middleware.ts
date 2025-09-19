@@ -118,3 +118,4 @@ export function logCorsRequest(req: http.IncomingMessage, allowed: boolean): voi
 		console.log(`CORS ${allowed ? 'ALLOWED' : 'BLOCKED'}: ${method} ${url} from ${origin || 'unknown origin'}`);
 	}
 }
+

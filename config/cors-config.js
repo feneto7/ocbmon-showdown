@@ -65,3 +65,4 @@ exports.securityHeaders = {
 	'X-Content-Type-Options': 'nosniff',
 	'X-XSS-Protection': '1; mode=block'
 };
+

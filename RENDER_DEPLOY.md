@@ -51,3 +51,4 @@ O servidor no Render vai fazer redeploy automaticamente quando você fizer push 
 4. Teste uma batalha
 
 Se ainda não funcionar, use a **Opção Alternativa** acima.
+

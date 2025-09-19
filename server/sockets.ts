@@ -395,12 +395,8 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 				// deixe o SockJS lidar com tudo sob "/showdown"
 				if (req.url && req.url.startsWith('/showdown')) return;
 				
-				// Tenta servir arquivos estáticos primeiro
-				if (serveStaticFile(req, res)) {
-					return;
-				}
-				
-				if (req.url === '/action.php' && req.method === 'POST') {
+				// Handle action.php requests
+				if (req.url && req.url.includes('/action.php')) {
 					// Handle login/authentication requests
 					let body = '';
 					req.on('data', (chunk) => {
@@ -428,6 +424,11 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 							}));
 						}
 					});
+					return;
+				}
+				
+				// Tenta servir arquivos estáticos primeiro
+				if (serveStaticFile(req, res)) {
 					return;
 				}
 				
