@@ -32,23 +32,29 @@ function handleActionPHP(req: http.IncomingMessage, res: http.ServerResponse, bo
 	
 	// Return appropriate response based on action
 	if (act === 'login') {
-		// For login, return just the assertion string
+		// For login, return JSON response
 		res.writeHead(200, { 
-			'Content-Type': 'text/plain',
+			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*',
 			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
 			'Access-Control-Allow-Headers': 'Content-Type'
 		});
-		res.end('guest-' + Date.now());
+		res.end(JSON.stringify({
+			actionsuccess: true,
+			assertion: 'guest-' + Date.now()
+		}));
 	} else if (act === 'getassertion') {
-		// For getassertion, return just the assertion string
+		// For getassertion, return JSON response
 		res.writeHead(200, { 
-			'Content-Type': 'text/plain',
+			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*',
 			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
 			'Access-Control-Allow-Headers': 'Content-Type'
 		});
-		res.end('guest-' + Date.now());
+		res.end(JSON.stringify({
+			actionsuccess: true,
+			assertion: 'guest-' + Date.now()
+		}));
 	} else if (act === 'upkeep') {
 		// For upkeep, return JSON response
 		res.writeHead(200, { 
@@ -62,6 +68,18 @@ function handleActionPHP(req: http.IncomingMessage, res: http.ServerResponse, bo
 			loggedin: false,
 			username: '',
 			assertion: ''
+		}));
+	} else if (act === 'updateladder') {
+		// For updateladder, return JSON response
+		res.writeHead(200, { 
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+			'Access-Control-Allow-Headers': 'Content-Type'
+		});
+		res.end(JSON.stringify({
+			actionsuccess: true,
+			serverid: 'ocbmon-showdown'
 		}));
 	} else {
 		// For other actions, return JSON

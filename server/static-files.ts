@@ -49,6 +49,11 @@ export function serveStaticFile(req: http.IncomingMessage, res: http.ServerRespo
 		return serveFile(req, res, pathname);
 	}
 	
+	// Tratamento específico para favicon
+	if (pathname === '/favicon.ico' || pathname.includes('favicon')) {
+		return serveFile(req, res, '/public/favicon.ico');
+	}
+	
 	// Para outros caminhos, tenta servir da pasta public
 	return serveFile(req, res, '/public' + pathname);
 }
@@ -67,8 +72,16 @@ function serveFile(req: http.IncomingMessage, res: http.ServerResponse, pathname
 		// Caminho completo do arquivo
 		const filePath = path.join(__dirname, '..', safePath);
 		
-		// Log para debug
-		console.log(`Tentando servir: ${pathname} -> ${filePath}`);
+		// Log do caminho completo para debug
+		console.log(`Caminho completo: ${filePath}`);
+		
+	// Log para debug
+	console.log(`Tentando servir: ${pathname} -> ${filePath}`);
+	
+	// Log específico para favicon
+	if (pathname.includes('favicon')) {
+		console.log(`Favicon request: ${pathname}, file exists: ${fs.existsSync(filePath)}`);
+	}
 		
 		// Se é um diretório, tenta servir index.html
 		if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
