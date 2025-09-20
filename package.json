@@ -33,7 +33,7 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "start": "node pokemon-showdown start",
+    "start": "node scripts/ensure-logs.js && node pokemon-showdown start",
     "build": "node build",
     "tsc": "tsc",
     "fast-lint": "eslint . --config .eslintrc-no-types.json --cache --cache-location .eslintcache-no-types --ext .js,.ts,.tsx",

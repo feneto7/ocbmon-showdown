@@ -28,7 +28,22 @@ function handleActionPHP(req: http.IncomingMessage, res: http.ServerResponse, bo
 	const act = params.get('act');
 	
 	// Log para debug
-	console.log(`Action.php request: act=${act}, method=${req.method}`);
+	console.log(`Action.php request: act=${act || 'null'}, method=${req.method}`);
+	
+	// Se act é null ou vazio, retorna erro
+	if (!act || act === 'null') {
+		res.writeHead(400, { 
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+			'Access-Control-Allow-Headers': 'Content-Type'
+		});
+		res.end(JSON.stringify({
+			actionsuccess: false,
+			error: 'Missing or invalid action parameter'
+		}));
+		return;
+	}
 	
 	// Return appropriate response based on action
 	if (act === 'login') {
