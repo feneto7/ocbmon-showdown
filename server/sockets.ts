@@ -438,6 +438,11 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 			const spritesServer = new StaticServer('../ocbmon-showdown-assets');
 			// const staticServer = new StaticServer('../ocbmon-showdown-client'); // Desabilitado para deploy no Render
 			const staticRequestHandler = (req: http.IncomingMessage, res: http.ServerResponse) => {
+				// Verificar se a resposta já foi enviada
+				if (res.headersSent) {
+					return;
+				}
+				
 				// console.log(`static rq: ${req.socket.remoteAddress}:${req.socket.remotePort} -> ${req.socket.localAddress}:${req.socket.localPort} - ${req.method} ${req.url} ${req.httpVersion} - ${req.rawHeaders.join('|')}`);
 				req.resume();
 				req.addListener('end', () => {

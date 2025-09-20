@@ -147,11 +147,27 @@ exports.potd = '';
  */
 exports.crashguard = true;
 
+// Desabilitar recursos pesados para economizar memória no Render
+exports.watchconfig = false; // Desabilitar watch de config
+exports.autojoin = []; // Desabilitar autojoin para economizar memória
+exports.autoladder = false; // Desabilitar auto ladder
+exports.reportbattles = false; // Desabilitar relatórios de batalha
+exports.battlemodlog = false; // Desabilitar modlog de batalhas
+exports.pmmodlog = false; // Desabilitar modlog de PMs
+
 // Configurações específicas para Render (limitação de memória)
 exports.backoff = 0; // Desabilitar backoff para economizar memória
 exports.backoffthreshold = 0;
 exports.backoffbase = 0;
 exports.backoffcap = 0;
+
+// Otimizações extremas para Render (512MB limit)
+exports.maxprocesses = 1; // Limitar processos
+exports.maxmemprocesses = 1; // Limitar processos por memória
+exports.simprocesses = 1; // Apenas 1 processo de simulação
+exports.validatorprocesses = 1; // Apenas 1 processo de validação
+exports.battlesearchprocesses = 1; // Apenas 1 processo de busca
+exports.replsocketprefix = ''; // Desabilitar REPL sockets para economizar memória
 
 /**
  * login server data - don't forget the http:// and the trailing slash

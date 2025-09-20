@@ -21,7 +21,7 @@
 
 // Garantir que os arquivos de log existam antes de iniciar o servidor
 try {
-	const { ensureLogFiles } = require('../scripts/init-logs');
+	const { ensureLogFiles } = require('../../scripts/init-logs');
 	ensureLogFiles();
 } catch (error: any) {
 	console.error('Erro ao inicializar logs:', error.message);

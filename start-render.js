@@ -36,8 +36,10 @@ function ensureLogFiles() {
 }
 
 // 2. Configurar variáveis de ambiente para otimização
-process.env.NODE_OPTIONS = '--max-old-space-size=400'; // Limitar uso de memória a 400MB
+process.env.NODE_OPTIONS = '--max-old-space-size=350 --optimize-for-size'; // Limitar uso de memória a 350MB
 process.env.NODE_ENV = 'production';
+process.env.GC_FORCE = 'true'; // Forçar garbage collection
+process.env.NODE_NO_WARNINGS = '1'; // Reduzir warnings
 
 // 3. Garantir logs
 ensureLogFiles();
@@ -59,8 +61,16 @@ setInterval(() => {
     const memMB = Math.round(memUsage.heapUsed / 1024 / 1024);
     console.log(`📊 Uso de memória: ${memMB}MB`);
     
-    if (memMB > 450) {
+    if (memMB > 300) {
         console.warn('⚠️  Alto uso de memória detectado!');
+    }
+    
+    if (memMB > 350) {
+        console.error('🚨 CRÍTICO: Uso de memória muito alto!');
+        // Forçar garbage collection
+        if (global.gc) {
+            global.gc();
+        }
     }
 }, 30000); // A cada 30 segundos
 
