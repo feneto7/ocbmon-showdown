@@ -17,7 +17,17 @@
  *   It exports the global tables `Users.users` and `Users.connections`.
  *
  * Rooms - from rooms.ts
- *
+ */
+
+// Garantir que os arquivos de log existam antes de iniciar o servidor
+try {
+	const { ensureLogFiles } = require('../scripts/init-logs');
+	ensureLogFiles();
+} catch (error: any) {
+	console.error('Erro ao inicializar logs:', error.message);
+}
+
+/**
  *   Every chat room and battle is a room, and what they do is done in
  *   rooms.ts. There's also a global room which every user is in, and
  *   handles miscellaneous things like welcoming the user.

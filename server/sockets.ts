@@ -479,9 +479,6 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 
 			// Handle all HTTP requests
 			this.server.on('request', (req: http.IncomingMessage, res: http.ServerResponse) => {
-				// Aplica headers CORS
-				applyCorsHeaders(req, res);
-				
 				// deixe o SockJS lidar com tudo sob "/showdown"
 				if (req.url && req.url.startsWith('/showdown')) return;
 				

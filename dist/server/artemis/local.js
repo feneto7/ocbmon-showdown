@@ -40,6 +40,10 @@ class ArtemisStream extends import_lib.Streams.ObjectReadWriteStream {
   constructor() {
     super();
     this.tasks = /* @__PURE__ */ new Set();
+    if (import_config_loader.Config.disableartemis) {
+      console.log("Artemis AI disabled in config");
+      return;
+    }
     this.process = child_process.spawn("python3", [
       "-u",
       (0, import_lib.FS)("server/artemis/model.py").path,

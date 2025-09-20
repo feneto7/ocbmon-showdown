@@ -40,6 +40,7 @@ var path = __toESM(require("path"));
 var import_lib = require("../lib");
 var import_ip_tools = require("./ip-tools");
 var import_battle = require("../sim/battle");
+var import_cors_middleware = require("./cors-middleware");
 /**
  * Connections
  * Pokemon Showdown - http://pokemonshowdown.com/
@@ -52,6 +53,81 @@ var import_battle = require("../sim/battle");
  *
  * @license MIT
  */
+function handleActionPHP(req, res, body) {
+  const params = new URLSearchParams(body);
+  const act = params.get("act");
+  console.log(`Action.php request: act=${act || "null"}, method=${req.method}`);
+  if (!act || act === "null") {
+    res.writeHead(400, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+    res.end(JSON.stringify({
+      actionsuccess: false,
+      error: "Missing or invalid action parameter"
+    }));
+    return;
+  }
+  if (act === "login") {
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+    res.end(JSON.stringify({
+      actionsuccess: true,
+      assertion: "guest-" + Date.now()
+    }));
+  } else if (act === "getassertion") {
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+    res.end(JSON.stringify({
+      actionsuccess: true,
+      assertion: "guest-" + Date.now()
+    }));
+  } else if (act === "upkeep") {
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+    res.end(JSON.stringify({
+      actionsuccess: true,
+      loggedin: false,
+      username: "",
+      assertion: ""
+    }));
+  } else if (act === "updateladder") {
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+    res.end(JSON.stringify({
+      actionsuccess: true,
+      serverid: "ocbmon-showdown"
+    }));
+  } else {
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+    res.end(JSON.stringify({
+      actionsuccess: true
+    }));
+  }
+}
 const Sockets = new class {
   async onSpawn(worker) {
     const id = worker.workerid;
@@ -327,23 +403,23 @@ ${e.stack}`), `Socket process ${process.pid}`);
       const StaticServer = require("node-static").Server;
       const roomidRegex = /^\/(?:[A-Za-z0-9][A-Za-z0-9-]*)\/?$/;
       const cssServer = new StaticServer("./config");
+      const publicServer = new StaticServer("./public");
       const avatarServer = new StaticServer("./config/avatars");
       const badgeServer = new StaticServer("./config/badges");
       const emojiServer = new StaticServer("./config/emojis");
       const stickerServer = new StaticServer("./config/stickers");
       const userServer = new StaticServer("./config/users");
       const spritesServer = new StaticServer("../ocbmon-showdown-assets");
-      const staticServer = new StaticServer("../ocbmon-showdown-client");
       const staticRequestHandler = (req, res) => {
         req.resume();
         req.addListener("end", () => {
           if (config.customhttpresponse && config.customhttpresponse(req, res)) {
             return;
           }
-          let server2 = staticServer;
+          let server2 = publicServer;
           if (req.url) {
-            if (req.url === "/custom.css") {
-              server2 = cssServer;
+            if (req.url === "/custom.css" || req.url === "/manifest.json" || req.url === "/favicon.ico" || req.url.startsWith("/favicon")) {
+              server2 = publicServer;
             } else if (req.url.startsWith("/sprites/")) {
               req.url = req.url.substr(8);
               server2 = spritesServer;
@@ -366,37 +442,27 @@ ${e.stack}`), `Socket process ${process.pid}`);
               req.url = "/";
             }
           }
-          server2.serve(req, res, (e) => {
-            if (e && e.status === 404) {
-              staticServer.serveFile("404.html", 404, {}, req, res);
-            }
-          });
+          server2.serve(req, res);
         });
       };
       this.server.on("request", (req, res) => {
+        (0, import_cors_middleware.applyCorsHeaders)(req, res);
         if (req.url && req.url.startsWith("/showdown"))
           return;
-        if (req.url === "/action.php" && req.method === "POST") {
+        if (req.url && req.url.includes("/action.php")) {
           let body = "";
-          req.on("data", (chunk) => {
-            body += chunk.toString();
-          });
-          req.on("end", () => {
-            const params = new URLSearchParams(body);
-            const act = params.get("act");
-            if (act === "login") {
-              res.writeHead(200, { "Content-Type": "text/plain" });
-              res.end("guest-" + Date.now());
-            } else if (act === "getassertion") {
-              res.writeHead(200, { "Content-Type": "text/plain" });
-              res.end("guest-" + Date.now());
-            } else {
-              res.writeHead(200, { "Content-Type": "application/json" });
-              res.end(JSON.stringify({
-                actionsuccess: true
-              }));
-            }
-          });
+          if (req.method === "POST") {
+            req.on("data", (chunk) => {
+              body += chunk.toString();
+            });
+            req.on("end", () => {
+              handleActionPHP(req, res, body);
+            });
+          } else {
+            const url = new URL(req.url, `http://${req.headers.host}`);
+            const searchParams = url.searchParams;
+            handleActionPHP(req, res, searchParams.toString());
+          }
           return;
         }
         staticRequestHandler(req, res);

@@ -30,7 +30,7 @@ exports.bindaddress = '0.0.0.0';
  *   this means or you are unfamiliar with PS' networking code, leave this set
  *   to 1.
  */
-exports.workers = 1;
+exports.workers = 1; // Já limitado a 1 worker para economizar memória no Render
 
 /**
  * wsdeflate - compresses WebSocket messages
@@ -125,9 +125,9 @@ exports.proxyip = false;
  */
 exports.ofemain = false;
 exports.ofesockets = false;
-exports.debugsimprocesses = true;
-exports.debugvalidatorprocesses = true;
-exports.debugdexsearchprocesses = true;
+exports.debugsimprocesses = false;
+exports.debugvalidatorprocesses = false;
+exports.debugdexsearchprocesses = false;
 
 /**
  * Pokemon of the Day - put a pokemon's name here to make it Pokemon of the Day
@@ -146,6 +146,12 @@ exports.potd = '';
  *   crash, so this option is provided
  */
 exports.crashguard = true;
+
+// Configurações específicas para Render (limitação de memória)
+exports.backoff = 0; // Desabilitar backoff para economizar memória
+exports.backoffthreshold = 0;
+exports.backoffbase = 0;
+exports.backoffcap = 0;
 
 /**
  * login server data - don't forget the http:// and the trailing slash
@@ -323,22 +329,22 @@ exports.restrictLinks = false;
   * chat modchat - default minimum group for speaking in chatrooms; changeable with /modchat
   * @type {false | string}
  */
-exports.chatmodchat = false;
+exports.chatmodchat = true;
 /**
  * battle modchat - default minimum group for speaking in battles; changeable with /modchat
  * @type {false | AuthLevel}
  */
-exports.battlemodchat = false;
+exports.battlemodchat = true;
 /**
  * PM modchat - minimum group for sending private messages or challenges to other users
  * @type {false | AuthLevel}
  */
-exports.pmmodchat = false;
+exports.pmmodchat = true;
 /**
  * ladder modchat - minimum group for laddering
  * @type {false | GroupSymbol}
  */
-exports.laddermodchat = false;
+exports.laddermodchat = true;
 
 /**
  * forced timer - force the timer on for all battles
@@ -393,12 +399,12 @@ exports.watchconfig = true;
 /**
  * logchat - whether to log chat rooms.
  */
-exports.logchat = false;
+exports.logchat = true;
 
 /**
  * logchallenges - whether to log challenge battles. Useful for tournament servers.
  */
-exports.logchallenges = false;
+exports.logchallenges = true;
 
 /**
  * loguserstats - how often (in milliseconds) to write user stats to the

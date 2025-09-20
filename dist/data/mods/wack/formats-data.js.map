@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../../data/mods/wack/formats-data.ts"],
-  "sourcesContent": ["export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {\n\t\n\twoot: {\n\t\tinherit: true,\n\t\ttier: \"LC\",\n\t\tisNonstandard: null,\n\t},\n\twoodie: {\n\t\tinherit: true,\n\t\ttier: \"NFE\",\n\t\tisNonstandard: null,\n\t},\n\tarbrood: {\n\t\tinherit: true,\n\t\ttier: \"OU\",\n\t\tisNonstandard: null,\n\t},\n\tmaggie: {\n\t\tinherit: true,\n\t\ttier: \"LC\",\n\t\tisNonstandard: null,\n\t}\n};\n"],
+  "sourcesContent": ["export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {\r\n\t\r\n\twoot: {\r\n\t\tinherit: true,\r\n\t\ttier: \"LC\",\r\n\t\tisNonstandard: null,\r\n\t},\r\n\twoodie: {\r\n\t\tinherit: true,\r\n\t\ttier: \"NFE\",\r\n\t\tisNonstandard: null,\r\n\t},\r\n\tarbrood: {\r\n\t\tinherit: true,\r\n\t\ttier: \"OU\",\r\n\t\tisNonstandard: null,\r\n\t},\r\n\tmaggie: {\r\n\t\tinherit: true,\r\n\t\ttier: \"LC\",\r\n\t\tisNonstandard: null,\r\n\t}\r\n};\r\n"],
   "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,cAAyD;AAAA,EAErE,MAAM;AAAA,IACL,SAAS;AAAA,IACT,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AAAA,EACA,QAAQ;AAAA,IACP,SAAS;AAAA,IACT,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AAAA,EACA,SAAS;AAAA,IACR,SAAS;AAAA,IACT,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AAAA,EACA,QAAQ;AAAA,IACP,SAAS;AAAA,IACT,MAAM;AAAA,IACN,eAAe;AAAA,EAChB;AACD;",
   "names": []
 }
