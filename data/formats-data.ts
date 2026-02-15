@@ -6242,4 +6242,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	slifer: {
+		isNonstandard: "Custom",
+		tier: "OU",
+	},
 };
