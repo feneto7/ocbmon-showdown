@@ -1,4 +1,4 @@
-export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable = {
+export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesDataTable = {
 
 	slifer: {
 		inherit: true,
