@@ -30,7 +30,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] OCBMons",
-		mod: 'gen9',
+		mod: 'gen9ocb',
 		ruleset: ['Standard','+Custom', '+Nonexistent', 'Dynamax Clause']
 	},
 	
