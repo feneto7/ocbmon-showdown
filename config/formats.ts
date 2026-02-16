@@ -31,7 +31,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] OCBMons",
 		mod: 'gen9ocb',
-		ruleset: ['Obtainable Moves']
+		ruleset: ['Standard', '+Custom', '+Nonexistent', 'Dynamax Clause','Obtainable Moves']
 	},
 	
 
