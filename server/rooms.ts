@@ -1484,19 +1484,25 @@ export class GlobalRoomState {
 				prevSection = section;
 				this.formatList += `|,${curColumn}|${section}`;
 			}
-			this.formatList += `|${format.name}`;
-			let displayCode = 0;
-			if (format.team) displayCode |= 1;
-			if (format.searchShow) displayCode |= 2;
-			if (format.challengeShow) displayCode |= 4;
-			if (format.tournamentShow) displayCode |= 8;
-			const ruleTable = Dex.formats.getRuleTable(format);
-			const level = ruleTable.adjustLevel || ruleTable.adjustLevelDown || ruleTable.maxLevel;
-			if (level === 50) displayCode |= 16;
-			// 32 was previously used for Multi Battles
-			if (format.bestOfDefault) displayCode |= 64;
-			if (format.teraPreviewDefault) displayCode |= 128;
-			this.formatList += ',' + displayCode.toString(16);
+			try {
+				this.formatList += `|${format.name}`;
+				let displayCode = 0;
+				if (format.team) displayCode |= 1;
+				if (format.searchShow) displayCode |= 2;
+				if (format.challengeShow) displayCode |= 4;
+				if (format.tournamentShow) displayCode |= 8;
+				const ruleTable = Dex.formats.getRuleTable(format);
+				const level = ruleTable.adjustLevel || ruleTable.adjustLevelDown || ruleTable.maxLevel;
+				if (level === 50) displayCode |= 16;
+				if (format.bestOfDefault) displayCode |= 64;
+				if (format.teraPreviewDefault) displayCode |= 128;
+				this.formatList += ',' + displayCode.toString(16);
+			} catch (err) {
+				console.error(`[formatListText] Format "${format.name}" (id: ${format.id}) failed:`, err);
+				// remove o formato já acrescentado para não quebrar a lista
+				const escaped = format.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+				this.formatList = this.formatList.replace(new RegExp(`\\|${escaped}$`), '');
+			}
 		}
 		return this.formatList;
 	}
