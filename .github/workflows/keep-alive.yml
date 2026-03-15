@@ -1,10 +1,14 @@
-# Ping HTTP no Render a cada 10 min para reduzir sleep do plano grátis.
+# Ping HTTP no Render a cada 10 min (UTC). Só agenda na BRANCH PADRÃO do repo (Settings > Branches).
+# Se não aparecer nenhum run: confira se este ficheiro existe na branch padrão (main ou master).
 name: Keep server awake
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '5,15,25,35,45,55 * * * *'
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   ping:
