@@ -65,7 +65,7 @@ export interface SpeciesFormatsDataTable { [speciesid: IDEntry]: SpeciesFormatsD
 export interface ModdedSpeciesFormatsDataTable { [speciesid: IDEntry]: ModdedSpeciesFormatsData }
 export interface LearnsetDataTable { [speciesid: IDEntry]: LearnsetData }
 export interface ModdedLearnsetDataTable { [speciesid: IDEntry]: ModdedLearnsetData }
-export interface PokemonGoDataTable { [speciesid: IDEntry]: PokemonGoData }
+	export interface PokemonGoDataTable { [speciesid: IDEntry]: PokemonGoData }
 
 /**
  * Describes a possible way to get a move onto a pokemon.
@@ -783,8 +783,8 @@ export class DexSpecies {
 		return learnsetData;
 	}
 
-	getPokemonGoData(id: ID): PokemonGoData {
-		return this.dex.data.PokemonGoData[id];
+	getPokemonGoData(id: ID): PokemonGoData | undefined {
+		return this.dex.data.PokemonGoData?.[id];
 	}
 
 	all(): readonly Species[] {
