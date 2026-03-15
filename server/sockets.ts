@@ -568,5 +568,7 @@ function start(processCount: ConfigLoader.SubProcessesConfig) {
 			break;
 		}
 	}
+	// Render e outras plataformas cloud injetam PORT via env var
+	if (!port && process.env.PORT) port = +process.env.PORT;
 	Sockets.listen(port, undefined, processCount);
 }
