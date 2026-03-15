@@ -5,7 +5,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	luminor: {
 		tier: "OU",
 	},
-	kravion: {
+	kraviron: {
 		tier: "OU",
 	},
 	floralyx: {
