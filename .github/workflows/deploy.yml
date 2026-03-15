@@ -29,12 +29,10 @@ jobs:
           npm ci
           node build
 
+      # Repo público: clone via HTTPS sem token. Push no passo seguinte exige CLIENT_REPO_TOKEN.
       - name: Clone client repo
-        uses: actions/checkout@v4
-        with:
-          repository: feneto7/ocbmon-showdown-client
-          token: ${{ secrets.CLIENT_REPO_TOKEN }}
-          path: pokemon-showdown-client
+        working-directory: ${{ github.workspace }}
+        run: git clone --depth 1 https://github.com/feneto7/ocbmon-showdown-client.git pokemon-showdown-client
 
       - name: Build client (full) with server data
         run: |
@@ -43,7 +41,13 @@ jobs:
           node build full
 
       - name: Commit and push client data
+        env:
+          CLIENT_REPO_TOKEN: ${{ secrets.CLIENT_REPO_TOKEN }}
         run: |
+          if [ -z "$CLIENT_REPO_TOKEN" ]; then
+            echo "::error::Crie o secret CLIENT_REPO_TOKEN (PAT classic com scope repo) em Settings > Secrets > Actions neste repositório."
+            exit 1
+          fi
           cd pokemon-showdown-client
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -53,5 +57,5 @@ jobs:
             echo "No changes in client data."
           else
             git commit -m "chore: update client data from server [skip ci]"
-            git push
+            git push "https://x-access-token:${CLIENT_REPO_TOKEN}@github.com/feneto7/ocbmon-showdown-client.git" HEAD:main
           fi
