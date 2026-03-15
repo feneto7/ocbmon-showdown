@@ -10,7 +10,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesDataTa
 			tier: "OU",
 			isNonstandard: null,
 		},
-		kravion: {
+		kraviron: {
 			inherit: true,
 			tier: "OU",
 			isNonstandard: null,
