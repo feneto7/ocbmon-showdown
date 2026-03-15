@@ -15,5 +15,47 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		gen: 9,
 	},
 
+	floralyx: {
+		num: -6001,
+		name: "Floralyx",
+		types: ["Grass", "Fairy"],
+		gender: "N",
+		baseStats: { hp: 90, atk: 85, def: 90, spa: 110, spd: 110, spe: 95 },
+		abilities: { 0: "NaturalCure" },
+		heightm: 1.5,
+		weightkg: 45,
+		color: "GREEN",
+		eggGroups: ["Undiscovered"],
+		gen: 9,
+	},
+
+	kraviron: {
+		num: -6002,
+		name: "Kraviron",
+		types: ["Steel", "Fighting"],
+		gender: "N",
+		baseStats: { hp: 100, atk: 120, def: 120, spa: 70, spd: 90, spe: 80 },
+		abilities: { 0: "IronFist" },
+		heightm: 2.1,
+		weightkg: 250,
+		color: "GRAY",
+		eggGroups: ["Undiscovered"],
+		gen: 9,
+	},
+
+	luminor: {
+		num: -6003,
+		name: "Luminor",
+		types: ["Electric", "Dragon"],
+		gender: "N",
+		baseStats: { hp: 95, atk: 95, def: 85, spa: 125, spd: 95, spe: 105 },
+		abilities: { 0: "Levitate" },
+		heightm: 2.0,
+		weightkg: 80,
+		color: "YELLOW",
+		eggGroups: ["Undiscovered"],
+		gen: 9,
+	},
+
 
  }
