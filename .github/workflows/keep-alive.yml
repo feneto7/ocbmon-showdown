@@ -1,0 +1,14 @@
+# Ping HTTP no Render a cada 10 min para reduzir sleep do plano grátis.
+name: Keep server awake
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render
+        run: curl -fsS -o /dev/null -w '%{http_code}\n' --max-time 60 https://ocbmon-showdown.onrender.com/
