@@ -1,7 +1,6 @@
 import type { ModdedConditionData } from '../../../sim/dex-conditions';
 
 export const Conditions: { [id: string]: ModdedConditionData } = {
-	
 	slifer: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
