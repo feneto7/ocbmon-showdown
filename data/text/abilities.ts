@@ -2281,4 +2281,1364 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	whiteout: {
+		name: "whiteout",
+		shortDesc: "This pokemon's Ice moves are boosted by 50% under Hail",
+	},
+	pyromancy: {
+		name: "Pyromancy",
+		shortDesc: "This Pokemon's moves have a 5x chance to burn",
+	},
+	keenedge: {
+		name: "Keen Edge",
+		shortDesc: "This Pokemon's slicing moves have their power boosted by 30%",
+	},
+	prismscales: {
+		name: "Prism Scales",
+		shortDesc: "This Pokemon takes 30% less damage from special attacks",
+	},
+	powerfists: {
+		name: "Power Fists",
+		shortDesc:
+			"Punching moves deal 30% more damage and use opponent's Special Def.",
+	},
+	sandsong: {
+		name: "Sand Song",
+		shortDesc: "This Pokemon's Normal-type sound-based moves become Ground type.",
+	},
+	rampage: {
+		name: "Rampage",
+		shortDesc: "This Pokemon doesn't recharge after a KO",
+	},
+	vengeance: {
+		name: "Vengeance",
+		shortDesc: "Boost Pokemon's Ghost moves by 20%, 50% when below 1/3 HP",
+	},
+	blitzboxer: {
+		name: "Blitz Boxer",
+		shortDesc:
+			"If this Pokemon is at full HP, this Pokemon's punching moves gain +1 priority",
+	},
+
+	// Elite Redux
+	antarcticbird: {
+		name: "Antarctic Bird",
+		shortDesc: "This Pokemon's Ice and Flying type moves are boosted by 30%",
+	},
+	immolate: {
+		name: "Immolate",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Fire type and have 1.1x power.",
+	},
+	crystallize: {
+		name: "Crystallize",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Rock type and have 1.1x power.",
+	},
+	electrocytes: {
+		name: "Electrocytes",
+		shortDesc: "This Pokemon's Electric type moves are boosted by 25%",
+	},
+	aerodynamics: {
+		name: "Aerodynamics",
+		shortDesc:
+			"This Pokemon's Speed is raised 1 stage if hit by an Flying move; Flying immunity.",
+	},
+	christmasspirit: {
+		name: "Christmas Spirit",
+		shortDesc: "This Pokemon takes half damage during Hail.",
+	},
+	exploitweakness: {
+		name: "Exploit Weakness",
+		shortDesc:
+			"This Pokemon has its move's power boosted by 25% when opponent is statused.",
+	},
+	groundshock: {
+		name: "Ground Shock",
+		shortDesc:
+			"This Pokemon can hit Ground types with Electric attacks, but not very effective",
+	},
+	ancientidol: {
+		name: "Ancient Idol",
+		shortDesc: "Uses its respective defensive stats for attacks.",
+	},
+	mysticpower: {
+		name: "Mystic Power",
+		shortDesc: "Gains STAB for all moves.",
+	},
+	perfectionist: {
+		name: "Perfectionist",
+		shortDesc:
+			"+1 crit ratio for moves under 50 power, +1 priority for moves under 25 power.",
+	},
+	growingtooth: {
+		name: "Growing Tooth",
+		shortDesc:
+			"This Pokemon's Attack is raised 1 state when using biting moves",
+	},
+	inflatable: {
+		name: "Inflatable",
+		shortDesc:
+			"Raises defenses when hit by Fire or Flying type moves (Immune).",
+	},
+	auroraborealis: {
+		name: "Aurora Borealis",
+		shortDesc: "Gains STAB for Ice moves",
+	},
+	avenger: {
+		name: "Avenger",
+		shortDesc: "Boosts offenses by 50% if ally fainted last turn.",
+	},
+	letsroll: {
+		name: "Let's Roll",
+		shortDesc: "Defense Curl on switch-in",
+	},
+	aquatic: {
+		name: "Aquatic",
+		shortDesc: "This Pokemon gains the Water type",
+	},
+	loudbang: {
+		name: "Loud Bang",
+		shortDesc: "This pokemon's sound-based moves have 50% chance to confuse",
+	},
+	leadcoat: {
+		name: "Lead Coat",
+		shortDesc: "Ups Defense by 40% but lowers speed by 10%",
+	},
+	coilup: {
+		name: "Coil Up",
+		shortDesc:
+			"This pokemon's biting moves have +1 priority the first time they are used",
+
+		activate: "  [POKEMON] prepares to strike!",
+	},
+	amphibious: {
+		name: "Amphibious",
+		shortDesc: "Gains STAB for Water moves",
+	},
+	grounded: {
+		name: "Grounded",
+		shortDesc: "This Pokemon gains the Ground type",
+	},
+	earthbound: {
+		name: "Earthbound",
+		shortDesc: "This Pokemon's Ground type attacks are boosted by 25%",
+	},
+	fightingspirit: {
+		name: "Fighting Spirit",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Fighting type and have 1.1x power.",
+	},
+	felineprowess: {
+		name: "Feline Prowess",
+		shortDesc: "This Pokemon's Special Attack is doubled.",
+	},
+	fossilized: {
+		name: "Fossilized",
+		shortDesc:
+			"This pokemon takes half damage from Rock type moves. Rock-type moves boosted by 20%",
+	},
+	magicaldust: {
+		name: "Magical Dust",
+		shortDesc:
+			"Pokemon making contact with this Pokemon gain the Psychic type",
+	},
+	dreamcatcher: {
+		name: "Dreamcatcher",
+		shortDesc:
+			"This pokemon's move power is doubled if anyone on the field is asleep",
+	},
+	nocturnal: {
+		name: "Nocturnal",
+		shortDesc:
+			"This Pokemon reduces damage recived from Dark and Fairy type moves by 25%; Pokemon's dark moves boosted by 25%",
+	},
+	selfsufficient: {
+		name: "Self Sufficient",
+		shortDesc: "This Pokemon heals 1/16 HP each turn",
+	},
+	tectonize: {
+		name: "Tectonize",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Ground type and have 1.1x power.",
+	},
+	iceage: {
+		name: "Ice Age",
+		shortDesc: "This Pokemon gains the Ice type",
+	},
+	halfdrake: {
+		name: "Half Drake",
+		shortDesc: "This Pokemon gains the Dragon type",
+	},
+	liquified: {
+		name: "Liquified",
+		shortDesc:
+			"This Pokemon takes 1/2 damage from contact moves, 2x damage from Water moves.",
+	},
+	dragonfly: {
+		name: "Half Drake",
+		shortDesc: "This Pokemon gains the Dragon type and Levitates",
+	},
+	dragonslayer: {
+		name: "Half Drake",
+		shortDesc:
+			"This Pokemon's moves deal 50% more damage against Dragon Types",
+	},
+	hydrate: {
+		name: "Hydrate",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Water type and have 1.1x power.",
+	},
+	metallic: {
+		name: "Metallic",
+		shortDesc: "This Pokemon gains the Steel type",
+	},
+	permafrost: {
+		name: "Permafrost",
+		shortDesc:
+			"This Pokemon receives 65% damage from supereffective attacks.",
+	},
+	primalarmor: {
+		name: "Primal Armor",
+		shortDesc:
+			"This Pokemon receives 1/2 damage from supereffective attacks.",
+	},
+	ragingboxer: {
+		name: "Raging Boxer",
+		shortDesc:
+			"This Pokemon's punching moves hit twice. The second hit has its damage halved.",
+	},
+	airblower: {
+		name: "Air Blower",
+		shortDesc: "On switch-in, this Pokemon summons Tailwind for 3 turns.",
+	},
+	juggernaut: {
+		name: "Juggernaut",
+		shortDesc:
+			"This Pokemon's contact moves use + 20% of defense stat; cannot be paralyzed",
+	},
+	shortcircuit: {
+		name: "Short Circuit",
+		shortDesc: "Boost Pokemon's Electric moves by 20%, 50% when below 1/3 HP",
+	},
+	majesticbird: {
+		name: "Short Circuit",
+		shortDesc: "Boost Special moves by 50%",
+	},
+	phantom: {
+		name: "Phantom",
+		shortDesc: "This Pokemon gains the Ghost type",
+	},
+	intoxicate: {
+		name: "Intoxicate",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Poison type and have 1.1x power.",
+	},
+	impenetrable: {
+		name: "Impenetrable",
+		desc: "This Pokemon can only be damaged by direct attacks. Curse and Substitute on use, Belly Drum, Pain Split, Struggle recoil, and confusion damage are considered direct damage.",
+		shortDesc: "This Pokemon can only be damaged by direct attacks.",
+	},
+	hypnotist: {
+		name: "Hypnotist",
+		shortDesc: "Hypnosis is 90% accurate for this Pokemon",
+	},
+	overwhelm: {
+		name: "Overwhelm",
+		desc: "This Pokemon can hit Fairy types with Dragon-type moves. This Pokemon is immune to the effect of the Intimidate and Scare abilities.",
+		shortDesc:
+			"Dragon moves hit Fairy types. Immune to Intimidate and Scare.",
+	},
+	scare: {
+		name: "Scare",
+		desc: "On switch-in, this Pokemon lowers the Special Attack of opposing Pokemon by 1 stage. Pokemon with the Inner Focus, Oblivious, Own Tempo, Overwhelm, or Scrappy Abilities and Pokemon behind a substitute are immune.",
+		shortDesc:
+			"On switch-in, this Pokemon lowers the Special Attack of opponents by 1 stage.",
+	},
+	majesticmoth: {
+		name: "Majestic Moth",
+		desc: "This Pokemon's highest stat is raised by 1 stage on switch-in. Stat stage changes are not considered. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order.",
+		shortDesc: "This Pokemon's highest stat is raised by 1 on switch-in.",
+	},
+	souleater: {
+		name: "Soul Eater",
+		shortDesc: "This pokemon heals 1/4 hp if it knock out a Pokemon",
+	},
+	soullinker: {
+		name: "Soul Linker",
+		shortDesc:
+			"This Pokemon recieves all damage it inflicts and shares all damage taken",
+	},
+	sweetdreams: {
+		name: "Sweet Dreams",
+		shortDesc: "This Pokemon heals 1/16 hp each turn if asleep",
+	},
+	badluck: {
+		name: "Bad Luck",
+		shortDesc:
+			"Foes always deal lowest damage roll, cannot land critical hits, and have all accuracy lowered by 5%",
+	},
+	hauntedspirit: {
+		name: "Haunted Spirit",
+		shortDesc: "When this Pokemon faints, the attacker becomes cursed",
+	},
+	electricburst: {
+		name: "Electric Burst",
+		shortDesc: "Electric type moves are 35% stronger, but take 10% recoil",
+	},
+	rawwood: {
+		name: "Raw Wood",
+		shortDesc:
+			"This Pokemon takes half damage from Grass type moves. Grass-type moves boosted by 20%",
+	},
+	solenoglyphs: {
+		name: "Solenoglyphs",
+		shortDesc:
+			"This Pokemon's biting moves have an addition 50% chance to poison",
+	},
+	spiderlair: {
+		name: "Spider Lair",
+		shortDesc:
+			"On switch-in, sets Sticky Web on opposing side; Sticky Webs end after 5 turns",
+	},
+	fatalprecision: {
+		name: "Fatal Precision",
+		shortDesc:
+			"This Pokemon's super effective moves deal 20% more damage and cannot miss",
+	},
+	fortknox: {
+		name: "Fort Knox",
+		shortDesc:
+			"This Pokemon's Defense is raised by 3 for each of its stats that is lowered by a foe.",
+	},
+	seaweed: {
+		name: "Fort Knox",
+		shortDesc:
+			"This Pokemon's Grass type moves deal neutral damage to Fire; Fire neutrality if Grass type.",
+	},
+	psychicmind: {
+		name: "Psychic Mind",
+		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Psychic-type attack.",
+		shortDesc:
+			"At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Psychic attacks.",
+	},
+	poisonabsorb: {
+		name: "Poison Absorb",
+		desc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move.",
+		shortDesc:
+			"This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity.",
+	},
+	scavenger: {
+		name: "Scavenger",
+		shortDesc: "This pokemon heals 1/4 hp if it knock out a Pokemon",
+	},
+	twistdimension: {
+		name: "Twist Dimension",
+		shortDesc: "On switch-in, this Pokemon summons Trick Room for 3 turns.",
+	},
+	multiheaded: {
+		name: "Multi Headed",
+		desc: "This Pokemon gains an addition attack for each of its heads. For additional attacks, the first addition attack deals 20% of the intital hit, with each hit after dealing 15%.",
+		shortDesc: "This Pokemon gains more attacks for each of its heads.",
+	},
+	northwind: {
+		name: "North Wind",
+		shortDesc:
+			"On switch-in, this Pokemon summons Aurora Veil for 3 turns; 5 turns if holding Light Clay",
+	},
+	overcharge: {
+		name: "Overcharge",
+		shortDesc:
+			"This Pokemon's Electric moves deal 2x damage to Electric types and may paralyze Electric types.",
+	},
+	violentrush: {
+		name: "Violent Rush",
+		shortDesc:
+			"This Pokemon is granted a 20% Attack boost and 50% Speed boost during its first turn on field",
+	},
+	flamingsoul: {
+		name: "Flaming Soul",
+		shortDesc:
+			"If this Pokemon is at full HP, its Fire-type moves have their priority increased by 1.",
+	},
+	sagepower: {
+		name: "Sage Power",
+		desc: "This Pokemon's Special Attack is multiplied by 1.5, but it can only select the first move it executes. These effects are prevented while this Pokemon is Dynamaxed.",
+		shortDesc:
+			"This Pokemon's Special Attack is 1.5x, but it can only select the first move it executes.",
+	},
+	bonezone: {
+		name: "Bone Zone",
+		shortDesc:
+			"This Pokemon's bone moves ignore immunities and deal 2x damage if not very effective ",
+	},
+	weathercontrol: {
+		name: "Weather Control",
+		shortDesc: "Opponent's weather-based moves are negated",
+	},
+	speedforce: {
+		name: "Speed Force",
+		shortDesc:
+			"This Pokemon's contact moves add 20% of speed for damage calculation",
+	},
+	seaguardian: {
+		name: "Sea Guardian",
+		shortDesc: "This Pokemon raises highest stat if switched in during rain.",
+	},
+	moltendown: {
+		name: "Molten Down",
+		shortDesc:
+			"This Pokemon's Fire type moves deal super effective damage against Rock.",
+	},
+	hyperaggressive: {
+		name: "Hyper Aggressive",
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. The second hit has its damage quartered. Does not affect Doom Desire, Dragon Darts, Dynamax Cannon, Endeavor, Explosion, Final Gambit, Fling, Future Sight, Ice Ball, Rollout, Self-Destruct, any multi-hit move, any move that has multiple targets, or any two-turn move.",
+		shortDesc:
+			"This Pokemon's damaging moves hit twice. The second hit has its damage quartered.",
+	},
+	flock: {
+		name: "Flock",
+		shortDesc: "Boost Pokemon's Flying moves by 20%, 50% when below 1/3 HP",
+	},
+	fieldexplorer: {
+		name: "Field Explorer",
+		shortDesc: "This Pokemon's field-based moves are boosted by 50%",
+	},
+	striker: {
+		name: "Striker",
+		shortDesc: "This Pokemon's kicking moves are boosted by 30%",
+	},
+	frozensoul: {
+		name: "Frozen Soul",
+		shortDesc:
+			"If this Pokemon is at full HP, its Ice-type moves have their priority increased by 1.",
+	},
+	predator: {
+		name: "Predator",
+		shortDesc: "This pokemon heals 1/4 hp if it knock out a Pokemon",
+	},
+	looter: {
+		name: "Looter",
+		shortDesc: "This pokemon heals 1/4 hp if it knock out a Pokemon",
+	},
+	powercore: {
+		name: "Power Core",
+		shortDesc: "This Pokemon uses 20% of its Def/SpD during moves",
+	},
+	sightingsystem: {
+		name: "Sighting System",
+		shortDesc:
+			"This Pokemon's move don't miss. Moves with less than 80% accuracy go last.",
+	},
+	// badcompany: {
+	//
+	// },
+	giantwings: {
+		name: "Giant Wings",
+		shortDesc: "This Pokemon's wind moves are boosted by 25%.",
+	},
+	momentum: {
+		name: "Momentum",
+		shortDesc:
+			"This Pokemon's contact moves use the Speed stat for calculation.",
+	},
+	grippincer: {
+		name: "Grip Pincer",
+		shortDesc:
+			"This Pokemon's contact moves have a 50% chance to trap. Ignores accuracy checks and foe's defensive stat changes if they're trapped.",
+	},
+	bigleaves: {
+		name: "Big Leaves",
+		shortDesc:
+			"Chloroplast, Chlorophyll, Solar Power, Leaf Guard, Harvest bundled into one bunch.",
+	},
+	precisefist: {
+		name: "Precise Fist",
+		shortDesc:
+			"This Pokemon's punching moves have double effect chance and have an increased crit ratio",
+	},
+	deadeye: {
+		name: "Deadeye",
+		shortDesc: "This Pokemon never misses. Arrow moves target lower defense",
+	},
+	artillery: {
+		name: "Artillery",
+		shortDesc:
+			"This Pokemon's single-target pulse moves now hit both foes and never miss",
+	},
+	amplifier: {
+		name: "Amplifier",
+		shortDesc:
+			"This Pokemon's sound moves are boosted by 30% and hit both foes.",
+	},
+	icedew: {
+		name: "Ice Dew",
+		shortDesc:
+			"This Pokemon's highest attacking stat is boosted when hit by Ice; Ice type immunities.",
+	},
+	sunworship: {
+		name: "Sun Worship",
+		shortDesc: "This Pokemon raises highest stat if switched in during sun.",
+	},
+	pollinate: {
+		name: "Pollinate",
+		desc: "This Pokemon's Normal-type moves become Bug-type moves and have their power multiplied by 1.1. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Bug type and have 1.1x power.",
+	},
+	solarflare: {
+		name: "Solar Flare",
+		shortDesc: "Fire type moves gain STAB; Uses moves as if under sun.",
+	},
+	lunareclipse: {
+		name: "Lunar Eclipse",
+		shortDesc:
+			"Fairy and Dark type moves gain STAB; Hypnosis accuracy + 50%.",
+	},
+	// Elite Redux's Opportunist renamed to 'Expert Hunter' to avoid name confict with gen 9's Opportunist
+	experthunter: {
+		name: "Expert Hunter",
+		shortDesc: "This Pokemon goes first against foes below 50% HP.",
+	},
+	mightyhorn: {
+		name: "Mighty Horn",
+		desc: "This Pokemon's horn and drill-based attacks have their power multiplied by 1.3.",
+		shortDesc:
+			"This Pokemon's horn and drill-based attacks have 1.3x power.",
+	},
+	hardenedsheath: {
+		name: "Hardened Sheath",
+		shortDesc:
+			"This Pokemon's Attack is raised 1 state when using horn moves",
+	},
+	arcticfur: {
+		name: "Arctic Fur",
+		desc: "This Pokemon has takes 65% damage from physical and special attacks.",
+		shortDesc: "This Pokemon takes 35% less damage from attacks",
+	},
+	coldrebound: {
+		name: "Cold Rebound",
+		desc: "If this Pokemon is hit by a contact move and still has HP, this Pokemon will counter with Icy Wind.",
+		shortDesc: "Counters with Icy Wind when hit by a contact move",
+	},
+	ironbarrage: {
+		name: "Iron Barrage",
+		desc: "This Pokemon has their pulse moves boosted by 1.5x. This Pokemon cannot miss, but moves wil <75 accuracy will go last.",
+		shortDesc: "Combined Mega Launcher and Sighting System",
+	},
+	steelbarrel: {
+		name: "Steel Barrel",
+		desc: "This Pokemon does not take recoil damage, except Struggle. Does not affect Life Orb damage or crash damage.",
+		shortDesc:
+			"This Pokemon does not take recoil damage besides Struggle/Life Orb/crash damage.",
+	},
+	pyroshells: {
+		name: "Pyro Shells",
+		desc: "After successfully using a pulse move, this pokemon will then follow up with a 50BP Outburst. This move will not cause self-destruction.",
+		shortDesc:
+			"Triggers 50BP Outburst after using pulse move. Will not self-destruct",
+	},
+	volcanorage: {
+		name: "Volcano Rage",
+		desc: "After successfully using a Fire-type attacking move, this pokemon will then follow up with a 50BP Eruption.",
+		shortDesc: "Triggers 50BP Eruption after using Fire-type move.",
+	},
+	thundercall: {
+		name: "Thunder Call",
+		desc: "After successfully using an Electric-type attacking move, this pokemon will then follow up with Smite at 20% power.",
+		shortDesc: "Triggers Smite at 20% power after using Electric-type move.",
+	},
+	marineapex: {
+		name: "Marine Apex",
+		desc: "This Pokemon deals 50% more damage against Water-types. This Pokemon's moves ignore substitutes and the opposing side's Reflect, Light Screen, Safeguard, Mist, and Aurora Veil.",
+		shortDesc:
+			"This Pokemon deals 50% more damage to Water-types + Infiltrator",
+	},
+	discipline: {
+		name: "Discipline",
+		desc: "This Pokemon can use rampaging moves without trapping. Immune to Confusion and Intimidate. Gaining this ability while confused will cure Confusion.",
+		shortDesc:
+			"Rampaging moves can be used freely; immune to Confusion and Intimidate",
+	},
+	lowblow: {
+		name: "Low Blow",
+		desc: "This Pokemon attacks the closest opponent with Feint Attack. This counts as the Pokemon's first move.",
+		shortDesc: "This Pokemon attacks with Feint Attack on switch-in.",
+	},
+	noseferatu: {
+		name: "Nosferatu",
+		desc: "Contact moves deal 20% more damage and drain for 33% of damage dealt. Contant moves that already drain are not affected",
+		shortDesc:
+			"Contact moves deal 20% more damage and drain for 33% of damage dealt.",
+	},
+	spectralize: {
+		name: "Spectralize",
+		desc: "This Pokemon's Normal-type moves become Ghost-type moves and have their power multiplied by 1.1. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Ghost type and have 1.1x power.",
+	},
+	spectralshroud: {
+		name: "Spectral Shroud",
+		desc: "This Pokemon's Normal-type moves become Ghost-type moves and have their power multiplied by 1.1. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects. All attacking moves have an increased 30% chance to badly poison",
+		shortDesc:
+			"This Pokemon's moves have a 30% chance to badly poison; Spectralize.",
+	},
+	lethargy: {
+		name: "Lethargy",
+		desc: "Attack and Special Attack drops 20% per turn, capping at 20% power. This effect is reset on switch-in.",
+		shortDesc:
+			"Attack and Special Attack drops 20% per turn, capping at 20% power.",
+	},
+	fungalinfection: {
+		name: "Fungal Infection",
+		shortDesc: "This Pokemon's contact moves set Leech Seed.",
+	},
+	parry: {
+		name: "Parry",
+		desc: "This Pokemon takes 80% damage from contact moves. If this Pokemon is hit by a contact move and still has HP, this Pokemon will counter with Mach Punch.",
+		shortDesc:
+			"Takes 80% damage from contact moves. Counters with Mach Punch when hit by a contact move",
+	},
+	roundhouse: {
+		name: "Roundhouse",
+		desc: "This Pokemon's kick moves cannot miss and use foe's lowest defense for calculation. If Defense and Special Defense are equal, defense calculated as normal",
+		shortDesc:
+			"This Pokemon's kick moves cannot miss and use foe's lowest defense.",
+	},
+	mineralize: {
+		name: "Mineralize",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Rock type and have 1.1x power.",
+	},
+	scrapyard: {
+		name: "Scrapyard",
+		shortDesc:
+			"If this Pokemon is hit by a contact attack, Spikes are set on the opposing side.",
+	},
+	loosequills: {
+		name: "Loose Quills",
+		shortDesc:
+			"If this Pokemon is hit by a contact attack, Spikes are set on the opposing side.",
+	},
+	looserocks: {
+		name: "Loose Rocks",
+		shortDesc:
+			"If this Pokemon is hit by a contact attack, Stealth Rock is set on the opposing side.",
+	},
+	spinningtop: {
+		name: "Spinning Top",
+		shortDesc:
+			"This Pokemon's attacking Fighting moves clear hazards and boost speed.",
+	},
+	atomicburst: {
+		name: "Atomic Burst",
+		desc: "Retaliates with a 50BP Hyper Beam when hit by a super effective move. Does not cause recharge.",
+		shortDesc:
+			"Retaliates with a 50BP Hyper Beam when hit by a super effective move. Does not cause recharge.",
+	},
+	retributionblow: {
+		name: "Retribution Blow",
+		desc: "If an opposing Pokemon successfully boosts stat(s), this pokemon will then follow up with Hyper Beam. This move will not cause recharge.",
+		shortDesc:
+			"Triggers Hyper Beam when foe boosts stat(s). Will not cause recharge",
+	},
+	draconize: {
+		name: "Draconize",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Dragon type and have 1.1x power.",
+	},
+	fearmonger: {
+		name: "Fearmonger",
+		shortDesc:
+			"Drops Atk and Spa by 1 stage on switch-in; contact moves have +10% chance to paralyse",
+	},
+	kingswrath: {
+		name: "King's Wrath",
+		shortDesc:
+			"Lowering stats on the field will boost this raise this Pokemon's Atk and Def",
+	},
+	queensmourning: {
+		name: "Queens's Mourning",
+		shortDesc:
+			"Lowering stats on the field will boost this raise this Pokemon's SpA and SpD",
+	},
+	toxicspill: {
+		name: "Toxic Spill",
+		shortDesc: "Damages non-Poison types by 1/8 HP at the end of each turn",
+	},
+	desertcloak: {
+		name: "Desert Cloak",
+		shortDesc:
+			"When sandstorm is active, protects allies and self from status and secondary effects",
+	},
+	prettyprincess: {
+		name: "Pretty Princess",
+		shortDesc:
+			"This Pokemon deals 50% more damage against foes with lowered stats",
+	},
+	selfrepair: {
+		name: "Self-Repair",
+		shortDesc:
+			"Heals 1/16 HP at end of each turn; Cures status on switch-out ",
+	},
+	hellblaze: {
+		name: "Hellblaze",
+		shortDesc: "Boost Pokemon's Fire moves by 30%, 80% when below 1/3 HP",
+		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.8 while using a Fire-type attack, and 1.3 otherwise.",
+	},
+	riptide: {
+		name: "Riptide",
+		shortDesc: "Boost Pokemon's Water moves by 30%, 80% when below 1/3 HP",
+		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.8 while using a Water-type attack, and 1.3 otherwise.",
+	},
+	forestrage: {
+		name: "Forest Rage",
+		shortDesc: "Boost Pokemon's Grass moves by 30%, 80% when below 1/3 HP",
+		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.8 while using a Grass-type attack, and 1.3 otherwise.",
+	},
+	primalmaw: {
+		name: "Primal Maw",
+		shortDesc:
+			"This Pokemon's biting moves hit twice. The second hit has its damage halved.",
+	},
+	sweepingedge: {
+		name: "Sweeping Edge",
+		shortDesc:
+			"This Pokemon's single-target slicing moves hit both foes and never miss",
+	},
+	clueless: {
+		name: "Clueless",
+		shortDesc:
+			"While this Pokemon is active, the effects of weather, rooms, and terrains are disabled.",
+
+		start: "[POKEMON]'s bliss negates field effects",
+	},
+	hydrocircuit: {
+		name: "Hydro Circuit",
+		shortDesc:
+			"This Pokemon's Electric moves are boosted by 50%; Water moves drain 25% damge",
+	},
+	giftedmind: {
+		name: "Gifted Mind",
+		shortDesc:
+			"This Pokemon's status moves cannot miss; Nulls Pokemon's Psychic weaknesses",
+	},
+	equinox: {
+		name: "Equinox",
+		shortDesc:
+			"This pokemon's lower attacking stat is raised to its higher attacking stat.",
+	},
+	absorbant: {
+		name: "Absorbant",
+		shortDesc:
+			"This Pokemon's draining moves drain for 50% more HP and set Leech Seed",
+	},
+	cheatingdeath: {
+		name: "Cheating Death",
+		shortDesc: "This Pokemon takes no damage from first two hits",
+	},
+	cheaptactics: {
+		name: "Cheap Tactics",
+		desc: "This Pokemon attacks the closest opponent with Scratch. This counts as the Pokemon's first move.",
+		shortDesc: "This Pokemon attacks with Scratch on switch-in.",
+	},
+	coward: {
+		name: "Coward",
+		desc: "This Pokemon uses Protect on switch-in. This counts as the Pokemon's first move.",
+		shortDesc: "This Pokemon uses Protect on switch-in.",
+	},
+	voltrush: {
+		name: "Volt Rush",
+		shortDesc:
+			"If this Pokemon is at full HP, its Electric-type moves have their priority increased by 1.",
+	},
+	duneterror: {
+		name: "Dune Terror",
+		shortDesc:
+			"This Pokemon's Ground type attacks are boosted by 20%. Takes 35% less damage under Sandstorm.",
+	},
+	infernalrage: {
+		name: "Infernal Rage",
+		shortDesc: "Fire type moves are 35% stronger, but take 5% recoil",
+	},
+	radiance: {
+		name: "Radiance",
+		shortDesc: "Dark moves fail when this Pokemon is on field; 1.2x accuracy",
+	},
+	atlas: {
+		name: "Atlas",
+		shortDesc:
+			"On switch-in, this Pokemon sets Gravity for 8 turns. User moves last.",
+	},
+	elementalcharge: {
+		name: "Elemental Charge",
+		shortDesc:
+			"This Pokemon's moves have a 20% chance to BRN/FRZ/PARA depending on move type.",
+	},
+	dualwield: {
+		name: "Dual Wield",
+		shortDesc:
+			"Mega Launcher and Keen Edge moves hit twice for 75% damage.",
+	},
+	ambush: {
+		name: "Ambush",
+		shortDesc:
+			"This Pokemon's first attack is guaranteed to be a critical hit.",
+	},
+	jawsofcarnage: {
+		name: "Jaws of Carnage",
+		shortDesc: "This pokemon heals 1/2 hp if it knock out a Pokemon",
+	},
+	angelswrath: {
+		name: "Angel's Wrath",
+		shortDesc: "Drastically alters all of Cascoon's moves",
+	},
+
+	prismaticfur: {
+		name: "Prismatic Fur",
+		shortDesc: "Color Change + Protean + Fur Coat + Ice Scales",
+	},
+	faehunter: {
+		name: "Fae Hunter",
+		shortDesc: "This Pokemon deals 50% more damage against Fairy-Types",
+	},
+	gravitywell: {
+		name: "Gravity Well",
+		shortDesc: "On switch-in, this Pokemon sets Gravity for 5 turns.",
+	},
+	shockingjaws: {
+		name: "Shocking Jaws",
+		shortDesc: "Biting moves have a 50% chance to paralyze the target.",
+	},
+	cryomancy: {
+		name: "Cryomancy",
+		shortDesc: "This Pokemon's moves have a 5x chance to frostbite",
+	},
+	phantompain: {
+		name: "Phantom Pain",
+		shortDesc:
+			"Ghost type moves can hit normal type pokemon for neutral damage.",
+	},
+	purgatory: {
+		name: "Purgatory",
+		shortDesc: "Boost Pokemon's Ghost moves by 30%, 80% when below 1/3 HP.",
+	},
+	emanate: {
+		name: "Emanate",
+		shortDesc:
+			"This Pokemon's Normal-type moves become Psychic type and get a 10% boost.",
+	},
+	monkeybusiness: {
+		name: "Monkey Business",
+		shortDesc: "This Pokemon attacks with Tickle on switch-in.",
+	},
+
+	// CAP
+	adrenalinerush: {
+		name: "Adrenaline Rush",
+		shortDesc: "KOs raise speed by +1.",
+		desc: "When this Pokemon directly knocks out an opponent, its speed raises by one stage.",
+	},
+	cryoproficiency: {
+		name: "Cryo Proficiency",
+		shortDesc: "Triggers hail when hit. 30% chance to frostbite on contact.",
+	},
+	voodoopower: {
+		name: "Voodoo Power",
+		shortDesc: "30% chance to bleed when hit by special attacks.",
+		activate: "  [POKEMON] caused a bleed!",
+	},
+	spikearmor: {
+		name: "Spike Armor",
+		shortDesc: "30% chance to bleed on contact.",
+		activate: "  [POKEMON] caused a bleed!",
+	},
+	kunoichisblade: {
+		name: "Kunoichi's Blade",
+		shortDesc:
+			"Boost weaker moves and increases the frequency of multi-hit moves.",
+		start: "  [POKEMON] sharpened it's blade!",
+	},
+	junglesguard: {
+		name: "Jungle's Guard",
+		shortDesc:
+			"Grass-types on user side: immune to status/stat drops from enemy.",
+		start: "  [POKEMON] is guarding it's jungle friends!",
+	},
+	pixiepower: {
+		name: "Pixie Power",
+		shortDesc: "Boosts Fairy moves by 33% and 1.2x accuracy.",
+		start: "  [POKEMON] is emanating pixie power!",
+	},
+	plasmalamp: {
+		name: "Plasma Lamp",
+		shortDesc:
+			"Boost accuracy & power of Fire and Electric type moves by 1.2x.",
+		start: "  [POKEMON]'s plasma lamp is powering it up!",
+	},
+	magmaeater: {
+		name: "Magma Eater",
+		shortDesc: "Combines Predator & Molten Down.",
+	},
+	superhotgoo: {
+		name: "Super Hot Goo",
+		shortDesc: "Inflicts burn and lower the speed on contact.",
+	},
+	nika: {
+		name: "Nika",
+		shortDesc: "Iron fist + Water moves function normally under sun.",
+	},
+	mindcrush: {
+		name: "Mind Crush",
+		shortDesc: "Biting moves use SpAtk and deal 50% more damage.",
+	},
+	vengefulspirit: {
+		name: "Vengeful Spirit",
+		shortDesc: "Haunted Spirit + Vengeance.",
+	},
+	tacticalretreat: {
+		name: "Tactical Retreat",
+		shortDesc: "Flees when stats are lowered.",
+	},
+	tidalrush: {
+		name: "Tidal Rush",
+		shortDesc: "Water moves get +1 priority. Requires full HP.",
+	},
+	guilttrip: {
+		name: "Guilt Trip",
+		shortDesc: "Sharply lowers attacker's Attack and SpAtk when fainting.",
+	},
+	stygianrush: {
+		name: "Stygian Rush",
+		shortDesc: "Dark moves get +1 priority. Requires full HP.",
+	},
+	readiedaction: {
+		name: "Readied Action",
+		shortDesc: "Doubles attack on first turn.",
+	},
+	subdue: {
+		name: "Subdue",
+		shortDesc: "Doubles the power of stat dropping moves.",
+	},
+	crownedsword: {
+		name: "Crowned Sword",
+		shortDesc: "Combines Intrepid Sword & Anger Point",
+	},
+	crownedshield: {
+		name: "Crowned Shield",
+		shortDesc: "Combines Dauntless Shield & Stamina",
+	},
+	crownedking: {
+		name: "Crowned King",
+		shortDesc: "Combines Unnerve & Grim Neigh & Chilling Neigh",
+	},
+	claptrap: {
+		name: "Clap Trap",
+		shortDesc: "Counters contact with 50BP Snap Trap.",
+	},
+	permanence: {
+		name: "Permanence",
+		shortDesc: "Foes can't heal in any way.",
+		cant: "[MOVE] failed to heal [POKEMON]!",
+	},
+	hubris: {
+		name: "Hubris",
+		shortDesc: "KOs raise SpA by +1.",
+	},
+	cosmicdaze: {
+		name: "Cosmic Daze",
+		shortDesc: "2x damage vs confused. Enemies take 2x confusion damage.",
+	},
+	bloodprice: {
+		name: "Blood Price",
+		shortDesc: "Does 30% more damage but lose 10% HP when attacking.",
+	},
+	egoist: {
+		name: "Egoist",
+		shortDesc: "Raises its own stats when foes raise theirs.",
+	},
+	terminalvelocity: {
+		name: "Terminal Velocity",
+		shortDesc: "Special moves use 20% of its Speed stat additionally.",
+	},
+	monsterhunter: {
+		name: "Monster Hunter",
+		shortDesc: "Deals 1.5x damage to Dark-types.",
+	},
+	flamingjaws: {
+		name: "Flaming Jaws",
+		shortDesc: "Biting moves have 50% chance to burn the target.",
+	},
+	bassboosted: {
+		name: "Bass Boosted",
+		shortDesc: "Combines Amplifier & Punk Rock.",
+	},
+	earlygrave: {
+		name: "Early Grave",
+		shortDesc: "+1 priority to Ghost-type moves at full HP.",
+	},
+	phantomthief: {
+		name: "Phantom Thief",
+		shortDesc: "Uses 40BP Spectral Thief on switch-in.",
+	},
+	devourer: {
+		name: "Devourer",
+		shortDesc: "Combines Strong Jaw & Primal Maw.",
+	},
+	fortitude: {
+		name: "Fortitude",
+		shortDesc: "Boosts SpDef +1 when hit. Maxes SpDef on crit.",
+	},
+	spiteful: {
+		name: "Spiteful",
+		shortDesc: "Reduces attacker's PP on contact.",
+	},
+	twostep: {
+		name: "Two Step",
+		shortDesc: "Triggers 50BP Revelation Dance after using a Dance move.",
+	},
+	impulse: {
+		name: "Impulse",
+		shortDesc: "Non-contact moves use the Speed stat for damage.",
+	},
+	saltcircle: {
+		name: "Salt Circle",
+		shortDesc: "Prevents opposing Pokémon from fleeing on entry.",
+	},
+	airborne: {
+		name: "Airborne",
+		shortDesc: "Boosts own & ally's Flying-type moves by 1.3x.",
+	},
+	showdownmode: {
+		name: "Showdown Mode",
+		shortDesc: "Combines Ambush & Violent Rush.",
+	},
+	webspinner: {
+		name: "Web Spinner",
+		shortDesc: "Uses String Shot on switch-in.",
+	},
+	banshee: {
+		name: "Banshee",
+		shortDesc: "Normal-type moves become Ghost-type and get a 1.2x boost.",
+	},
+	chromecoat: {
+		name: "Chrome Coat",
+		shortDesc:
+			"Reduces special damage taken by 40%, but decreases Speed by 10%.",
+	},
+	monstermash: {
+		name: "Monster Mash",
+		shortDesc: "Casts Trick-or-Treat on entry.",
+	},
+	powderburst: {
+		name: "Powder Burst",
+		shortDesc: "Casts Powder on entry.",
+	},
+	ponypower: {
+		name: "Pony Power",
+		shortDesc: "Combines Keen Edge & Mystic Blades.",
+	},
+	combustion: {
+		name: "Combustion",
+		shortDesc: "Boosts the power of Fire-type moves by 1.5x.",
+	},
+	telekinetic: {
+		name: "Telekinetic",
+		shortDesc: "Casts Telekinesis on entry.",
+	},
+	fighter: {
+		name: "Fighter",
+		shortDesc:
+			"Boosts Fighting-type moves by 1.2x, or 1.5x when below 1/3 HP.",
+	},
+	purelove: {
+		name: "Pure Love",
+		shortDesc: "Infatuates on contact. Heals 25% damage vs. infatuated.",
+	},
+	fertilize: {
+		name: "Fertilize",
+		shortDesc: "Normal-type moves become Grass-type and get a 1.1x boost.",
+	},
+	determination: {
+		name: "Determination",
+		shortDesc: "Ups Special Attack by 50% if suffering.",
+	},
+	mysticblades: {
+		name: "Mystic Blades",
+		shortDesc: "Keen edge moves become special and deal 30% more damage.",
+	},
+	changeofheart: {
+		name: "Change of Heart",
+		shortDesc: "Uses Heart Swap on switch-in.",
+	},
+	hightide: {
+		name: "High Tide",
+		shortDesc: "Triggers 50 BP Surf after using a Water-type move.",
+	},
+	seaborne: {
+		name: "Seaborne",
+		shortDesc: "Combines Drizzle & Swift Swim.",
+	},
+	purifyingwaters: {
+		name: "Purifying Waters",
+		shortDesc: "Combines Hydration & Water Veil.",
+	},
+	heavenasunder: {
+		name: "Heaven Asunder",
+		shortDesc: "Spacial Rend always crits. Ups crit level by +1.",
+	},
+	refridgerate: {
+		name: "Refridgerate",
+		shortDesc: "Normal-type moves become Ice-type and get a 1.1x boost.",
+	},
+	refridgerator: {
+		name: "Refridgerator",
+		shortDesc: "Combines Refrigerate & Illuminate.",
+	},
+	suppress: {
+		name: "Suppress",
+		shortDesc: "Casts Torment on entry.",
+	},
+	yukionna: {
+		name: "Yuki Onna",
+		shortDesc: "Scare + Intimidate. 10% chance to infatuate on hit.",
+	},
+	doombringer: {
+		name: "Doombringer",
+		shortDesc: "Uses Doom Desire on switch-in.",
+	},
+	arcaneforce: {
+		name: "Arcane Force",
+		shortDesc: "All moves gain STAB. Ups 'supereffective' by 10%.",
+	},
+	freezingpoint: {
+		name: "Freezing Point",
+		shortDesc: "30% chance to get frostbitten on contact.",
+	},
+	peacefulslumber: {
+		name: "Peaceful Slumber",
+		shortDesc: "Combines Sweet Dreams & Self Sufficient.",
+	},
+	enlightened: {
+		name: "Enlightened",
+		shortDesc: "Combines Emanate & Inner Focus.",
+	},
+	tippingpoint: {
+		name: "Tipping Point",
+		shortDesc: "Getting hit raises Sp. Atk. Critical hits maximize Sp. Atk.",
+	},
+	superstrain: {
+		name: "Super Strain",
+		shortDesc: "KOs lower Attack by +1. Take 25% recoil damage.",
+	},
+	primandproper: {
+		name: "Prim and Proper",
+		shortDesc: "Combines Wonder Skin & Cute Charm.",
+	},
+	soothingaroma: {
+		name: "Soothing Aroma",
+		shortDesc: "Cures party status on entry.",
+	},
+	naturalrecovery: {
+		name: "Natural Recovery",
+		shortDesc: "Combines Natural Cure & Regenerator.",
+	},
+	sandguard: {
+		name: "Sand Guard",
+		shortDesc:
+			"Blocks priority and reduces special damage taken by 1/2 in sand.",
+	},
+	trickster: {
+		name: "Trickster",
+		shortDesc: "Uses Disable on switch-in.",
+	},
+	berserkerrage: {
+		name: "Berserker Rage",
+		shortDesc: "Combines Berserk & Rampage.",
+	},
+	dustcloud: {
+		name: "Dust Cloud",
+		shortDesc: "Attacks with Sand Attack on switch-in.",
+	},
+	moonspirit: {
+		name: "Moon Spirit",
+		shortDesc: "Fairy & Dark gain STAB. Moonlight recovers 75% HP.",
+	},
+	generator: {
+		name: "Generator",
+		shortDesc: "Charges up on entry.",
+	},
+	itchydefense: {
+		name: "Itchy Defense",
+		shortDesc: "Causes infestation when hit by a contact move.",
+	},
+	frostburn: {
+		name: "Frost Burn",
+		shortDesc: "Triggers 40BP Ice Beam after using a Fire-type move.",
+	},
+	accelerate: {
+		name: "Accelerate",
+		shortDesc: "Moves that need a charge turn are now used instantly.",
+	},
+	rockhardwill: {
+		name: "Rockhard Will",
+		shortDesc: "Boosts Rock-type moves by 1.2x, or 1.5x when under 1/3 HP.",
+	},
+	demolitionist: {
+		name: "Demolitionist",
+		shortDesc:
+			"Readied Action + Ignores Protect + screens break on readied turn",
+	},
+	flamingmaw: {
+		name: "Flaming Maw",
+		shortDesc: "Strong Jaw + Flaming Jaws",
+	},
+	balloonbomb: {
+		name: "Balloon Bomb",
+		shortDesc: "Aftermath + Inflatable",
+	},
+	appleenlightenment: {
+		name: "Apple Enlightenment",
+		shortDesc: "Fur coat + Magic Guard.",
+	},
+	rejection: {
+		name: "Rejection",
+		shortDesc: "Applies Quash on switch-in.",
+	},
+	entrance: {
+		name: "Entrance",
+		shortDesc: "Confusion also inflicts infatuation.",
+	},
+	aftershock: {
+		name: "Aftershock",
+		shortDesc: "Triggers Magnitude 4-7 after using a damaging move.",
+		activate: "  [POKEMON] Created an aftershock!",
+	},
+
+	retriever: {
+		name: "Retriever",
+		shortDesc: "Retrieves item on switch-out",
+		activate: "  [POKEMON] retrieved its [ITEM]!",
+	},
+	parroting: {
+		name: "Parroting",
+		shortDesc: "Copies sound moves used by others. Immune to sound.",
+	},
+	aerialist: {
+		name: "Aerialist",
+		shortDesc: "Combines Levitate & Flock.",
+	},
+	contempt: {
+		name: "Contempt",
+		shortDesc:
+			"Ignores opposing stat changes. Boosts Attack when stat lowered.",
+	},
+	desertspirit: {
+		name: "Desert Spirit",
+		shortDesc: "Summons sand on entry. Ground moves hit airborne in sand.",
+	},
+	flourish: {
+		name: "Flourish",
+		shortDesc: "Boosts Grass moves by 50% in grassy terrain.",
+	},
+	lawnmower: {
+		name: "Lawnmower",
+		shortDesc: "Removes terrain on switch-in. Stat up if terrain removed.",
+	},
+	mythicalarrows: {
+		name: "Mythical Arrows",
+		shortDesc: "Arrow moves become special and deal 30% more damage.",
+	},
+	brawlingwyvern: {
+		name: "Brawling Wyvern",
+		shortDesc: "Dragon type moves become punching moves.",
+	},
+	deadpower: {
+		name: "Dead Power",
+		shortDesc: "1.5x Attack boost. 20% chance to curse on contact moves.",
+	},
+	malicious: {
+		name: "Malicious",
+		shortDesc: "Lowers the foe's highest Attack and Defense stat.",
+	},
+	ole: {
+		name: "Ole!",
+		shortDesc: "20% chance to evade physical moves.",
+	},
+	radiojam: {
+		name: "Radio Jam",
+		shortDesc: "Sound-based moves inflict disable.",
+	},
+	noisecancel: {
+		name: "Noise Cancel",
+		shortDesc: "Protects the party from sound-based moves.",
+	},
+	hauntingfrenzy: {
+		name: "Haunting Frenzy",
+		shortDesc: "20% chance to flinch the opponent. +1 speed on kill.",
+	},
+	moltenblades: {
+		name: "Molten Blades",
+		shortDesc: "Keen Edge + Keen Edge moves have a 20% chance to burn.",
+	},
+	minioncontrol: {
+		name: "Minion Control",
+		shortDesc: "Moves hit an extra time for each healthy party member.",
+	},
+	celestialblessing: {
+		name: "Celestial Blessing",
+		shortDesc: "Recovers 1/12 of its health each turn under Misty Terrain.",
+	},
+	blademaster: {
+		name: "Blade Master",
+		shortDesc: "Combines Sweeping Edge & Keen Edge.",
+	},
+	catastrophe: {
+		name: "Catastrophe",
+		shortDesc: "Sun boosts Water. Rain boosts Fire.",
+	},
+	ironserpent: {
+		name: "Iron Serpent",
+		shortDesc: "Ups “supereffective” by 33%.",
+	},
+	wingedking: {
+		name: "Winged King",
+		shortDesc: "Ups “supereffective” by 33%.",
+	},
+	sunbasking: {
+		name: "Sun Basking",
+		shortDesc: "Immune to status conditions if sun is active.",
+	},
+	gallantry: {
+		name: "Gallantry",
+		shortDesc: "Gets no damage for first hit.",
+	},
+	thickskin: {
+		name: "Thick Skin",
+		shortDesc: "Takes 25% less damage from super-effective moves.",
+	},
+	sharingiscaring: {
+		name: "Sharing is Caring",
+		shortDesc: "Stat changes are shared between all battlers.",
+	},
+	sharpedges: {
+		name: "Sharp Edges",
+		shortDesc: "1/6 HP damage when touched.",
+	},
+	rapidresponse: {
+		name: "Rapid Response",
+		shortDesc: "Boosts Speed by 50% and Sp. Atk by 20% on the first turn.",
+	},
+	watchyourstep: {
+		name: "Watch Your Step",
+		shortDesc: "Spreads two layers of Spikes on switch-in.",
+	},
+	firescales: {
+		name: "Fire Scales",
+		shortDesc: "Halves damage taken from Special moves.",
+	},
+	illwill: {
+		name: "Ill Will",
+		shortDesc: "Deletes the PP of the move that faints this Pokémon.",
+	},
 };

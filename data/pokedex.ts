@@ -181,4 +181,5 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		gen: 9,
 	},
+	
 };

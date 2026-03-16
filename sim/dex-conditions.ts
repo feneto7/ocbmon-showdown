@@ -95,6 +95,7 @@ export interface EventMethods {
 	onSideConditionStart?: (this: Battle, target: Side, source: Pokemon, sideCondition: Condition) => void;
 	onStallMove?: (this: Battle, pokemon: Pokemon) => boolean | void;
 	onSwitchIn?: (this: Battle, pokemon: Pokemon) => void;
+	onFoeSwitchIn?: (this: Battle, foe: Pokemon) => void;
 	onSwitchOut?: (this: Battle, pokemon: Pokemon) => void;
 	onSwap?: (this: Battle, target: Pokemon, source: Pokemon) => void;
 	onTakeItem?: (
