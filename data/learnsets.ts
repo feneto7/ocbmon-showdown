@@ -2,9 +2,9 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 
 	slifer: {
 		learnset: {
-			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
-			airslash: ["9M", "9L1", "8M", "8L1", "7L30", "6L30", "5L35", "4L35", "4S1"],
-			ancientpower: ["9L1", "8L1", "7L15", "6L15", "5L45", "5S2", "4T", "4L15", "4S1", "3L15"],
+			finalflash: ["9M", "7M", "6M", "5M", "4M", "3M"],
+			voltaicshadow: ["9M", "9L1", "8M", "8L1", "7L30", "6L30", "5L35", "4L35", "4S1"],
+			enragingshadowflurry: ["9L1", "8L1", "7L15", "6L15", "5L45", "5S2", "4T", "4L15", "4S1", "3L15"],
 			aquatail: ["7T", "6T", "5T", "4T"],
 			avalanche: ["9M", "8M", "4M"],
 			bind: ["7T", "6T", "5T"],
@@ -549,9 +549,9 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			rest: ["9M"],
 			sleeptalk: ["9M"],
 			terablast: ["9M"],
-			closecombat: ["9M"],
-			knockoff: ["9M"],
-			suckerpunch: ["9M"],
+			enragingshadowflurry: ["9M"],
+			voltaicshadow: ["9M"],
+			finalflash: ["9M"],
 		},
 	},
 	sombrul: {
