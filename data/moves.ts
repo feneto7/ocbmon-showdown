@@ -22214,4 +22214,10 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Dark",
 		contestType: "Cool",
 	},
+
+
+	/* Clovermons */
+	
+
+
 };
