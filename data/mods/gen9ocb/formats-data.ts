@@ -7360,4 +7360,2219 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesDataTa
 	},
 	
 	
+	kingdramegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	cascoonprimal: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wormadamsandycloak: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wormadamtrashcloak: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	shelloseastsea: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gastrodoneastsea: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	darmanitanzenmode: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	darmanitanzenmodegalar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	deerlingsummer: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	deerlingautumn: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	deerlingwinter: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sawsbucksummer: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sawsbuckautumn: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sawsbuckwinter: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	genesectdousedrive: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	genesectshockdrive: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	genesectburndrive: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	genesectchilldrive: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	greninjabattlebond: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	flabebeyellowflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	flabebeorangeflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	flabebeblueflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	flabebewhiteflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	floetteyellowflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	floetteorangeflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	floetteblueflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	floettewhiteflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	floetteeternalflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	florgesyellowflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	florgesorangeflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	florgesblueflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	florgeswhiteflower: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfrouhearttrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroustartrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroudiamondtrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroudebutantetrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroumatrontrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroudandytrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroulareinetrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroukabukitrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	furfroupharaohtrim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	meowsticfemale: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	xerneasactive: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zygarde50powerconstruct: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zygarde10powerconstruct: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	rockruffowntempo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniormeteororange: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniormeteoryellow: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniormeteorgreen: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniormeteorblue: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniormeteorindigo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniormeteorviolet: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniorcorered: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniorcoreorange: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniorcoreyellow: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniorcoregreen: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniorcoreblue: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniorcoreindigo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	miniorcoreviolet: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	magearnaoriginalcolor: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachuoriginalcap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachuhoenncap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachusinnohcap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachuunovacap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachukaloscap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachualolacap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachupartnercap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachuworldcap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownb: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownc: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownd: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unowne: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownf: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unowng: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownh: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unowni: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownj: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownk: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownm: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownn: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unowno: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownp: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownq: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownr: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unowns: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownt: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownu: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownv: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownw: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownx: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unowny: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownz: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownemark: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownqmark: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	burmysandycloak: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	burmytrashcloak: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonpolar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillontundra: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivilloncontinental: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillongarden: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonelegant: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonmeadow: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonmodern: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonmarine: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonarchipelago: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonhighplains: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonsandstorm: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonriver: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonmonsoon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonsavanna: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonsun: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonocean: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vivillonjungle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sinisteaantique: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	polteageistantique: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremierubycream: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremiematchacream: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremiemintcream: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremielemoncream: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremiesaltedcream: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremierubyswirl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremiecaramelswirl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremierainbowswirl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	eiscuenoiceface: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	indeedeefemale: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zaciancrownedsword: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zamazentacrownedshield: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	urshifurapidstrikestyle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	calyrexicerider: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	calyrexshadowrider: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dipplin: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	poltchageist: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sinistcha: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	okidogi: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	munkidori: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	fezandipiti: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerpon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hydrapple: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	arachtres: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	flairgrance: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	polartic: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	arashinne: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dreadnaut: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	boarlock: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	heliosunny: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sopranice: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	beefender: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	salazarus: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gooschase: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	lepastry: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gyaradeath: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tortemple: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	brontonana: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dredwood: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	corm: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	cormoth: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	popcorm: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	blizzardmaw: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	lumberingsloth: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ironcarapace: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	magmenous: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	kaiosea: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	slyduck: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	shyduck: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	marbeep: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	fluffbee: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	amphybuzz: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	bariong: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	phanfernal: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	skulberus: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	velozel: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	bubbleo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hydroar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	granitun: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	fujiflap: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	burmyeterna: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sagaracas: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	luminositeon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	crawdauntles: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	scrafster: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ironvoca: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	morpekyll: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	frostula: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dududunsparce: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dududunsparcemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerponmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerponhearthflamemaskmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerponcornerstonemaskmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerponwellspringmaskmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	seerkat: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tentagrewl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	cacjack: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tyranjoula: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	jaggedchungulis: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dedelibird: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	krampird: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ironpalette: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	carbonix: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wispywaspy: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ironscythe: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	woolyworm: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	heracreus: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	grotom: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	orchestot: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	queengambit: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pentadug: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	crabominablemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	abyssand: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pentawug: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ratiking: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ratfioso: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	guardozel: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	beniccino: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	bewarden: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	torrentula: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	spindaze: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	blocli: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	bloxtack: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gargablox: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hippopotato: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hippotaton: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	harvestingtyrant: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ironspirals: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ironsaber: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hypnocroak: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	plundertow: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	qwilfishhisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	growlithehisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	arcaninehisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	voltorbhisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	electrodehisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	typhlosionhisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sneaselhisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	samurotthisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	lilliganthisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	braviaryhisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sliggoohisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	goodrahisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	avalugghisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	decidueyehisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zoruahisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zoroarkhisuian: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	taurospaldeanaquabreed: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	taurospaldeanblazebreed: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	taurospaldeancombatbreed: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ursalunabloodmoon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tatsugiricurly: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tatsugiristretchy: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tatsugiridroopy: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	squawkabillygreenplumage: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	squawkabillyblueplumage: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	squawkabillyyellowplumage: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	squawkabillywhiteplumage: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerponwellspringmask: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerponhearthflamemask: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ogerponcornerstonemask: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	polarticbluemoon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	lumberingslothengulfed: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hydroarf: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	eeveepartner: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	meowthpartner: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	mimikyurayquazabusted: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	slakingmegaapeshift: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	raichumegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	castformfoggy: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	fidoughpartner: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	chesnaughtbattlebond: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	chesnaughtclemont: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	delphoxbattlebond: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	delphoxserena: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	morpekyllhangry: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	unownrevelation: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	lycanroceclipse: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	lycanroctwilight: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	falinksmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pyroarmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	chesnaughtmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	delphoxmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	greninjamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	eelektrossmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	malamarmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	victreebelmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dragalgemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hawluchamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	clefablemegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dragonitemegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	excadrillmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	scolipedemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	chandeluremegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	floetteeternalflowermega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zygardecompletemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	barbaraclemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	drampamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	starmiemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	skarmorymegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	froslassmegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wigglytuffmegax: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wigglytuffmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	lucariomegaz: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gyaradeathmegax: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gyaradeathmegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	arbokmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	golisopodmegay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	rapidashmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	rapidashmegagalar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	oricoriomega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	cormothmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	popcormmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	amphybuzzmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	urshifumega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	urshifurapidstrikestylemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	melmetalmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	venusaurmegax: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	blastoisemegax: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gengarmegax: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	charizardmegaz: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	snorlaxmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	rillaboommega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	cinderacemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	inteleonmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	corviknightmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	drednawmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	coalossalmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sandacondamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	copperajahmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hatterenemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	garbodormega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	orbeetlemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	grimmsnarlmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	centiskorchmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	alcremiemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	toxtricitymega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pikachupartnermega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	eeveepartnermega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	meowthpartnermega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	fidoughpartnermega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	weavilemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	serperiormega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	emboarmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	samurottmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	decidueyemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	decidueyehisuianmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	incineroarmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	meowscaradamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	primarinamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	quaquavalmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	samurotthisuianmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	skeledirgemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	typhlosionhisuianmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	mienshaomega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	arcaninemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	goodramega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	slowbromegagalar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	slowkingmegagalar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	roserademega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	clodsiremega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gothitellemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	arcaninehisuianmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	reuniclusmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	kipmodo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	marshmodo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	swampage: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	swampagemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	chandeluremega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zapdosexmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	articunoexmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	moltresexmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zapdosex: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	articunoex: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	moltresex: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	frostuccino: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	talonflamemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	carbonixmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	grotomglass: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	grotomroll: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	grotomdrum: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	grotomkick: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	grotomfill: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	heracreusmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wispywaspyhivemind: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dragapultmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sandslashalolamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	kleavormega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	scythermega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hydreigonmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	vanilluxemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	pentadugalola: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	rexcadrill: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	selenumbra: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	sneaslermega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	clefablemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tsareenamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	goodrahisuianmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	hariyamamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	eraticate: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	luxzeromega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	luxzero: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dragonitedelivery: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	chienpaomega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	dracovishmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	ledianparadox: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	snorlaxprimal: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	victiniprimal: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wigglytuffprimal: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	abomasnowsanta: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	bewearangry: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	mimikyurayquaza: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	espeongalaxy: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	darkrainightmare: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	solrocksystem: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	spectriercloud: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	calyrexcloudrider: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	wigglytuffapex: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	yveltalmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	kartanafallen: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tinkatonmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	mimikyuapex: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	mimikyuapexbusted: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	kilozuna: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	kilozunamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	fogging: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	breezing: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	storming: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	merrykarp: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	gyarevalry: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	raichumegax: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	chimechomega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	absolmegaz: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	staraptormega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	garchompmegaz: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	heatranmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	darkraimega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	golurkmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	meowsticmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	golisopodmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	magearnamega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	zeraoramega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	scovillainmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	glimmoramega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	tatsugirimega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	baxcaliburmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
+	slate: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: 'Custom',
+	},
 };
