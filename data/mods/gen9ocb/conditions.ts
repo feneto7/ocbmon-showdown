@@ -48,6 +48,40 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 				return this.chainModify([5461, 4096]);
 			}
 		},
-	}
+	},
+
+	articunoex:{
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug("Permafrost neutralize");
+				return this.chainModify(0.65);
+			}
+		},
+	}, 
+	zapdosex:{
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity["Electric"] = true;
+			}
+			const baseEffectiveness = move.onEffectiveness;
+			move.onEffectiveness = (effectiveness, target, type, usedMove) => {
+				if (usedMove.type === 'Electric' && type === 'Ground') return -1;
+				return baseEffectiveness?.apply(this, [effectiveness, target, type, usedMove]);
+			};
+		},
+	},
+	moltresex:{
+		onModifyMovePriority: -2,
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug("quintupling burn chance");
+				for (const secondary of move.secondaries) {
+					if (secondary.status?.includes("brn") && secondary.chance && !secondary.ability) { secondary.chance *= 5; }
+				}
+			}
+		},
+	},
 	
 };
