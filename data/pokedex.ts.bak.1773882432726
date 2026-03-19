@@ -22548,43 +22548,22 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	scizorredux: {
 		name: "Scizor-Redux",
 		num: 2577,
-		types: ["Poison", "Steel", "Dragon"],
+		types: ["Bug", "Fairy"],
 		abilities: {
-			0: "Mind Crunch", H: "Chrome Coat", 
+			"0": "Static",
 		},
 		baseStats: {
-			hp: 70,
-			atk: 50,
-			def: 75,
-			spa: 125,
-			spd: 100,
-			spe: 80,
+			hp: 110,
+			atk: 115,
+			def: 80,
+			spa: 50,
+			spd: 90,
+			spe: 90,
 		},
 		eggGroups: ["Undiscovered", "Undiscovered"],
 		weightkg: 0,
 		evoLevel: 0,
 		evos: [],
-	},
-	scizorreduxmega: {
-		name: "Scizor Redux-Mega",
-		num: 2578,
-		types: ["Poison", "Steel", "Dragon"],
-		abilities: {
-			"0": "Primal Maw", "H": "Chrome Coat"
-		},
-		baseStats: {
-			hp: 70,
-			atk: 65,
-			def: 110,
-			spa: 155,
-			spd: 125,
-			spe: 75,
-		},
-		eggGroups: ["Undiscovered", "Undiscovered"],
-		weightkg: 0,
-		evoLevel: 0,
-		evos: [],
-		prevo: "Scizor-Redux",
 	},
 	ironexo: {
 		name: "IronExo",
@@ -22668,7 +22647,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	cascoonprimal: {
 		name: "Cascoon-Primal",
 		num: 268,
-		types: ["Bug"],
+		types: ["Bug","Bug"],
 		abilities: {0: "Angel's Wrath", 1: "Angel's Wrath", H: "Angel's Wrath"},
 		baseStats: {
 			hp: 121,
@@ -22722,7 +22701,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	shelloseastsea: {
 		name: "Shellos-East Sea",
 		num: 422,
-		types: ["Water"],
+		types: ["Water","Water"],
 		abilities: {0: "Shell Armor", 1: "Storm Drain", H: "Regenerator"},
 		baseStats: {
 			hp: 76,
@@ -22992,7 +22971,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	flabebeyellowflower: {
 		name: "Flabebe-Yellow Flower",
 		num: 669,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 44,
@@ -23010,7 +22989,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	flabebeorangeflower: {
 		name: "Flabebe-Orange Flower",
 		num: 669,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 44,
@@ -23028,7 +23007,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	flabebeblueflower: {
 		name: "Flabebe-Blue Flower",
 		num: 669,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 44,
@@ -23046,7 +23025,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	flabebewhiteflower: {
 		name: "Flabebe-White Flower",
 		num: 669,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 44,
@@ -23064,7 +23043,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	floetteyellowflower: {
 		name: "Floette-Yellow Flower",
 		num: 670,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 54,
@@ -23082,7 +23061,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	floetteorangeflower: {
 		name: "Floette-Orange Flower",
 		num: 670,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 54,
@@ -23100,7 +23079,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	floetteblueflower: {
 		name: "Floette-Blue Flower",
 		num: 670,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 54,
@@ -23118,7 +23097,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	floettewhiteflower: {
 		name: "Floette-White Flower",
 		num: 670,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 54,
@@ -23136,7 +23115,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	floetteeternalflower: {
 		name: "Floette-Eternal Flower",
 		num: 670,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		baseStats: {
 			hp: 54,
@@ -23154,7 +23133,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	florgesyellowflower: {
 		name: "Florges-Yellow Flower",
 		num: 671,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Harvest", 1: "Misty Surge", H: "Fairy Aura"},
 		baseStats: {
 			hp: 78,
@@ -23172,7 +23151,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	florgesorangeflower: {
 		name: "Florges-Orange Flower",
 		num: 671,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Harvest", 1: "Misty Surge", H: "Fairy Aura"},
 		baseStats: {
 			hp: 78,
@@ -23190,7 +23169,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	florgesblueflower: {
 		name: "Florges-Blue Flower",
 		num: 671,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Harvest", 1: "Misty Surge", H: "Fairy Aura"},
 		baseStats: {
 			hp: 78,
@@ -23208,7 +23187,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	florgeswhiteflower: {
 		name: "Florges-White Flower",
 		num: 671,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Harvest", 1: "Misty Surge", H: "Fairy Aura"},
 		baseStats: {
 			hp: 78,
@@ -23226,7 +23205,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfrouhearttrim: {
 		name: "Furfrou-Heart Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23244,7 +23223,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroustartrim: {
 		name: "Furfrou-Star Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23262,7 +23241,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroudiamondtrim: {
 		name: "Furfrou-Diamond Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23280,7 +23259,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroudebutantetrim: {
 		name: "Furfrou-Debutante Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23298,7 +23277,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroumatrontrim: {
 		name: "Furfrou-Matron Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23316,7 +23295,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroudandytrim: {
 		name: "Furfrou-Dandy Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23334,7 +23313,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroulareinetrim: {
 		name: "Furfrou-La Reine Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23352,7 +23331,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroukabukitrim: {
 		name: "Furfrou-Kabuki Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23370,7 +23349,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	furfroupharaohtrim: {
 		name: "Furfrou-Pharaoh Trim",
 		num: 676,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Cute Charm"},
 		baseStats: {
 			hp: 75,
@@ -23388,7 +23367,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	meowsticfemale: {
 		name: "Meowstic-Female",
 		num: 678,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Infiltrator", 1: "Competitive", H: "Sage Power"},
 		baseStats: {
 			hp: 74,
@@ -23406,7 +23385,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	xerneasactive: {
 		name: "Xerneas-Active",
 		num: 716,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Pixilate", 1: "Competitive", H: "Self Sufficient"},
 		baseStats: {
 			hp: 126,
@@ -23460,7 +23439,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	rockruffowntempo: {
 		name: "Rockruff-Own Tempo",
 		num: 744,
-		types: ["Rock"],
+		types: ["Rock","Rock"],
 		abilities: {0: "Own Tempo", 1: "Own Tempo", H: "Own Tempo"},
 		baseStats: {
 			hp: 45,
@@ -23730,7 +23709,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachuoriginalcap: {
 		name: "Pikachu-Original Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23748,7 +23727,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachuhoenncap: {
 		name: "Pikachu-Hoenn Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23766,7 +23745,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachusinnohcap: {
 		name: "Pikachu-Sinnoh Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23784,7 +23763,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachuunovacap: {
 		name: "Pikachu-Unova Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23802,7 +23781,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachukaloscap: {
 		name: "Pikachu-Kalos Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23820,7 +23799,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachualolacap: {
 		name: "Pikachu-Alola Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23838,7 +23817,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachupartnercap: {
 		name: "Pikachu-Partner Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23856,7 +23835,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachuworldcap: {
 		name: "Pikachu-World Cap",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
 			hp: 35,
@@ -23874,7 +23853,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownb: {
 		name: "Unown-B",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -23892,7 +23871,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownc: {
 		name: "Unown-C",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -23910,7 +23889,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownd: {
 		name: "Unown-D",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -23928,7 +23907,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unowne: {
 		name: "Unown-E",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -23946,7 +23925,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownf: {
 		name: "Unown-F",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -23964,7 +23943,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unowng: {
 		name: "Unown-G",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -23982,7 +23961,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownh: {
 		name: "Unown-H",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24000,7 +23979,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unowni: {
 		name: "Unown-I",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24018,7 +23997,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownj: {
 		name: "Unown-J",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24036,7 +24015,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownk: {
 		name: "Unown-K",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24054,7 +24033,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownl: {
 		name: "Unown-L",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24072,7 +24051,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownm: {
 		name: "Unown-M",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24090,7 +24069,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownn: {
 		name: "Unown-N",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24108,7 +24087,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unowno: {
 		name: "Unown-O",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24126,7 +24105,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownp: {
 		name: "Unown-P",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24144,7 +24123,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownq: {
 		name: "Unown-Q",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24162,7 +24141,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownr: {
 		name: "Unown-R",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24180,7 +24159,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unowns: {
 		name: "Unown-S",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24198,7 +24177,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownt: {
 		name: "Unown-T",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24216,7 +24195,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownu: {
 		name: "Unown-U",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24234,7 +24213,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownv: {
 		name: "Unown-V",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24252,7 +24231,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownw: {
 		name: "Unown-W",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24270,7 +24249,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownx: {
 		name: "Unown-X",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24288,7 +24267,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unowny: {
 		name: "Unown-Y",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24306,7 +24285,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownz: {
 		name: "Unown-Z",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24324,7 +24303,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownemark: {
 		name: "Unown-Emark",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24342,7 +24321,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownqmark: {
 		name: "Unown-Qmark",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Mystic Power"},
 		baseStats: {
 			hp: 48,
@@ -24360,7 +24339,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	burmysandycloak: {
 		name: "Burmy-Sandy Cloak",
 		num: 412,
-		types: ["Bug"],
+		types: ["Bug","Bug"],
 		abilities: {0: "Shed Skin", H: "Overcoat"},
 		baseStats: {
 			hp: 40,
@@ -24378,7 +24357,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	burmytrashcloak: {
 		name: "Burmy-Trash Cloak",
 		num: 412,
-		types: ["Bug"],
+		types: ["Bug","Bug"],
 		abilities: {0: "Shed Skin", H: "Overcoat"},
 		baseStats: {
 			hp: 40,
@@ -24702,7 +24681,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	sinisteaantique: {
 		name: "Sinistea-Antique",
 		num: 854,
-		types: ["Ghost"],
+		types: ["Ghost","Ghost"],
 		abilities: {0: "Weak Armor", 1: "Weak Armor", H: "Cursed Body"},
 		baseStats: {
 			hp: 40,
@@ -24720,7 +24699,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	polteageistantique: {
 		name: "Polteageis",
 		num: 855,
-		types: ["Ghost"],
+		types: ["Ghost","Ghost"],
 		abilities: {0: "Weak Armor", 1: "Weak Armor", H: "Cursed Body"},
 		baseStats: {
 			hp: 60,
@@ -24738,7 +24717,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremierubycream: {
 		name: "Alcremie-Ruby Cream",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24756,7 +24735,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremiematchacream: {
 		name: "Alcremie-Matcha Cream",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24774,7 +24753,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremiemintcream: {
 		name: "Alcremie-Mint Cream",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24792,7 +24771,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremielemoncream: {
 		name: "Alcremie-Lemon Cream",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24810,7 +24789,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremiesaltedcream: {
 		name: "Alcremie-Salted Cream",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24828,7 +24807,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremierubyswirl: {
 		name: "Alcremie-Ruby Swirl",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24846,7 +24825,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremiecaramelswirl: {
 		name: "Alcremie-Caramel Swirl",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24864,7 +24843,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremierainbowswirl: {
 		name: "Alcremie-Rainbow Swirl",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sweet Veil", 1: "Sweet Veil", H: "Aroma Veil"},
 		baseStats: {
 			hp: 65,
@@ -24882,7 +24861,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	eiscuenoiceface: {
 		name: "Eiscue-Noice Face",
 		num: 875,
-		types: ["Ice"],
+		types: ["Ice","Ice"],
 		abilities: {0: "Ice Face", 1: "Ice Face", H: "Ice Face"},
 		baseStats: {
 			hp: 75,
@@ -25134,7 +25113,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	ogerpon: {
 		name: "Ogerpon",
 		num: 1017,
-		types: ["Grass"],
+		types: ["Grass","Grass"],
 		abilities: {0: "Prankster", 1: "Raw Wood", H: "Defiant"},
 		baseStats: {
 			hp: 80,
@@ -25260,7 +25239,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	boarlock: {
 		name: "Boarlock",
 		num: 1034,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Headstrong", 1: "Gluttony", H: "Magic Bounce"},
 		baseStats: {
 			hp: 120,
@@ -25350,7 +25329,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	gooschase: {
 		name: "Gooschase",
 		num: 1040,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Restraining Order", 1: "Intimidate", H: "Scare"},
 		baseStats: {
 			hp: 98,
@@ -25386,7 +25365,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	gyaradeath: {
 		name: "Gyaradeath",
 		num: 1041,
-		types: ["Ghost"],
+		types: ["Ghost","Ghost"],
 		abilities: {0: "Scare", 1: "Moxie", H: "Greater Spirit"},
 		baseStats: {
 			hp: 95,
@@ -25404,7 +25383,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	tortemple: {
 		name: "Tortemple",
 		num: 1042,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Stamina", 1: "White Smoke", H: "Mountaineer"},
 		baseStats: {
 			hp: 90,
@@ -25458,7 +25437,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	corm: {
 		name: "Corm",
 		num: 1045,
-		types: ["Grass"],
+		types: ["Grass","Grass"],
 		abilities: {0: "Grass Pelt", 1: "Chlorophyll", H: "Overcoat"},
 		baseStats: {
 			hp: 50,
@@ -25476,7 +25455,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	cormoth: {
 		name: "Cormoth",
 		num: 1046,
-		types: ["Grass"],
+		types: ["Grass","Grass"],
 		abilities: {0: "Grass Pelt", 1: "Chlorophyll", H: "Overcoat"},
 		baseStats: {
 			hp: 95,
@@ -25602,7 +25581,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	slyduck: {
 		name: "Slyduck",
 		num: 1053,
-		types: ["Dark"],
+		types: ["Dark","Dark"],
 		abilities: {0: "Fearmonger", 1: "Fatal Precision", H: "Ambush"},
 		baseStats: {
 			hp: 80,
@@ -25620,7 +25599,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	shyduck: {
 		name: "Shyduck",
 		num: 1054,
-		types: ["Dark"],
+		types: ["Dark","Dark"],
 		abilities: {0: "Anger Point", 1: "Low Blow", H: "Soul Linker"},
 		baseStats: {
 			hp: 90,
@@ -25638,7 +25617,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	marbeep: {
 		name: "Marbeep",
 		num: 1055,
-		types: ["Bug"],
+		types: ["Bug","Bug"],
 		abilities: {0: "Honey Gather", 1: "Gooey", H: "Compound Eyes"},
 		baseStats: {
 			hp: 70,
@@ -25656,7 +25635,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	fluffbee: {
 		name: "Fluffbee",
 		num: 1056,
-		types: ["Bug"],
+		types: ["Bug","Bug"],
 		abilities: {0: "Honey Gather", 1: "Gooey", H: "Compound Eyes"},
 		baseStats: {
 			hp: 85,
@@ -25728,7 +25707,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	skulberus: {
 		name: "Skulberus",
 		num: 1061,
-		types: ["Dark"],
+		types: ["Dark","Dark"],
 		abilities: {0: "Moxie", 1: "Stygian Rush", H: "Strong Jaw"},
 		baseStats: {
 			hp: 100,
@@ -25746,7 +25725,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	velozel: {
 		name: "Velozel",
 		num: 1062,
-		types: ["Flying"],
+		types: ["Flying","Flying"],
 		abilities: {0: "Impulse", 1: "Momentum", H: "Air Blower"},
 		baseStats: {
 			hp: 95,
@@ -25854,7 +25833,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	sagaracas: {
 		name: "Sagaracas",
 		num: 1064,
-		types: ["Grass"],
+		types: ["Grass","Grass"],
 		abilities: {0: "Chlorophyll", 1: "Dune Terror", H: "Reservoir"},
 		baseStats: {
 			hp: 90,
@@ -26016,7 +25995,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	ogerponmega: {
 		name: "Ogerpon-Mega",
 		num: 1017,
-		types: ["Grass"],
+		types: ["Grass","Grass"],
 		abilities: {0: "Embody Aspect", 1: "Embody Aspect", H: "Embody Aspect"},
 		baseStats: {
 			hp: 80,
@@ -26196,7 +26175,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	krampird: {
 		name: "Krampird",
 		num: 1126,
-		types: ["Ice"],
+		types: ["Ice","Ice"],
 		abilities: {0: "Snow Cloak", 1: "Slush Rush", H: "Power Spot"},
 		baseStats: {
 			hp: 80,
@@ -26322,7 +26301,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	grotom: {
 		name: "Grotom",
 		num: 1128,
-		types: ["Poison"],
+		types: ["Poison","Poison"],
 		abilities: {0: "Scavenger", 1: "Neurotoxin", H: "Speed Force"},
 		baseStats: {
 			hp: 70,
@@ -26376,7 +26355,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pentadug: {
 		name: "Pentadug",
 		num: 1094,
-		types: ["Ground"],
+		types: ["Ground","Ground"],
 		abilities: {0: "Stamina", 1: "Sand Fiend", H: "Arena Trap"},
 		baseStats: {
 			hp: 90,
@@ -26430,7 +26409,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pentawug: {
 		name: "Pentawug",
 		num: 1096,
-		types: ["Water"],
+		types: ["Water","Water"],
 		abilities: {0: "Accelerate", 1: "Elude", H: "Sturdy"},
 		baseStats: {
 			hp: 70,
@@ -26448,7 +26427,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	ratiking: {
 		name: "Ratiking",
 		num: 1099,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "King's Wrath", 1: "Pressure", H: "Looter"},
 		baseStats: {
 			hp: 123,
@@ -26484,7 +26463,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	guardozel: {
 		name: "Guardozel",
 		num: 1101,
-		types: ["Water"],
+		types: ["Water","Water"],
 		abilities: {0: "Friend Guard", 1: "Hospitality", H: "Hydrate"},
 		baseStats: {
 			hp: 90,
@@ -26502,7 +26481,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	beniccino: {
 		name: "Beniccino",
 		num: 1102,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Pixilate", 1: "Pickup", H: "Perfectionist"},
 		baseStats: {
 			hp: 95,
@@ -26574,7 +26553,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	blocli: {
 		name: "Blocli",
 		num: 1106,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Friend Guard", 1: "Immunity", H: "Self Sufficient"},
 		baseStats: {
 			hp: 55,
@@ -26592,7 +26571,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	bloxtack: {
 		name: "Bloxtack",
 		num: 1107,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Overcoat", 1: "Immunity", H: "Self Sufficient"},
 		baseStats: {
 			hp: 65,
@@ -26610,7 +26589,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	gargablox: {
 		name: "Gargablox",
 		num: 1108,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Fort Knox", 1: "Immunity", H: "Self Repair"},
 		baseStats: {
 			hp: 95,
@@ -27078,7 +27057,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	taurospaldeancombatbreed: {
 		name: "Tauros-Paldean Combat Breed",
 		num: 128,
-		types: ["Fighting"],
+		types: ["Fighting","Fighting"],
 		abilities: {0: "Hyper Aggressive", 1: "Anger Point", H: "Cud Chew"},
 		baseStats: {
 			hp: 95,
@@ -27366,7 +27345,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachupartner: {
 		name: "Pikachu-Partner",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Ground Shock", 1: "Generator", H: "Electric Burst"},
 		baseStats: {
 			hp: 50,
@@ -27384,7 +27363,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	eeveepartner: {
 		name: "Eevee-Partner",
 		num: 133,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Prankster", 1: "Unaware", H: "Simple"},
 		baseStats: {
 			hp: 65,
@@ -27402,7 +27381,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	meowthpartner: {
 		name: "Meowth-Partner",
 		num: 52,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Opportunist", 1: "Equinox", H: "Skill Link"},
 		baseStats: {
 			hp: 50,
@@ -27456,7 +27435,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	raichumegay: {
 		name: "Raichu-Mega Y",
 		num: 26,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Power Outage", 1: "Power Outage", H: "Power Outage"},
 		baseStats: {
 			hp: 60,
@@ -27474,7 +27453,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	castformfoggy: {
 		name: "Castform-Foggy",
 		num: 351,
-		types: ["Ghost"],
+		types: ["Ghost","Ghost"],
 		abilities: {0: "Ethereal Rush", 1: "Ectoplasm", H: "Early Grave"},
 		baseStats: {
 			hp: 75,
@@ -27492,7 +27471,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	fidoughpartner: {
 		name: "Fidough-Partner",
 		num: 926,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Sharing Is Caring", 1: "Soothing Aroma", H: "Pretty Privilege"},
 		baseStats: {
 			hp: 80,
@@ -27600,7 +27579,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	unownrevelation: {
 		name: "Unown-Revelation",
 		num: 201,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Anticipation", 1: "Minion Control", H: "Magic Bounce"},
 		baseStats: {
 			hp: 58,
@@ -27654,7 +27633,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	falinksmega: {
 		name: "Falinks-Mega",
 		num: 870,
-		types: ["Fighting"],
+		types: ["Fighting","Fighting"],
 		abilities: {0: "Fort Knox", 1: "Mold Breaker", H: "Friend Guard"},
 		baseStats: {
 			hp: 65,
@@ -27744,7 +27723,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	eelektrossmega: {
 		name: "Eelektross-Mega",
 		num: 604,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Electromorphosis", 1: "Nosferatu", H: "Polarity"},
 		baseStats: {
 			hp: 85,
@@ -27924,7 +27903,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	floetteeternalflowermega: {
 		name: "Floette-Mega",
 		num: 670,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Energy Siphon", 1: "Misty Surge", H: "Artillery"},
 		baseStats: {
 			hp: 74,
@@ -28212,7 +28191,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	oricoriomega: {
 		name: "Oricorio-Mega",
 		num: 741,
-		types: ["Flying"],
+		types: ["Flying","Flying"],
 		abilities: {0: "Dancer", 1: "Prankster", H: "Two Step"},
 		baseStats: {
 			hp: 75,
@@ -28230,7 +28209,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	cormothmega: {
 		name: "Cormoth-Mega",
 		num: 1046,
-		types: ["Grass"],
+		types: ["Grass","Grass"],
 		abilities: {0: "Grass Pelt", 1: "Butter Up", H: "Overcoat"},
 		baseStats: {
 			hp: 95,
@@ -28320,7 +28299,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	melmetalmega: {
 		name: "Melmetal-Mega",
 		num: 809,
-		types: ["Steel"],
+		types: ["Steel","Steel"],
 		abilities: {0: "Atomic Punch", 1: "Atomic Punch", H: "Atomic Punch"},
 		baseStats: {
 			hp: 135,
@@ -28392,7 +28371,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	charizardmegaz: {
 		name: "Charizard-Mega Z",
 		num: 6,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Wildfire", 1: "Wildfire", H: "Wildfire"},
 		baseStats: {
 			hp: 79,
@@ -28428,7 +28407,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	rillaboommega: {
 		name: "Rillaboom-Mega",
 		num: 812,
-		types: ["Grass"],
+		types: ["Grass","Grass"],
 		abilities: {0: "Rhythmic", 1: "Long Reach", H: "Grass Pelt"},
 		baseStats: {
 			hp: 100,
@@ -28446,7 +28425,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	cinderacemega: {
 		name: "Cinderace-Mega",
 		num: 815,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Deadeye", 1: "Turboblaze", H: "Defiant"},
 		baseStats: {
 			hp: 80,
@@ -28464,7 +28443,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	inteleonmega: {
 		name: "Inteleon-Mega",
 		num: 818,
-		types: ["Water"],
+		types: ["Water","Water"],
 		abilities: {0: "Deadeye", 1: "Terminal Velocity", H: "Super Luck"},
 		baseStats: {
 			hp: 75,
@@ -28554,7 +28533,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	copperajahmega: {
 		name: "Copperajah-Mega",
 		num: 879,
-		types: ["Steel"],
+		types: ["Steel","Steel"],
 		abilities: {0: "Stall", 1: "Sap Sipper", H: "Growing Tooth"},
 		baseStats: {
 			hp: 122,
@@ -28662,7 +28641,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	alcremiemega: {
 		name: "Alcremie-Mega",
 		num: 869,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Natural Cure", 1: "Well Baked Body", H: "Misty Surge"},
 		baseStats: {
 			hp: 75,
@@ -28698,7 +28677,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	pikachupartnermega: {
 		name: "Pikachu-Mega",
 		num: 25,
-		types: ["Electric"],
+		types: ["Electric","Electric"],
 		abilities: {0: "Ground Shock", 1: "Overcharge", H: "Illuminate"},
 		baseStats: {
 			hp: 50,
@@ -28716,7 +28695,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	eeveepartnermega: {
 		name: "Eevee-Mega",
 		num: 133,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Prankster", 1: "Scrappy", H: "Friend Guard"},
 		baseStats: {
 			hp: 65,
@@ -28734,7 +28713,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	meowthpartnermega: {
 		name: "Meowth-Mega",
 		num: 52,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Good As Gold", 1: "Higher Rank", H: "Scrappy"},
 		baseStats: {
 			hp: 50,
@@ -28752,7 +28731,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	fidoughpartnermega: {
 		name: "Fidough-Mega",
 		num: 926,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Misty Surge", 1: "Rising Dough", H: "Pretty Privilege"},
 		baseStats: {
 			hp: 80,
@@ -29022,7 +29001,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	arcaninemega: {
 		name: "Arcanine-Mega",
 		num: 59,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Tough Claws", 1: "Tough Claws", H: "Tough Claws"},
 		baseStats: {
 			hp: 90,
@@ -29040,7 +29019,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	goodramega: {
 		name: "Goodra-Mega",
 		num: 706,
-		types: ["Dragon"],
+		types: ["Dragon","Dragon"],
 		abilities: {0: "Poison Absorb", 1: "Overcoat", H: "Drizzle"},
 		baseStats: {
 			hp: 90,
@@ -29166,7 +29145,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	reuniclusmega: {
 		name: "Reuniclus-Mega",
 		num: 579,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Magical Fists", 1: "Hustle", H: "Iron Fist"},
 		baseStats: {
 			hp: 110,
@@ -29652,7 +29631,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	vanilluxemega: {
 		name: "Vanilluxe-Mega",
 		num: 584,
-		types: ["Ice"],
+		types: ["Ice","Ice"],
 		abilities: {0: "Snow Cloak", 1: "Glacial Rage", H: "Mirror Armor"},
 		baseStats: {
 			hp: 71,
@@ -29742,7 +29721,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	clefablemega: {
 		name: "Clefable-Mega",
 		num: 36,
-		types: ["Fairy"],
+		types: ["Fairy","Fairy"],
 		abilities: {0: "Dazzling", 1: "Wonder Skin", H: "Fairy Aura"},
 		baseStats: {
 			hp: 100,
@@ -29796,7 +29775,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	hariyamamega: {
 		name: "Hariyama-Mega",
 		num: 297,
-		types: ["Fighting"],
+		types: ["Fighting","Fighting"],
 		abilities: {0: "Steadfast", 1: "Fighting Spirit", H: "Stalwart"},
 		baseStats: {
 			hp: 144,
@@ -29940,7 +29919,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	snorlaxprimal: {
 		name: "Snorlax-Primal",
 		num: 143,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Inversion", 1: "Inversion", H: "Inversion"},
 		baseStats: {
 			hp: 160,
@@ -30048,7 +30027,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	espeongalaxy: {
 		name: "Espeon-Primal",
 		num: 196,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Pure Power", 1: "Pure Power", H: "Pure Power"},
 		baseStats: {
 			hp: 65,
@@ -30066,7 +30045,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	darkrainightmare: {
 		name: "Darkrai-Nightmare",
 		num: 491,
-		types: ["Dark"],
+		types: ["Dark","Dark"],
 		abilities: {0: "Bad Dreams", 1: "Bad Dreams", H: "Bad Dreams"},
 		baseStats: {
 			hp: 70,
@@ -30102,7 +30081,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	spectriercloud: {
 		name: "Spectrier-Cloud",
 		num: 897,
-		types: ["Flying"],
+		types: ["Flying","Flying"],
 		abilities: {0: "Adrenaline Rush", 1: "Adrenaline Rush", H: "Adrenaline Rush"},
 		baseStats: {
 			hp: 100,
@@ -30444,7 +30423,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	garchompmegaz: {
 		name: "Garchomp-Mega Z",
 		num: 445,
-		types: ["Dragon"],
+		types: ["Dragon","Dragon"],
 		abilities: {0: "Sinister Claws", 1: "Sinister Claws", H: "Sinister Claws"},
 		baseStats: {
 			hp: 108,
@@ -30462,7 +30441,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	heatranmega: {
 		name: "Heatran-Mega",
 		num: 485,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Wildfire", 1: "Wildfire", H: "Wildfire"},
 		baseStats: {
 			hp: 79,
@@ -30480,7 +30459,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	darkraimega: {
 		name: "Darkrai-Mega",
 		num: 491,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Wildfire", 1: "Wildfire", H: "Wildfire"},
 		baseStats: {
 			hp: 79,
@@ -30516,7 +30495,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	meowsticmega: {
 		name: "Meowstic-Mega",
 		num: 678,
-		types: ["Psychic"],
+		types: ["Psychic","Psychic"],
 		abilities: {0: "Prankster", 1: "Sheer Force", H: "Hyper Aggressive"},
 		baseStats: {
 			hp: 84,
@@ -30552,7 +30531,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	magearnamega: {
 		name: "Magearna-Mega",
 		num: 801,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Wildfire", 1: "Wildfire", H: "Wildfire"},
 		baseStats: {
 			hp: 79,
@@ -30570,7 +30549,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	zeraoramega: {
 		name: "Zeraora-Mega",
 		num: 807,
-		types: ["Fire"],
+		types: ["Fire","Fire"],
 		abilities: {0: "Wildfire", 1: "Wildfire", H: "Wildfire"},
 		baseStats: {
 			hp: 79,
@@ -30660,7 +30639,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	slate: {
 		name: "Slate",
 		num: 1222,
-		types: ["Normal"],
+		types: ["Normal","Normal"],
 		abilities: {0: "Perfectionist", 1: "Pickup", H: "Skill Link"},
 		baseStats: {
 			hp: 85,
