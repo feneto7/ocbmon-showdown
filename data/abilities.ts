@@ -4016,6 +4016,28 @@ export const Abilities = {
 		rating: 3,
 		num: 113,
 	},
+	blindrage: {
+		// Blind Rage combina os efeitos do Scrappy (Normal/Luta ignoram imunidade a Fantasma)
+		// com o Mold Breaker (ignora a Ability do alvo).
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Blind Rage');
+		},
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Fighting'] = true;
+				move.ignoreImmunity['Normal'] = true;
+			}
+			move.ignoreAbility = true;
+		},
+		flags: {},
+		name: "Blind Rage",
+		shortDesc: "Normal e Ataque Lutador ignoram imunidade a Fantasma. Também ignora a Ability do alvo.",
+		rating: 4,
+		num: 902,
+		gen: 8,
+	},
 	screencleaner: {
 		onStart(pokemon) {
 			let activated = false;
@@ -11363,6 +11385,25 @@ export const Abilities = {
 				return this.chainModify([5325, 4096]);
 			}
 		},
+	},
+	pinnacleblade: {
+		name: "Pinnacle Blade",
+		shortDesc: "Movimentos de corte sempre acertam, quebram Protect e ignoram barreiras de Substituto.",
+		onModifyMove(move) {
+			if (!move.flags["slicing"]) return;
+
+			// Força acerto automático nos movimentos de corte
+			move.accuracy = true;
+
+			// Permite quebrar Protect (e similares) ao acertar
+			move.breaksProtect = true;
+
+			// Ignora Substituto/“barreira” no alvo
+			(move.flags as any).bypasssub = 1;
+		},
+		rating: 4,
+		num: 901,
+		gen: 8,
 	},
 	catastrophe: {
 		name: "Catastrophe",
