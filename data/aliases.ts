@@ -140,8 +140,11 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	mbro: "Slowbro-Mega",
 	megabro: "Slowbro-Mega",
 	megasaur: "Venusaur-Mega",
-	megazygardecomplete: "Zygarde-Mega",
-	zygardecompletemega: "Zygarde-Mega",
+	// Zygarde-Mega existe como `zygardecompletemega` no Pokedex
+	zygardemega: "zygardecompletemega",
+	megazygardecomplete: "zygardecompletemega",
+	// Moltres-Mega existe como `moltresexmega` no Pokedex
+	moltresmega: "moltresexmega",
 
 	// Pokéstar Studios --- 1st ordered alphabetically by species, 2nd by alias
 	blackdoor: "Pokestar Black Door",
