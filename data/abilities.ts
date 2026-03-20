@@ -961,7 +961,7 @@ export const Abilities = {
 			if (this.field.weatherState.source !== pokemon) return;
 			for (const target of this.getAllActive()) {
 				if (target === pokemon) continue;
-				if (target.hasAbility('desolateland')) {
+				if (target.hasAbility('desolateland') || target.hasAbility('blisteringsun')) {
 					this.field.weatherState.source = target;
 					return;
 				}
@@ -2901,6 +2901,27 @@ export const Abilities = {
 		rating: 3.5,
 		num: 256,
 	},
+	// Habilidade OCB: junta Aura Break + Mega Launcher (Zygarde-Mega e similares).
+	nihilblaster: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Nihil Blaster');
+		},
+		onAnyTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			move.hasAuraBreak = true;
+		},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['pulse']) {
+				return this.chainModify(1.5);
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Nihil Blaster",
+		shortDesc: "Inverte os efeitos de habilidades de Aura. Potencializa movimentos de pulso.",
+		rating: 4,
+		num: 1000,
+	},
 	noguard: {
 		onAnyInvulnerabilityPriority: 1,
 		onAnyInvulnerability(target, source, move) {
@@ -4037,6 +4058,61 @@ export const Abilities = {
 		rating: 4,
 		num: 902,
 		gen: 8,
+	},
+	// Habilidade OCB: Desolate Land + Air Blower (clima extremo de sol + Tailwind ao entrar).
+	blisteringsun: {
+		onStart(source) {
+			this.field.setWeather('desolateland');
+			const tailwind = source.side.sideConditions['tailwind'];
+			if (!tailwind) {
+				this.add('-activate', source, 'ability: Blistering Sun');
+				source.side.addSideCondition('tailwind', source, source.getAbility());
+			}
+		},
+		onAnySetWeather(target, source, weather) {
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+			if (this.field.getWeather().id === 'desolateland' && !strongWeathers.includes(weather.id)) return false;
+		},
+		onEnd(pokemon) {
+			if (this.field.weatherState.source !== pokemon) return;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (target.hasAbility('desolateland') || target.hasAbility('blisteringsun')) {
+					this.field.weatherState.source = target;
+					return;
+				}
+			}
+			this.field.clearWeather();
+		},
+		flags: {},
+		name: "Blistering Sun",
+		shortDesc: "Ao entrar, ativa sol extremo e Tailwind no seu lado. Igual Desolate Land para bloquear climas fracos.",
+		rating: 5,
+		num: 1001,
+	},
+	// Habilidade OCB: Furnace + absorve movimentos Rock (cura) e dano de Stealth Rock.
+	moltencore: {
+		onTryHit(target, source, move) {
+			if (target === source || move.type !== 'Rock') return;
+			if (!this.heal(target.baseMaxhp / 4)) {
+				this.add('-immune', target, '[from] ability: Molten Core');
+			}
+			return null;
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect?.id === 'stealthrock') {
+				return false;
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (!damage || move.type !== 'Rock') return;
+			this.boost({ spe: 2 }, target, target, this.dex.abilities.get('moltencore'));
+		},
+		flags: { breakable: 1 },
+		name: "Molten Core",
+		shortDesc: "Furnace + absorve movimentos Rock (cura 1/4 do HP) e não sofre dano de Stealth Rock; +2 Speed se um Rock causar dano.",
+		rating: 4,
+		num: 1002,
 	},
 	screencleaner: {
 		onStart(pokemon) {
