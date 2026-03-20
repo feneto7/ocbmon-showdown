@@ -13,6 +13,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesDataTa
 	rogue: { inherit: true, tier: "OU", isNonstandard: 'Custom'},
 	sombrul: { inherit: true, tier: "OU", isNonstandard: 'Custom'},
 	urbaneon: { inherit: true, tier: "OU", isNonstandard: 'Custom'},
+	rikusen: { inherit: true, tier: "OU", isNonstandard: 'Custom'},
+	frostsucold: { inherit: true, tier: "OU", isNonstandard: 'Custom'},
+	igris: { inherit: true, tier: "OU", isNonstandard: 'Custom'},
+	frostsu: { inherit: true, tier: "OU", isNonstandard: 'Custom'},
 	bulbasaur: {
 			inherit: true,
 			tier: "OU",

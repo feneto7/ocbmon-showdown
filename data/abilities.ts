@@ -11695,4 +11695,357 @@ export const Abilities = {
 			}
 		},
 	},
+	quickstart: {
+		shortDesc: "On switch-in, this Pokemon's Attack and Speed are doubled for 5 turns.",
+		rating: 4,
+			num: 1036, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		onStart(pokemon) {
+			pokemon.addVolatile('quickstart');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['quickstart'];
+			this.add('-end', pokemon, 'Quickstart', '[silent]');
+		},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'ability: Quickstart');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				return this.chainModify(2);
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(2);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Quickstart');
+			},
+		},
+		name: "Quickstart",
+    },
+
+	possessiverage: {
+		name: "Possessive Rage",
+		shortDesc: "Foes become possessed: they use random moves, lose accuracy, gain power, and always crit.",
+		rating: 5,
+		num: 4001,
+	
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Possessive Rage');
+			this.add('-message', "A dark presence possesses the opposing Pokémon!");
+		},
+	
+		// Força o inimigo a usar um move aleatório
+		onFoeBeforeMovePriority: 10,
+		onFoeBeforeMove(attacker, defender, move) {
+			if (!attacker.moveSlots.length) return;
+	
+			const randomMove = this.sample(attacker.moveSlots).id;
+			const newMove = this.dex.getActiveMove(randomMove);
+	
+			this.add('-message', `${attacker.name} is possessed and acts on its own!`);
+			this.actions.useMove(newMove, attacker, { target: defender });
+	
+			return false; // Cancela o move escolhido pelo treinador
+		},
+	
+		// Reduz precisão dos golpes do oponente
+		onFoeModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			return this.chainModify(0.85);
+		},
+	
+		// Aumenta o Base Power dos golpes do oponente
+		onFoeBasePower(basePower) {
+			return this.chainModify(1.15);
+		},
+	
+		// Força golpes críticos do oponente
+		onFoeModifyCritRatio(critRatio) {
+			return 5; // Garante crítico
+		},
+	},
+
+	genjutsudomain: {
+		name: "Genjutsu Domain",
+		shortDesc: "Confuses foes & drops Atk/SpA. KOs trigger Mangekyō (Double Atk/SpA, Max Crit).",
+	
+		onStart(pokemon) {
+			// Initialize state
+			if (pokemon.abilityState.mangekyo === undefined) {
+				pokemon.abilityState.mangekyo = false;
+			}
+	
+			// Apply confusion immediately upon entering
+			for (const target of pokemon.side.foe.active) {
+				if (!target || target.fainted) continue;
+				if (!target.volatiles['confusion']) {
+					target.addVolatile('confusion');
+					this.add('-message', `${target.name} is caught in the Genjutsu Domain!`);
+				}
+			}
+		},
+	
+		// Trigger when a foe switches in
+		onFoeSwitchIn(target) {
+			if (!target.volatiles['confusion']) {
+				target.addVolatile('confusion');
+				this.add('-message', `${target.name} enters the Genjutsu Domain!`);
+			}
+		},
+	
+		onResidual(pokemon) {
+			// If Mangekyo is active, we stop the debuffs/confusion enforcement (optional based on interpretation, 
+			// but usually "changing forms" stops the old passive. Removing this check makes it do BOTH).
+			
+			
+			if (!pokemon.abilityState.mangekyo) {
+				for (const target of pokemon.side.foe.active) {
+					if (!target || target.fainted) continue;
+	
+					// 1. Re-apply confusion if missing
+					if (!target.volatiles['confusion']) {
+						target.addVolatile('confusion');
+						this.add('-message', `${target.name} is lost in the illusion again!`);
+					}
+	
+					// 2. Lower Atk and SpA by 1 stage
+					this.boost({ atk: -1, spa: -1 }, target, pokemon);
+				}
+			}
+		},
+	
+		// Reduce accuracy by 30% if the attacker is confused
+		onModifyAccuracy(accuracy, target, source, move) {
+			// 'target' is the Ability User (Defender), 'source' is the Foe (Attacker)
+			if (target.hasAbility('genjutsudomain') && source.volatiles['confusion']) {
+				return this.chainModify(0.7); // 0.7 = 30% reduction
+			}
+		},
+	
+		// Trigger Mangekyo on KO
+		onSourceAfterFaint(length, target, source) {
+			if (!source || source.fainted) return;
+	
+			// Check if ability is active and not yet in Mangekyo mode
+			if (source.hasAbility('genjutsudomain') && !source.abilityState.mangekyo) {
+				source.abilityState.mangekyo = true;
+				
+				this.add('-ability', source, 'Genjutsu Domain');
+				this.add('-message', `${source.name} awakens the Mangekyō!`);
+	
+				//  Clears boosts (debuffs) and Status conditions
+				source.clearBoosts();
+				source.cureStatus();
+				this.add('-clearboost', source);
+			}
+		},
+	
+		// Mangekyo Effect:
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.abilityState.mangekyo) {
+				return this.chainModify(2);
+			}
+		},
+	
+		// Mangekyo Effect: 
+		onModifySpA(spa, pokemon) {
+			if (pokemon.abilityState.mangekyo) {
+				return this.chainModify(2);
+			}
+		},
+	
+		// Mangekyo Effect: 
+		onModifyCritRatio(critRatio, source) {
+			if (source.abilityState.mangekyo) {
+				return 5; // Guaranteed crit
+			}
+		},
+	},
+
+	substitutionjutsu: {
+		name: "Substitution Jutsu",
+		shortDesc: "If hit by >50% HP dmg, creates reinforced Sub (max 2). Subzero Slammer transforms.",
+	
+		onDamage(damage, target, source, effect) {
+			// 1. Basic Checks: Must be a move, target cannot already have a Substitute
+			if (effect.effectType !== 'Move') return;
+			if (target.volatiles['substitute']) return;
+	
+			// 2. Initialize and Check Usage Limit (Max 2 times per battle)
+			if (!target.abilityState.substitutionActivations) target.abilityState.substitutionActivations = 0;
+			if (target.abilityState.substitutionActivations >= 2) return;
+	
+			const maxHP = target.maxhp;
+	
+			// 3. Trigger Condition: Damage must be >= 50% of Max HP
+			// REMOVED: && this.randomChance(1, 2) -> Now it is guaranteed.
+			if (damage >= maxHP / 2) {
+				target.abilityState.substitutionActivations++;
+				
+				this.add('-ability', target, 'Substitution Jutsu');
+				this.add('-message', `${target.name} performs a Substitution Jutsu! (Uses left: ${2 - target.abilityState.substitutionActivations})`);
+	
+				// 4. Create the Substitute
+				target.addVolatile('substitute');
+				
+				// 5. Reinforce the Substitute (50% HP instead of standard 25%)
+				const sub = target.volatiles['substitute'];
+				if (sub) {
+					(sub as any).hp = Math.floor(maxHP / 2);
+					this.add('-message', `A reinforced clone appears with ${Math.floor(maxHP / 2)} HP!`);
+				}
+	
+				// 6. Reduce the incoming damage to 25%
+				return Math.floor(maxHP / 4);
+			}
+		},
+	
+		onAfterMove(source, target, move) {
+			// 1. Check for Subzero Slammer and prevent loop if already transformed
+			if (move.id !== 'subzeroslammer') return;
+			if (source.species.name === 'Frostsu-Cold') return;
+	
+			this.add('-ability', source, 'Substitution Jutsu');
+			this.add('-message', `${source.name} is enveloped by absolute zero!`);
+	
+			// 2. Transformation Logic
+			source.formeChange('Frostsu-Cold', this.effect, true);
+	
+			// 3. Reset Stats and Status
+			source.clearStatus();
+			source.clearBoosts();
+			
+			// 4. Clear Volatiles
+			const volatilesToKeep = ['dynamax']; 
+			for (const volatile of Object.keys(source.volatiles)) {
+				if (!volatilesToKeep.includes(volatile)) {
+					source.removeVolatile(volatile);
+				}
+			}
+	
+			// 5. Full Heal
+			source.heal(source.maxhp);
+			this.add('-heal', source, source.getHealth, '[silent]');
+			this.add('-message', `${source.name} transformed into Frostsu-Cold!`);
+		},
+	},
+
+	hyouton: {
+		name: "Hyouton",
+		shortDesc: "Summons Hail. Water moves become Ice. Fire moves fail. Opponents' Speed is reduced. Ice moves never miss.",
+	
+		// Summon Hail on entry
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Hyouton');
+	
+			if (this.field.weather !== 'hail') {
+				this.field.setWeather('hail', pokemon);
+			}
+		},
+	
+		// Reapply Hail every turn if removed
+		onResidual(pokemon) {
+			if (this.field.weather !== 'hail') {
+				this.field.setWeather('hail', pokemon);
+			}
+		},
+	
+		// Water → Ice + Ice moves never miss
+		onModifyMove(move) {
+			if (move.type === 'Water') {
+				move.type = 'Ice';
+			}
+	
+			if (move.type === 'Ice') {
+				move.accuracy = true;
+			}
+		},
+	
+		
+		onTryMove(pokemon, target, move) {
+			if (move.type === 'Fire') {
+				this.add('-immune', target, '[from] ability: Hyouton');
+				return false;
+			}
+		},
+	
+		// Hidden Speed reduction
+		onAnyModifySpe(spe, pokemon) {
+			const source = this.effectState.target;
+			if (!source || pokemon === source) return;
+	
+			return this.chainModify(0.2);
+		},
+	},
+
+
+	crimsonbladeofshadows: {
+		isNonstandard: "Future",
+	
+		shortDesc: "legacyofshadows + Sharpness + Mold Breaker + Normal-type moves become Steel-type and gain 1.5x power",
+	
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Crimson Blade of Shadows');
+		},
+	
+		onAnyModifyAtk(atk, source, target, move) {
+			const holder = this.effectState.target;
+			if (!source || source.hasAbility('Crimson Blade of Shadows') || move?.category !== 'Physical') return;
+			if (!move.ruinedAtk) move.ruinedAtk = holder;
+			if (move.ruinedAtk !== holder) return;
+			return this.chainModify(0.6);
+		},
+	
+		onAnyModifySpA(spa, source, target, move) {
+			const holder = this.effectState.target;
+			if (!source || source.hasAbility('Crimson Blade of Shadows') || move?.category !== 'Special') return;
+			if (!move.ruinedSpA) move.ruinedSpA = holder;
+			if (move.ruinedSpA !== holder) return;
+			return this.chainModify(0.6);
+		},
+	
+		onSetStatus(status) {
+			if (['psn', 'tox', 'brn', 'par', 'slp'].includes(status.id)) return false;
+		},
+	
+		onDeductPP(target, source) {
+			if (!source || target.isAlly(source)) return;
+			return 1;
+		},
+	
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (attacker !== this.effectState.target) return;
+	
+			if (move.flags?.slicing) {
+				return this.chainModify(2);
+			}
+	
+			if (move.type === 'Normal') {
+				move.type = 'Steel';
+				return this.chainModify(1.5);
+			}
+		},
+	
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+	
+		name: "Crimson Blade of Shadows",
+	},
+
+
+
+
+
+
+
+
+
+
+	
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;

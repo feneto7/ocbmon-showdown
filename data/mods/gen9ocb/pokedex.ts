@@ -30659,4 +30659,59 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.7,
 		color: "Green",
 	},
+
+	igris: {
+		num: 1223,
+		name: "Igris",
+		types: ["Steel"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 90, atk: 130, def: 150, spa: 10, spd: 90, spe: 120},
+		abilities: {0: "Crimson Blade of Shadows"},
+		heightm: 2.1,
+		weightkg: 250,
+		color: "Red",
+		eggGroups: ["Human-Like"],
+	},
+
+	frostsu: {
+        num: 1224,
+        name: "Frostsu",
+        types: ["Ice"],
+        genderRatio: {M: 0.5, F: 0.5},
+        baseStats: {hp: 100, atk: 10, def: 80, spa: 120, spd: 100, spe: 140},
+        abilities: {0: "Substitution Jutsu"},
+        heightm: 2.0,
+        weightkg: 100,
+        color: "White",
+        eggGroups: ["Human-Like"],
+        
+    },
+	frostsucold: {
+        num: 1225,
+        name: "Frostsu-Cold",
+        types: ["Ice", "Ice"],
+        genderRatio: {M: 0.5, F: 0.5},
+        baseStats: {hp: 100, atk: 10, def: 100, spa: 150, spd: 130, spe: 150},
+        abilities: {0: "Hyouton"},
+        heightm: 2.0,
+        weightkg: 100,
+        color: "Dark",
+        eggGroups: ["Dragon"],
+        
+    },
+
+	rikusen: {
+        num: -1226,
+        name: "Rikusen",
+        types: ["???"],
+        genderRatio: {M: 0.5, F: 0.5},
+        baseStats: {hp: 100, atk: 10, def: 120, spa: 140, spd: 110, spe: 70},
+        abilities: {0: "Genjutsu Domain"},
+        heightm: 1.2,
+        weightkg: 20,
+        color: "Dark",
+        eggGroups: ["Animal"],
+    },
+
+
 };

@@ -13,6 +13,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	rogue: { tier: "OU" },
 	sombrul: { tier: "OU" },
 	urbaneon: { tier: "OU" },
+	rikusen: { tier: "OU" },
+	frostsucold: { tier: "OU" },
+	igris: { tier: "OU" },
+	frostsu: { tier: "OU" },
 	bulbasaur: {
 		tier: "LC",
 		doublesTier: "LC",
