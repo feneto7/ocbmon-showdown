@@ -145,13 +145,15 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	megazygardecomplete: "zygardecompletemega",
 	// Moltres-Mega existe como `moltresexmega` no Pokedex
 	moltresmega: "moltresexmega",
-	// Articuno-Mega / Zapdos-Mega: toID do nome ≠ ID interno (*exmega); igual ao Moltres
+	// Articuno-Mega / Zapdos-Mega: toID do nome â‰  ID interno (*exmega); igual ao Moltres
 	articunomega: "articunoexmega",
-	zapdosemega: "zapdosexmega",
-	// Pikachu-Mega (parceiro) no Pokedex é `pikachupartnermega`
+	megaarticuno: "articunoexmega",
+	zapdosmega: "zapdosexmega",
+	megazapdos: "zapdosexmega",
+	// Pikachu-Mega (parceiro) no Pokedex Ã© `pikachupartnermega`
 	pikachumega: "pikachupartnermega",
 
-	// Pokéstar Studios --- 1st ordered alphabetically by species, 2nd by alias
+	// PokÃ©star Studios --- 1st ordered alphabetically by species, 2nd by alias
 	blackdoor: "Pokestar Black Door",
 	brycen: "Pokestar Brycen-Man",
 	brycenman: "Pokestar Brycen-Man",
@@ -684,17 +686,17 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	deerlingsummer: "Deerling",
 	deerlingautumn: "Deerling",
 	deerlingwinter: "Deerling",
-	flabb: "Flabébé",
-	flabebered: "Flabébé",
-	flabebeblue: "Flabébé",
-	flabebeorange: "Flabébé",
-	flabebewhite: "Flabébé",
-	flabebeyellow: "Flabébé",
-	flabbred: "Flabébé",
-	flabbblue: "Flabébé",
-	flabborange: "Flabébé",
-	flabbwhite: "Flabébé",
-	flabbyellow: "Flabébé",
+	flabb: "FlabeÌbeÌ",
+	flabebered: "FlabeÌbeÌ",
+	flabebeblue: "FlabeÌbeÌ",
+	flabebeorange: "FlabeÌbeÌ",
+	flabebewhite: "FlabeÌbeÌ",
+	flabebeyellow: "FlabeÌbeÌ",
+	flabbred: "FlabeÌbeÌ",
+	flabbblue: "FlabeÌbeÌ",
+	flabborange: "FlabeÌbeÌ",
+	flabbwhite: "FlabeÌbeÌ",
+	flabbyellow: "FlabeÌbeÌ",
 	floettered: "Floette",
 	floetteblue: "Floette",
 	floetteorange: "Floette",
@@ -1610,7 +1612,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	yadoran: "Slowbro",
 	koiru: "Magnemite",
 	reakoiru: "Magneton",
-	kamonegi: "Farfetch’d",
+	kamonegi: "Farfetchâ€™d",
 	doodoo: "Doduo",
 	doodorio: "Dodrio",
 	pauwau: "Seel",
@@ -2193,7 +2195,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	bibiyon: "Vivillon",
 	shishiko: "Litleo",
 	kaenjishi: "Pyroar",
-	furabebe: "Flabébé",
+	furabebe: "FlabeÌbeÌ",
 	furaette: "Floette",
 	furaajesu: "Florges",
 	meeekuru: "Skiddo",
@@ -2386,7 +2388,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	tachifusaguma: "Obstagoon",
 	nyaikingu: "Perrserker",
 	sanigoon: "Cursola",
-	negiganaito: "Sirfetch’d",
+	negiganaito: "Sirfetchâ€™d",
 	barikooru: "Mr. Rime",
 	desubaan: "Runerigus",
 	mahomiru: "Milcery",
@@ -2981,3 +2983,5 @@ export const CompoundWordNames = [
 	'Turbo-blaze',
 	'Un-seen Fist',
 ];
+
+

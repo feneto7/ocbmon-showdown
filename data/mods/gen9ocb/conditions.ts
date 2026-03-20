@@ -93,6 +93,19 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	
+	lucariomegaz:{
+		onSourceModifyDamage(damage, source, target, move) {
+			this.debug('Deflect reduce');
+			return this.chainModify(0.8);
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (!damage || !target.hp || !source?.hp) return;
+			const counterMove = this.dex.getActiveMove('vacuumwave');
+			counterMove.basePower = 20;
+			this.actions.useMove(counterMove, target, { target: source });
+		},
+	},
+
+
 	
 };

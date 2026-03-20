@@ -4114,6 +4114,36 @@ export const Abilities = {
 		rating: 4,
 		num: 1002,
 	},
+	// Habilidade OCB: redução fixa de dano recebido.
+	auraarmor: {
+		onSourceModifyDamage(damage, source, target, move) {
+			this.debug('Aura Armor reduce');
+			return this.chainModify(0.65);
+		},
+		flags: { breakable: 1 },
+		name: "Aura Armor",
+		shortDesc: "Recebe 35% menos dano.",
+		rating: 4,
+		num: 1003,
+	},
+	// Habilidade OCB: redução de dano + contra-ataque com Vacuum Wave enfraquecido.
+	deflect: {
+		onSourceModifyDamage(damage, source, target, move) {
+			this.debug('Deflect reduce');
+			return this.chainModify(0.8);
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (!damage || !target.hp || !source?.hp) return;
+			const counterMove = this.dex.getActiveMove('vacuumwave');
+			counterMove.basePower = 20;
+			this.actions.useMove(counterMove, target, { target: source });
+		},
+		flags: { breakable: 1 },
+		name: "Deflect",
+		shortDesc: "Recebe 20% menos dano e contra-ataca com Vacuum Wave de 20 BP ao ser atingido.",
+		rating: 4,
+		num: 1004,
+	},
 	screencleaner: {
 		onStart(pokemon) {
 			let activated = false;
@@ -11514,22 +11544,33 @@ export const Abilities = {
 		},
 	},
 	sunbasking: {
-		name: "Sun Basking",
-		shortDesc: "Immune to status conditions if sun is active.",
 		onUpdate(pokemon) {
-			if (pokemon.status) {
+			// Cura o status se o sol estiver ativo
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()) && pokemon.status) {
 				this.add("-activate", pokemon, "ability: Sun Basking");
 				pokemon.cureStatus();
 			}
 		},
 		onSetStatus(status, target, source, effect) {
+			// Impede novos status se o sol estiver ativo
+			if (!['sunnyday', 'desolateland'].includes(target.effectiveWeather())) return;
 			if (!status) return;
 			if ((effect as Move)?.status) {
 				this.add("-immune", target, "[from] ability: Sun Basking");
 			}
 			return false;
 		},
+		onFoePrepareHit(source, target, move) {
+			// Imunidade a prioridade (estilo Dazzling/Queenly Majesty)
+			// Verifica se o sol está ativo E se o golpe tem prioridade maior que 0
+			if (this.field.isWeather(['sunnyday', 'desolateland']) && move.priority > 0) {
+				this.add('-activate', target, 'ability: Sun Basking');
+				return false;
+			}
+		},
 		flags: { breakable: 1 },
+		name: "Sun Basking",
+		shortDesc: "Sob o Sol, o usuário é imune a status e golpes de prioridade.",
 	},
 	gallantry: {
 		name: "Gallantry",
