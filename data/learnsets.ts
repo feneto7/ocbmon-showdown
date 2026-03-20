@@ -120098,4 +120098,132 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			tripleaxel: ["9M"],
 		},
 	},
+
+	frostsu: {
+		learnset: {
+			protect: ["9M"],
+			substitute: ["9M"],
+			recover: ["9M"],
+			calmmind: ["9M"],
+			nastyplot: ["9M"],
+			taunt: ["9M"],
+			haze: ["9M"],
+			auroraveil: ["7M"],
+	
+			surf: ["9M"],
+			hydropump: ["9M"],
+			scald: ["9M"],
+			watershuriken: ["9M", "7L1", "6L1"],
+	
+			icebeam: ["9M"],
+			blizzard: ["9M"],
+			freezedry: ["9M"],
+			frostbreath: ["9M"],
+			slipturn: ["9M"],
+		},
+	},
+	rikusen: {
+		learnset: {
+			protect: ["9M"],
+			substitute: ["9M"],
+			recover: ["9L1"],
+			roost: ["9M"],
+			calmmind: ["9M"],
+			nastyplot: ["9M"],
+			thunderwave: ["9M"],
+			taunt: ["9M"],
+			defog: ["9M"],
+			haze: ["9M"],
+			stealthrock: ["9M"],
+			photongeyser: ["9M", "7L50", "7S1"],
+			dracometeor: ["9M", "7T", "6T", "6S7", "5T", "4T"],
+	
+			laserbeam:["9M"],
+	
+			// FIRE
+			fireblast: ["9M"],
+			flamethrower: ["9M"],
+	
+			// WATER
+			surf: ["9M"],
+			hydropump: ["9M"],
+	
+			// FLYING
+			hurricane: ["9M"],
+			airslash: ["9M"],
+	
+			// GROUND
+			earthpower: ["9M"],
+	
+			// ELECTRIC
+			thunderbolt: ["9M"],
+			thunder: ["9M"],
+			voltswitch: ["9M"],
+	
+			// ICE
+			icebeam: ["9M"],
+			blizzard: ["9M"],
+	
+			// GRASS
+			energyball: ["9M"],
+			gigadrain: ["9M"],
+	
+			// ROCK
+			powergem: ["9M"],
+			meteorbeam: ["9T"],
+		},
+	},
+
+	igris: {
+		learnset: {
+			aerialace: ["8L25", "7M", "7L23"],
+			aircutter: ["8L20", "8S2", "7L1"],
+			airslash: ["8M", "7L59", "7S0", "7S1"],
+			brickbreak: ["8M", "7M"],
+			behemothblade: ["9M", "8R"],
+			calmmind: ["8M", "7M"],
+			confide: ["7M"],
+			cut: ["8L15", "7L1"],
+			defog: ["9M", "7T", "7L1"],
+			detect: ["8L30", "7L53", "7S0", "7S1"],
+			doubleteam: ["7M"],
+			endure: ["8M"],
+			falseswipe: ["8M", "8L10", "7M", "7L7"],
+			frustration: ["7M"],
+			furycutter: ["8L1", "7L1"],
+			gigadrain: ["8M", "7T"],
+			gigaimpact: ["8M", "7M"],
+			guillotine: ["9M", "7L73"],
+			hiddenpower: ["7M"],
+			irondefense: ["8M", "7T"],
+			knockoff: ["7T"],
+			laserfocus: ["8L45", "7T", "7L29"],
+			lastresort: ["7T"],
+			leafblade: ["8M", "8L55", "8S2", "7L43", "7S0", "7S1"],
+			nightslash: ["9M", "7L31"],
+			protect: ["8M", "7M"],
+			psychocut: ["8M", "7L67"],
+			razorleaf: ["8L5", "7L13"],
+			rest: ["8M", "7M"],
+			return: ["7M"],
+			round: ["8M", "7M"],
+			sacredsword: ["9M", "7L1"],
+			screech: ["8M"],
+			sleeptalk: ["8M", "7M"],
+			smartstrike: ["9M", "7M"],
+			snore: ["8M", "7T"],
+			solarblade: ["8M"],
+			steelbeam: ["8T"],
+			substitute: ["9M", "7M"],
+			swagger: ["7M"],
+			swordsdance: ["9M", "8L65", "8S2", "7M", "7L37"],
+			synthesis: ["9M", "7T", "7L19"],
+			tailwind: ["7T"],
+			toxic: ["7M"],
+			vacuumwave: ["8L1", "8S2", "7L1"],
+			xscissor: ["9M", "7M", "7L47", "7S0", "7S1"],
+		},
+		
+	},
+
 };
