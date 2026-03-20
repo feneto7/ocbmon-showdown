@@ -3472,7 +3472,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	},
 	darkvoid: {
 		num: 464,
-		accuracy: 50,
+		accuracy: 80,
 		basePower: 0,
 		category: "Status",
 		name: "Dark Void",
