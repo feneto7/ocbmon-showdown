@@ -145,6 +145,11 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	megazygardecomplete: "zygardecompletemega",
 	// Moltres-Mega existe como `moltresexmega` no Pokedex
 	moltresmega: "moltresexmega",
+	// Articuno-Mega / Zapdos-Mega: toID do nome ≠ ID interno (*exmega); igual ao Moltres
+	articunomega: "articunoexmega",
+	zapdosemega: "zapdosexmega",
+	// Pikachu-Mega (parceiro) no Pokedex é `pikachupartnermega`
+	pikachumega: "pikachupartnermega",
 
 	// Pokéstar Studios --- 1st ordered alphabetically by species, 2nd by alias
 	blackdoor: "Pokestar Black Door",
