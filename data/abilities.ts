@@ -4144,6 +4144,18 @@ export const Abilities = {
 		rating: 4,
 		num: 1004,
 	},
+	// Habilidade OCB: ativa chuva e terreno elétrico ao entrar.
+	supercell: {
+		onStart(source) {
+			this.field.setWeather('raindance');
+			this.field.setTerrain('electricterrain');
+		},
+		flags: {},
+		name: "Supercell",
+		shortDesc: "Ao entrar, ativa Drizzle + Electric Surge (chuva e terreno elétrico).",
+		rating: 5,
+		num: 1005,
+	},
 	screencleaner: {
 		onStart(pokemon) {
 			let activated = false;
