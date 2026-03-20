@@ -22117,7 +22117,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		num: 2513,
 		types: ["Dark", "Dark"],
 		abilities: {
-			"0": "Minion Control",
+			"0": "Trickster",
 		},
 		baseStats: {
 			hp: 55,
@@ -22139,7 +22139,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		num: 2146,
 		types: ["Dark", "Dark"],
 		abilities: {
-			"0": "Minion Control",
+			"0": "Trickster",
 		},
 		baseStats: {
 			hp: 55,
@@ -22669,7 +22669,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Cascoon-Primal",
 		num: 268,
 		types: ["Bug"],
-		abilities: {0: "Angel's Wrath", 1: "Angel's Wrath", H: "Angel's Wrath"},
+		abilities: {0: "Malicious"},
 		baseStats: {
 			hp: 121,
 			atk: 121,
@@ -27601,7 +27601,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Unown-Revelation",
 		num: 201,
 		types: ["Psychic"],
-		abilities: {0: "Anticipation", 1: "Minion Control", H: "Magic Bounce"},
+		abilities: {0: "Anticipation", 1: "Trickster", H: "Magic Bounce"},
 		baseStats: {
 			hp: 58,
 			atk: 138,
