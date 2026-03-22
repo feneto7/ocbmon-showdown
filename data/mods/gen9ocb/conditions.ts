@@ -1,5 +1,11 @@
 import type { ModdedConditionData } from '../../../sim/dex-conditions';
 
+// Mesma regra do abilities.ts (Parental Bond / multihit custom) para não forçar 2 hits em moves inválidos
+function isParentalBondBanned(move: ActiveMove, _source: Pokemon): boolean {
+	return move.category === 'Status' || !!move.multihit || !!move.flags['noparentalbond'] ||
+		!!move.flags['charge'] || !!move.flags['futuremove'] || !!move.spreadHit || !!move.isZ || !!move.isMax;
+}
+
 export const Conditions: { [id: string]: ModdedConditionData } = {
 	slifer: {
 		onResidualOrder: 28,
@@ -18,7 +24,7 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	koraidon:{
+	koraidon: {
 		onSwitchIn(pokemon) {
 			if (this.field.setWeather('sunnyday')) {
 				this.add('-activate', pokemon, 'Orichalcum Pulse', '[source]');
@@ -34,8 +40,8 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 			}
 		},
 	},
-	
-	miraidon:{
+
+	miraidon: {
 		onSwitchIn(pokemon) {
 			if (!this.field.setTerrain('electricterrain') && this.field.isTerrain('electricterrain')) {
 				this.add('-activate', pokemon, 'ability: Hadron Engine');
@@ -50,7 +56,7 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	yveltalmega:{
+	yveltalmega: {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.hp >= target.maxhp) {
 				this.debug('Shadow Shield weaken');
@@ -59,7 +65,7 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	lucariomegaz:{
+	lucariomegaz: {
 		onSourceModifyDamage(damage, source, target, move) {
 			this.debug('Deflect reduce');
 			return this.chainModify(0.8);
@@ -72,8 +78,177 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
+	zygardecompletemega: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug("Primal Armor neutralize");
+				return this.chainModify(0.5);
+			}
+		},
+	},
+
+	mewtwomegax: {
+		onPrepareHit(source, target, move) {
+			if (isParentalBondBanned(move, source)) { return; }
+			if ((move.flags as Record<string, number | undefined>)["punch"]) {
+				move.multihit = 2;
+				(move as { multihitType?: string }).multihitType = "boxer";
+			}
+		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			if ((move as { multihitType?: string }).multihitType !== "boxer") return;
+			if (!secondaries) return;
+			if (move.hit <= 1) return;
+			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
+			return secondaries;
+		},
+	},
+
+
+	rayquazamega:{
+		onSwitchIn(source) {
+			this.field.setWeather('deltastream');
+		},
+		onAnySetWeather(target, source, weather) {
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+			if (this.field.getWeather().id === 'deltastream' && !strongWeathers.includes(weather.id)) return false;
+		},
+		onEnd(pokemon) {
+			if (this.field.weatherState.source !== pokemon) return;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (target.hasAbility('deltastream')) {
+					this.field.weatherState.source = target;
+					return;
+				}
+			}
+			this.field.clearWeather();
+		},
+	},
+
+	moltresexmega:{
+		onModifySpA(atk, attacker, defender, move) {
+			return this.chainModify(1.5);
+		},
+	},
+
+	ampharosmega:{
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Transistor boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Transistor boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+	},
+	slakingmegaapeshift:{
+		onSwitchIn(pokemon) {
+			this.add('-ability', pokemon, 'Mold Breaker');
+		},
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+	},
+
+	slakingmega:{
+		onSwitchIn(pokemon) {
+			this.add('-ability', pokemon, 'Mold Breaker');
+		},
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+	},
+
+	articunoexmega:{
+		onResidualOrder: 28,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of [...pokemon.foes(), ...pokemon.alliesAndSelf()]) {
+				if (!target?.hp) continue;
+				if (target.hasType('Ice')) {
+					this.heal(target.baseMaxhp / 8, target, pokemon, pokemon.getAbility());
+				} else {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		}
+	},
+
+	chienpaomega:{
+		// Uses parentalBond as base.
+		onPrepareHit(source, target, move) {
+			if (isParentalBondBanned(move, source)) { return; }
+			if (move.flags["bite"]) {
+				move.multihit = 2;
+				(move as { multihitType?: string }).multihitType = "maw";
+			}
+		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			console.log(move.hit, move.secondaries);
+			if ((move as { multihitType?: string }).multihitType !== "maw") return;
+			if (!secondaries) return;
+			if (move.hit <= 1) return;
+			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
+			return secondaries;
+		},
+	},
+
+
+	mimikyurayquaza:{
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect?.effectType === 'Move' && target.species.id === 'mimikyurayquaza' && !this.effectState.busted) {
+				this.add('-activate', target, 'ability: Patchwork');
+				this.effectState.busted = true;
+				this.effectState.bustSource = source;
+				return 0;
+			}
+		},
+		onCriticalHit(target, source, move) {
+			if (!target) return;
+			if (target.species.id !== 'mimikyurayquaza') return;
+			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+			if (!target.runImmunity(move)) return;
+			return false;
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (!target || move.category === 'Status') return;
+			if (target.species.id !== 'mimikyurayquaza') return;
+			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+			if (!target.runImmunity(move)) return;
+			return 0;
+		},
+		onUpdate(pokemon) {
+			if (pokemon.species.id === 'mimikyurayquaza' && this.effectState.busted) {
+				pokemon.formeChange('Mimikyu-Primal', this.effect, true);
+				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get('mimikyurayquazabusted'));
+				const foe = this.effectState.bustSource as Pokemon | undefined;
+				if (foe?.hp && foe.side !== pokemon.side) {
+					foe.addVolatile('curse', pokemon, this.dex.abilities.get('patchwork'));
+				}
+			}
+		},
+	},
+
 	
 
 
-	
+
+
+
+
+
+
+
+
+
 };

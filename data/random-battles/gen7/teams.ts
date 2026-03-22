@@ -194,7 +194,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					counter.damagingMoves.add(move);
 				}
 				if (move.flags['bite']) counter.add('strongjaw');
-				if (move.flags['punch']) counter.add('ironfist');
+				if (move.type === 'Steel') counter.add('ironfist');
 				if (move.flags['sound']) counter.add('sound');
 				if (move.priority > 0) counter.add('priority');
 			}

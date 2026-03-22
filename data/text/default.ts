@@ -263,6 +263,10 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 	trapped: {
 		start: "  [POKEMON] can no longer escape!",
 	},
+	knowyourplace: {
+		start: "  [POKEMON] was put in its place!",
+		end: "  [POKEMON] shook off the pressure!",
+	},
 	dynamax: {
 		start: "  ([POKEMON]'s Dynamax!)",
 		end: "  ([POKEMON] returned to normal!)",
@@ -346,6 +350,11 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		end: "  The weirdness disappeared from the battlefield!",
 		block: "  [POKEMON] is protected by the Psychic Terrain!",
 	},
+	toxicterrain: {
+		start: "  The battlefield was drenched in toxic sludge!",
+		end: "  The toxic sludge disappeared from the battlefield!",
+		damage: "  [POKEMON] was hurt by the toxic terrain!",
+	},
 
 	// field effects
 	gravity: {
@@ -353,6 +362,10 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		end: "  Gravity returned to normal!",
 		cant: "[POKEMON] can't use [MOVE] because of gravity!",
 		activate: "[POKEMON] fell from the sky due to the gravity!",
+	},
+	eeriefog: {
+		start: "  An eerie fog crept over the battlefield!",
+		end: "  The eerie fog lifted!",
 	},
 	magicroom: {
 		start: "  It created a bizarre area in which Pok\u00E9mon's held items lose their effects!",

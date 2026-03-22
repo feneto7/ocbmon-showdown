@@ -812,8 +812,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	ironfist: {
 		name: "Iron Fist",
-		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.2.",
-		shortDesc: "This Pokemon's punch-based attacks have 1.2x power. Sucker Punch is not boosted.",
+		desc: "This Pokemon's Steel-type attacks have their power multiplied by 1.3.",
+		shortDesc: "This Pokemon's Steel-type attacks have 1.3x power.",
 	},
 	justified: {
 		name: "Justified",
@@ -832,6 +832,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Klutz",
 		desc: "This Pokemon's held item has no effect. This Pokemon cannot use Fling successfully. Macho Brace, Power Anklet, Power Band, Power Belt, Power Bracer, Power Lens, and Power Weight still have their effects.",
 		shortDesc: "This Pokemon's held item has no effect, except Macho Brace. Fling cannot be used.",
+	},
+	knowyourplace: {
+		name: "Know Your Place",
+		desc: "Contact moves used by this Pokemon make the target move last among Pokemon using the same or greater priority moves for 5 turns.",
+		shortDesc: "Contact: target moves last in priority for 5 turns.",
 	},
 	leafguard: {
 		name: "Leaf Guard",
@@ -1155,6 +1160,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Opportunist",
 		shortDesc: "When an opposing Pokemon has a stat stage raised, this Pokemon copies the effect.",
 	},
+	opportunistpriority: {
+		name: "Opportunist",
+		shortDesc: "This Pokemon's moves have +1 priority against foes below 1/2 max HP.",
+	},
 	orichalcumpulse: {
 		name: "Orichalcum Pulse",
 		shortDesc: "On switch-in, summons Sunny Day. During Sunny Day, Attack is 1.3333x.",
@@ -1212,6 +1221,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Pastel Veil",
 		desc: "This Pokemon and its allies cannot be poisoned. Gaining this Ability while this Pokemon or its ally is poisoned cures them. If this Ability is being ignored during an effect that causes poison, this Pokemon is cured immediately but its ally is not.",
 		shortDesc: "This Pokemon and its allies cannot be poisoned. On switch-in, cures poisoned allies.",
+	},
+	patchwork: {
+		name: "Patchwork",
+		desc: "The first time this Pokemon is hit by a damaging attack while in its disguised form, it takes no damage, changes to its revealed form, loses 1/8 of its maximum HP, and curses the attacker. While disguised, this Pokemon takes no damage from super-effective moves and is not affected by critical hits.",
+		shortDesc: "Disguise + curses the opponent when its disguise breaks.",
 	},
 	perishbody: {
 		name: "Perish Body",
@@ -1914,6 +1928,12 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  [POKEMON]'s Sword of Ruin weakened the Defense of all surrounding Pokémon!",
 	},
+	swordofdamnation: {
+		name: "Sword of Damnation",
+		desc: "This Pokemon ignores other Pokemon's Attack, Special Attack, and accuracy stat stages when taking damage, and ignores other Pokemon's Defense, Special Defense, and evasiveness stat stages when dealing damage. Active Pokemon without this Ability have their Defense multiplied by 0.75.",
+		shortDesc: "Unaware + Sword of Ruin: ignores foe boosts as Unaware; other Pokemon's Def ×0.75.",
+		start: "  [POKEMON]'s Sword of Damnation twisted the battlefield!",
+	},
 	symbiosis: {
 		name: "Symbiosis",
 		desc: "If an ally uses its item, this Pokemon gives its item to that ally immediately. Does not activate if the ally's item was stolen or knocked off, or if the ally used an Eject Button or Eject Pack.",
@@ -2516,6 +2536,21 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Juggernaut",
 		shortDesc:
 			"This Pokemon's contact moves use + 20% of defense stat; cannot be paralyzed",
+	},
+	irongiant: {
+		name: "Iron Giant",
+		desc: "The power of Fire-type attacks against this Pokemon is halved. This Pokemon takes half of the usual burn damage, rounded down. This Pokemon's contact moves add 20% of its Defense to their damage. This Pokemon cannot be paralyzed.",
+		shortDesc: "Heatproof effects + contact moves use +20% Defense; cannot be paralyzed.",
+	},
+	sleekscales: {
+		name: "Sleek Scales",
+		desc: "When taking damage from attacks, this Pokemon adds 15% of its Speed stat to its Defense in damage calculations against physical moves, and to its Special Defense in damage calculations against special moves.",
+		shortDesc: "When defending, +15% of its Speed is added to its defensive stats.",
+	},
+	winterthrone: {
+		name: "Winter Throne",
+		desc: "At the end of each turn, each Pokemon on the field takes damage equal to 1/8 of its maximum HP, rounded down, unless it is an Ice type. Ice-type Pokemon on the field are healed for 1/8 of their maximum HP, rounded down, instead.",
+		shortDesc: "End of turn: 1/8 max HP damage to non-Ice; heals Ice types 1/8 max HP.",
 	},
 	shortcircuit: {
 		name: "Short Circuit",

@@ -961,7 +961,7 @@ export class RandomGen8Teams {
 				}
 
 				if (move.flags['bite']) counter.add('strongjaw');
-				if (move.flags['punch']) counter.add('ironfist');
+				if (move.type === 'Steel') counter.add('ironfist');
 				if (move.flags['sound']) counter.add('sound');
 				if (move.priority !== 0 || (moveid === 'grassyglide' && abilities.includes('Grassy Surge'))) {
 					counter.add('priority');
@@ -1553,7 +1553,7 @@ export class RandomGen8Teams {
 			if (species.id === 'salamence' && moves.has('dragondance')) return true;
 			return ['bodyslam', 'bounce', 'tripleaxel'].some(m => moves.has(m));
 		case 'Iron Fist':
-			return (counter.get('ironfist') < 2 || moves.has('dynamicpunch'));
+			return (counter.get('ironfist') < 2 || moves.has('bulletpunch'));
 		case 'Justified':
 			return (isDoubles && abilities.includes('Inner Focus'));
 		case 'Lightning Rod':

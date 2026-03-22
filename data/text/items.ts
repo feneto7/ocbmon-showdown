@@ -1913,7 +1913,7 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	terrainextender: {
 		name: "Terrain Extender",
-		shortDesc: "Holder's use of Electric/Grassy/Misty/Psychic Terrain lasts 8 turns instead of 5.",
+		shortDesc: "Holder's terrain moves last longer (8 turns instead of 5; Toxic Terrain lasts 11 instead of 8).",
 	},
 	thickclub: {
 		name: "Thick Club",

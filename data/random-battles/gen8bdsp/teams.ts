@@ -583,7 +583,7 @@ export class RandomBDSPTeams extends RandomGen8Teams {
 			if (species.id === 'salamence' && moves.has('dragondance')) return true;
 			return ['bodyslam', 'bounce', 'rockclimb', 'tripleaxel'].some(m => moves.has(m));
 		case 'Iron Fist':
-			return (counter.get('ironfist') < 2 || moves.has('dynamicpunch'));
+			return (counter.get('ironfist') < 2 || moves.has('bulletpunch'));
 		case 'Justified':
 			return (isDoubles && abilities.includes('Inner Focus'));
 		case 'Lightning Rod':

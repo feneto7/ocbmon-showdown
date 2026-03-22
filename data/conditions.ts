@@ -582,6 +582,22 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			return this.chainModify([5325, 4096]);
 		},
 	},
+	// Know Your Place ability: forced to move last within the same priority bracket (like Stall / Lagging Tail)
+	knowyourplace: {
+		name: 'knowyourplace',
+		duration: 5,
+		onFractionalPriority: -0.1,
+		onStart(target, source, sourceEffect) {
+			if (sourceEffect?.effectType === 'Ability') {
+				this.add('-start', target, 'knowyourplace', '[from] ability: ' + sourceEffect.name, `[of] ${source}`);
+			} else {
+				this.add('-start', target, 'knowyourplace');
+			}
+		},
+		onEnd(target) {
+			this.add('-end', target, 'knowyourplace');
+		},
+	},
 
 	// weather is implemented here since it's so important to the game
 

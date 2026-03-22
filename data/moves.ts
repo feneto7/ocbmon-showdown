@@ -2412,6 +2412,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				newType = 'Fairy';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				newType = 'Psychic';
+			} else if (this.field.isTerrain('toxicterrain')) {
+				newType = 'Poison';
 			}
 
 			if (target.getTypes().join() === newType || !target.setType(newType)) return false;
@@ -4570,6 +4572,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Dragon",
 		maxMove: { basePower: 130 },
 	},
+	dragondash: {
+		num: 1020,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Dragon Dash",
+		pp: 20,
+		priority: 1,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bigpecksboost: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		contestType: "Cool",
+	},
 	dragonenergy: {
 		num: 820,
 		accuracy: 100,
@@ -4891,6 +4907,54 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Normal",
 		contestType: "Beautiful",
+	},
+	// Pseudo-clima: some os stats de quem não é Ghost/Psychic a cada final de turno (fichas custom).
+	eeriefog: {
+		num: 950,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Eerie Fog",
+		pp: 10,
+		priority: 0,
+		flags: { mirror: 1, metronome: 1 },
+		pseudoWeather: 'eeriefog',
+		condition: {
+			duration: 8,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Eerie Fog', `[of] ${source}`);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('eeriefog');
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldResidual() {
+				for (const pokemon of this.getAllActive()) {
+					if (!pokemon || pokemon.fainted) continue;
+					if (pokemon.hasType('Ghost') || pokemon.hasType('Psychic')) continue;
+					let hadPositive = false;
+					let b: BoostID;
+					for (b in pokemon.boosts) {
+						if (pokemon.boosts[b]! > 0) {
+							hadPositive = true;
+							break;
+						}
+					}
+					if (!hadPositive) continue;
+					pokemon.clearBoosts();
+					this.add('-clearboost', pokemon, '[from] move: Eerie Fog');
+				}
+			},
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Eerie Fog');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Ghost",
+		zMove: { boost: { spd: 1 } },
+		contestType: "Clever",
 	},
 	eerieimpulse: {
 		num: 598,
@@ -6083,6 +6147,21 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ground",
 		zMove: { basePower: 180 },
 		maxMove: { basePower: 130 },
+		contestType: "Tough",
+	},
+	fivestarfury: {
+		num: 1001,
+		accuracy: 100,
+		basePower: 15,
+		category: "Physical",
+		name: "Five-Star Fury",
+		pp: 10,
+		priority: 1,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, punch: 1, bigpecksboost: 1 },
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Bug",
 		contestType: "Tough",
 	},
 	flail: {
@@ -7291,6 +7370,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
+	},
+	godspeed: {
+		num: 1024,
+		accuracy: true,
+		basePower: 65,
+		category: "Physical",
+		name: "Godspeed",
+		pp: 5,
+		priority: 2,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, wind: 1, bigpecksboost: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Flying",
 		contestType: "Cool",
 	},
 	glaciallance: {
@@ -10196,6 +10289,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			boosts: {
 				spe: -1,
 			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Tough",
+	},
+	icewall: {
+		num: 1028,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Ice Wall",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bigpecksboost: 1 },
+		self: {
+			sideCondition: 'reflect',
 		},
 		secondary: null,
 		target: "normal",
@@ -13706,6 +13816,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
+			} else if (this.field.isTerrain('toxicterrain')) {
+				move = 'sludgebomb';
 			}
 			this.actions.useMove(move, pokemon, { target });
 			return null;
@@ -16907,6 +17019,38 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Dark",
 		contestType: "Tough",
 	},
+	saberslashes: {
+		num: 1019,
+		accuracy: 100,
+		basePower: 35,
+		category: "Physical",
+		name: "Saber Slashes",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1, bigpecksboost: 1 },
+		multihit: 2,
+		onModifyType(move, pokemon, target) {
+			if (!target) return;
+			const dex = this.dex;
+			const fireImmune = !dex.getImmunity({ type: 'Fire' }, target);
+			const elecImmune = !dex.getImmunity({ type: 'Electric' }, target);
+			if (elecImmune && !fireImmune) {
+				move.type = 'Fire';
+			} else if (fireImmune && !elecImmune) {
+				move.type = 'Electric';
+			} else if (fireImmune && elecImmune) {
+				move.type = 'Fire';
+			} else {
+				const fireMod = dex.getEffectiveness('Fire', target);
+				const elecMod = dex.getEffectiveness('Electric', target);
+				move.type = elecMod > fireMod ? 'Electric' : 'Fire';
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Cool",
+	},
 	sacredfire: {
 		num: 221,
 		accuracy: 95,
@@ -17355,6 +17499,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 						spe: -1,
 					},
 				});
+			} else if (this.field.isTerrain('toxicterrain')) {
+				move.secondaries.push({
+					chance: 30,
+					status: 'psn',
+				});
 			}
 		},
 		secondary: {
@@ -17433,7 +17582,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		contestType: "Tough",
 	},
 	seismicblade: {
-		num: 950,
+		num: 985,
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
@@ -21127,6 +21276,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'psychicterrain':
 				move.type = 'Psychic';
 				break;
+			case 'toxicterrain':
+				move.type = 'Poison';
+				break;
 			}
 		},
 		onModifyMove(move, pokemon) {
@@ -21659,6 +21811,63 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Poison",
 		zMove: { boost: { def: 1 } },
 		contestType: "Clever",
+	},
+	toxicterrain: {
+		num: 1006,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Toxic Terrain",
+		pp: 10,
+		priority: 0,
+		flags: { nonsky: 1, metronome: 1 },
+		terrain: 'toxicterrain',
+		condition: {
+			effectType: 'Terrain',
+			duration: 8,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 11;
+				}
+				return 8;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Poison' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('toxic terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Toxic Terrain', '[from] ability: ' + effect.name, `[of] ${source}`);
+				} else {
+					this.add('-fieldstart', 'move: Toxic Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (!pokemon.isGrounded() || pokemon.isSemiInvulnerable()) return;
+				if (pokemon.hasType('Poison') || pokemon.hasType('Steel')) {
+					this.debug('Toxic Terrain residual immunity');
+					return;
+				}
+				const terrain = this.field.getTerrain();
+				const dmg = Math.floor(pokemon.baseMaxhp / 16);
+				if (dmg) this.damage(dmg, pokemon, pokemon, terrain);
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Toxic Terrain');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Poison",
+		zMove: { boost: { def: 1 } },
+		contestType: "Tough",
 	},
 	toxicthread: {
 		num: 672,

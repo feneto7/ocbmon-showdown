@@ -2191,9 +2191,9 @@ export const Abilities = {
 	ironfist: {
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['punch']) {
+			if (move.type === 'Steel') {
 				this.debug('Iron Fist boost');
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5325, 4096]);
 			}
 		},
 		flags: {},
@@ -2242,6 +2242,20 @@ export const Abilities = {
 		name: "Klutz",
 		rating: -1,
 		num: 103,
+	},
+	knowyourplace: {
+		// Contact from this Pokemon inflicts a short "move last" effect (same fractional priority as Stall)
+		onSourceDamagingHit(damage, target, source, move) {
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+			if (this.checkMoveMakesContact(move, target, source)) {
+				target.addVolatile('knowyourplace', source, this.effect);
+			}
+		},
+		flags: {},
+		name: "Know Your Place",
+		rating: 3,
+		num: 461,
+		gen: 9,
 	},
 	leafguard: {
 		onSetStatus(status, target, source, effect) {
@@ -2538,6 +2552,9 @@ export const Abilities = {
 				break;
 			case 'psychicterrain':
 				types = ['Psychic'];
+				break;
+			case 'toxicterrain':
+				types = ['Poison'];
 				break;
 			default:
 				types = pokemon.baseSpecies.types;
@@ -3047,6 +3064,21 @@ export const Abilities = {
 		rating: 3,
 		num: 290,
 	},
+	// Custom: +1 prioridade vs oponentes com HP abaixo da metade (usa originalTarget da fila de ações).
+	opportunistpriority: {
+		onModifyPriority(priority, pokemon, target, move) {
+			const action = this.queue.willMove(pokemon);
+			const foe = action?.originalTarget;
+			if (!foe || foe.fainted) return;
+			if (foe.side === pokemon.side) return;
+			if (foe.hp < foe.maxhp / 2) return priority + 1;
+		},
+		flags: {},
+		name: "Opportunist",
+		rating: 3.5,
+		num: 383,
+		gen: 9,
+	},
 	orichalcumpulse: {
 		onStart(pokemon) {
 			if (this.field.setWeather('sunnyday')) {
@@ -3185,6 +3217,52 @@ export const Abilities = {
 		name: "Pastel Veil",
 		rating: 2,
 		num: 257,
+	},
+	// Mimikyu-Rayquaza: disfarce como Disguise; ao revelar, aplica Curse no oponente que quebrou o disfarce.
+	patchwork: {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect?.effectType === 'Move' && target.species.id === 'mimikyurayquaza' && !this.effectState.busted) {
+				this.add('-activate', target, 'ability: Patchwork');
+				this.effectState.busted = true;
+				this.effectState.bustSource = source;
+				return 0;
+			}
+		},
+		onCriticalHit(target, source, move) {
+			if (!target) return;
+			if (target.species.id !== 'mimikyurayquaza') return;
+			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+			if (!target.runImmunity(move)) return;
+			return false;
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (!target || move.category === 'Status') return;
+			if (target.species.id !== 'mimikyurayquaza') return;
+			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+			if (!target.runImmunity(move)) return;
+			return 0;
+		},
+		onUpdate(pokemon) {
+			if (pokemon.species.id === 'mimikyurayquaza' && this.effectState.busted) {
+				pokemon.formeChange('Mimikyu-Primal', this.effect, true);
+				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get('mimikyurayquazabusted'));
+				const foe = this.effectState.bustSource as Pokemon | undefined;
+				if (foe?.hp && foe.side !== pokemon.side) {
+					foe.addVolatile('curse', pokemon, this.dex.abilities.get('patchwork'));
+				}
+			}
+		},
+		flags: {
+			failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1,
+			breakable: 1, notransform: 1,
+		},
+		name: "Patchwork",
+		rating: 4,
+		num: 385,
+		gen: 9,
 	},
 	perishbody: {
 		onDamagingHit(damage, target, source, move) {
@@ -4890,6 +4968,41 @@ export const Abilities = {
 		name: "Sword of Ruin",
 		rating: 4.5,
 		num: 285,
+	},
+	// Unaware + Sword of Ruin (custom)
+	swordofdamnation: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Sword of Damnation');
+		},
+		onAnyModifyBoost(boosts, pokemon) {
+			const unawareUser = this.effectState.target;
+			if (unawareUser === pokemon) return;
+			if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+			if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+				boosts['atk'] = 0;
+				boosts['def'] = 0;
+				boosts['spa'] = 0;
+				boosts['accuracy'] = 0;
+			}
+		},
+		onAnyModifyDef(def, target, source, move) {
+			const abilityHolder = this.effectState.target;
+			if (target.hasAbility('Sword of Damnation')) return;
+			if (!move.ruinedDef?.hasAbility('Sword of Damnation')) move.ruinedDef = abilityHolder;
+			if (move.ruinedDef !== abilityHolder) return;
+			this.debug('Sword of Damnation Def drop');
+			return this.chainModify(0.75);
+		},
+		flags: { breakable: 1 },
+		name: "Sword of Damnation",
+		rating: 5,
+		num: 465,
+		gen: 9,
 	},
 	symbiosis: {
 		onAllyAfterUseItem(item, pokemon) {
@@ -6622,6 +6735,90 @@ export const Abilities = {
 		num: 350,
 		gen: 8,
 	},
+	// Heatproof + Juggernaut (custom)
+	irongiant: {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Iron Giant Heatproof Atk weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Iron Giant Heatproof SpA weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect && effect.id === 'brn') {
+				return damage / 2;
+			}
+		},
+		onModifyAtkPriority: 11,
+		onModifyMove(move) {
+			if (move.flags['contact']) (move as { secondaryOffensiveStats?: [string, number][] }).secondaryOffensiveStats = [['def', 0.2]];
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status === 'par') {
+				this.add('-activate', pokemon, 'ability: Iron Giant');
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (status.id !== 'par') return;
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Iron Giant');
+			}
+			return false;
+		},
+		flags: { breakable: 1 },
+		name: "Iron Giant",
+		rating: 4,
+		num: 462,
+		gen: 9,
+	},
+	// +15% da Velocidade somada à Defesa/SpD no cálculo de dano recebido
+	sleekscales: {
+		onModifyDefPriority: 6,
+		onModifyDef(def, pokemon) {
+			const spe = pokemon.getStat('spe', false, false);
+			const bonus = Math.floor(spe * 15 / 100);
+			return def + bonus;
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd, pokemon) {
+			const spe = pokemon.getStat('spe', false, false);
+			const bonus = Math.floor(spe * 15 / 100);
+			return spd + bonus;
+		},
+		flags: { breakable: 1 },
+		name: "Sleek Scales",
+		rating: 3.5,
+		num: 463,
+		gen: 9,
+	},
+	// Fim do turno: 1/8 do max HP em dano a quem não é Ice; 1/8 de cura em tipos Ice (estilo Toxic Spill + Ice Body)
+	winterthrone: {
+		onResidualOrder: 28,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of [...pokemon.foes(), ...pokemon.alliesAndSelf()]) {
+				if (!target?.hp) continue;
+				if (target.hasType('Ice')) {
+					this.heal(target.baseMaxhp / 8, target, pokemon, pokemon.getAbility());
+				} else {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		},
+		flags: {},
+		name: "Winter Throne",
+		rating: 4,
+		num: 464,
+		gen: 9,
+	},
 	shortcircuit: {
 		onModifyDamage(atk, attacker, defender, move) {
 			if (move && move.type === "Electric") {
@@ -7742,8 +7939,12 @@ export const Abilities = {
 	},
 	// Elite Redux's Opportunist renamed to 'Expert Hunter' to avoid name confict with gen 9's Opportunist
 	experthunter: {
-		onModifyPriority(priority, source, target, move) {
-			if (target && target.hp && target.hp <= target.maxhp / 2) return priority + 1;
+		onModifyPriority(priority, pokemon, target, move) {
+			const action = this.queue.willMove(pokemon);
+			const foe = action?.originalTarget;
+			if (!foe || foe.fainted) return;
+			if (foe.side === pokemon.side) return;
+			if (foe.hp < foe.maxhp / 2) return priority + 1;
 		},
 		name: "Expert Hunter",
 		rating: 4.5,
@@ -9358,6 +9559,46 @@ export const Abilities = {
 		flags: { breakable: 1 },
 		name: "Evaporate",
 		shortDesc: "Takes no damage and sets Mist if hit by water.",
+	},
+	// Usada em fichas custom: anula quedas de stat por efeitos próprios e aguenta um golpe fatal uma vez por entrada.
+	luckyhalo: {
+		onStart(pokemon) {
+			pokemon.abilityState.luckyhaloEndured = false;
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (!source || target !== source) return;
+			let blocked = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					delete boost[i];
+					blocked = true;
+				}
+			}
+			if (blocked && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+				this.add('-fail', target, 'unboost', '[from] ability: Lucky Halo', `[of] ${target}`);
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Lucky Halo');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.abilityState.luckyhaloEndured) return;
+			if (damage >= target.hp && effect && effect.effectType === 'Move') {
+				target.abilityState.luckyhaloEndured = true;
+				this.add('-activate', target, 'ability: Lucky Halo');
+				return target.hp - 1;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Lucky Halo",
+		rating: 3.5,
+		num: 382,
+		gen: 9,
 	},
 	lumberjack: {
 		name: "Lumberjack",

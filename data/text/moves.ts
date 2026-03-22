@@ -1670,6 +1670,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. In Double Battles, this move attempts to hit the targeted Pokemon and its ally once each. If hitting one of these Pokemon would be prevented by immunity, protection, semi-invulnerability, an Ability, or accuracy, it attempts to hit the other Pokemon twice instead. If this move is redirected, it hits that target twice.",
 		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
 	},
+	dragondash: {
+		name: "Dragon Dash",
+		desc: "Makes contact. Usually goes first. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Low base power interacts with Technician and Perfectionist.",
+		shortDesc: "+1 priority. Contact. Big Pecks boost. Technician/Perfectionist.",
+	},
 	dragonenergy: {
 		name: "Dragon Energy",
 		desc: "Power is equal to (user's current HP * 150 / user's maximum HP), rounded down, but not less than 1.",
@@ -1788,6 +1793,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Echoed Voice",
 		desc: "For every consecutive turn that this move is used by at least one Pokemon, this move's power is multiplied by the number of turns to pass, but not more than 5.",
 		shortDesc: "Power increases when used on consecutive turns.",
+	},
+	eeriefog: {
+		name: "Eerie Fog",
+		desc: "For 8 turns, the battlefield is covered in eerie fog. At the end of each turn, Pokemon that are not Ghost-type or Psychic-type lose all of their stat stage changes as if they were affected by Haze. Ghost- and Psychic-type Pokemon are unaffected.",
+		shortDesc: "8 turns. End of turn: non-Ghost/Psychic lose all stat changes.",
 	},
 	eerieimpulse: {
 		name: "Eerie Impulse",
@@ -2210,6 +2220,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Deals 65535 damage. Fails if target is faster.",
 		},
 	},
+	fivestarfury: {
+		name: "Five-Star Fury",
+		desc: "Makes contact. Hits two to five times. Power is multiplied by 1.2 when used by a Pokemon with the Iron Fist Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability. Low base power interacts with Technician and Perfectionist.",
+		shortDesc: "Hits 2-5 times. Iron Fist & Big Pecks. Technician/Perfectionist.",
+	},
 	flail: {
 		name: "Flail",
 		desc: "The power of this move is 20 if X is 33 to 48, 40 if X is 17 to 32, 80 if X is 10 to 16, 100 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
@@ -2609,6 +2624,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	gigavolthavoc: {
 		name: "Gigavolt Havoc",
 		shortDesc: "Power is equal to the base move's Z-Power.",
+	},
+	godspeed: {
+		name: "Godspeed",
+		desc: "This move does not check accuracy. Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Wind move (Wind Power, Wind Rider).",
+		shortDesc: "Never misses. +2 priority. Big Pecks boost. Wind move.",
 	},
 	glaciallance: {
 		name: "Glacial Lance",
@@ -3403,6 +3423,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Ice Hammer",
 		desc: "Lowers the user's Speed by 1 stage.",
 		shortDesc: "Lowers the user's Speed by 1.",
+	},
+	icewall: {
+		name: "Ice Wall",
+		desc: "Makes contact. Sets Reflect on the user's side.",
+		shortDesc: "Damages target. Sets Reflect on user's side.",
 	},
 	icepunch: {
 		name: "Ice Punch",
@@ -5683,6 +5708,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Deals damage to the target equal to half of its current HP, rounded down, but not less than 1 HP.",
 		shortDesc: "Does damage equal to 1/2 target's current HP.",
 	},
+	saberslashes: {
+		name: "Saber Slashes",
+		desc: "Makes contact. Hits twice. Each hit becomes Fire or Electric type, whichever is more effective against the target, taking immunities into account. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Low base power interacts with Technician and Perfectionist.",
+		shortDesc: "Hits twice. Fire or Electric per hit. Big Pecks. Technician/Perfectionist.",
+	},
 	sacredfire: {
 		name: "Sacred Fire",
 		desc: "Has a 50% chance to burn the target.",
@@ -7350,6 +7380,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  Poison spikes were scattered on the ground all around [TEAM]!",
 		end: "  The poison spikes disappeared from the ground around [TEAM]!",
+	},
+	toxicterrain: {
+		name: "Toxic Terrain",
+		desc: "For 8 turns, the terrain becomes Toxic Terrain. During the effect, the power of Poison-type attacks used by grounded Pokemon is multiplied by 1.3, and grounded Pokemon that are not Poison- or Steel-type lose 1/16 of their maximum HP, rounded down, at the end of each turn. Camouflage transforms the user into a Poison type, Nature Power becomes Sludge Bomb, and Secret Power has a 30% chance to poison. Lasts for 11 turns if the user is holding Terrain Extender. Fails if the current terrain is Toxic Terrain.",
+		shortDesc: "8 turns. Grounded: +Poison power; others lose 1/16 max HP.",
 	},
 	toxicthread: {
 		name: "Toxic Thread",

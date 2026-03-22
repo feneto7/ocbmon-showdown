@@ -27405,7 +27405,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		name: "Mimikyu-Primal",
 		num: 778,
 		types: ["Ghost","Fairy"],
-		abilities: {0: "Shadow Tag", 1: "Fearmonger", H: "Opportunist"},
+		abilities: {0: "Patchwork", 1: "Shadow Tag", H: "Fearmonger"},
 		baseStats: {
 			hp: 79,
 			atk: 120,
@@ -30015,7 +30015,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		name: "Mimikyu-Rayquaza",
 		num: 778,
 		types: ["Ghost","Fairy"],
-		abilities: {0: "Shadow Tag", 1: "Fearmonger", H: "Opportunist"},
+		abilities: {0: "Patchwork", 1: "Shadow Tag", H: "Fearmonger"},
 		baseStats: {
 			hp: 79,
 			atk: 120,
