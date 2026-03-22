@@ -27,7 +27,9 @@ export type MoveTarget =
 /** Possible move flags. */
 interface MoveFlags {
 	allyanim?: 1; // The move plays its animation when used on an ally.
+	arrow?: 1; // Treated as an arrow move for abilities (e.g. Archer).
 	bypasssub?: 1; // Ignores a target's substitute.
+	bigpecksboost?: 1; // Power is multiplied by 1.2 when used by a Pokemon with the Ability Big Pecks.
 	bite?: 1; // Power is multiplied by 1.5 when used by a Pokemon with the Ability Strong Jaw.
 	bullet?: 1; // Has no effect on Pokemon with the Ability Bulletproof.
 	cantusetwice?: 1; // The user cannot select this move after a previous successful use.
@@ -44,6 +46,8 @@ interface MoveFlags {
 	futuremove?: 1; // Targets a slot, and in 2 turns damages that slot.
 	gravity?: 1; // Prevented from being executed or selected during Gravity's effect.
 	heal?: 1; // Prevented from being executed or selected during Heal Block's effect.
+	horn?: 1; // Treated as a horn move for abilities (e.g. Mighty Horn).
+	kick?: 1; // Treated as a kicking move for abilities and interactions.
 	metronome?: number | 1; // Can be selected by Metronome.
 	mirror?: 1; // Can be copied by Mirror Move.
 	mustpressure?: 1; // Additional PP is deducted due to Pressure when it ordinarily would not.

@@ -85,6 +85,11 @@ export const Tags: { [id: IDEntry]: TagData } = {
 		desc: "Boosted 1.2x by Iron Fist.",
 		moveFilter: move => 'punch' in move.flags,
 	},
+	bigpecksboost: {
+		name: "Big Pecks boost",
+		desc: "Boosted 1.2x by Big Pecks.",
+		moveFilter: move => 'bigpecksboost' in move.flags,
+	},
 	pulse: {
 		name: "Pulse",
 		desc: "Boosted 1.5x by Mega Launcher.",

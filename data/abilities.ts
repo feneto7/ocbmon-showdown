@@ -458,6 +458,13 @@ export const Abilities = {
 				}
 			}
 		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['bigpecksboost']) {
+				this.debug('Big Pecks move boost');
+				return this.chainModify([4915, 4096]);
+			}
+		},
 		flags: { breakable: 1 },
 		name: "Big Pecks",
 		rating: 0.5,

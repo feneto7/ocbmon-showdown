@@ -148,10 +148,20 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 100% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "100% chance to lower the target's Sp. Def by 1.",
 	},
+	aquabash: {
+		name: "Aqua Bash",
+		desc: "Makes contact. Has a 20% chance to make the target flinch. Power is multiplied by ~1.3 when used by a Pokemon with the Mighty Horn Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "20% flinch. Mighty Horn & Big Pecks boost power.",
+	},
 	aquacutter: {
 		name: "Aqua Cutter",
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
+	},
+	aquafang: {
+		name: "Aqua Fang",
+		desc: "Makes contact. Has a 20% chance to make the target flinch. Power is multiplied by 1.5 when used by a Pokemon with the Strong Jaw Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "20% flinch. Strong Jaw & Big Pecks boost power.",
 	},
 	aquajet: {
 		name: "Aqua Jet",
@@ -174,6 +184,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	aquatail: {
 		name: "Aqua Tail",
 		shortDesc: "No additional effect.",
+	},
+	archershot: {
+		name: "Archer Shot",
+		desc: "Power is multiplied by 1.3 when used by a Pokemon with the Archer Ability.",
+		shortDesc: "Archer: 1.3x power. Arrow move.",
 	},
 	armorcannon: {
 		name: "Armor Cannon",
@@ -240,6 +255,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Power doubles if the target has already taken damage this turn.",
 		},
 	},
+	asteroidshot: {
+		name: "Asteroid Shot",
+		desc: "This move does not check accuracy. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "Can't miss. Mega Launcher: 1.5x power.",
+	},
 	astonish: {
 		name: "Astonish",
 		desc: "Has a 30% chance to make the target flinch.",
@@ -252,6 +272,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Astral Barrage",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	astralhand: {
+		name: "Astral Hand",
+		desc: "Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "Contact. Big Pecks: 1.2x power.",
 	},
 	attackorder: {
 		name: "Attack Order",
@@ -275,6 +300,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		endFromItem: "  [POKEMON] cured its infatuation using its [ITEM]!",
 		activate: "  [POKEMON] is in love with [TARGET]!",
 		cant: "[POKEMON] is immobilized by love!",
+	},
+	auraforce: {
+		name: "Aura Force",
+		desc: "Has a high critical hit ratio. Super effective against Ghost types. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "High crit. Super effective on Ghost. Mega Launcher: 1.5x power.",
 	},
 	aurasphere: {
 		name: "Aura Sphere",
@@ -403,6 +433,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] started heating up its beak!",
 	},
+	beatdown: {
+		name: "Beatdown",
+		desc: "Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Low base power interacts with Technician and Perfectionist.",
+		shortDesc: "Contact. Big Pecks: 1.2x power.",
+	},
 	beatup: {
 		name: "Beat Up",
 		desc: "Hits one time for the user and one time for each unfainted Pokemon without a non-volatile status condition in the user's party. The power of each hit is equal to 5+(X/10), where X is each participating Pokemon's base Attack; each hit is considered to come from the user.",
@@ -527,12 +562,17 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	bittermalice: {
 		name: "Bitter Malice",
-		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",
-		shortDesc: "100% chance to lower the target's Attack by 1.",
+		desc: "Has a 30% chance to frostbite the target. Power is boosted 1.5x if the target has a non-volatile status condition.",
+		shortDesc: "30% frostbite. 1.5x power if target is statused.",
 	},
 	blackholeeclipse: {
 		name: "Black Hole Eclipse",
 		shortDesc: "Power is equal to the base move's Z-Power.",
+	},
+	blackmagic: {
+		name: "Black Magic",
+		desc: "Has a 20% chance to make the target bleed.",
+		shortDesc: "20% chance to bleed.",
 	},
 	blastburn: {
 		name: "Blast Burn",
@@ -543,6 +583,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Blaze Kick",
 		desc: "Has a 10% chance to burn the target and a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio. 10% chance to burn.",
+	},
+	blazingarrow: {
+		name: "Blazing Arrow",
+		desc: "Has a high critical hit ratio. Has a 20% chance to burn the target. Arrow move (Archer boost).",
+		shortDesc: "High crit. 20% burn. Arrow move.",
 	},
 	blazingtorque: {
 		name: "Blazing Torque",
@@ -676,6 +721,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		prepare: "[POKEMON] sprang up!",
+	},
+	brambleblast: {
+		name: "Bramble Blast",
+		desc: "Makes contact. Has a 30% chance to Leech Seed the target. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Arrow move (Archer boost).",
+		shortDesc: "30% Leech Seed. Big Pecks boost. Arrow move.",
 	},
 	bouncybubble: {
 		name: "Bouncy Bubble",
@@ -904,6 +954,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "For Chatot, 31% chance to confuse the target.",
 		},
 	},
+	cheapshot: {
+		name: "Cheap Shot",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
+	},
 	chillingwater: {
 		name: "Chilling Water",
 		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",
@@ -973,6 +1028,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Clangorous Soulblaze",
 		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "Raises the user's Atk/Def/SpAtk/SpDef/Spe by 1.",
+	},
+	claydart: {
+		name: "Clay Dart",
+		desc: "Super effective against Flying types. Arrow move (Archer boost).",
+		shortDesc: "Super effective on Flying. Arrow move.",
 	},
 	clearsmog: {
 		name: "Clear Smog",
@@ -1235,6 +1295,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Power is equal to 120 * (target's current HP / target's maximum HP) + 1, rounded down.",
 		},
 	},
+	cupidshot: {
+		name: "Cupid Shot",
+		desc: "Has a 20% chance to infatuate the target. Arrow move (Archer boost).",
+		shortDesc: "20% infatuate. Arrow move.",
+	},
 	curse: {
 		name: "Curse",
 		desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected.",
@@ -1252,6 +1317,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	cut: {
 		name: "Cut",
 		shortDesc: "No additional effect.",
+	},
+	cutsieslap: {
+		name: "Cutsie Slap",
+		desc: "Makes contact. Has a 10% chance to infatuate the target. Power is multiplied by 1.2 when used by a Pokemon with the Iron Fist Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% infatuate. Iron Fist & Big Pecks boost power.",
 	},
 	darkestlariat: {
 		name: "Darkest Lariat",
@@ -1360,6 +1430,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	devastatingdrake: {
 		name: "Devastating Drake",
 		shortDesc: "Power is equal to the base move's Z-Power.",
+	},
+	diamondarrow: {
+		name: "Diamond Arrow",
+		desc: "Ignores the target's stat stage changes, including evasiveness. Power is multiplied by ~1.3 when used by a Pokemon with the Keen Edge Ability. Arrow move (Archer boost).",
+		shortDesc: "Ignores target's boosts. Keen Edge boost. Arrow move.",
 	},
 	diamondstorm: {
 		name: "Diamond Storm",
@@ -1516,6 +1591,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Hits twice. Damage is calculated once for the first hit and used for both hits. If the first hit breaks the target's substitute, the move ends.",
 		},
 	},
+	doublelariat: {
+		name: "Double Lariat",
+		desc: "Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "Contact. Big Pecks: 1.2x power.",
+	},
 	doubleshock: {
 		name: "Double Shock",
 		desc: "Fails unless the user is an Electric type. If this move is successful and the user is not Terastallized, the user's Electric type becomes typeless as long as it remains active.",
@@ -1546,6 +1626,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Draco Meteor",
 		desc: "Lowers the user's Special Attack by 2 stages.",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
+	},
+	draconicfangs: {
+		name: "Draconic Fangs",
+		desc: "Makes contact. Has a 20% chance to make the target flinch. Power is multiplied by 1.5 when used by a Pokemon with the Strong Jaw Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "20% flinch. Strong Jaw: 1.5x power. Big Pecks: 1.2x power.",
+	},
+	dracomissile: {
+		name: "Draco Missile",
+		desc: "No additional effect. Hits adjacent foes. Arrow move (Archer boost).",
+		shortDesc: "Hits adjacent foes. Arrow move.",
 	},
 	dragonascent: {
 		name: "Dragon Ascent",
@@ -1835,6 +1925,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
 	},
+	energywave: {
+		name: "Energy Wave",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
+	},
 	entrainment: {
 		name: "Entrainment",
 		desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Truant, Zen Mode, or Zero to Hero, or the same Ability as the user, or if the user's Ability is As One, Battle Bond, Comatose, Commander, Disguise, Embody Aspect, Flower Gift, Forecast, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Poison Puppeteer, Power Construct, Power of Alchemy, Protosynthesis, Quark Drive, Receiver, RKS System, Schooling, Shields Down, Stance Change, Tera Shell, Tera Shift, Teraform Zero, Trace, Wonder Guard, Zen Mode, or Zero to Hero.",
@@ -1866,6 +1961,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Eternabeam",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
 		shortDesc: "User cannot move next turn.",
+	},
+	excalibur: {
+		name: "Excalibur",
+		desc: "Makes contact. Deals neutral damage to Dragon types. Has a high critical hit ratio. Power is multiplied by ~1.3 when used by a Pokemon with the Keen Edge Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability. Has a 20% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "Neutral vs Dragon. High crit. Keen Edge & Big Pecks. 20% -1 Def.",
 	},
 	expandingforce: {
 		name: "Expanding Force",
@@ -1933,6 +2033,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Fairy Wind",
 		shortDesc: "No additional effect.",
 	},
+	fairyspheres: {
+		name: "Fairy Spheres",
+		desc: "Makes contact. Hits two to five times. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Low base power interacts with Technician and Perfectionist.",
+		shortDesc: "Hits 2-5 times. Mega Launcher & Big Pecks. Technician/Perfectionist.",
+	},
 	fakeout: {
 		name: "Fake Out",
 		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
@@ -1992,6 +2097,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Has a 30% chance this move's power is doubled.",
 
 		activate: "  [POKEMON] is going all out for this attack!",
+	},
+	fertilefangs: {
+		name: "Fertile Fangs",
+		desc: "Makes contact. Has a 10% chance to Leech Seed the target. Power is multiplied by 1.5 when used by a Pokemon with the Strong Jaw Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% Leech Seed. Strong Jaw & Big Pecks boost power.",
 	},
 	fierydance: {
 		name: "Fiery Dance",
@@ -2129,6 +2239,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 100% chance to raise the user's Speed by 1 stage.",
 		shortDesc: "100% chance to raise the user's Speed by 1.",
 	},
+	flametongue: {
+		name: "Flame Tongue",
+		desc: "Makes contact. Has a 10% chance to burn the target. Power is multiplied by ~1.3 when used by a Pokemon with the Keen Edge Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% burn. Keen Edge & Big Pecks boost power.",
+	},
 	flamethrower: {
 		name: "Flamethrower",
 		desc: "Has a 10% chance to burn the target.",
@@ -2157,6 +2272,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Flash Cannon",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
+	flashfreeze: {
+		name: "Flash Freeze",
+		desc: "Frostbites the target. If an Ice-type Pokemon uses this move, the target cannot avoid the attack, even if the target is in the middle of a two-turn move.",
+		shortDesc: "Frostbites the target. Ice types can't miss.",
 	},
 	flatter: {
 		name: "Flatter",
@@ -2345,6 +2465,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
 		shortDesc: "Always results in a critical hit.",
 	},
+	frostbolt: {
+		name: "Frost Bolt",
+		desc: "Has a high critical hit ratio. Has a 20% chance to frostbite the target.",
+		shortDesc: "High crit. 20% frostbite. Arrow move.",
+	},
+	frostbrand: {
+		name: "Frost Brand",
+		desc: "Makes contact. Has a 10% chance to frostbite the target. Power is multiplied by ~1.3 when used by a Pokemon with the Keen Edge Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% frostbite. Keen Edge & Big Pecks boost power.",
+	},
 	frustration: {
 		name: "Frustration",
 		desc: "Power is equal to the greater of ((255 - user's Happiness) * 2/5), rounded down, or 1.",
@@ -2398,6 +2528,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Fusion Flare",
 		desc: "Power doubles if the last move used by any Pokemon this turn was Fusion Bolt.",
 		shortDesc: "Power doubles if used after Fusion Bolt this turn.",
+	},
+	fumigationbomb: {
+		name: "Fumigation Bomb",
+		desc: "Super effective against Bug types. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "Super effective on Bug. Mega Launcher: 1.5x power. Bulletproof blocks.",
 	},
 	futuresight: {
 		name: "Future Sight",
@@ -2484,6 +2619,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Glaciate",
 		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
 		shortDesc: "100% chance to lower the foe(s) Speed by 1.",
+	},
+	glaciercrash: {
+		name: "Glacier Crash",
+		desc: "Hits all adjacent Pokemon. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "Hits adjacent foes. Mega Launcher: 1.5x power.",
 	},
 	glaiverush: {
 		name: "Glaive Rush",
@@ -3114,6 +3254,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "No competitive use. Fails if there is no ally adjacent to the user.",
 		shortDesc: "No competitive use.",
 	},
+	homingfletch: {
+		name: "Homing Fletch",
+		desc: "This move always hits.",
+		shortDesc: "Always hits. High critical-hit ratio.",
+	},
 	honeclaws: {
 		name: "Hone Claws",
 		desc: "Raises the user's Attack and accuracy by 1 stage.",
@@ -3331,8 +3476,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	infernalparade: {
 		name: "Infernal Parade",
-		desc: "Has a 30% chance to burn the target. Power doubles if the target has a non-volatile status condition.",
-		shortDesc: "30% burn. 2x power if target is already statused.",
+		desc: "Has a 30% chance to burn the target (50% if the target has a non-volatile status condition).",
+		shortDesc: "30% burn; 50% burn if target is statused.",
 	},
 	inferno: {
 		name: "Inferno",
@@ -3418,6 +3563,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a higher chance for a critical hit. If the user is an Ogerpon, this move's type changes depending on its form. Water type for Wellspring Mask, Fire type for Hearthflame Mask, and Rock type for Cornerstone Mask.",
 		shortDesc: "High critical hit ratio. Type depends on user's form.",
 	},
+	jaggedhorns: {
+		name: "Jagged Horns",
+		desc: "Makes contact. Has a 10% chance to make the target flinch and a 10% chance to make the target bleed. Power is multiplied by ~1.3 when used by a Pokemon with the Mighty Horn Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% flinch. 10% bleed. Mighty Horn & Big Pecks boost power.",
+	},
+	jaggedpunch: {
+		name: "Jagged Punch",
+		desc: "Makes contact. Has a 10% chance to set Stealth Rock on the opposing side. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Power is multiplied by 1.2 when used by a Pokemon with the Iron Fist Ability.",
+		shortDesc: "10% Stealth Rock. Big Pecks & Iron Fist boost power.",
+	},
 	jawlock: {
 		name: "Jaw Lock",
 		desc: "Prevents the user and the target from switching out. The user and the target can still switch out if either of them is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field.",
@@ -3470,6 +3625,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Kinesis",
 		desc: "Lowers the target's accuracy by 1 stage.",
 		shortDesc: "Lowers the target's accuracy by 1.",
+	},
+	kineticbarrage: {
+		name: "Kinetic Barrage",
+		desc: "Has a 30% chance to confuse the target. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "30% confuse. Mega Launcher: 1.5x power.",
 	},
 	kingsshield: {
 		name: "King's Shield",
@@ -3617,6 +3777,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up.",
 		shortDesc: "Heals the user and its allies by 1/4 their max HP.",
 	},
+	lightningstrike: {
+		name: "Lightning Strike",
+		desc: "Has a 20% chance to raise the user's Speed by 1 stage. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "20% chance to raise Speed. Mega Launcher: 1.5x power. Arrow move.",
+	},
 	lightofruin: {
 		name: "Light of Ruin",
 		desc: "If the target lost HP, the user takes recoil damage equal to 1/2 the HP lost by the target, rounded half up, but not less than 1 HP.",
@@ -3671,6 +3836,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		start: "  [SOURCE] took aim at [POKEMON]!",
+	},
+	lotusshower: {
+		name: "Lotus Shower",
+		desc: "Has a 10% chance to put the target to sleep. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "Hits adjacent foes. 10% sleep. Mega Launcher: 1.5x power.",
+	},
+	lovelybite: {
+		name: "Lovely Bite",
+		desc: "Makes contact. Has a 10% chance to infatuate the target. Power is multiplied by 1.5 when used by a Pokemon with the Strong Jaw Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% infatuate. Strong Jaw & Big Pecks boost power.",
 	},
 	lovelykiss: {
 		name: "Lovely Kiss",
@@ -4156,6 +4331,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		damage: "  ([POKEMON] cut its own HP to power up its move!)",
 	},
+	mindbreak: {
+		name: "Mind Break",
+		desc: "Makes contact. Has a 20% chance to confuse the target.",
+		shortDesc: "20% chance to confuse the target.",
+	},
 	mindreader: {
 		name: "Mind Reader",
 		desc: "Until the end of the next turn, the target cannot avoid the user's moves, even if the target is in the middle of a two-turn move. The effect ends if either the user or the target leaves the field. Fails if this effect is active for the user.",
@@ -4339,6 +4519,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field. Has a 100% chance to poison the target.",
 		shortDesc: "Poisons foes, frees user from hazards/bind/leech.",
 	},
+	mountainchunk: {
+		name: "Mountain Chunk",
+		desc: "Has a 30% chance to make the target flinch. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "30% flinch. Mega Launcher: 1.5x power.",
+	},
 	mountaingale: {
 		name: "Mountain Gale",
 		desc: "Has a 30% chance to make the target flinch.",
@@ -4517,8 +4702,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	octolock: {
 		name: "Octolock",
-		desc: "Prevents the target from switching out. At the end of each turn during effect, the target's Defense and Special Defense are lowered by 1 stage. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field.",
-		shortDesc: "Traps target, lowers Def and SpD by 1 each turn.",
+		desc: "Damages the target. Prevents the target from switching out. At the end of each turn during effect, the target's Defense and Special Defense are lowered by 1 stage. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field.",
+		shortDesc: "Damages. Traps; -1 Def/SpD per turn. Technician-friendly BP.",
 
 		start: "  [POKEMON] can no longer escape because of Octolock!",
 	},
@@ -4538,6 +4723,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
 	},
+	oneinchpunch: {
+		name: "One-Inch Punch",
+		desc: "This move does not check accuracy. Makes contact. Has a high critical hit ratio. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Power is multiplied by 1.2 when used by a Pokemon with the Iron Fist Ability.",
+		shortDesc: "Never misses. High crit. Big Pecks & Iron Fist: 1.2x power.",
+	},
+	onifist: {
+		name: "Oni Fist",
+		desc: "This move does not check accuracy. Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "Never misses. Big Pecks: 1.2x power.",
+	},
 	orderup: {
 		name: "Order Up",
 		desc: "If an ally Tatsugiri has activated its Commander Ability, this move raises the user's Attack by 1 stage if the Tatsugiri is Curly Form, Defense by 1 stage if Droopy Form, or Speed by 1 stage if Stretchy Form. The effect happens even if the Tatsugiri that activated the effect has since fainted.",
@@ -4547,6 +4742,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Origin Pulse",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	outburst: {
+		name: "Outburst",
+		desc: "The user explodes to inflict terrible damage even while fainting itself. The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+		shortDesc: "Hits adjacent Pokemon. User faints. Special.",
 	},
 	outrage: {
 		name: "Outrage",
@@ -4670,6 +4870,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		prepare: "#shadowforce",
 		activate: "#shadowforce",
 	},
+	phantomglove: {
+		name: "Phantom Glove",
+		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "30% chance to lower the target's Speed by 1.",
+	},
 	photongeyser: {
 		name: "Photon Geyser",
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
@@ -4697,10 +4902,25 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Hits two to five times. Has a 3/8 chance to hit two or three times, and a 1/8 chance to hit four or five times. Damage is calculated once for the first hit and used for every hit. If one of the hits breaks the target's substitute, the move ends.",
 		},
 	},
+	pixiebeam: {
+		name: "Pixie Beam",
+		desc: "Has a 20% chance to lower the target's Special Attack by 1 stage. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "20% chance to lower Sp. Atk. Mega Launcher: 1.5x power.",
+	},
+	pixieslash: {
+		name: "Pixie Slash",
+		desc: "Makes contact. Has a high critical hit ratio. Power is multiplied by ~1.3 when used by a Pokemon with the Keen Edge Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "High crit. Keen Edge & Big Pecks boost power.",
+	},
 	plasmafists: {
 		name: "Plasma Fists",
 		desc: "If this move is successful, causes Normal-type moves to become Electric type this turn.",
 		shortDesc: "Normal moves become Electric type this turn.",
+	},
+	plasmapulse: {
+		name: "Plasma Pulse",
+		desc: "Power doubles if the target has a non-volatile status condition or the Comatose Ability. Has a 10% chance to paralyze the target. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "2x BP vs status. 10% paralyze. Mega Launcher: 1.5x power.",
 	},
 	playnice: {
 		name: "Play Nice",
@@ -4870,6 +5090,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen2: {
 			desc: "If this move is successful, it deals damage or heals the target. 102/256 chance for 40 power, 76/256 chance for 80 power, 26/256 chance for 120 power, or 52/256 chance to heal the target by 1/4 of its maximum HP, rounded down. If this move deals damage, it uses an abnormal version of the damage formula by substituting certain values. The user's Attack stat is replaced with 10 times the effectiveness of this move against the target, the target's Defense stat is replaced with the index number of the user's secondary type, and the user's level is replaced with the index number of the target's secondary type. If a Pokemon does not have a secondary type, its primary type is used. The index numbers for each type are Normal: 0, Fighting: 1, Flying: 2, Poison: 3, Ground: 4, Rock: 5, Bug: 7, Ghost: 8, Steel: 9, Fire: 20, Water: 21, Grass: 22, Electric: 23, Psychic: 24, Ice: 25, Dragon: 26, Dark: 27. If at any point a division by 0 would happen in the damage formula, it divides by 1 instead.",
 		},
+	},
+	primalbeam: {
+		name: "Primal Beam",
+		desc: "Deals damage using the user's Attack stat. Has a 20% chance to raise the user's Attack by 1 stage.",
+		shortDesc: "Uses Attack. 20% chance to raise user's Attack by 1.",
 	},
 	prismaticlaser: {
 		name: "Prismatic Laser",
@@ -5113,8 +5338,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ragingfury: {
 		name: "Raging Fury",
-		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
-		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+		desc: "Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+		shortDesc: "2-3 turns, random foe, then confusion. Big Pecks: 1.2x power.",
 	},
 	raindance: {
 		name: "Rain Dance",
@@ -5567,6 +5792,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Speed by 2 stages.",
 		shortDesc: "Lowers the target's Speed by 2.",
 	},
+	scatterblast: {
+		name: "Scatter Blast",
+		desc: "Sets Stealth Rock on the target's side. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability.",
+		shortDesc: "Sets Stealth Rock. Mega Launcher: 1.5x power.",
+	},
+	scorchedearth: {
+		name: "Scorched Earth",
+		desc: "This move's type becomes Fire or Ground, whichever is more effective against the target (ties choose Fire). Has a 10% chance to burn the target.",
+		shortDesc: "Fire or Ground (best effectiveness). 10% burn.",
+	},
 	scorchingsands: {
 		name: "Scorching Sands",
 		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
@@ -5621,6 +5856,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 40% chance to lower the target's Special Defense by 2 stages.",
 		shortDesc: "40% chance to lower the target's Sp. Def by 2.",
 	},
+	seismicfist: {
+		name: "Seismic Fist",
+		desc: "Makes contact. Has a 20% chance to lower the target's Defense by 1 stage. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "20% chance to lower Def. Big Pecks: 1.2x power.",
+	},
+	seismicblade: {
+		name: "Seismic Blade",
+		desc: "Makes contact. Has a high critical hit ratio. Power is multiplied by ~1.3 when used by a Pokemon with the Keen Edge Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "High crit. Keen Edge & Big Pecks boost power.",
+	},
 	seismictoss: {
 		name: "Seismic Toss",
 		desc: "Deals damage to the target equal to the user's level.",
@@ -5662,6 +5907,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Shadow Claw",
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
+	},
+	shadowfangs: {
+		name: "Shadow Fangs",
+		desc: "Makes contact. Has a 10% chance to curse the target. Power is multiplied by 1.5 when used by a Pokemon with the Strong Jaw Ability, and by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% curse. Strong Jaw & Big Pecks boost power.",
 	},
 	shadowforce: {
 		name: "Shadow Force",
@@ -5746,6 +5996,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Shift Gear",
 		desc: "Raises the user's Speed by 2 stages and its Attack by 1 stage.",
 		shortDesc: "Raises the user's Speed by 2 and Attack by 1.",
+	},
+	shockingedge: {
+		name: "Shocking Edge",
+		desc: "Makes contact. Has a 10% chance to paralyze the target. Power is multiplied by ~1.3 when used by a Pokemon with the Keen Edge Ability.",
+		shortDesc: "10% paralyze. Keen Edge boost.",
+	},
+	shockingjab: {
+		name: "Shocking Jab",
+		desc: "Makes contact. Has a 20% chance to paralyze the target. Power is multiplied by ~1.3 when used by a Pokemon with the Mighty Horn Ability.",
+		shortDesc: "20% paralyze. Mighty Horn boost.",
 	},
 	shockwave: {
 		name: "Shock Wave",
@@ -5986,6 +6246,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Damage doubles if the target is paralyzed. If this move is successful, the target is cured of paralysis.",
 			shortDesc: "Damage doubles if target is paralyzed; cures it.",
 		},
+	},
+	smite: {
+		name: "Smite",
+		desc: "Makes contact. Has a 20% chance to paralyze the target. Grounds the target as long as it remains active (Smack Down). Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "20% paralyze. Smack Down. Big Pecks: 1.2x power.",
 	},
 	smog: {
 		name: "Smog",
@@ -6301,6 +6566,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 30% chance to lower the target's Attack by 1 stage.",
 		shortDesc: "30% chance to lower the foe(s) Attack by 1.",
 	},
+	starburst: {
+		name: "Starburst",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+	},
+	starcrash: {
+		name: "Star Crash",
+		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/3 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		shortDesc: "User loses 33% max HP.",
+	},
 	stealthrock: {
 		name: "Stealth Rock",
 		desc: "Sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Fails if the effect is already active on the opposing side. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Rock type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any Pokemon uses Tidy Up, or if any opposing Pokemon uses Mortal Spin, Rapid Spin, or Defog successfully, or is hit by Defog.",
@@ -6581,6 +6856,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Supersonic Skystrike",
 		shortDesc: "Power is equal to the base move's Z-Power.",
 	},
+	supersonicshot: {
+		name: "Supersonic Shot",
+		desc: "This move always results in a critical hit. Arrow move (Archer boost).",
+		shortDesc: "Always crits. Arrow move.",
+	},
 	surf: {
 		name: "Surf",
 		desc: "Damage doubles if the target is using Dive.",
@@ -6818,6 +7098,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "This move's type depends on the user's held Drive.",
 		shortDesc: "Type varies based on the held Drive.",
 	},
+	tectonicfangs: {
+		name: "Tectonic Fangs",
+		desc: "Makes contact. Has a 10% chance to make the target flinch. Power is multiplied by 1.5 when used by a Pokemon with the Strong Jaw Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "10% flinch. Strong Jaw & Big Pecks boost power.",
+	},
 	tectonicrage: {
 		name: "Tectonic Rage",
 		shortDesc: "Power is equal to the base move's Z-Power.",
@@ -6854,6 +7139,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Temper Flare",
 		desc: "Power doubles if the user's last move on the previous turn, including moves called by other moves or those used through Instruct, Magic Coat, Snatch, or the Dancer or Magic Bounce Abilities, failed to do any of its normal effects, not including damage from an unsuccessful High Jump Kick, Jump Kick, or Mind Blown, or if the user was prevented from moving by any effect other than recharging or Sky Drop. A move that was blocked by Baneful Bunker, Detect, King's Shield, Protect, Spiky Shield, Crafty Shield, Mat Block, Quick Guard, or Wide Guard will not double this move's power, nor will Bounce or Fly ending early due to the effect of Gravity, Smack Down, or Thousand Arrows.",
 		shortDesc: "Power doubles if the user's last move failed.",
+	},
+	tempeststorm: {
+		name: "Tempest Storm",
+		desc: "Sets an Electric Terrain on the field for five turns (eight turns if the user holds Terrain Extender).",
+		shortDesc: "Sets Electric Terrain.",
 	},
 	terablast: {
 		name: "Tera Blast",
@@ -7029,6 +7319,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] was subjected to torment!",
 		end: "  [POKEMON] is no longer tormented!",
+	},
+	torrentfist: {
+		name: "Torrent Fist",
+		desc: "Has a 20% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "20% chance to lower the target's Speed by 1.",
 	},
 	toxic: {
 		name: "Toxic",
@@ -7261,6 +7556,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1.",
 		shortDesc: "Max happiness: 102 power. Can't miss.",
 	},
+	venombolt: {
+		name: "Venom Bolt",
+		desc: "Has a high critical hit ratio. Has a 20% chance to poison the target. Arrow move (Archer boost).",
+		shortDesc: "High crit. 20% poison. Arrow move.",
+	},
 	venomdrench: {
 		name: "Venom Drench",
 		desc: "Lowers the target's Attack, Special Attack, and Speed by 1 stage if the target is poisoned. Fails if the target is not poisoned.",
@@ -7288,6 +7588,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Vital Throw",
 		desc: "This move does not check accuracy.",
 		shortDesc: "This move does not check accuracy. Goes last.",
+	},
+	voltbolt: {
+		name: "Volt Bolt",
+		desc: "Power doubles if the target is paralyzed. Arrow move (Archer boost).",
+		shortDesc: "2x BP vs paralyzed. Arrow move.",
 	},
 	voltswitch: {
 		name: "Volt Switch",
@@ -7378,8 +7683,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	wavecrash: {
 		name: "Wave Crash",
-		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
-		shortDesc: "Has 33% recoil.",
+		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP. Has a 10% chance to lower the target's Speed by 1 stage (drenched). Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "33% recoil. 10% -1 Spe. Big Pecks: 1.2x power.",
 	},
 	weatherball: {
 		name: "Weather Ball",
@@ -7397,6 +7702,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
+	},
+	webshot: {
+		name: "Web Shot",
+		desc: "Has a high critical hit ratio. Sets up a Sticky Web hazard on the opposing side. Arrow move (Archer boost).",
+		shortDesc: "High crit. Sets Sticky Web. Arrow move.",
+	},
+	whirlingstrikes: {
+		name: "Whirling Strikes",
+		desc: "Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. Low base power interacts with Technician and Perfectionist.",
+		shortDesc: "Contact. Big Pecks: 1.2x power.",
 	},
 	whirlpool: {
 		name: "Whirlpool",
@@ -7597,6 +7912,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Zen Headbutt",
 		desc: "Has a 20% chance to make the target flinch.",
 		shortDesc: "20% chance to make the target flinch.",
+	},
+	zephyrrush: {
+		name: "Zephyr Rush",
+		desc: "Makes contact. Has 33% recoil. If this move fails, misses, is blocked by a protection move, or has no effect, the user loses half its maximum HP, rounded up. Power is multiplied by 1.5 when used by a Pokemon with the Mega Launcher Ability. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability.",
+		shortDesc: "33% recoil. Crash on miss. Mega Launcher & Big Pecks. Wind move.",
 	},
 	zingzap: {
 		name: "Zing Zap",
