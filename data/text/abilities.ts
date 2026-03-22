@@ -2552,6 +2552,16 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "At the end of each turn, each Pokemon on the field takes damage equal to 1/8 of its maximum HP, rounded down, unless it is an Ice type. Ice-type Pokemon on the field are healed for 1/8 of their maximum HP, rounded down, instead.",
 		shortDesc: "End of turn: 1/8 max HP damage to non-Ice; heals Ice types 1/8 max HP.",
 	},
+	elude: {
+		name: "Elude",
+		desc: "When this Pokemon is hit by a damaging move that does not make contact, the damage calculation uses its Speed stat in place of its Defense or Special Defense.",
+		shortDesc: "Uses Speed as its defensive stat when hit by non-contact moves.",
+	},
+	blur: {
+		name: "Blur",
+		desc: "When this Pokemon is hit by a damaging move that makes contact, the damage calculation uses its Speed stat in place of its Defense or Special Defense.",
+		shortDesc: "Uses Speed as its defensive stat when hit by contact moves.",
+	},
 	shortcircuit: {
 		name: "Short Circuit",
 		shortDesc: "Boost Pokemon's Electric moves by 20%, 50% when below 1/3 HP",

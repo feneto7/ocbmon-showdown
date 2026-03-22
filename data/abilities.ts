@@ -6819,6 +6819,35 @@ export const Abilities = {
 		num: 464,
 		gen: 9,
 	},
+	// Speed no divisor do dano: Elude = sem contacto; Blur = com contacto (via onFoeModifyMove do defensor)
+	elude: {
+		onFoeModifyMovePriority: 100,
+		onFoeModifyMove(move, attacker, defender) {
+			if (move.category === 'Status') return;
+			if (!this.checkMoveMakesContact(move, attacker, defender)) {
+				move.overrideDefensiveStat = 'spe';
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Elude",
+		rating: 3.5,
+		num: 466,
+		gen: 9,
+	},
+	blur: {
+		onFoeModifyMovePriority: 100,
+		onFoeModifyMove(move, attacker, defender) {
+			if (move.category === 'Status') return;
+			if (this.checkMoveMakesContact(move, attacker, defender)) {
+				move.overrideDefensiveStat = 'spe';
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Blur",
+		rating: 3.5,
+		num: 467,
+		gen: 9,
+	},
 	shortcircuit: {
 		onModifyDamage(atk, attacker, defender, move) {
 			if (move && move.type === "Electric") {
