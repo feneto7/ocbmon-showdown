@@ -1416,6 +1416,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spe: 2 } },
 		contestType: "Cute",
 	},
+	berrysmash: {
+		num: 9830,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Berry Smash",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, hammer: 1, bigpecksboost: 1 },
+		onTry(pokemon) {
+			return !!pokemon.getItem().isBerry;
+		},
+		onHit(target, pokemon) {
+			if (pokemon.getItem().isBerry) {
+				pokemon.eatItem(true);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Tough",
+	},
 	bide: {
 		num: 117,
 		accuracy: true,
@@ -3345,7 +3367,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		flags: { mirror: 1, metronome: 1 },
 		onHitField(target, source) {
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'luckychant', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'gmaxvolcalith',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'creepingthorns', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'luckychant', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'gmaxvolcalith',
 			];
 			let success = false;
 			if (this.gameType === "freeforall") {
@@ -3478,6 +3500,32 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allySide",
 		type: "Fairy",
 		zMove: { boost: { spd: 1 } },
+		contestType: "Clever",
+	},
+	creepingthorns: {
+		num: 9897,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Creeping Thorns",
+		pp: 20,
+		priority: 0,
+		flags: { reflectable: 1, metronome: 1, mustpressure: 1 },
+		sideCondition: 'creepingthorns',
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Creeping Thorns');
+			},
+			onSwitchIn(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('creepingthorns')), -6, 6);
+				this.damage(pokemon.maxhp * (2 ** typeMod) / 8);
+			},
+		},
+		secondary: null,
+		target: "foeSide",
+		type: "Grass",
+		zMove: { boost: { def: 1 } },
 		contestType: "Clever",
 	},
 	crosschop: {
@@ -3812,7 +3860,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		onHit(target, source, move) {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({ evasion: -1 });
-			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge'];
 			const removeTarget = ['reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', ...removeAll];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -8308,7 +8356,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		self: {
 			onHit(source) {
 				let success = false;
-				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge'];
 				const removeTarget = ['reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', ...removeAll];
 				for (const targetCondition of removeTarget) {
 					if (source.side.foe.removeSideCondition(targetCondition)) {
@@ -13482,7 +13530,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', `[of] ${pokemon}`);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', `[of] ${pokemon}`);
@@ -13498,7 +13546,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', `[of] ${pokemon}`);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', `[of] ${pokemon}`);
@@ -14590,12 +14638,12 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		contestType: "Cool",
 	},
 	phantomglove: {
-		num: 981,
+		num: 9812,
 		accuracy: 100,
 		basePower: 85,
 		category: "Physical",
 		name: "Phantom Glove",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, pulse: 1, bigpecksboost: 1 },
 		secondary: {
@@ -16099,6 +16147,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "randomNormal",
 		type: "Fire",
 	},
+	ragingsouls: {
+		num: 9853,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		name: "Raging Souls",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Clever",
+	},
 	raindance: {
 		num: 240,
 		accuracy: true,
@@ -16129,7 +16196,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', `[of] ${pokemon}`);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', `[of] ${pokemon}`);
@@ -16145,7 +16212,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', `[of] ${pokemon}`);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', `[of] ${pokemon}`);
@@ -16388,6 +16455,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Beautiful",
+	},
+	requiem: {
+		num: 9855,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Requiem",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1 },
+		secondary: {
+			chance: 10,
+			volatileStatus: 'curse',
+		},
+		target: "normal",
+		type: "Ghost",
 		contestType: "Beautiful",
 	},
 	rest: {
@@ -21621,7 +21705,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			for (const active of this.getAllActive()) {
 				if (active.removeVolatile('substitute')) success = true;
 			}
-			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge'];
 			const sides = [pokemon.side, ...pokemon.side.foeSidesWithConditions()];
 			for (const side of sides) {
 				for (const sideCondition of removeAll) {
@@ -23328,6 +23412,26 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Bug",
 		contestType: "Cool",
 	},
+	yggdrasilforce: {
+		num: 9836,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Yggdrasil Force",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bigpecksboost: 1 },
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Tough",
+	},
 	yawn: {
 		num: 281,
 		accuracy: true,
@@ -23567,7 +23671,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll',
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll',
 				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -23582,7 +23686,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'creepingthorns', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);

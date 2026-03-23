@@ -496,6 +496,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		takeItem: "  [SOURCE] gave [POKEMON] its [ITEM]!",
 	},
+	berrysmash: {
+		name: "Berry Smash",
+		desc: "Fails unless the user is holding a Berry. The user attacks and consumes its Berry, triggering that Berry's effect when eaten. Super Slammer boosts hammer-based moves. Big Pecks boosts this move's power.",
+		shortDesc: "Requires Berry; attacks, then eats Berry for its effect.",
+	},
 	bide: {
 		name: "Bide",
 		desc: "The user spends two turns locked into this move and then, on the second turn after using this move, the user attacks the last Pokemon that hit it, inflicting double the damage in HP it lost to attacks during the two turns. If the last Pokemon that hit it is no longer active, the user attacks a random opposing Pokemon instead. If the user is prevented from moving during this move's use, the effect ends. This move does not check accuracy and does not ignore type immunity.",
@@ -1262,6 +1267,15 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  Crafty Shield protected [TEAM]!",
 		block: "  Crafty Shield protected [POKEMON]!",
+	},
+	creepingthorns: {
+		name: "Creeping Thorns",
+		desc: "Sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in, based on weakness to the Grass type, unless it holds Heavy-Duty Boots. Fails if the effect is already active on that side. Can be removed by Defog, Rapid Spin, Mortal Spin, Tidy Up, or Court Change.",
+		shortDesc: "Hurts foes on switch-in. Factors Grass weakness.",
+
+		start: "  Thorned vines crept around [TEAM]!",
+		end: "  The thorned vines withered away!",
+		damage: "  [POKEMON] was hurt by the creeping thorns!",
 	},
 	crosschop: {
 		name: "Cross Chop",
@@ -4897,8 +4911,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	phantomglove: {
 		name: "Phantom Glove",
-		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
-		shortDesc: "30% chance to lower the target's Speed by 1.",
+		desc: "Makes contact. Has a 30% chance to lower the target's Speed by 1 stage. Mega Launcher boosts this move. Big Pecks boosts this move's power.",
+		shortDesc: "30% chance to lower the target's Speed. Pulse move.",
 	},
 	photongeyser: {
 		name: "Photon Geyser",
@@ -5366,6 +5380,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Makes contact. Power is multiplied by 1.2 when used by a Pokemon with the Big Pecks Ability. The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
 		shortDesc: "2-3 turns, random foe, then confusion. Big Pecks: 1.2x power.",
 	},
+	ragingsouls: {
+		name: "Raging Souls",
+		desc: "Lowers the user's Special Attack by 2 stages after damaging the target.",
+		shortDesc: "Hits hard. Lowers the user's Sp. Atk by 2.",
+	},
 	raindance: {
 		name: "Rain Dance",
 		desc: "For 5 turns, the weather becomes Rain Dance. The damage of Water-type attacks is multiplied by 1.5 and the damage of Fire-type attacks is multiplied by 0.5 during the effect. Lasts for 8 turns if the user is holding Damp Rock. Fails if the current weather is Rain Dance.",
@@ -5499,6 +5518,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Relic Song",
 		desc: "Has a 10% chance to cause the target to fall asleep. If this move is successful on at least one target and the user is a Meloetta, it changes to Pirouette Forme if it is currently in Aria Forme, or changes to Aria Forme if it is currently in Pirouette Forme. This forme change does not happen if the Meloetta has the Sheer Force Ability. The Pirouette Forme reverts to Aria Forme when Meloetta is not active.",
 		shortDesc: "10% chance to sleep foe(s). Meloetta transforms.",
+	},
+	requiem: {
+		name: "Requiem",
+		desc: "Has a 10% chance to curse the target. Sound-based.",
+		shortDesc: "Sound move. 10% chance to curse the target.",
 	},
 	rest: {
 		name: "Rest",
@@ -7930,6 +7954,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	xscissor: {
 		name: "X-Scissor",
 		shortDesc: "No additional effect.",
+	},
+	yggdrasilforce: {
+		name: "Yggdrasil Force",
+		desc: "Makes contact. Lowers the user's Attack and Defense by 1 stage after damaging the target. Big Pecks boosts this move's power.",
+		shortDesc: "Lowers the user's Atk and Def. Big Pecks: more power.",
 	},
 	yawn: {
 		name: "Yawn",

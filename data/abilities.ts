@@ -6863,6 +6863,21 @@ export const Abilities = {
 		num: 468,
 		gen: 9,
 	},
+	// Ao entrar, aplica Yawn nos oponentes adjacentes (como o move)
+	dreamwhimsy: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Dream Whimsy');
+			for (const target of pokemon.adjacentFoes()) {
+				this.actions.useMove('yawn', pokemon, { target, sourceEffect: pokemon.getAbility() });
+			}
+		},
+		flags: {},
+		name: "Dream Whimsy",
+		rating: 3.5,
+		num: 469,
+		gen: 9,
+	},
 	shortcircuit: {
 		onModifyDamage(atk, attacker, defender, move) {
 			if (move && move.type === "Electric") {
