@@ -6824,6 +6824,7 @@ export const Abilities = {
 		onFoeModifyMovePriority: 100,
 		onFoeModifyMove(move, attacker, defender) {
 			if (move.category === 'Status') return;
+			if (!defender) return;
 			if (!this.checkMoveMakesContact(move, attacker, defender)) {
 				move.overrideDefensiveStat = 'spe';
 			}
@@ -6838,6 +6839,7 @@ export const Abilities = {
 		onFoeModifyMovePriority: 100,
 		onFoeModifyMove(move, attacker, defender) {
 			if (move.category === 'Status') return;
+			if (!defender) return;
 			if (this.checkMoveMakesContact(move, attacker, defender)) {
 				move.overrideDefensiveStat = 'spe';
 			}
@@ -6846,6 +6848,19 @@ export const Abilities = {
 		name: "Blur",
 		rating: 3.5,
 		num: 467,
+		gen: 9,
+	},
+	// Mesmo clima do move Eerie Fog (fichas custom)
+	lowvisibility: {
+		onStart(source) {
+			if (this.suppressingAbility(source)) return;
+			this.add('-activate', source, 'ability: Low Visibility');
+			this.field.setWeather('eeriefog', source, source.getAbility());
+		},
+		flags: {},
+		name: "Low Visibility",
+		rating: 3.5,
+		num: 468,
 		gen: 9,
 	},
 	shortcircuit: {

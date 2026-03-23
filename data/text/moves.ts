@@ -1302,7 +1302,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	curse: {
 		name: "Curse",
-		desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected.",
+		desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected. While Eerie Fog is active, this move always uses the Ghost-type effect, even if the user is not a Ghost type.",
 		shortDesc: "Curses if Ghost, else -1 Spe, +1 Atk, +1 Def.",
 		gen4: {
 			desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected or has a substitute.",
@@ -1796,8 +1796,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	eeriefog: {
 		name: "Eerie Fog",
-		desc: "For 8 turns, the battlefield is covered in eerie fog. At the end of each turn, Pokemon that are not Ghost-type or Psychic-type lose all of their stat stage changes as if they were affected by Haze. Ghost- and Psychic-type Pokemon are unaffected.",
-		shortDesc: "8 turns. End of turn: non-Ghost/Psychic lose all stat changes.",
+		desc: "For 8 turns (12 if the user holds Smoke Ball), the battlefield is covered in eerie fog (not the Sinnoh fog; accuracy is unaffected). At the end of each turn, Pokemon that are not Ghost-type or Psychic-type have each of their positive stat stages lowered by 1. Ghost- and Psychic-type Pokemon take 20% less damage from attacks. Weather-based recovery from moves is weakened. While this field is active, Curse always uses its Ghost-type effect.",
+		shortDesc: "8 (12 w/ Smoke Ball) turns: decay boosts; Ghost/Psychic -20% dmg; weather heals weaker; Ghost Curse.",
 	},
 	eerieimpulse: {
 		name: "Eerie Impulse",

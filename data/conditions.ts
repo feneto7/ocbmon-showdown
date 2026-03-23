@@ -854,6 +854,53 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			this.add('-weather', 'none');
 		},
 	},
+	// Elite Redux: clima de campo; dano contra Ghost/Psychic reduzido; stats positivos caem por turno (exceto esses tipos)
+	eeriefog: {
+		name: 'EerieFog',
+		effectType: 'Weather',
+		duration: 8,
+		durationCallback(source, effect) {
+			if (source?.hasItem('smokeball')) {
+				return 12;
+			}
+			return 8;
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (defender.hasType('Ghost') || defender.hasType('Psychic')) {
+				return this.chainModify(0.8);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'EerieFog', '[from] ability: ' + effect.name, `[of] ${source}`);
+			} else {
+				this.add('-weather', 'EerieFog');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'EerieFog', '[upkeep]');
+			if (this.field.isWeather('eeriefog')) this.eachEvent('Weather');
+		},
+		onWeather(pokemon) {
+			if (pokemon.hasType('Ghost') || pokemon.hasType('Psychic')) return;
+			const fogMove = this.dex.getActiveMove('eeriefog');
+			const boosts: SparseBoostsTable = {};
+			let stat: BoostID;
+			for (stat in pokemon.boosts) {
+				if ((pokemon.boosts[stat] || 0) > 0) {
+					boosts[stat] = -1;
+				}
+			}
+			if (Object.keys(boosts).length) {
+				this.boost(boosts, pokemon, pokemon, fogMove);
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 	deltastream: {
 		name: 'DeltaStream',
 		effectType: 'Weather',

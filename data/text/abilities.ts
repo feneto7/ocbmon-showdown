@@ -2562,6 +2562,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "When this Pokemon is hit by a damaging move that makes contact, the damage calculation uses its Speed stat in place of its Defense or Special Defense.",
 		shortDesc: "Uses Speed as its defensive stat when hit by contact moves.",
 	},
+	lowvisibility: {
+		name: "Low Visibility",
+		desc: "When this Pokemon enters the battle, it summons Eerie Fog for 8 turns, or 12 turns if it holds Smoke Ball.",
+		shortDesc: "Summons Eerie Fog on entry (12 turns if holding Smoke Ball).",
+	},
 	shortcircuit: {
 		name: "Short Circuit",
 		shortDesc: "Boost Pokemon's Electric moves by 20%, 50% when below 1/3 HP",

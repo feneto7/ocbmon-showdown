@@ -5821,6 +5821,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 283,
 		gen: 4,
 	},
+	smokeball: {
+		name: "Smoke Ball",
+		spritenum: 221,
+		fling: {
+			basePower: 30,
+		},
+		// Extends Eerie Fog to 12 turns; internal num 3299 (116 is Douse Drive in this fork).
+		num: 3299,
+		gen: 2,
+	},
 	snorliumz: {
 		name: "Snorlium Z",
 		spritenum: 656,

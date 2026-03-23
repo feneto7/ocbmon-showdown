@@ -3602,14 +3602,16 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		flags: { bypasssub: 1, metronome: 1 },
 		volatileStatus: 'curse',
 		onModifyMove(move, source, target) {
-			if (!source.hasType('Ghost')) {
+			const ghostCurse = source.hasType('Ghost') || this.field.isWeather('eeriefog');
+			if (!ghostCurse) {
 				move.target = move.nonGhostTarget!;
 			} else if (source.isAlly(target)) {
 				move.target = 'randomNormal';
 			}
 		},
 		onTryHit(target, source, move) {
-			if (!source.hasType('Ghost')) {
+			const ghostCurse = source.hasType('Ghost') || this.field.isWeather('eeriefog');
+			if (!ghostCurse) {
 				delete move.volatileStatus;
 				delete move.onHit;
 				move.self = { boosts: { spe: -1, atk: 1, def: 1 } };
@@ -4908,7 +4910,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Beautiful",
 	},
-	// Pseudo-clima: some os stats de quem não é Ghost/Psychic a cada final de turno (fichas custom).
+	// Elite Redux: clima de campo — lógica em conditions.eeriefog
 	eeriefog: {
 		num: 950,
 		accuracy: true,
@@ -4918,38 +4920,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { mirror: 1, metronome: 1 },
-		pseudoWeather: 'eeriefog',
-		condition: {
-			duration: 8,
-			onFieldStart(field, source) {
-				this.add('-fieldstart', 'move: Eerie Fog', `[of] ${source}`);
-			},
-			onFieldRestart(target, source) {
-				this.field.removePseudoWeather('eeriefog');
-			},
-			onFieldResidualOrder: 27,
-			onFieldResidualSubOrder: 7,
-			onFieldResidual() {
-				for (const pokemon of this.getAllActive()) {
-					if (!pokemon || pokemon.fainted) continue;
-					if (pokemon.hasType('Ghost') || pokemon.hasType('Psychic')) continue;
-					let hadPositive = false;
-					let b: BoostID;
-					for (b in pokemon.boosts) {
-						if (pokemon.boosts[b]! > 0) {
-							hadPositive = true;
-							break;
-						}
-					}
-					if (!hadPositive) continue;
-					pokemon.clearBoosts();
-					this.add('-clearboost', pokemon, '[from] move: Eerie Fog');
-				}
-			},
-			onFieldEnd() {
-				this.add('-fieldend', 'move: Eerie Fog');
-			},
-		},
+		weather: 'EerieFog',
 		secondary: null,
 		target: "all",
 		type: "Ghost",
@@ -13441,6 +13412,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				factor = 0.25;
 				break;
 			}
+			if (this.field.isWeather('eeriefog')) {
+				factor = this.modify(factor, 0.8);
+			}
 			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
 			if (!success) {
 				this.add('-fail', pokemon, 'heal');
@@ -13477,6 +13451,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'snowscape':
 				factor = 0.25;
 				break;
+			}
+			if (this.field.isWeather('eeriefog')) {
+				factor = this.modify(factor, 0.8);
 			}
 			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
 			if (!success) {
@@ -18060,6 +18037,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (this.field.isWeather('sandstorm')) {
 				factor = 0.667;
 			}
+			if (this.field.isWeather('eeriefog')) {
+				factor = this.modify(factor, 0.8);
+			}
 			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
 			if (!success) {
 				this.add('-fail', pokemon, 'heal');
@@ -20637,6 +20617,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'snowscape':
 				factor = 0.25;
 				break;
+			}
+			if (this.field.isWeather('eeriefog')) {
+				factor = this.modify(factor, 0.8);
 			}
 			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
 			if (!success) {

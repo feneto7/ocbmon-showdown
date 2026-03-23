@@ -1775,6 +1775,11 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Smooth Rock",
 		shortDesc: "Holder's use of Sandstorm lasts 8 turns instead of 5.",
 	},
+	smokeball: {
+		name: "Smoke Ball",
+		desc: "Holder escapes from wild Pokemon. In battle, if the holder sets Eerie Fog (move or ability), it lasts 12 turns instead of 8.",
+		shortDesc: "Eerie Fog set by holder lasts 12 turns instead of 8.",
+	},
 	snorliumz: {
 		name: "Snorlium Z",
 		shortDesc: "If held by a Snorlax with Giga Impact, it can use Pulverizing Pancake.",

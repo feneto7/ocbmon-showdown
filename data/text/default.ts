@@ -307,6 +307,12 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		end: "  The snow stopped.",
 		upkeep: "  (The snow is falling down.)",
 	},
+	eeriefog: {
+		weatherName: "Eerie Fog",
+		start: "  An eerie fog crept over the battlefield!",
+		end: "  The eerie fog lifted!",
+		upkeep: "  (The fog is thick and unsettling.)",
+	},
 	desolateland: {
 		weatherName: "Intense Sun",
 		start: "  The sunlight turned extremely harsh!",
@@ -362,10 +368,6 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		end: "  Gravity returned to normal!",
 		cant: "[POKEMON] can't use [MOVE] because of gravity!",
 		activate: "[POKEMON] fell from the sky due to the gravity!",
-	},
-	eeriefog: {
-		start: "  An eerie fog crept over the battlefield!",
-		end: "  The eerie fog lifted!",
 	},
 	magicroom: {
 		start: "  It created a bizarre area in which Pok\u00E9mon's held items lose their effects!",
