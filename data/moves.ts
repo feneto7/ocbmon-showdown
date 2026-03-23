@@ -23702,6 +23702,139 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	},
 
 
+	bloodshot: {
+		num: 810,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Blood Shot",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, bigpecksboost: 1},
+		status: 'bld',
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
+
+	bravado: {
+		num: 9813,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Bravado",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, bigpecksboost: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.status && pokemon.status !== 'slp') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Tough",
+	},
+
+	flutteringleaf: {
+		num: 9814,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Fluttering Leaf",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, bigpecksboost: 1},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Beautiful",
+	},
+
+	ghastlyecho: {
+		num: 9815,
+		accuracy: 100,
+		basePower: 20,
+		category: "Special",
+		name: "Ghastly Echo",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		selfSwitch: true,
+		// O aliado que entrar ganha 50% de boost em dano por 1 turno
+		self: {
+			sideCondition: 'ghastlyecho',
+		},
+		condition: {
+			duration: 1,
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Ghastly Echo');
+			},
+			onSwitchIn(pokemon) {
+				// +50% de dano no primeiro turno do switch-in
+				pokemon.addVolatile('ghastlyechoboost');
+				pokemon.side.removeSideCondition('ghastlyecho');
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Ghastly Echo');
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Clever",
+	},
+
+	ironfangs: {
+		num: 9816,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Iron Fangs",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, bite: 1, bigpecksboost: 1},
+		onTryHit(pokemon) {
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+	},
+
+	psychokineticslam: {
+		num: 9817,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Psychokinetic Slam",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, metronome: 1, bigpecksboost: 1, nosleeptalk: 1, failinstruct: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		recoil: [33, 100],
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+
 	inverseroom: {
 		num: 69032,
 		accuracy: true,

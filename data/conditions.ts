@@ -582,6 +582,21 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			return this.chainModify([5325, 4096]);
 		},
 	},
+	// Boost temporário do Ghastly Echo: +50% dano por 1 turno ao entrar em campo
+	ghastlyechoboost: {
+		name: 'ghastlyechoboost',
+		duration: 1,
+		onBasePowerPriority: 8,
+		onBasePower(basePower) {
+			return this.chainModify(1.5);
+		},
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'move: Ghastly Echo');
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'move: Ghastly Echo');
+		},
+	},
 	// Know Your Place ability: forced to move last within the same priority bracket (like Stall / Lagging Tail)
 	knowyourplace: {
 		name: 'knowyourplace',

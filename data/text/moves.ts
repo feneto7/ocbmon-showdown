@@ -641,6 +641,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Blood Moon",
 		shortDesc: "Cannot be selected the turn after it's used.",
 	},
+	bloodshot: {
+		name: "Blood Shot",
+		desc: "Hurls a sphere of cursed blood magic. Causes the target to bleed.",
+		shortDesc: "Causes the target to bleed.",
+	},
 	bloomdoom: {
 		name: "Bloom Doom",
 		shortDesc: "Power is equal to the base move's Z-Power.",
@@ -741,6 +746,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Branch Poke",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect.",
+	},
+	bravado: {
+		name: "Bravado",
+		desc: "Power doubles if the user is burned, poisoned, or paralyzed.",
+		shortDesc: "2x power if user is burned/poisoned/paralyzed.",
 	},
 	bravebird: {
 		name: "Brave Bird",
@@ -2354,6 +2364,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities. This move does not check accuracy.",
 		shortDesc: "Always results in a critical hit; no accuracy check.",
 	},
+	flutteringleaf: {
+		name: "Fluttering Leaf",
+		desc: "If this move is successful, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
+		shortDesc: "User switches out after damaging the target.",
+	},
 	fly: {
 		name: "Fly",
 		desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister, and Gust and Twister have doubled power when used against it. If the user is holding a Power Herb, the move completes in one turn.",
@@ -2614,6 +2629,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Charges, then raises SpA, SpD, Spe by 2 turn 2.",
 
 		prepare: "[POKEMON] is absorbing power!",
+	},
+	ghastlyecho: {
+		name: "Ghastly Echo",
+		desc: "Deals damage and the user switches out. The replacement Pokemon gets a 50% damage boost for 1 turn. Sound-based move.",
+		shortDesc: "User switches; ally gets 50% boost for 1 turn.",
 	},
 	gigadrain: {
 		name: "Giga Drain",
@@ -3591,6 +3611,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Iron Head",
 		desc: "Has a 30% chance to make the target flinch.",
 		shortDesc: "30% chance to make the target flinch.",
+	},
+	ironfangs: {
+		name: "Iron Fangs",
+		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated. Boosted by Strong Jaw.",
+		shortDesc: "Destroys screens, unless the target is immune.",
 	},
 	irontail: {
 		name: "Iron Tail",
@@ -5205,6 +5230,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen7: {
 			desc: "For 5 turns, the terrain becomes Psychic Terrain. During the effect, the power of Psychic-type attacks made by grounded Pokemon is multiplied by 1.5 and grounded Pokemon cannot be hit by moves with priority greater than 0, unless the target is an ally. Camouflage transforms the user into a Psychic type, Nature Power becomes Psychic, and Secret Power has a 30% chance to lower the target's Speed by 1 stage. Fails if the current terrain is Psychic Terrain.",
 		},
+	},
+	psychokineticslam: {
+		name: "Psychokinetic Slam",
+		desc: "This attack charges on the first turn and executes on the second. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. 33% recoil.",
 	},
 	psychoboost: {
 		name: "Psycho Boost",
