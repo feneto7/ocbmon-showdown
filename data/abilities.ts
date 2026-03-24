@@ -9064,7 +9064,7 @@ export const Abilities = {
 			if (mon === source) return;
 			if (damage <= 0) return;
 			if (effect.effectType !== "Move") return;
-			const pas = (mon as any).permanentAbilityState;
+			const pas = ((mon as any).permanentAbilityState ??= {});
 			pas["cheatingdeath"] = pas["cheatingdeath"] || 0;
 			if (pas["cheatingdeath"] >= 2) return;
 			pas["cheatingdeath"]++;
@@ -11898,7 +11898,7 @@ export const Abilities = {
 			if (mon === source) return;
 			if (damage <= 0) return;
 			if (effect.effectType !== "Move") return;
-			const pasG = (mon as any).permanentAbilityState;
+			const pasG = ((mon as any).permanentAbilityState ??= {});
 			pasG["gallantry"] = pasG["gallantry"] || 0;
 			if (pasG["gallantry"] >= 1) return;
 			pasG["gallantry"]++;
