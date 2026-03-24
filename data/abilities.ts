@@ -12357,8 +12357,20 @@ export const Abilities = {
 		name: "Crimson Blade of Shadows",
 	},
 
-
-
+	// Usa Wish ao entrar em campo, limitado a 3 vezes por batalha
+	wishmaker: {
+		onStart(pokemon) {
+			if (!pokemon.abilityState.wishCount) pokemon.abilityState.wishCount = 0;
+			if (pokemon.abilityState.wishCount >= 3) return;
+			pokemon.abilityState.wishCount++;
+			this.add('-activate', pokemon, 'ability: Wishmaker');
+			(this.actions as any).runAdditionalMove(Dex.moves.get("wish"), pokemon, pokemon);
+		},
+		flags: {},
+		name: "Wishmaker",
+		shortDesc: "Uses Wish on switch-in. Three uses per battle.",
+		rating: 3.5,
+	},
 
 
 
