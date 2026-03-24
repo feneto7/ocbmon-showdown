@@ -16680,7 +16680,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Dragapult",
 		types: ["Dragon", "Ghost"],
 		baseStats: {hp: 88, atk: 120, def: 75, spa: 100, spd: 75, spe: 142},
-		abilities: {0: "Clear Body", 1: "Infiltrator", H: "Cursed Body"},
+		abilities: {0: "Parental Bond", 1: "Infiltrator", H: "Speed Boost"},
 		heightm: 3,
 		weightkg: 50,
 		color: "Green",
