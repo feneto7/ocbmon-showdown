@@ -32,7 +32,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] OCBMons",
 		mod: 'gen9ocb',
 		ruleset: [
-			'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
+			'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
 			'Sleep Clause Mod', 'OHKO Clause',
 			'+Custom', '+Nonexistent', 'Dynamax Clause',
 		],
