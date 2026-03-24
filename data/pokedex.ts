@@ -18349,7 +18349,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Ground", "Steel"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 112, def: 120, spa: 72, spd: 70, spe: 106},
-		abilities: {0: "Quark Drive"},
+		abilities: {0: "Quark Drive", 1:"Watch Your Step"},
 		heightm: 0.9,
 		weightkg: 240,
 		color: "Gray",
@@ -19535,7 +19535,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	shedinjamega: {
 		abilities: {
-			"0": "Cheating Death",
+			"0": "Cheating Death", 1:"Magic Guard"
 		},
 		baseStats: {
 			hp: 1,
