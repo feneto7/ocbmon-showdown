@@ -3352,10 +3352,8 @@ export const pages: Chat.PageTable = {
 		}
 		return buf;
 	},
-	// keepalive do cliente — responde silenciosamente com o timestamp atual
-	ping(this: CommandContext, target, room, user) {
-		this.connection.send(`|:|${Math.round(Date.now() / 1000)}`);
-	},
+	// keepalive do cliente — noop silencioso para manter o WebSocket vivo
+	ping() {},
 
 };
 
