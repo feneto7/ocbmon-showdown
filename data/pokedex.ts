@@ -11615,7 +11615,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Electric", "Flying"],
 		gender: "M",
 		baseStats: {hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111},
-		abilities: {0: "Prankster", H: "Defiant"},
+		abilities: {0: "Transistor", H: "Raging Storm", 1:"Thundercall"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "Blue",
