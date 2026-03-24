@@ -16808,7 +16808,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Fighting", "Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
-		abilities: {0: "Unseen Fist"},
+		abilities: {0: "Violent Rush", 1:"Discipline"},
 		heightm: 1.9,
 		weightkg: 105,
 		color: "Gray",
