@@ -12372,8 +12372,21 @@ export const Abilities = {
 		rating: 3.5,
 	},
 
-
-
+	// Ativa Inverse Room ao entrar, com duração reduzida de 3 turnos
+	inversion: {
+		onStart(source) {
+			this.add('-activate', source, 'ability: Inversion');
+			const effect = this.field.addPseudoWeather('inverseroom', source, source.getAbility());
+			if (effect) {
+				// força duração de 3 turnos ao invés do padrão (5)
+				this.field.pseudoWeather['inverseroom'].duration = 3;
+			}
+		},
+		flags: {},
+		name: "Inversion",
+		shortDesc: "Sets up Inverse Room on entry, lasts 3 turns.",
+		rating: 4,
+	},
 
 
 
