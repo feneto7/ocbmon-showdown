@@ -8229,7 +8229,7 @@ export const Abilities = {
 	},
 	lowblow: {
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(
 				Dex.moves.get("feintattack"),
@@ -9078,7 +9078,7 @@ export const Abilities = {
 	},
 	cheaptactics: {
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(
 				Dex.moves.get("scratch"),
@@ -9599,7 +9599,7 @@ export const Abilities = {
 		num: 460,
 		gen: 8,
 		onStart(pokemon) {
-			const opponent = (pokemon as any).oppositeFoe();
+			const opponent = pokemon.adjacentFoes()[0];
 			if (!opponent) return;
 
 			this.boost({atk: -1, def: -1}, opponent, pokemon, null, true);
@@ -10394,7 +10394,7 @@ export const Abilities = {
 		name: "Phantom Thief",
 		shortDesc: "Uses 40BP Spectral Thief on switch-in.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(
 				Dex.moves.get("spectralthief"),
@@ -10538,7 +10538,7 @@ export const Abilities = {
 		name: "Web Spinner",
 		shortDesc: "Uses String Shot on switch-in.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("stringshot"), pokemon, target);
 		},
@@ -10577,7 +10577,7 @@ export const Abilities = {
 		name: "Monster Mash",
 		shortDesc: "Casts Trick-or-Treat on entry.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("trickortreat"), pokemon, target);
 		},
@@ -10586,7 +10586,7 @@ export const Abilities = {
 		name: "Powder Burst",
 		shortDesc: "Casts Powder on entry.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("powder"), pokemon, target);
 		},
@@ -10620,7 +10620,7 @@ export const Abilities = {
 		name: "Telekinetic",
 		shortDesc: "Casts Telekinesis on entry.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("telekinesis"), pokemon, target);
 		},
@@ -10699,7 +10699,7 @@ export const Abilities = {
 		name: "Change of Heart",
 		shortDesc: "Uses Heart Swap on switch-in.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("heartswap"), pokemon, target);
 		},
@@ -10825,7 +10825,7 @@ export const Abilities = {
 		name: "Suppress",
 		shortDesc: "Casts Torment on entry",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("torment"), pokemon, target);
 		},
@@ -10863,7 +10863,7 @@ export const Abilities = {
 		name: "Doombringer",
 		shortDesc: "Uses Doom Desire on switch-in.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("doomdesire"), pokemon, target);
 		},
@@ -11159,7 +11159,7 @@ export const Abilities = {
 		name: "Trickster",
 		shortDesc: "Uses Disable on switch-in.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("disable"), pokemon, target);
 		},
@@ -11223,7 +11223,7 @@ export const Abilities = {
 		name: "Dust Cloud",
 		shortDesc: "Attacks with Sand Attack on switch-in.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("sandattack"), pokemon, target);
 		},
@@ -11242,7 +11242,7 @@ export const Abilities = {
 		name: "Generator",
 		shortDesc: "Charges up on entry.",
 		onSwitchIn(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("charge"), pokemon, target);
 		},
@@ -11427,7 +11427,7 @@ export const Abilities = {
 		name: "Rejection",
 		shortDesc: "Applies Quash on switch-in.",
 		onStart(pokemon) {
-			const target = (pokemon as any).oppositeFoe();
+			const target = pokemon.adjacentFoes()[0];
 			if (!target) return;
 			(this.actions as any).runAdditionalMove(Dex.moves.get("quash"), pokemon, target);
 		},
