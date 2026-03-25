@@ -263,14 +263,25 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 				this.actions.useMove('yawn', pokemon, { target, sourceEffect: pokemon.getAbility() });
 			}
 		},
-	}
+	},
 
-
-
-
-
-
-
-
+	mewtwomegax: {
+		// Uses parentalBond as base.
+		onPrepareHit(source, target, move) {
+			if (isParentalBondBanned(move, source)) { return; }
+			if ((move.flags as Record<string, number | undefined>)["punch"]) {
+				move.multihit = 2;
+				(move as { multihitType?: string }).multihitType = "boxer";
+			}
+		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			console.log(move.hit, move.secondaries);
+			if ((move as { multihitType?: string }).multihitType !== "boxer") return;
+			if (!secondaries) return;
+			if (move.hit <= 1) return;
+			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
+			return secondaries;
+		},
+	},
 
 };
