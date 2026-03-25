@@ -8152,21 +8152,27 @@ export const Abilities = {
 			if (move.category === 'Status' || move.type !== 'Electric') return;
 			if (move.id === 'smite') return;
 			if (!target || target.hp <= 0) return;
+
 			this.add('-activate', source, 'ability: Thunder Call');
 			source.m.thunderCallNerf = true;
+			
 			this.actions.useMove('smite', source, target);
 		},
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.id === 'smite' && attacker.m.thunderCallNerf) {
-				attacker.m.thunderCallNerf = false;
-				return this.chainModify(0.2);
+		onModifyMove(move, pokemon) {
+			if (move.id === 'smite' && pokemon.m.thunderCallNerf) {
+				move.basePower = 24; 
+			}
+		},
+		onAfterMove(source, target, move) {
+			if (move.id === 'smite' && source.m.thunderCallNerf) {
+				source.m.thunderCallNerf = false;
 			}
 		},
 		
 		name: "Thunder Call",
-		shortDesc: "Ao acertar um golpe Elétrico, usa o movimento Smite em seguida com 20% do poder.",
 		rating: 3,
+		num: 405,
+		gen: 8,
 	},
 	marineapex: {
 		onModifyMove(move) {
