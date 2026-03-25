@@ -12392,20 +12392,16 @@ export const Abilities = {
 			return this.chainModify(1.5);
 		},
 
-		onSwitchIn(pokemon) {
-			pokemon.addVolatile('articunoexmega');
-		},
-
 		onStart(source) {
-
-			pokemon.addVolatile('articunoexmega');
+			source.addVolatile('articunoexmega');
+			
 			const veil = source.side.sideConditions["auroraveil"];
 			if (!veil) {
-				this.add("-activate", source, "ability: North Wind");
+				this.add("-activate", source, "ability: Aurora's Gale");
 				source.side.addSideCondition(
 					"auroraveil",
 					source,
-					this.dex.abilities.get("northwind")
+					this.dex.abilities.get("aurorasgale")
 				);
 			}
 		},
