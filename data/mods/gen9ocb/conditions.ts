@@ -215,8 +215,8 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 		onUpdate(pokemon) {
 			if (pokemon.species.id === 'mimikyurayquaza' && this.effectState.busted) {
-				pokemon.formeChange('Mimikyu-Primal', this.effect, true);
-				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get('mimikyurayquazabusted'));
+				pokemon.formeChange('mimikyuprimal', this.effect, true);
+				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get('mimikyuprimal'));
 				const foe = this.effectState.bustSource as Pokemon | undefined;
 				if (foe?.hp && foe.side !== pokemon.side) {
 					foe.addVolatile('curse', pokemon, this.dex.abilities.get('patchwork'));

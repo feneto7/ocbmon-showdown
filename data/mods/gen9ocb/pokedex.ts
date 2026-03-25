@@ -17533,43 +17533,58 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		eggGroups: ["Flying"],
 	},
 	squawkabillyblue: {
-		num: 931,
 		name: "Squawkabilly-Blue",
-		baseSpecies: "Squawkabilly",
-		forme: "Blue",
-		types: ["Normal", "Flying"],
-		baseStats: {hp: 82, atk: 96, def: 51, spa: 45, spd: 51, spe: 92},
-		abilities: {0: "Intimidate", 1: "Hustle", H: "Guts"},
-		heightm: 0.6,
-		weightkg: 2.4,
-		color: "Blue",
+		num: 931,
+		types: ["Normal","Flying"],
+		abilities: {0: "Power Spot", 1: "Intimidate", H: "Friend Guard"},
+		baseStats: {
+			hp: 90,
+			atk: 45,
+			def: 100,
+			spa: 76,
+			spd: 90,
+			spe: 85,
+		},
 		eggGroups: ["Flying"],
+		weightkg: 2.4,
+		heightm: 0.6,
+		color: "Green",
 	},
 	squawkabillyyellow: {
-		num: 931,
 		name: "Squawkabilly-Yellow",
-		baseSpecies: "Squawkabilly",
-		forme: "Yellow",
-		types: ["Normal", "Flying"],
-		baseStats: {hp: 82, atk: 96, def: 51, spa: 45, spd: 51, spe: 92},
-		abilities: {0: "Intimidate", 1: "Hustle", H: "Sheer Force"},
-		heightm: 0.6,
-		weightkg: 2.4,
-		color: "Yellow",
+		num: 931,
+		types: ["Normal","Flying"],
+		abilities: {0: "Power Spot", 1: "Intimidate", H: "Friend Guard"},
+		baseStats: {
+			hp: 90,
+			atk: 45,
+			def: 100,
+			spa: 76,
+			spd: 90,
+			spe: 85,
+		},
 		eggGroups: ["Flying"],
+		weightkg: 2.4,
+		heightm: 0.6,
+		color: "Green",
 	},
 	squawkabillywhite: {
-		num: 931,
 		name: "Squawkabilly-White",
-		baseSpecies: "Squawkabilly",
-		forme: "White",
-		types: ["Normal", "Flying"],
-		baseStats: {hp: 82, atk: 96, def: 51, spa: 45, spd: 51, spe: 92},
-		abilities: {0: "Intimidate", 1: "Hustle", H: "Sheer Force"},
-		heightm: 0.6,
-		weightkg: 2.4,
-		color: "White",
+		num: 931,
+		types: ["Normal","Flying"],
+		abilities: {0: "Power Spot", 1: "Intimidate", H: "Friend Guard"},
+		baseStats: {
+			hp: 90,
+			atk: 45,
+			def: 100,
+			spa: 76,
+			spd: 90,
+			spe: 85,
+		},
 		eggGroups: ["Flying"],
+		weightkg: 2.4,
+		heightm: 0.6,
+		color: "Green",
 	},
 	nacli: {
 		num: 932,
@@ -25511,7 +25526,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0,
 		color: "Gray",
 	},
-	lumberingsloth: {
+	lumbersloth: {
 		name: "Lumber-Sloth",
 		num: 1049,
 		types: ["Fire","Grass"],
@@ -25871,7 +25886,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 2.1,
 		color: "Blue",
 	},
-	crawdauntles: {
+	crawdauntless: {
 		name: "Crawdauntless",
 		num: 1075,
 		types: ["Water","Dark"],
@@ -26141,7 +26156,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.8,
 		color: "Yellow",
 	},
-	jaggedchungulis: {
+	cragchungus: {
 		name: "Crag-Chungus",
 		num: 1085,
 		types: ["Rock","Ground"],
@@ -26645,7 +26660,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.7,
 		color: "Green",
 	},
-	harvestingtyrant: {
+	corntyrant: {
 		name: "Corn-Tyrant",
 		num: 1111,
 		types: ["Grass","Dragon"],
@@ -27167,60 +27182,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.6,
 		color: "Green",
 	},
-	squawkabillyblueplumage: {
-		name: "Squawkabilly-Blue",
-		num: 931,
-		types: ["Normal","Flying"],
-		abilities: {0: "Power Spot", 1: "Intimidate", H: "Friend Guard"},
-		baseStats: {
-			hp: 90,
-			atk: 45,
-			def: 100,
-			spa: 76,
-			spd: 90,
-			spe: 85,
-		},
-		eggGroups: ["Flying"],
-		weightkg: 2.4,
-		heightm: 0.6,
-		color: "Green",
-	},
-	squawkabillyyellowplumage: {
-		name: "Squawkabilly-Yellow",
-		num: 931,
-		types: ["Normal","Flying"],
-		abilities: {0: "Power Spot", 1: "Intimidate", H: "Friend Guard"},
-		baseStats: {
-			hp: 90,
-			atk: 45,
-			def: 100,
-			spa: 76,
-			spd: 90,
-			spe: 85,
-		},
-		eggGroups: ["Flying"],
-		weightkg: 2.4,
-		heightm: 0.6,
-		color: "Green",
-	},
-	squawkabillywhiteplumage: {
-		name: "Squawkabilly-White",
-		num: 931,
-		types: ["Normal","Flying"],
-		abilities: {0: "Power Spot", 1: "Intimidate", H: "Friend Guard"},
-		baseStats: {
-			hp: 90,
-			atk: 45,
-			def: 100,
-			spa: 76,
-			spd: 90,
-			spe: 85,
-		},
-		eggGroups: ["Flying"],
-		weightkg: 2.4,
-		heightm: 0.6,
-		color: "Green",
-	},
 	ogerponwellspringmask: {
 		name: "Ogerpon-Wellspring Mask",
 		num: 1017,
@@ -27239,7 +27200,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 1.2,
 		color: "Green",
 	},
-	ogerponhearthflamemask: {
+	ogerponhearthflame: {
 		name: "Ogerpon-Hearthflame",
 		num: 1017,
 		types: ["Grass","Fire"],
@@ -27257,7 +27218,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 1.2,
 		color: "Green",
 	},
-	ogerponcornerstonemask: {
+	ogerponcornerstone: {
 		name: "Ogerpon-Cornerstone",
 		num: 1017,
 		types: ["Grass","Rock"],
@@ -27401,7 +27362,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.4,
 		color: "Yellow",
 	},
-	mimikyurayquazabusted: {
+	mimikyuprimal: {
 		name: "Mimikyu-Primal",
 		num: 778,
 		types: ["Ghost","Fairy"],
@@ -27419,7 +27380,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.2,
 		color: "Yellow",
 	},
-	slakingmegaapeshift: {
+	slakingmegaslow: {
 		name: "Slaking-Mega Ape Shift",
 		num: 289,
 		types: ["Normal","Ice"],
@@ -28175,7 +28136,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 1.7,
 		color: "Yellow",
 	},
-	rapidashmegagalar: {
+	rapidashmegagalarian: {
 		name: "Rapidash-Mega Galarian",
 		num: 78,
 		types: ["Psychic","Fairy"],
@@ -28733,7 +28694,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.4,
 		color: "Yellow",
 	},
-	fidoughpartnermega: {
+	fidoughmega: {
 		name: "Fidough-Mega",
 		num: 926,
 		types: ["Fairy"],
@@ -29039,7 +29000,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 2,
 		color: "Purple",
 	},
-	slowbromegagalar: {
+	slowbromegagalarian: {
 		name: "Slowbro-Mega Galarian",
 		num: 80,
 		types: ["Poison","Psychic"],
@@ -29057,7 +29018,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 1.6,
 		color: "Pink",
 	},
-	slowkingmegagalar: {
+	slowkingmegagalarian: {
 		name: "Slowking-Mega Galarian",
 		num: 199,
 		types: ["Poison","Psychic"],
@@ -29651,7 +29612,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 1.3,
 		color: "White",
 	},
-	pentadugalola: {
+	pentadugalolan: {
 		name: "Pentadug-Alolan",
 		num: 1094,
 		types: ["Ground","Steel"],
@@ -29903,7 +29864,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 2.3,
 		color: "Green",
 	},
-	ledianparadox: {
+	ironheart: {
 		name: "Iron-Heart",
 		num: 1066,
 		types: ["Steel","Bug"],
@@ -30029,7 +29990,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		heightm: 0.2,
 		color: "Yellow",
 	},
-	espeongalaxy: {
+	espeonprimal: {
 		name: "Espeon-Primal",
 		num: 196,
 		types: ["Psychic"],
