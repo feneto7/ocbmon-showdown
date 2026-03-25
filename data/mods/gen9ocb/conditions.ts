@@ -149,20 +149,20 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 	},
 
 	articunoexmega: {
-		onResidualOrder: 28,
-		onResidual(pokemon) {
-			if (!pokemon.hp || pokemon.fainted) return;
-			this.heal(pokemon.baseMaxhp / 8, pokemon, pokemon);
-			for (const target of pokemon.foes()) {
-				if (!target || !target.hp || target.fainted) continue;
-				if (!target.hasType('Ice')) {
-					this.damage(target.baseMaxhp / 8, target, pokemon);
-				} else {
-					this.add("-message", `${target.name} é imune ao frio por ser do tipo Gelo!`);
-				}
-			}
-		},
-	},
+    onResidualOrder: 28,
+    onResidual(pokemon) {
+        if (pokemon.fainted) return;
+        this.heal(pokemon.baseMaxhp / 8, pokemon);
+        for (const target of pokemon.side.foe.active) {
+            if (target && !target.fainted && !target.hasType('Ice')) {
+                this.add("-ability", pokemon, "Articuno-EX Mega");
+                this.damage(target.baseMaxhp / 8, target, pokemon);
+            }
+        }
+    },
+    name: "Articuno-EX Mega",
+    rating: 4,
+},
 
 	chienpaomega:{
 		// Uses parentalBond as base.
@@ -248,20 +248,20 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	mewtwomegax: {
-		onPrepareHit(source, target, move) {
+mewtwomegax: {
+    onPrepareHit(source, target, move) {
         if (move.category !== 'Status' && move.flags['punch'] && !move.multihit && !move.isZ && !move.isMax) {
             move.multihit = 2;
-            (move as any).multihitType = 'boxer';
+            (move as any).mewtwoMegaXHit = true;
         }
-		},
-		onBasePowerPriority: 7,
-		onBasePower(basePower, pokemon, target, move) {
-			if ((move as any).multihitType === 'boxer' && pokemon.volatiles['attaching']?.hit === 2) {
-				return this.chainModify(0.4);
-			}
-		},
-	},
+    },
+    onBasePowerPriority: 7,
+    onBasePower(basePower, pokemon, target, move) {
+        if ((move as any).mewtwoMegaXHit && move.hit === 2) {
+            return this.chainModify(0.4);
+        }
+    },
+},
 
 	shedinjamega: {
 		onDamage(damage, target, source, effect) {
