@@ -29306,6 +29306,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 55.4,
 		heightm: 1.7,
 		color: "Blue",
+		requiredItem: "Articunuite",
 	},
 	moltresexmega: {
 		name: "Moltres-Mega",

@@ -12388,6 +12388,28 @@ export const Abilities = {
 		rating: 4,
 	},
 
+	aurorasgale: {
+		onModifySpA(atk, attacker, defender, move) {
+			return this.chainModify(1.5);
+		},
+
+		onStart(source) {
+		
+			const veil = source.side.sideConditions["auroraveil"];
+			if (!veil) {
+				this.add("-activate", source, "ability: North Wind");
+				source.side.addSideCondition(
+					"auroraveil",
+					source,
+					this.dex.abilities.get("northwind")
+				);
+			}
+		},
+		name: "Aurora's Gale",
+		rating: 4.5,
+		num: 977,
+		gen: 9,
+	},
 
 
 
