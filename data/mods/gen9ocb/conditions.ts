@@ -148,41 +148,25 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	articunoexmega: {
-		onStart(pokemon) {
-			pokemon.addVolatile('articunoexmega');
-		},
-		condition: {
-			onResidualOrder: 28,
-			onResidual(pokemon) {
-				if (!pokemon.isActive || pokemon.fainted) return;
-				this.heal(pokemon.baseMaxhp / 8, pokemon);
-				for (const target of pokemon.side.foe.active) {
-					if (target && !target.fainted && !target.hasType('Ice')) {
-						this.add("-ability", pokemon, "Articuno-EX Mega");
-						this.damage(target.baseMaxhp / 8, target, pokemon);
-					}
-				}
-			}
-		},
-	},
-
-	chienpaomega:{
-		// Uses parentalBond as base.
+	chienpaomega: {
 		onPrepareHit(source, target, move) {
-			if (isParentalBondBanned(move, source)) { return; }
-			if (move.flags["bite"]) {
-				move.multihit = 2;
-				(move as { multihitType?: string }).multihitType = "maw";
+			if (move.category === 'Status' || !move.flags['bite'] || move.multihit || 
+				move.flags['noparentalbond'] || move.flags['charge'] ||
+				move.flags['futuremove'] || move.spreadHit || move.isZ || move.isMax) return;
+
+			move.multihit = 2;
+			move.multihitType = 'parentalbond';
+		},
+		onBasePowerPriority: 7,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.multihitType === 'parentalbond' && move.hit === 2) {
+				return this.chainModify(0.25); 
 			}
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
-			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "maw") return;
-			if (!secondaries) return;
-			if (move.hit <= 1) return;
-			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
-			return secondaries;
+			if (move.multihitType === 'parentalbond' && move.hit > 1) {
+				return secondaries.filter(effect => effect.volatileStatus !== 'flinch');
+			}
 		},
 	},
 
@@ -252,25 +236,27 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 	},
 
 	mewtwomegax: {
-		onStart(pokemon) {
-			pokemon.addVolatile('mewtwomegax');
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status' || !move.flags['punch'] || move.multihit || 
+				move.flags['noparentalbond'] || move.flags['charge'] ||
+				move.flags['futuremove'] || move.spreadHit || move.isZ || move.isMax) return;
+
+			move.multihit = 2;
+			move.multihitType = 'parentalbond';
 		},
-		condition: {
-			onPrepareHit(source, target, move) {
-				if (!source.isActive) return;
-				if (move.category !== 'Status' && move.flags['punch'] && !move.multihit && !move.isZ && !move.isMax) {
-					move.multihit = 2;
-					(move as any).mewtwoMegaXHit = true;
-				}
-			},
-			onBasePowerPriority: 7,
-			onBasePower(basePower, pokemon, target, move) {
-				if (!pokemon.isActive) return;
-				if ((move as any).mewtwoMegaXHit && move.hit === 2) {
-					return this.chainModify(0.4);
-				}
+		onBasePowerPriority: 7,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.multihitType === 'parentalbond' && move.hit === 2) {
+				return this.chainModify(0.4);
 			}
 		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			if (move.multihitType === 'parentalbond' && move.id === 'secretpower' && move.hit < 2) {
+				return secondaries.filter(effect => effect.volatileStatus === 'flinch');
+			}
+		},
+		name: "Iron Fist Bond",
+		shortDesc: "Socos atingem duas vezes. O segundo golpe tem 40% do poder.",
 	},
 
 	shedinjamega: {
@@ -282,5 +268,30 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
+	articunoexmega: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.hp <= 0) return;
+			for (const target of pokemon.foes()) {
+				if (target.hasType('Ice')) {
+					this.add('-immune', target, '[from] ability: Nome da Sua Habilidade');
+					continue;
+				}
+				this.damage(target.baseMaxhp / 8, target, pokemon);
+			}
+			this.heal(pokemon.baseMaxhp / 8);
+		},
+	},
+
+	greninjamega: {
+		onModifyMove(move, pokemon) {
+			if (move.id === 'watershuriken') {
+				delete move.multihit;
+				move.basePower = 100;
+				move.critRatio = (move.critRatio || 1) + 1;
+			}
+		},
+	},
 
 };

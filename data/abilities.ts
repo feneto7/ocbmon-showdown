@@ -12410,6 +12410,21 @@ export const Abilities = {
 		gen: 9,
 	},
 
+	giantshuriken: {
+		onModifyMove(move, pokemon) {
+			if (move.id === 'watershuriken') {
+				delete move.multihit;
+				move.basePower = 100;
+				move.critRatio = (move.critRatio || 1) + 1;
+			}
+		},
+		name: "Giant Shuriken",
+		shortDesc: "Water Shuriken: Bate uma vez com 100 BP e +1 de taxa de crítico.",
+		rating: 4,
+		num: 978,
+		gen: 9,
+	},
+
 
 
 	
