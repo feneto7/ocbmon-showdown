@@ -41,21 +41,6 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	miraidon: {
-		onSwitchIn(pokemon) {
-			if (!this.field.setTerrain('electricterrain') && this.field.isTerrain('electricterrain')) {
-				this.add('-activate', pokemon, 'ability: Hadron Engine');
-			}
-		},
-		onModifySpAPriority: 5,
-		onModifySpA(atk, attacker, defender, move) {
-			if (this.field.isTerrain('electricterrain')) {
-				this.debug('Hadron Engine boost');
-				return this.chainModify([5461, 4096]);
-			}
-		},
-	},
-
 	yveltalmega: {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.hp >= target.maxhp) {
@@ -272,14 +257,17 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 				
 				if (target.hasType('Ice')) {
 					this.add('-immune', target, '[from] ability: Articuno Ex Mega');
-					continue;
+				} else {
+					const dano = Math.max(1, Math.floor(target.baseMaxhp / 8));
+					this.damage(dano, target, pokemon);
 				}
-				this.damage(target.baseMaxhp / 8, target, pokemon);
 			}
-			this.heal(pokemon.baseMaxhp / 8, pokemon);
+			const cura = Math.max(1, Math.floor(pokemon.baseMaxhp / 8));
+			this.heal(cura, pokemon);
 		},
+		name: "Articuno Ex Mega",
 	},
-
+	
 	greninjamega: {
 		onModifyMove(move, pokemon) {
 			if (move.id === 'watershuriken') {
