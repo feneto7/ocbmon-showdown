@@ -246,27 +246,6 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	articunoexmega: {
-		name: 'Articuno Ex Mega',
-		onResidualOrder: 28,
-		onResidualSubOrder: 2,
-		onResidual(target) {
-			if (!target.hp) return;
-			for (const foe of target.foes()) {
-				if (!foe.hp) continue;
-				
-				if (foe.hasType('Ice')) {
-					this.add('-immune', foe);
-				} else {
-					const dano = Math.max(1, Math.floor(foe.baseMaxhp / 8));
-					this.damage(dano, foe, target);
-				}
-			}
-			const cura = Math.max(1, Math.floor(target.baseMaxhp / 8));
-			this.heal(cura, target, target);
-		},
-	},
-
 	greninjamega: {
 		onModifyMove(move, pokemon) {
 			if (move.id === 'watershuriken') {
