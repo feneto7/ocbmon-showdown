@@ -149,14 +149,19 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 	},
 
 	articunoexmega: {
-		onResidualOrder: 28,
-		onResidual(pokemon) {
-			if (pokemon.fainted) return;
-			this.heal(pokemon.baseMaxhp / 8, pokemon);
-			for (const target of pokemon.side.foe.active) {
-				if (target && !target.fainted && !target.hasType('Ice')) {
-					this.add("-ability", pokemon, "Articuno-EX Mega");
-					this.damage(target.baseMaxhp / 8, target, pokemon);
+		onStart(pokemon) {
+			pokemon.addVolatile('articunoexmega');
+		},
+		condition: {
+			onResidualOrder: 28,
+			onResidual(pokemon) {
+				if (!pokemon.isActive || pokemon.fainted) return;
+				this.heal(pokemon.baseMaxhp / 8, pokemon);
+				for (const target of pokemon.side.foe.active) {
+					if (target && !target.fainted && !target.hasType('Ice')) {
+						this.add("-ability", pokemon, "Articuno-EX Mega");
+						this.damage(target.baseMaxhp / 8, target, pokemon);
+					}
 				}
 			}
 		},
@@ -247,16 +252,23 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 	},
 
 	mewtwomegax: {
-		onPrepareHit(source, target, move) {
-			if (move.category !== 'Status' && move.flags['punch'] && !move.multihit && !move.isZ && !move.isMax) {
-				move.multihit = 2;
-				(move as any).mewtwoMegaXHit = true;
-			}
+		onStart(pokemon) {
+			pokemon.addVolatile('mewtwomegax');
 		},
-		onBasePowerPriority: 7,
-		onBasePower(basePower, pokemon, target, move) {
-			if ((move as any).mewtwoMegaXHit && move.hit === 2) {
-				return this.chainModify(0.4);
+		condition: {
+			onPrepareHit(source, target, move) {
+				if (!source.isActive) return;
+				if (move.category !== 'Status' && move.flags['punch'] && !move.multihit && !move.isZ && !move.isMax) {
+					move.multihit = 2;
+					(move as any).mewtwoMegaXHit = true;
+				}
+			},
+			onBasePowerPriority: 7,
+			onBasePower(basePower, pokemon, target, move) {
+				if (!pokemon.isActive) return;
+				if ((move as any).mewtwoMegaXHit && move.hit === 2) {
+					return this.chainModify(0.4);
+				}
 			}
 		},
 	},
