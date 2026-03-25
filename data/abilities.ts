@@ -9055,9 +9055,9 @@ export const Abilities = {
 	},
 	cheatingdeath: {
 		onStart(pokemon) {
-			this.effectState.hitsLeft = 2;
+			this.effectState.hitsLeft = 1;
 			this.add("-ability", pokemon, "Cheating Death");
-			this.add("-message", `${pokemon.name} está protegido contra os próximos 2 ataques nesta entrada!`);
+			this.add("-message", `${pokemon.name} está protegido contra o próximo ataque nesta entrada!`);
 		},
 		onDamage(damage, target, source, effect) {
 			if (target === source) return;
