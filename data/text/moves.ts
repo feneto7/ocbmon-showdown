@@ -8026,4 +8026,49 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
 	},
+	takeflight: {
+		name: "Take Flight",
+		desc: "O usuário ataca o alvo e, logo em seguida, volta para a equipe para ser substituído por outro Pokémon. Se o usuário for o último Pokémon apto para batalhar na sua equipe, este movimento ainda causará dano normalmente, mas a troca não acontecerá.",
+		shortDesc: "O usuário ataca e é substituído logo em seguida.",
+	},
+	giantgale: {
+		name: "Giant Gale",
+		desc: "Strikes with a mighty gale, but lowers the user's Speed by 1 stage.",
+		shortDesc: "Lowers the user's Speed by 1.",
+	},
+	wyrmwind: {
+		name: "Wyrm Wind",
+		desc: "Atinge o alvo de 2 a 5 vezes. Tem 100% de chance de reduzir a Special Defense do alvo em 1 estágio a cada acerto. Após o último acerto, a Speed do usuário aumenta em 1 estágio. O dano é ampliado pela habilidade Mega Launcher.",
+		shortDesc: "Bate 2-5 vezes. Reduz Sp. Def do alvo e aumenta a própria Speed.",
+	},
+	caltrops: {
+		name: "Caltrops",
+		desc: "Espalha espinhos no lado da equipe adversária. O próximo Pokémon oponente que entrar em campo, desde que não seja do tipo Voador ou tenha a habilidade Levitate, sofrerá a condição de Sangramento e a armadilha será desfeita.",
+		shortDesc: "Aplica Sangramento no próximo Pokémon que entrar.",
+	},
+	seicsmicslam: {
+		name: "Seismic Slam",
+		desc: "O usuário ataca com uma força esmagadora, mas recebe dano de recuo igual a 33% do dano causado ao alvo. Este movimento é fortalecido pela habilidade Big Pecks.",
+		shortDesc: "Recebe 33% de dano de recuo.",
+	},
+	badegg: {
+		name: "Bad Egg",
+		desc: "Arremessa um ovo cheio de toxinas no alvo. Tem 100% de chance de deixar o alvo gravemente envenenado (Badly Poisoned).",
+		shortDesc: "100% de chance de deixar o alvo gravemente envenenado.",
+	},
+	safepassage: {
+		name: "Safe Passage",
+		desc: "O usuário sai de campo e é substituído por um aliado. O aliado que entrar em campo recebe 35% a menos de dano de ataques durante o turno em que entrar.",
+		shortDesc: "O aliado que entra recebe 35% a menos de dano neste turno.",
+	},
+	soildrain: {
+		name: "Soil Drain",
+		desc: "O usuário ataca o alvo e drena sua energia para o solo. O usuário recupera 50% do dano causado como HP.",
+		shortDesc: "O usuário recupera 50% do dano causado.",
+	},
+	transmute: {
+		name: "Transmute",
+		desc: "O usuário ataca o alvo. Se o alvo for nocauteado por este ataque, o usuário recupera o item que consumiu anteriormente durante a batalha. Faz contato e é fortalecido por Big Pecks.",
+		shortDesc: "Recupera o item usado se nocautear o alvo.",
+	},
 };
