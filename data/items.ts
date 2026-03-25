@@ -8174,4 +8174,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 8,
 		isNonstandard: "CAP",
 	},
+	articunuite: {
+		name: "Articunuite",
+		spritenum: 623,
+		megaStone: { "Articuno-Ex": "Articuno-Mega" },
+		itemUser: ["Articuno-Ex"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 9777,
+		gen: 9,
+		isNonstandard: "Past",
+	},
 };
+
