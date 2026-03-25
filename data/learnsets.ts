@@ -118782,7 +118782,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			surf: ["9L1"],
 		},
 	},
-	},
 	snorlaxreduxmega: {
 		learnset: {
 			acidarmor: ["9M"],
