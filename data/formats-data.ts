@@ -7490,4 +7490,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 		doublesTier: "DOU",
 	},
+	munchlaxredux: {
+		tier: "OU",
+		doublesTier: "DOU",
+	},
+	snorlaxredux: {
+		tier: "OU",
+		doublesTier: "DOU",
+	},
 };
