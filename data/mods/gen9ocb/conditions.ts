@@ -87,24 +87,6 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	mewtwomegax: {
-		onPrepareHit(source, target, move) {
-			if (isParentalBondBanned(move, source)) { return; }
-			if ((move.flags as Record<string, number | undefined>)["punch"]) {
-				move.multihit = 2;
-				(move as { multihitType?: string }).multihitType = "boxer";
-			}
-		},
-		onSourceModifySecondaries(secondaries, target, source, move) {
-			if ((move as { multihitType?: string }).multihitType !== "boxer") return;
-			if (!secondaries) return;
-			if (move.hit <= 1) return;
-			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
-			return secondaries;
-		},
-	},
-
-
 	rayquazamega:{
 		onSwitchIn(source) {
 			this.field.setWeather('deltastream');
@@ -166,19 +148,20 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
-	articunoexmega:{
+	articunoexmega: {
 		onResidualOrder: 28,
 		onResidual(pokemon) {
-			if (!pokemon.hp) return;
-			for (const target of [...pokemon.foes(), ...pokemon.alliesAndSelf()]) {
-				if (!target?.hp) continue;
-				if (target.hasType('Ice')) {
-					this.heal(target.baseMaxhp / 8, target, pokemon, pokemon.getAbility());
-				} else {
+			if (!pokemon.hp || pokemon.fainted) return;
+			this.heal(pokemon.baseMaxhp / 8, pokemon, pokemon);
+			for (const target of pokemon.foes()) {
+				if (!target || !target.hp || target.fainted) continue;
+				if (!target.hasType('Ice')) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
+				} else {
+					this.add("-message", `${target.name} é imune ao frio por ser do tipo Gelo!`);
 				}
 			}
-		}
+		},
 	},
 
 	chienpaomega:{
@@ -266,22 +249,28 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 	},
 
 	mewtwomegax: {
-		// Uses parentalBond as base.
 		onPrepareHit(source, target, move) {
-			if (isParentalBondBanned(move, source)) { return; }
-			if ((move.flags as Record<string, number | undefined>)["punch"]) {
-				move.multihit = 2;
-				(move as { multihitType?: string }).multihitType = "boxer";
+        if (move.category !== 'Status' && move.flags['punch'] && !move.multihit && !move.isZ && !move.isMax) {
+            move.multihit = 2;
+            (move as any).multihitType = 'boxer';
+        }
+		},
+		onBasePowerPriority: 7,
+		onBasePower(basePower, pokemon, target, move) {
+			if ((move as any).multihitType === 'boxer' && pokemon.volatiles['attaching']?.hit === 2) {
+				return this.chainModify(0.4);
 			}
 		},
-		onSourceModifySecondaries(secondaries, target, source, move) {
-			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "boxer") return;
-			if (!secondaries) return;
-			if (move.hit <= 1) return;
-			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
-			return secondaries;
+	},
+
+	shedinjamega: {
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
 		},
 	},
+
 
 };
