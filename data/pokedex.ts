@@ -30691,30 +30691,4 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
         eggGroups: ["Animal"],
     },
 
-	munchlaxredux: {
-		num: 1227,
-		name: "Munchlax-Redux",
-		types: ["Water"],
-		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 150, atk: 25, def: 95, spa: 40, spd: 75, spe: 5},
-		abilities: {0: "Soundproof", 1: "Inflatable", H: "Sticky Hold"},
-		heightm: 0.6,
-		weightkg: 105,
-		color: "Black",
-		evos: ["Snorlax-Redux"],
-	},
-	snorlaxredux: {
-		num: 1228,
-		name: "Snorlax-Redux",
-		types: ["Water"],
-		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
-		abilities: {0: "Soundproof", 1: "Water Absorb", H: "hyper Cleanse"},
-		heightm: 2.1,
-		weightkg: 460,
-		color: "Black",
-		prevo: "Munchlax-Redux",
-		evoType: "levelFriendship",
-	},
-	
 };
