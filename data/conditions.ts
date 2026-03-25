@@ -1085,19 +1085,12 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 
 	articunoexmega: {
 		name: 'Articuno Ex Mega',
-		noCopy: true,
-		
-		onStart(target) {
-			this.add('-message', `[DEBUG] A condição inata grudou no ${target.name}!`);
-		},
-
+		noCopy: true, 
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
 		onResidual(target) {
-			this.add('-message', `[DEBUG] O final do turno ativou para ${target.name}!`);
-			
 			if (!target.hp) return;
-
+			
 			for (const foe of target.foes()) {
 				if (!foe.hp) continue;
 				
@@ -1105,12 +1098,11 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 					this.add('-immune', foe);
 				} else {
 					const dano = Math.max(1, Math.floor(foe.maxhp / 8));
-					this.damage(dano, foe, target);
+					this.damage(dano, foe, target, this.effect);
 				}
 			}
-			
 			const cura = Math.max(1, Math.floor(target.maxhp / 8));
-			this.heal(cura, target, target);
+			this.heal(cura, target, target, this.effect);
 		},
 	},
 
