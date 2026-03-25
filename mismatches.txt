@@ -1,0 +1,77 @@
+[2153] Key: farfetchd, Name: Farfetch\u2019d, Expected: farfetchu2019d
+[2166] Key: farfetchdgalar, Name: Farfetch\u2019d-Galar, Expected: farfetchu2019dgalar
+[12263] Key: flabebe, Name: Flabe\u0301be\u0301, Expected: flabeu0301beu0301
+[16287] Key: sirfetchd, Name: Sirfetch\u2019d, Expected: sirfetchu2019d
+[18786] Key: baseStats, Name: Dewgong-Mega, Expected: dewgongmega
+[18809] Key: baseStats, Name: Hitmonchan-Mega, Expected: hitmonchanmega
+[18832] Key: baseStats, Name: Hitmonlee-Mega, Expected: hitmonleemega
+[18855] Key: baseStats, Name: Hitmontop-Mega, Expected: hitmontopmega
+[18880] Key: baseStats, Name: Crobat-Mega, Expected: crobatmega
+[18903] Key: baseStats, Name: Skarmory-Mega, Expected: skarmorymega
+[18955] Key: baseStats, Name: Torterra-Mega, Expected: torterramega
+[18978] Key: baseStats, Name: Infernape-Mega, Expected: infernapemega
+[19003] Key: baseStats, Name: Empoleon-Mega, Expected: empoleonmega
+[19026] Key: baseStats, Name: Shuckle-Mega, Expected: shucklemega
+[19049] Key: baseStats, Name: Relicanth-Mega, Expected: relicanthmega
+[19072] Key: baseStats, Name: Quagsire-Mega, Expected: quagsiremega
+[19126] Key: baseStats, Name: Toucannon-Mega, Expected: toucannonmega
+[19149] Key: baseStats, Name: Dragonite-Mega, Expected: dragonitemega
+[19172] Key: baseStats, Name: Breloom-Mega, Expected: breloommega
+[19195] Key: baseStats, Name: Slaking-Mega, Expected: slakingmega
+[19218] Key: baseStats, Name: Feraligatr-Mega-X, Expected: feraligatrmegax
+[19241] Key: baseStats, Name: Feraligatr-Mega-Y, Expected: feraligatrmegay
+[19266] Key: baseStats, Name: Granbull-Mega, Expected: granbullmega
+[19289] Key: baseStats, Name: Gyarados-Mega-Y, Expected: gyaradosmegay
+[19312] Key: baseStats, Name: Haxorus-Mega, Expected: haxorusmega
+[19365] Key: baseStats, Name: Meganium-Mega, Expected: meganiummega
+[19388] Key: baseStats, Name: Luxray-Mega, Expected: luxraymega
+[19411] Key: baseStats, Name: Nidoking-Mega, Expected: nidokingmega
+[19434] Key: baseStats, Name: Nidoqueen-Mega, Expected: nidoqueenmega
+[19457] Key: baseStats, Name: Sandslash-Mega, Expected: sandslashmega
+[19480] Key: baseStats, Name: Typhlosion-Mega, Expected: typhlosionmega
+[19503] Key: baseStats, Name: Krookodile-Mega, Expected: krookodilemega
+[19526] Key: baseStats, Name: Magnezone-Mega, Expected: magnezonemega
+[19549] Key: baseStats, Name: Shedinja-Mega, Expected: shedinjamega
+[19572] Key: baseStats, Name: Swalot-Mega, Expected: swalotmega
+[19595] Key: baseStats, Name: Lanturn-Mega, Expected: lanturnmega
+[19618] Key: baseStats, Name: Lapras-Mega-X, Expected: laprasmegax
+[19641] Key: baseStats, Name: Slowking-Mega, Expected: slowkingmega
+[22777] Key: darmanitanzenmodegalar, Name: Darmanitan-Zen Mode Galarian, Expected: darmanitanzenmodegalarian
+[24721] Key: polteageistantique, Name: Polteageis, Expected: polteageis
+[25279] Key: heliosunny, Name: Heliomodo, Expected: heliomodo
+[25531] Key: lumberingsloth, Name: Lumber-Sloth, Expected: lumbersloth
+[25567] Key: magmenous, Name: Magnemous, Expected: magnemous
+[25873] Key: luminositeon, Name: Lucineon, Expected: lucineon
+[25891] Key: crawdauntles, Name: Crawdauntless, Expected: crawdauntless
+[26035] Key: ogerponhearthflamemaskmega, Name: Ogerpon-Hearthflame Mega, Expected: ogerponhearthflamemega
+[26053] Key: ogerponcornerstonemaskmega, Name: Ogerpon-Cornerstone Mega, Expected: ogerponcornerstonemega
+[26071] Key: ogerponwellspringmaskmega, Name: Ogerpon-Wellspring, Expected: ogerponwellspring
+[26161] Key: jaggedchungulis, Name: Crag-Chungus, Expected: cragchungus
+[26665] Key: harvestingtyrant, Name: Corn-Tyrant, Expected: corntyrant
+[27187] Key: squawkabillyblueplumage, Name: Squawkabilly-Blue, Expected: squawkabillyblue
+[27205] Key: squawkabillyyellowplumage, Name: Squawkabilly-Yellow, Expected: squawkabillyyellow
+[27223] Key: squawkabillywhiteplumage, Name: Squawkabilly-White, Expected: squawkabillywhite
+[27259] Key: ogerponhearthflamemask, Name: Ogerpon-Hearthflame, Expected: ogerponhearthflame
+[27277] Key: ogerponcornerstonemask, Name: Ogerpon-Cornerstone, Expected: ogerponcornerstone
+[27421] Key: mimikyurayquazabusted, Name: Mimikyu-Primal, Expected: mimikyuprimal
+[27529] Key: chesnaughtclemont, Name: Clemont-Chesnaught, Expected: clemontchesnaught
+[27565] Key: delphoxserena, Name: Serena-Delphox, Expected: serenadelphox
+[27925] Key: floetteeternalflowermega, Name: Floette-Mega, Expected: floettemega
+[27943] Key: zygardecompletemega, Name: Zygarde-Mega, Expected: zygardemega
+[28069] Key: wigglytuffmega, Name: Wigglytuff-Mega Y, Expected: wigglytuffmegay
+[28195] Key: rapidashmegagalar, Name: Rapidash-Mega Galarian, Expected: rapidashmegagalarian
+[28699] Key: pikachupartnermega, Name: Pikachu-Mega, Expected: pikachumega
+[28717] Key: eeveepartnermega, Name: Eevee-Mega, Expected: eeveemega
+[28735] Key: meowthpartnermega, Name: Meowth-Mega, Expected: meowthmega
+[28753] Key: fidoughpartnermega, Name: Fidough-Mega, Expected: fidoughmega
+[29059] Key: slowbromegagalar, Name: Slowbro-Mega Galarian, Expected: slowbromegagalarian
+[29077] Key: slowkingmegagalar, Name: Slowking-Mega Galarian, Expected: slowkingmegagalarian
+[29257] Key: chandeluremega, Name: Chandelure-Mega X, Expected: chandeluremegax
+[29275] Key: zapdosexmega, Name: Zapdos-Mega, Expected: zapdosmega
+[29293] Key: articunoexmega, Name: Articuno-Mega, Expected: articunomega
+[29312] Key: moltresexmega, Name: Moltres-Mega, Expected: moltresmega
+[29582] Key: sandslashalolamega, Name: Sandslash-Alolan Mega, Expected: sandslashalolanmega
+[29672] Key: pentadugalola, Name: Pentadug-Alolan, Expected: pentadugalolan
+[29924] Key: ledianparadox, Name: Iron-Heart, Expected: ironheart
+[30050] Key: espeongalaxy, Name: Espeon-Primal, Expected: espeonprimal
+[30356] Key: gyarevalry, Name: Gyarevelry, Expected: gyarevelry
