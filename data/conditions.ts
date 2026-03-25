@@ -187,88 +187,39 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 	bld: {
 		name: "bld",
 		effectType: "Status",
-		/**
-		 * This is called when the status starts and is responsible for populating status activation messages on screen.
-		 * It handles the status being activated by either an ability or a move secondary effect.
-		 * The target is the pokemon being statused, the source is the pokemon that caused the status.
-		 * Source effect will the ability or move that caused the status.
-		 */
 		onStart(target, source, sourceEffect) {
 			if (sourceEffect && sourceEffect.effectType === "Ability") {
-				this.add(
-					"-status",
-					target,
-					"bld",
-					`[from] ability: ${sourceEffect.name}`,
-					` [of] ${source}`
-				);
+				this.add("-status", target, "bld", `[from] ability: ${sourceEffect.name}`, ` [of] ${source}`);
 			} else if (sourceEffect && sourceEffect.effectType === "Move") {
-				this.add(
-					"-status",
-					target,
-					"bld",
-					"[from] move: " + sourceEffect.name
-				);
+				this.add("-status", target, "bld", "[from] move: " + sourceEffect.name);
+			} else {
+				this.add("-status", target, "bld");
 			}
 		},
-		/**
-		 * This is called right before a pokemon uses a given move.
-		 * We use this to check if a status healing move is being used on a bleeding pokemon.
-		 * If so, we block the heal but cure the bleed.
-		 * NOTE: This should cover non-self healing moves i.e. enemy or partner healing moves used on the bleeding pokemon
-		 */
-		// onBeforeMove(source, target, move) {
-		// 	if (move.flags['heal'] && move.category === "Status") {
-		// 		/// Outright block status healing moves.
-		// 		this.add('cant', target, 'status: bleed', move);
-		// 		target.cureStatus();
-		// 		return false;
-		// 	}
-		// },
-		/**
-		 * This is called right before a pokemon is healed by any source.
-		 * In this case, we just prevent the healing.
-		 * In most cases, you want to provide a message by using this.add("cant", ...)
-		 * But since this is from a status effect and blocks secondary effects from items, moves like giga drain, etc...
-		 * The expected behavior is more nuanced.
-		 * It's possible that some conditional messages may be desired here, but more work is needed to iron out all those details.
-		 */
 		onTryHeal(amount, target, source, effect) {
 			if (effect.effectType === "Condition" && effect.id === "wish") {
-				this.add("-message", `${target.name}'s wish cured it's bleed!`);
+				this.add("-message", `${target.name}'s wish cured its bleed!`);
 				target.cureStatus(true);
 			}
 
 			if (effect.effectType === "Move") {
-				const move = effect as Move;
-
-				if (move.basePower < 0) target.cureStatus();
-				if (move.category === "Status") target.cureStatus();
+				if (effect.basePower < 0) target.cureStatus();
+				if (effect.category === "Status") target.cureStatus();
 			}
 
 			return false;
 		},
-		/**
-		 * This should negate the boosts of this pokemon while bleed is inflicted.
-		 */
 		onModifyBoost(boosts, pokemon) {
 			for (const b in boosts) {
-				if (boosts[b] > 0) {
-					boosts[b] = 0;
+				const boostValue = boosts[b as keyof typeof boosts];
+				if (boostValue && boostValue > 0) {
+					(boosts as any)[b] = 0;
 				}
 			}
 		},
-		/**
-		 * This is (believed) to be used as an order in which status/item/weather residual effects resolve at the end of the battle.
-		 * In this case, bleed was made to have the same residual order value as bleed/freeze/etc.
-		 */
 		onResidualOrder: 10,
-		/**
-		 * This is called to compute any residual (turn over turn) effects on the statused target.
-		 * Bleed simply causes 1/16 base hp chip damage every turn.
-		 */
 		onResidual(pokemon) {
-			this.damage(pokemon.baseMaxhp / 16);
+			this.damage(Math.max(1, Math.floor(pokemon.maxhp / 16)));
 		},
 	},
 	confusion: {
@@ -1103,6 +1054,23 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			}
 			const cura = Math.max(1, Math.floor(target.maxhp / 8));
 			this.heal(cura, target, target, this.effect);
+		},
+	},
+	safepassage: {
+		name: 'Safe Passage',
+		noCopy: true,
+		onStart(side: any) {
+			this.add('-message', `[Safe Passage] O aliado está sendo guiado com segurança!`);
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			return this.chainModify(0.65);
+		},
+		onResidualOrder: 21,
+		onResidual(side: any) {
+			if (side && side.active && side.active[0]) {
+				side.removeSlotCondition(side.active[0], 'safepassage');
+			}
+			this.add('-message', `[Safe Passage] A proteção terminou.`);
 		},
 	},
 

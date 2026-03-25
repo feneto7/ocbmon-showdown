@@ -23884,7 +23884,169 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		isNonstandard: "Future",
 	},
-	
 
+	takeflight: {
+		num: 9818,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Take Flight",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, distance: 1, wind: 1},
+		selfSwitch: true, 
+		secondary: null,
+		target: "any",
+		type: "Flying",
+	},
 
+	giantgale: {
+		num: 9819,
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		name: "Giant Gale",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		self: {
+			boosts: {
+				spe: -1, 
+			},
+		},
+		secondary: null, 
+		target: "normal",
+		type: "Flying",
+	},
+	wyrmwind: {
+		num: 9820, 
+		accuracy: 100,
+		basePower: 25,
+		category: "Special",
+		name: "Wyrm Wind",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bullet: 1}, 
+		multihit: [2, 5],
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		self: {
+			boosts: {
+				spe: 1,
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+	caltrops: {
+		num: 9821,
+		accuracy: true, 
+		basePower: 0,
+		category: "Status",
+		name: "Caltrops",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1, snatch: 1}, 
+		sideCondition: 'caltrops', 
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Caltrops');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				if (!pokemon.isGrounded()) return;
+				if (pokemon.trySetStatus('bld', pokemon.side.foe.active[0])) {
+					pokemon.side.removeSideCondition('caltrops');
+					this.add('-sideend', pokemon.side, 'move: Caltrops', '[of] ' + pokemon);
+				}
+			},
+		},
+		secondary: null,
+		target: "foeSide", 
+		type: "Steel",
+	},
+	seicsmicslam: {
+		num: 9822,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Seismic Slam",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, bigpecks: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+	},
+	badegg: {
+		num: 9823,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Bad Egg",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	safepassage: {
+		num: 9824,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Safe Passage",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		slotCondition: 'safepassage',
+		selfSwitch: true,
+		target: "self",
+		type: "Normal",
+	},
+	soildrain: {
+		num: 9825,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Soil Drain",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+	},
+	transmute: {
+		num: 9826,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Transmute",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, bigpecks: 1},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (target && (target.fainted || target.hp <= 0)) {
+				if (!pokemon.item && pokemon.lastItem) {
+					pokemon.setItem(pokemon.lastItem);
+					this.add('-item', pokemon, pokemon.getItem(), '[from] move: Transmute');
+					this.add('-message', `${pokemon.name} transmutou a energia do nocaute para recuperar seu item!`);
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
 };
