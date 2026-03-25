@@ -12392,8 +12392,13 @@ export const Abilities = {
 			return this.chainModify(1.5);
 		},
 
+		onSwitchIn(pokemon) {
+			pokemon.addVolatile('articunoexmega');
+		},
+
 		onStart(source) {
-		
+
+			pokemon.addVolatile('articunoexmega');
 			const veil = source.side.sideConditions["auroraveil"];
 			if (!veil) {
 				this.add("-activate", source, "ability: North Wind");
