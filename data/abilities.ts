@@ -7802,18 +7802,18 @@ export const Abilities = {
 		onModifyMove(move) {
 			if (move.flags["punch"]) {
 				if (move.secondaries) {
-					this.debug("doubling secondary chance");
+					this.debug("quintuple the secondary chance");
 					for (const secondary of move.secondaries) {
-						if (secondary.chance) secondary.chance *= 2;
+						if (secondary.chance) secondary.chance *= 5;
 					}
 				}
 				if (move.secondary) {
-					this.debug("doubling secondary chance");
+					this.debug("quintuple the secondary chance");
 					// TODO: Fixed an invalid reference bug here.
 					// if (secondary.chance) secondary.chance *= 2;
-					if (move.secondary.chance) move.secondary.chance *= 2;
+					if (move.secondary.chance) move.secondary.chance *= 5;
 				}
-				if (move.self?.chance) move.self.chance *= 2;
+				if (move.self?.chance) move.self.chance *= 5;
 			}
 		},
 		onModifyCritRatio(critRatio, source, target, move) {
@@ -9055,24 +9055,23 @@ export const Abilities = {
 	},
 	cheatingdeath: {
 		onStart(pokemon) {
-			if (pokemon.activeTurns === 0 && !this.effectState.beginCD) {
-				this.effectState.beginCD = true;
-				this.effectState.hitsLeft = 2;
+			this.effectState.hitsLeft = 2;
+			this.add("-ability", pokemon, "Cheating Death");
+			this.add("-message", `${pokemon.name} está protegido contra os próximos 2 ataques nesta entrada!`);
+		},
+		onDamage(damage, target, source, effect) {
+			if (target === source) return;
+			if (!effect || effect.effectType !== "Move") return;
+			if (this.effectState.hitsLeft > 0) {
+				this.effectState.hitsLeft--;
+				this.add("-activate", target, "ability: Cheating Death");
+				const remaining = this.effectState.hitsLeft;
+				this.add("-message", `${target.name} bloqueou o dano! (${remaining} proteção(ões) restante(s))`);
+				return 0;
 			}
 		},
-		onDamage(damage, mon, source, effect) {
-			if (mon === source) return;
-			if (damage <= 0) return;
-			if (effect.effectType !== "Move") return;
-			const pas = ((mon as any).permanentAbilityState ??= {});
-			pas["cheatingdeath"] = pas["cheatingdeath"] || 0;
-			if (pas["cheatingdeath"] >= 2) return;
-			pas["cheatingdeath"]++;
-			this.add("-activate", mon, "ability: Cheating Death");
-			return 0;
-		},
 		name: "Cheating Death",
-		rating: 3,
+		rating: 4,
 		num: 440,
 		gen: 8,
 	},
