@@ -548,31 +548,31 @@ export class BattleActions {
 		if (targets.length > 1 && !move.smartTarget) move.spreadHit = true;
 
 		const moveSteps: ((targets: Pokemon[], pokemon: Pokemon, move: ActiveMove) =>
-		(number | boolean | "" | undefined)[] | undefined)[] = [
-			// 0. check for semi invulnerability
-			this.hitStepInvulnerabilityEvent,
+			(number | boolean | "" | undefined)[] | undefined)[] = [
+				// 0. check for semi invulnerability
+				this.hitStepInvulnerabilityEvent,
 
-			// 1. run the 'TryHit' event (Protect, Magic Bounce, Volt Absorb, etc.) (this is step 2 in gens 5 & 6, and step 4 in gen 4)
-			this.hitStepTryHitEvent,
+				// 1. run the 'TryHit' event (Protect, Magic Bounce, Volt Absorb, etc.) (this is step 2 in gens 5 & 6, and step 4 in gen 4)
+				this.hitStepTryHitEvent,
 
-			// 2. check for type immunity (this is step 1 in gens 4-6)
-			this.hitStepTypeImmunity,
+				// 2. check for type immunity (this is step 1 in gens 4-6)
+				this.hitStepTypeImmunity,
 
-			// 3. check for various move-specific immunities
-			this.hitStepTryImmunity,
+				// 3. check for various move-specific immunities
+				this.hitStepTryImmunity,
 
-			// 4. check accuracy
-			this.hitStepAccuracy,
+				// 4. check accuracy
+				this.hitStepAccuracy,
 
-			// 5. break protection effects
-			this.hitStepBreakProtect,
+				// 5. break protection effects
+				this.hitStepBreakProtect,
 
-			// 6. steal positive boosts (Spectral Thief)
-			this.hitStepStealBoosts,
+				// 6. steal positive boosts (Spectral Thief)
+				this.hitStepStealBoosts,
 
-			// 7. loop that processes each hit of the move (has its own steps per iteration)
-			this.hitStepMoveHitLoop,
-		];
+				// 7. loop that processes each hit of the move (has its own steps per iteration)
+				this.hitStepMoveHitLoop,
+			];
 		if (this.battle.gen <= 6) {
 			// Swap step 1 with step 2
 			[moveSteps[1], moveSteps[2]] = [moveSteps[2], moveSteps[1]];
@@ -1524,35 +1524,35 @@ export class BattleActions {
 			this.battle.boost(move.zMove.boost, pokemon, pokemon, zPower);
 		} else if (move.zMove?.effect) {
 			switch (move.zMove.effect) {
-			case 'heal':
-				this.battle.heal(pokemon.maxhp, pokemon, pokemon, zPower);
-				break;
-			case 'healreplacement':
-				pokemon.side.addSlotCondition(pokemon, 'healreplacement', pokemon, move);
-				break;
-			case 'clearnegativeboost':
-				const boosts: SparseBoostsTable = {};
-				let i: BoostID;
-				for (i in pokemon.boosts) {
-					if (pokemon.boosts[i] < 0) {
-						boosts[i] = 0;
-					}
-				}
-				pokemon.setBoost(boosts);
-				this.battle.add('-clearnegativeboost', pokemon, '[zeffect]');
-				break;
-			case 'redirect':
-				pokemon.addVolatile('followme', pokemon, zPower);
-				break;
-			case 'crit2':
-				pokemon.addVolatile('focusenergy', pokemon, zPower);
-				break;
-			case 'curse':
-				if (pokemon.hasType('Ghost')) {
+				case 'heal':
 					this.battle.heal(pokemon.maxhp, pokemon, pokemon, zPower);
-				} else {
-					this.battle.boost({ atk: 1 }, pokemon, pokemon, zPower);
-				}
+					break;
+				case 'healreplacement':
+					pokemon.side.addSlotCondition(pokemon, 'healreplacement', pokemon, move);
+					break;
+				case 'clearnegativeboost':
+					const boosts: SparseBoostsTable = {};
+					let i: BoostID;
+					for (i in pokemon.boosts) {
+						if (pokemon.boosts[i] < 0) {
+							boosts[i] = 0;
+						}
+					}
+					pokemon.setBoost(boosts);
+					this.battle.add('-clearnegativeboost', pokemon, '[zeffect]');
+					break;
+				case 'redirect':
+					pokemon.addVolatile('followme', pokemon, zPower);
+					break;
+				case 'crit2':
+					pokemon.addVolatile('focusenergy', pokemon, zPower);
+					break;
+				case 'curse':
+					if (pokemon.hasType('Ghost')) {
+						this.battle.heal(pokemon.maxhp, pokemon, pokemon, zPower);
+					} else {
+						this.battle.boost({ atk: 1 }, pokemon, pokemon, zPower);
+					}
 			}
 		}
 	}
@@ -1563,8 +1563,8 @@ export class BattleActions {
 
 	combineResults<T extends number | boolean | null | '' | undefined,
 		U extends number | boolean | null | '' | undefined>(
-		left: T, right: U
-	): T | U {
+			left: T, right: U
+		): T | U {
 		const NOT_FAILURE = 'string';
 		const NULL = 'object';
 		const resultsPriorities = ['undefined', NOT_FAILURE, NULL, 'boolean', 'number'];
@@ -1967,4 +1967,44 @@ export class BattleActions {
 	}
 
 	// #endregion
+
+	/**
+	 * Helper used by custom abilities to fire an additional move
+	 * (e.g. switch-in effects like Doombringer, Webspinner, etc.)
+	 *
+	 * @param move        The Move object to execute (from Dex.moves.get(...))
+	 * @param source      The Pokémon using the move
+	 * @param target      The target Pokémon (can equal source for self-targeting moves)
+	 * @param mutations   Optional property overrides applied to the ActiveMove
+	 *                    before execution (e.g. { basePower: 50 })
+	 */
+	runAdditionalMove(
+		move: Move | string,
+		source: Pokemon,
+		target: Pokemon,
+		mutations?: Partial<ActiveMove>
+	): void {
+		if (!source.hp || source.fainted) return;
+		if (!target || !target.hp || target.fainted) return;
+
+		const activeMove = this.dex.getActiveMove(move);
+
+		// Apply any mutations (e.g. reduced base power)
+		const originals: Partial<ActiveMove> = {};
+		if (mutations) {
+			for (const key of Object.keys(mutations) as (keyof ActiveMove)[]) {
+				(originals as any)[key] = (activeMove as any)[key];
+				(activeMove as any)[key] = (mutations as any)[key];
+			}
+		}
+
+		this.useMove(activeMove, source, { target, sourceEffect: source.getAbility() });
+
+		// Restore mutated properties
+		if (mutations) {
+			for (const key of Object.keys(mutations) as (keyof ActiveMove)[]) {
+				(activeMove as any)[key] = (originals as any)[key];
+			}
+		}
+	}
 }
