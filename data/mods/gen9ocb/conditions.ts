@@ -287,4 +287,15 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 		},
 	},
 
+	dualstab: {
+		name: 'Dual STAB',
+		noCopy: true,
+		onModifySTAB(stab: any, source: any, target: any, move: any) {
+			if (source.types && source.types.length === 2 && source.types[0] === source.types[1]) {
+				if (source.hasAbility('adaptability')) return 2.5;
+				return 2;
+			}
+		},
+	},
+
 };
