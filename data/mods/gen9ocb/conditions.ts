@@ -238,9 +238,17 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 	},
 
 	shedinjamega: {
-		onDamage(damage, target, source, effect) {
+		name: 'Shedinja-Mega',
+		noCopy: true,
+		onStart(pokemon) {
+			this.add('-message', `[Inata] ${pokemon.name} está protegido!`);
+		},
+		onDamage(damage, target: any, source: any, effect: any) {
+			// Se a origem do dano NÃO for um movimento direto (Move)
 			if (effect.effectType !== 'Move') {
-				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				if (effect.effectType === 'Ability') {
+					this.add('-activate', source, 'ability: ' + effect.name);
+				}
 				return false;
 			}
 		},

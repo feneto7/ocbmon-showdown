@@ -9625,10 +9625,21 @@ export const Abilities = {
 		name: "Evaporate",
 		shortDesc: "Takes no damage and sets Mist if hit by water.",
 	},
-	// Usada em fichas custom: anula quedas de stat por efeitos próprios e aguenta um golpe fatal uma vez por entrada.
 	luckyhalo: {
 		onStart(pokemon) {
 			pokemon.abilityState.luckyhaloEndured = false;
+
+			if (!pokemon.hasType('Fire')) {
+				if (pokemon.addType('Fire')) {
+					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Turbo Halo');
+					this.add('-message', `${pokemon.name} incandesceu sua aura e ganhou o tipo Fogo!`);
+				}
+			}
+			this.add('-ability', pokemon, 'Turbo Halo');
+			this.add('-message', `${pokemon.name} está irradiando uma chama que ignora habilidades!`);
+		},
+		onModifyMove(move) {
+			move.ignoreAbility = true;
 		},
 		onTryBoost(boost, target, source, effect) {
 			if (!source || target !== source) return;
@@ -9656,14 +9667,13 @@ export const Abilities = {
 			if (damage >= target.hp && effect && effect.effectType === 'Move') {
 				target.abilityState.luckyhaloEndured = true;
 				this.add('-activate', target, 'ability: Lucky Halo');
+				this.add('-message', `${target.name} sobreviveu ao golpe graças a sua habilidade!`);
 				return target.hp - 1;
 			}
 		},
 		flags: { breakable: 1 },
 		name: "Lucky Halo",
-		rating: 3.5,
-		num: 382,
-		gen: 9,
+		rating: 5,
 	},
 	lumberjack: {
 		name: "Lumberjack",

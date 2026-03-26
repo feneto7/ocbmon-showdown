@@ -8832,7 +8832,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	uxie: {
 		num: 480,
 		name: "Uxie",
-		types: ["Psychic"],
+		types: ["Psychic", "Fairy"],
 		gender: "N",
 		baseStats: {hp: 75, atk: 75, def: 130, spa: 75, spd: 130, spe: 95},
 		abilities: {0: "Levitate"},
