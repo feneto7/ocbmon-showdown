@@ -9625,7 +9625,7 @@ export const Abilities = {
 		name: "Evaporate",
 		shortDesc: "Takes no damage and sets Mist if hit by water.",
 	},
-	turbohalo: {
+	luckyhalo: {
 		onStart(pokemon) {
 			pokemon.abilityState.luckyhaloEndured = false;
 
@@ -9652,12 +9652,12 @@ export const Abilities = {
 				}
 			}
 			if (blocked && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-				this.add('-fail', target, 'unboost', '[from] ability: Turbo Halo', `[of] ${target}`);
+				this.add('-fail', target, 'unboost', '[from] ability: Lucky Halo', `[of] ${target}`);
 			}
 		},
 		onTryHit(pokemon, target, move) {
 			if (move.ohko) {
-				this.add('-immune', pokemon, '[from] ability: Turbo Halo');
+				this.add('-immune', pokemon, '[from] ability: Lucky Halo');
 				return null;
 			}
 		},
@@ -9666,13 +9666,13 @@ export const Abilities = {
 			if (target.abilityState.luckyhaloEndured) return;
 			if (damage >= target.hp && effect && effect.effectType === 'Move') {
 				target.abilityState.luckyhaloEndured = true;
-				this.add('-activate', target, 'ability: Turbo Halo');
-				this.add('-message', `${target.name} sobreviveu ao golpe graças ao seu halo iluminado!`);
+				this.add('-activate', target, 'ability: Lucky Halo');
+				this.add('-message', `${target.name} sobreviveu ao golpe graças a sua habilidade!`);
 				return target.hp - 1;
 			}
 		},
 		flags: { breakable: 1 },
-		name: "Turbo Halo",
+		name: "Lucky Halo",
 		rating: 5,
 	},
 	lumberjack: {
