@@ -21507,6 +21507,68 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		},
 	},
+	crawdauntless: {
+		learnset: {
+			aquajet: ["9M"],
+			assurance: ["9M"],
+			beatdown: ["9M"],
+			bite: ["9M"],
+			brickbreak: ["9M"],
+			brine: ["9M"],
+			bubblebeam: ["9M"],
+			chipaway: ["9M"],
+			clamp: ["9M"],
+			crabhammer: ["9M"],
+			crunch: ["9M"],
+			dragondance: ["9M"],
+			fling: ["9M"],
+			furycutter: ["9M"],
+			guillotine: ["9M"],
+			hammerarm: ["9M"],
+			harden: ["9M"],
+			icebeam: ["9M"],
+			icehammer: ["9M"],
+			irondefense: ["9M"],
+			knockoff: ["9M"],
+			lashout: ["9M"],
+			liquidation: ["9M"],
+			metalclaw: ["9M"],
+			mudsport: ["9M"],
+			nastyplot: ["9M"],
+			nightdaze: ["9M"],
+			nightslash: ["9M"],
+			powertrip: ["9M"],
+			protect: ["9M"],
+			pursuit: ["9M"],
+			raindance: ["9M"],
+			rainflush: ["9M"],
+			rapidriver: ["9M"],
+			razorshell: ["9M"],
+			rest: ["9M"],
+			return: ["9M"],
+			scald: ["9M"],
+			scaryface: ["9M"],
+			secretpower: ["9M"],
+			seismictoss: ["9M"],
+			sharpen: ["9M"],
+			sleeptalk: ["9M"],
+			soak: ["9M"],
+			substitute: ["9M"],
+			superpower: ["9M"],
+			surf: ["9M"],
+			swagger: ["9M"],
+			swift: ["9M"],
+			swordsdance: ["9M"],
+			thief: ["9M"],
+			trick: ["9M"],
+			vexingvoid: ["9M"],
+			watergun: ["9M"],
+			waterpulse: ["9M"],
+			whirlpool: ["9M"],
+			wideguard: ["9M"],
+			xscissor: ["9M"],
+		},
+	},
 	baltoy: {
 		learnset: {
 			amnesia: ["9M"],
@@ -120109,12 +120171,12 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			taunt: ["9M"],
 			haze: ["9M"],
 			auroraveil: ["7M"],
-	
+
 			surf: ["9M"],
 			hydropump: ["9M"],
 			scald: ["9M"],
 			watershuriken: ["9M", "7L1", "6L1"],
-	
+
 			icebeam: ["9M"],
 			blizzard: ["9M"],
 			freezedry: ["9M"],
@@ -120137,37 +120199,37 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			stealthrock: ["9M"],
 			photongeyser: ["9M", "7L50", "7S1"],
 			dracometeor: ["9M", "7T", "6T", "6S7", "5T", "4T"],
-	
-			laserbeam:["9M"],
-	
+
+			laserbeam: ["9M"],
+
 			// FIRE
 			fireblast: ["9M"],
 			flamethrower: ["9M"],
-	
+
 			// WATER
 			surf: ["9M"],
 			hydropump: ["9M"],
-	
+
 			// FLYING
 			hurricane: ["9M"],
 			airslash: ["9M"],
-	
+
 			// GROUND
 			earthpower: ["9M"],
-	
+
 			// ELECTRIC
 			thunderbolt: ["9M"],
 			thunder: ["9M"],
 			voltswitch: ["9M"],
-	
+
 			// ICE
 			icebeam: ["9M"],
 			blizzard: ["9M"],
-	
+
 			// GRASS
 			energyball: ["9M"],
 			gigadrain: ["9M"],
-	
+
 			// ROCK
 			powergem: ["9M"],
 			meteorbeam: ["9T"],
@@ -120223,6 +120285,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			vacuumwave: ["8L1", "8S2", "7L1"],
 			xscissor: ["9M", "7M", "7L47", "7S0", "7S1"],
 		},
-		
+
 	},
 };
