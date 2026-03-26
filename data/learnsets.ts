@@ -120206,7 +120206,7 @@ igris: {
 		},
 
 },
-crawdauntles: {
+crawdauntless: {
 	learnset: {
 		agility: ["9M"],
 		aquajet: ["9M"],
