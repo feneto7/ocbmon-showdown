@@ -3243,6 +3243,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			}
 			if (pokemon.species.id === 'mespritredux') {
 				pokemon.addVolatile('dualstab');;
+				pokemon.addVolatile('koraidon');;
 			}
 		},
 		
