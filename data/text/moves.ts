@@ -8071,4 +8071,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "O usuário ataca o alvo. Se o alvo for nocauteado por este ataque, o usuário recupera o item que consumiu anteriormente durante a batalha. Faz contato e é fortalecido por Big Pecks.",
 		shortDesc: "Recupera o item usado se nocautear o alvo.",
 	},
+	laserbeam: {
+		name: "Laser Beam",
+		shortDesc: "15% chance to lower foe's accuracy.",
+	},
 };
