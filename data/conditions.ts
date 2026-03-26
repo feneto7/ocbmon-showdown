@@ -1034,6 +1034,19 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		},
 	},
 
+	// Volatile aplicado por Rapid River — deixa o alvo encharcado e mais lento
+	drench: {
+		name: 'drench',
+		duration: 3,
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'drench');
+			this.boost({ spe: -1 }, pokemon, pokemon, this.effect);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'drench', '[silent]');
+		},
+	},
+
 	safepassage: {
 		name: 'Safe Passage',
 		noCopy: true,

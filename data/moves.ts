@@ -24049,4 +24049,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Psychic",
 	},
+	// Golpe duplo aquático com 10% de chance de encharcar o alvo (reduz Velocidade por 3 turnos)
+	rapidriver: {
+		num: 9827,
+		accuracy: 100,
+		basePower: 45,
+		category: "Physical",
+		name: "Rapid River",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, pulse: 1, bigpecksboost: 1},
+		multihit: 2,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'drench',
+		},
+		target: "normal",
+		type: "Water",
+	},
 };
