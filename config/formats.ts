@@ -34,7 +34,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: [
 			'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
 			'Sleep Clause Mod', 'OHKO Clause',
-			'+Custom', '+Nonexistent', 'Dynamax Clause',
+			'+Custom', '+Nonexistent', 'Dynamax Clause', 'Elite Redux Innates', 'Double Type Boost',
 		],
 	},
 	
