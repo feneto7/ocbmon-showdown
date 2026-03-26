@@ -24067,4 +24067,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Water",
 	},
+	laserbeam: {
+		num: 9828,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Laser Beam",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 15,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Tough",
+	},
 };
