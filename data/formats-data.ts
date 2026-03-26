@@ -6435,10 +6435,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 		doublesTier: "DOU",
 	},
-	crawdauntles: {
-		tier: "OU",
-		doublesTier: "DOU",
-	},
 	scrafster: {
 		tier: "OU",
 		doublesTier: "DOU",

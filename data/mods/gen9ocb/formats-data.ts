@@ -8260,11 +8260,6 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesDataTa
 		tier: "OU",
 		isNonstandard: 'Custom',
 	},
-	crawdauntles: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: 'Custom',
-	},
 	scrafster: {
 		inherit: true,
 		tier: "OU",
