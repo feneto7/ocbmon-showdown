@@ -342,6 +342,11 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 			const avatarServer = new StaticServer('./config/avatars');
 			const staticServer = new StaticServer('./server/static');
 			const staticRequestHandler = (req: http.IncomingMessage, res: http.ServerResponse) => {
+				if (req.url === '/keep-alive') {
+					res.writeHead(200, { 'Content-Type': 'text/plain' });
+					res.end('Estou acordado!');
+					return;
+				}
 				// console.log(`static rq: ${req.socket.remoteAddress}:${req.socket.remotePort} -> ${req.socket.localAddress}:${req.socket.localPort} - ${req.method} ${req.url} ${req.httpVersion} - ${req.rawHeaders.join('|')}`);
 				req.resume();
 				req.addListener('end', () => {
