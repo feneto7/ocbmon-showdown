@@ -6677,12 +6677,12 @@ export const Abilities = {
 			if (isParentalBondBanned(move, source)) { return; }
 			if ((move.flags as Record<string, number | undefined>)["punch"]) {
 				move.multihit = 2;
-				(move as { multihitType?: string }).multihitType = "boxer";
+				(move as { multihitType?: string; }).multihitType = "boxer";
 			}
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "boxer") return;
+			if ((move as { multihitType?: string; }).multihitType !== "boxer") return;
 			if (!secondaries) return;
 			if (move.hit <= 1) return;
 			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
@@ -6714,7 +6714,7 @@ export const Abilities = {
 	juggernaut: {
 		onModifyAtkPriority: 11,
 		onModifyMove(move) {
-			if (move.flags["contact"]) (move as { secondaryOffensiveStats?: [string, number][] }).secondaryOffensiveStats = [["def", 0.2]];
+			if (move.flags["contact"]) (move as { secondaryOffensiveStats?: [string, number][]; }).secondaryOffensiveStats = [["def", 0.2]];
 		},
 		onUpdate(pokemon) {
 			if (pokemon.status === "par") {
@@ -6758,7 +6758,7 @@ export const Abilities = {
 		},
 		onModifyAtkPriority: 11,
 		onModifyMove(move) {
-			if (move.flags['contact']) (move as { secondaryOffensiveStats?: [string, number][] }).secondaryOffensiveStats = [['def', 0.2]];
+			if (move.flags['contact']) (move as { secondaryOffensiveStats?: [string, number][]; }).secondaryOffensiveStats = [['def', 0.2]];
 		},
 		onUpdate(pokemon) {
 			if (pokemon.status === 'par') {
@@ -7375,12 +7375,12 @@ export const Abilities = {
 			}
 			if (threeHeaded.includes(source.species.id)) {
 				move.multihit = 3;
-				(move as { multihitType?: string }).multihitType = "headed";
+				(move as { multihitType?: string; }).multihitType = "headed";
 			}
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			console.log(move.hit, move.secondaries);
-			const mht = (move as { multihitType?: string }).multihitType;
+			const mht = (move as { multihitType?: string; }).multihitType;
 			if (mht !== "headed" && mht !== "parentalbond") return;
 			if (!secondaries) return;
 			if (move.hit <= 1) return;
@@ -8944,12 +8944,12 @@ export const Abilities = {
 			if (isParentalBondBanned(move, source)) { return; }
 			if (move.flags["bite"]) {
 				move.multihit = 2;
-				(move as { multihitType?: string }).multihitType = "maw";
+				(move as { multihitType?: string; }).multihitType = "maw";
 			}
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "maw") return;
+			if ((move as { multihitType?: string; }).multihitType !== "maw") return;
 			if (!secondaries) return;
 			if (move.hit <= 1) return;
 			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
@@ -9248,12 +9248,12 @@ export const Abilities = {
 			if (isParentalBondBanned(move, source)) { return; }
 			if (move.flags["pulse"] || move.flags['slicing']) {
 				move.multihit = 2;
-				(move as { multihitType?: string }).multihitType = "dual";
+				(move as { multihitType?: string; }).multihitType = "dual";
 			}
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "dual") return;
+			if ((move as { multihitType?: string; }).multihitType !== "dual") return;
 			if (!secondaries) return;
 			if (move.hit <= 1) return;
 			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
@@ -9703,11 +9703,11 @@ export const Abilities = {
 		onPrepareHit(source, target, move) {
 			if (isParentalBondBanned(move, source)) { return; }
 			move.multihit = 2;
-			(move as { multihitType?: string }).multihitType = "ragingmoth";
+			(move as { multihitType?: string; }).multihitType = "ragingmoth";
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "ragingmoth") return;
+			if ((move as { multihitType?: string; }).multihitType !== "ragingmoth") return;
 			if (!secondaries) return;
 			if (move.hit <= 1) return;
 			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
@@ -10438,12 +10438,12 @@ export const Abilities = {
 			if (isParentalBondBanned(move, source)) { return; }
 			if (move.flags["bite"]) {
 				move.multihit = 2;
-				(move as { multihitType?: string }).multihitType = "maw";
+				(move as { multihitType?: string; }).multihitType = "maw";
 			}
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "maw") return;
+			if ((move as { multihitType?: string; }).multihitType !== "maw") return;
 			if (!secondaries) return;
 			if (move.hit <= 1) return;
 			secondaries = secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
@@ -10743,11 +10743,11 @@ export const Abilities = {
 		onStart(source) {
 			for (const action of this.queue) {
 				if (
-					(action as { choice?: string }).choice === "runPrimal" &&
+					(action as { choice?: string; }).choice === "runPrimal" &&
 					action.pokemon === source &&
 					source.species.id === "kyogre"
 				) { return; }
-				if ((action as { choice?: string }).choice !== "runSwitch" && (action as { choice?: string }).choice !== "runPrimal") { break; }
+				if ((action as { choice?: string; }).choice !== "runSwitch" && (action as { choice?: string; }).choice !== "runPrimal") { break; }
 			}
 			this.field.setWeather("raindance");
 		},
@@ -11790,11 +11790,11 @@ export const Abilities = {
 				}
 			}
 			move.multihit = allyCount;
-			(move as { multihitType?: string }).multihitType = "minion";
+			(move as { multihitType?: string; }).multihitType = "minion";
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			console.log(move.hit, move.secondaries);
-			if ((move as { multihitType?: string }).multihitType !== "minion") return;
+			if ((move as { multihitType?: string; }).multihitType !== "minion") return;
 			if (!secondaries) return;
 			if (move.hit <= 1) return;
 			secondaries = secondaries.filter((effect) => effect.ability || effect.kingsrock);
@@ -12442,8 +12442,23 @@ export const Abilities = {
 		num: 978,
 		gen: 9,
 	},
+	unrelenting: {
+		name: "Unrelenting",
+		shortDesc: "All attacking moves hit 2-5 times.",
+		desc: "All damaging moves used by this Pokémon hit 2 to 5 times.",
+		onModifyMove(move) {
+
+			if (move.category === 'Status') return;
 
 
+			if (move.multihit) return;
 
+
+			move.multihit = [2, 5];
+		},
+		rating: 4,
+		num: 979,
+		gen: 9,
+	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
