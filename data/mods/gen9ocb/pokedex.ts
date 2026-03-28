@@ -27311,6 +27311,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	pikachupartner: {
 		name: "Pikachu-Partner",
 		num: 25,
+		baseSpecies: "Pikachu",
+		forme: "Partner",
 		types: ["Electric"],
 		abilities: {0: "Ground Shock", 1: "Generator", H: "Electric Burst"},
 		baseStats: {
