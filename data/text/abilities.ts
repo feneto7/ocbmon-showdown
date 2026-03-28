@@ -3696,4 +3696,9 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Ill Will",
 		shortDesc: "Deletes the PP of the move that faints this Pokémon.",
 	},
+	funeralpyre: {
+		name: "Funeral Pyre",
+		desc: "Enquanto este Pokémon estiver em campo, qualquer Pokémon que não seja do tipo Fantasma (Ghost) ou Sombrio (Dark) perde 1/4 (25%) do seu HP máximo no final de cada turno.",
+		shortDesc: "Pokémon não-Ghost e não-Dark perdem 25% de HP por turno.",
+	},
 };

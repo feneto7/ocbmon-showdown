@@ -12460,5 +12460,24 @@ export const Abilities = {
 		num: 979,
 		gen: 9,
 	},
+	funeralpyre: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of this.getAllActive()) {
+				if (!target.hp) continue;
+				if (target === pokemon) continue;
+				if (!target.hasType('Ghost') && !target.hasType('Dark')) {
+					this.add('-message', `${target.name} está sendo consumido!`);
+					this.damage(Math.max(1, Math.floor(target.maxhp / 4)), target, pokemon);
+				}
+			}
+		},
+		name: "Funeral Pyre",
+		rating: 4.5,
+		num: 980,
+		gen: 9,
+	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
