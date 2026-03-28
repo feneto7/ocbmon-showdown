@@ -24070,7 +24070,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	laserbeam: {
 		num: 9828,
 		accuracy: 90,
-		basePower: 100,
+		basePower: 150,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Laser Beam",
@@ -24086,5 +24086,257 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "???",
 		contestType: "Tough",
+	},
+	waterlog: {
+		num: 9828,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Waterlog",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'quash', 
+		onAfterHit(target, source, move) {
+			let drenchChance = 20;
+			if (['raindance', 'primordialsea'].includes(source.effectiveWeather())) {
+				drenchChance = 50;
+			}
+			if (this.randomChance(drenchChance, 100)) {
+				target.trySetStatus('drench', source, move);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	pebbleshower: {
+		num: 9829,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Pebble Shower",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		target: "allAdjacentFoes",
+		type: "Rock",
+	},
+	gemmissile: {
+		num: 9830,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Gem Missile",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
+	atomicfire: {
+		num: 9831,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Atomic Fire",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		recoil: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	mysticdance: {
+		num: 9832,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Mystic Dance",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1, dance: 1},
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Dragon",
+	},
+	sunstriken: {
+		num: 9833,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Sunstrike (N)",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		ignoreDefensive: true,
+		ignoreEvasion: true,
+		onModifyMove(move, source, target) {
+			let def = target.getStat('def', false, true);
+			let spd = target.getStat('spd', false, true);
+			
+			if (def < spd) {
+				move.defensiveCategory = 'Physical';
+			} else {
+				move.defensiveCategory = 'Special';
+			}
+		},
+		onModifyDamage(damage, source, target, move) {
+			let mult = 1;
+			let item = target.getItem().id;
+			
+			if (item === 'eviolite') mult = 1.5;
+			if (item === 'assaultvest' && move.defensiveCategory === 'Special') mult = 1.5;
+			mult *= 1.2; 
+			
+			return this.chainModify(mult);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	superhotflame: {
+		num: 9834,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Superhot Flame",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1}, 
+		onBasePower(basePower, pokemon, target) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				this.debug('Superhot Flame rain boost');
+				return this.chainModify(3);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	karma: {
+		num: 9835,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Karma",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spd: 1,
+			spe: -1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Poison",
+	},
+	banishedpower: {
+		num: 9836,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Banished Power",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move: any, pokemon: any) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+				move.category = 'Physical';
+			} else {
+				move.category = 'Special';
+			}
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit(pokemon: any) {
+					let bestStat = 'atk';
+					let highest = 0;
+					const stats = ['atk', 'def', 'spa', 'spd'];
+					
+					for (const s of stats) {
+						let statValue = pokemon.storedStats[s];
+						if (statValue > highest) {
+							highest = statValue;
+							bestStat = s;
+						}
+					}
+					
+					this.boost({[bestStat]: 1}, pokemon);
+				}
+			}
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	bonk: {
+		num: 9837,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Bonk",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'yawn', 
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	wildswing: {
+		num: 9838,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Wild Swing",
+		pp: 20,
+		priority: -6,
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
+		forceSwitch: true, 
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+	},
+	blazingbone: {
+		num: 845,
+		accuracy: 100,
+		basePower: 15,
+		category: "Physical",
+		name: "Blazing Bone",
+		pp: 10,
+		priority: 1,
+		flags: {protect: 1, mirror: 1, bone: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	shadowhammer: {
+		num: 939,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Shadow Hammer",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
 	},
 };
