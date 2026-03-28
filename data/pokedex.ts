@@ -23854,6 +23854,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Pikachu-Partner Cap",
 		num: 25,
 		baseSpecies: "Pikachu",
+		forme: "Partner Cap",
 		types: ["Electric"],
 		abilities: {0: "Electrocytes", 1: "Static", H: "Electric Burst"},
 		baseStats: {
@@ -27329,6 +27330,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Pikachu-Partner",
 		num: 25,
 		baseSpecies: "Pikachu",
+		forme: "Partner",
 		types: ["Electric"],
 		abilities: {0: "Ground Shock", 1: "Generator", H: "Electric Burst"},
 		baseStats: {
@@ -28662,6 +28664,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Pikachu-Mega",
 		num: 25,
 		baseSpecies: "Pikachu",
+		forme: "Mega",
 		types: ["Electric"],
 		abilities: {0: "Ground Shock", 1: "Overcharge", H: "Illuminate"},
 		baseStats: {
