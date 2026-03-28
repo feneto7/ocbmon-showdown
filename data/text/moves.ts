@@ -8075,4 +8075,69 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Laser Beam",
 		shortDesc: "15% chance to lower foe's accuracy.",
 	},
+	waterlog: {
+		name: "Waterlog",
+		desc: "O alvo afetado moverá por último neste turno. Tem 20% de chance de deixar o alvo gravemente encharcado (Drench). Na chuva, a chance sobe para 50%.",
+		shortDesc: "Força o alvo a mover-se por último; chance de drench (20% -> 50% na chuva).",
+	},
+	pebbleshower: {
+		name: "Pebble Shower",
+		desc: "O usuário faz chover pedras sobre os oponentes. Este ataque atinge todos os inimigos adjacentes e tem 20% de chance de fazer cada alvo recuar (flinch).",
+		shortDesc: "Atinge oponentes adjacentes; 20% chance de flinch.",
+	},
+	gemmissile: {
+		name: "Gem Missile",
+		desc: "Um ataque rápido onde o usuário dispara uma joia afiada contra o alvo. Este movimento tem prioridade +1. É fortalecido por Technician e ganha bônus de chance de acerto crítico através da habilidade Perfectionist.",
+		shortDesc: "Ataca primeiro (prioridade +1).",
+	},
+	atomicfire: {
+		name: "Atomic Fire",
+		desc: "O usuário atinge o alvo com uma bola de energia radioativa e extremamente perigosa. O usuário sofre um dano de recuo equivalente a 50% (metade) do dano causado ao alvo.",
+		shortDesc: "Sofre recuo igual a 50% do dano causado.",
+	},
+	mysticdance: {
+		name: "Mystic Dance",
+		desc: "O usuário realiza uma dança mística e poderosa. Aumenta o Special Attack e a Speed do usuário em 1 estágio. Por ser um movimento de dança, pode ser copiado pela habilidade Dancer.",
+		shortDesc: "Aumenta o Sp. Atk e a Speed do usuário em 1 estágio.",
+	},
+	sunstriken: {
+		name: "Sunstrike (N)",
+		desc: "Um golpe de prioridade (+1) que neutraliza as defesas do oponente. Ele calcula o dano usando a menor estatística defensiva do alvo (Defense ou Sp. Def). Além disso, o ataque ignora mudanças de status (Boosts), itens defensivos e investimentos de EVs do alvo. É fortalecido pela habilidade Technician.",
+		shortDesc: "+1 Prioridade. Nega boosts, itens, EVs e bate na menor defesa.",
+	},
+	superhotflame: {
+		name: "Superhot Flame",
+		desc: "O usuário ataca com chamas tão intensas que evaporam a água ao redor. Se o clima estiver chuvoso (Rain), em vez do poder deste ataque ser reduzido pela metade, ele é multiplicado por 1.5x. Descongela o usuário se ele estiver congelado.",
+		shortDesc: "Poder é multiplicado por 1.5x na Chuva em vez de ser reduzido.",
+	},
+	karma: {
+		name: "Karma",
+		desc: "O usuário expurga suas impurezas. Reduz a própria Speed em 1 estágio, mas aumenta o Special Attack e a Special Defense em 1 estágio cada.",
+		shortDesc: "Aumenta o Sp. Atk e Sp. Def em 1, mas reduz a Speed em 1.",
+	},
+	banishedpower: {
+		name: "Banished Power",
+		desc: "Um poder banido que se adapta ao usuário. Causa dano Físico ou Especial, dependendo de qual dos atributos de ataque do usuário for maior. Além disso, tem 100% de chance de aumentar o atributo mais alto do usuário (Attack, Defense, Sp. Atk ou Sp. Def) em 1 estágio.",
+		shortDesc: "Vira Physical ou Special (o que for maior). Aumenta o melhor status de Atk/Def do usuário.",
+	},
+	bonk: {
+		name: "Bonk",
+		desc: "O usuário atinge o alvo com uma pancada pesada na cabeça. Tem 50% de chance de causar sonolência (Drowsiness/Yawn), fazendo com que o alvo adormeça no final do próximo turno. É classificado como um golpe de Martelo (Hammer-based), recebendo bônus de dano de habilidades como Big Pecks.",
+		shortDesc: "50% chance de causar sonolência. Movimento de martelo.",
+	},
+	wildswing: {
+		name: "Wild Swing",
+		desc: "O usuário atinge o alvo com um golpe violento, forçando-o a ser trocado por um aliado aleatório. Por ter prioridade -6, o usuário se moverá por último na maioria das vezes. Recebe bônus de dano de habilidades como Technician (por ter 60 de BP) e Big Pecks (por ser classificado como Hammer).",
+		shortDesc: "Força a troca do alvo. Prioridade -6. Movimento de martelo.",
+	},
+	blazingbone: {
+		name: "Blazing Bone",
+		desc: "O usuário ataca o alvo com um osso em chamas de 2 a 5 vezes consecutivas. Este movimento ataca primeiro (prioridade +1). É classificado como um golpe de osso (Bone-based), recebendo bônus da habilidade Bone Zone. Também é fortalecido por Technician e Perfectionist.",
+		shortDesc: "Atinge 2-5 vezes. Prioridade +1. Movimento de osso.",
+	},
+	shadowhammer: {
+		name: "Shadow Hammer",
+		desc: "O usuário atira seu corpo fantasmagórico com toda a força contra o inimigo. O usuário sofre dano de recuo equivalente a 33% (um terço) do dano causado ao alvo. Faz contato físico e é classificado como um golpe de martelo (Hammer-based), recebendo bônus de dano de habilidades como Big Pecks.",
+		shortDesc: "Sofre recuo igual a 33% do dano causado. Movimento de martelo.",
+	},
 };

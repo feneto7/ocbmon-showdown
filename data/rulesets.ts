@@ -3222,30 +3222,30 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			if (!speciesMods.length) throw new Error('This format has no rules that modify base stats.');
 		},
 	},
-	doubletypeboost: {
-		effectType: 'Rule',
-		name: 'Double Type Boost',
-		desc: 'Pokémon com dois tipos idênticos recebem STAB de 2.0x.',
-		onModifySTAB(_stab: any, source: any, target: any, move: any) {
-			if (source.types && source.types.length === 2 && source.types[0] === source.types[1]) {
-				if (source.hasAbility('adaptability')) return 2.5;
-				return 2;
-			}
-		},
-	},
-	elitereduxinnates: {
-		effectType: 'Rule',
-		name: 'Elite Redux Innates',
-		desc: 'Aplica inatas específicas baseadas na espécie do Pokémon ao entrar em campo.',
-		onSwitchIn(pokemon: any) {
-			if (pokemon.species.id === 'victiniprimal') {
-				pokemon.addVolatile('dualstab');;
-			}
-			if (pokemon.species.id === 'mespritredux') {
-				pokemon.addVolatile('dualstab');;
-				pokemon.addVolatile('koraidon');;
-			}
-		},
+	// doubletypeboost: {
+	// 	effectType: 'Rule',
+	// 	name: 'Double Type Boost',
+	// 	desc: 'Pokémon com dois tipos idênticos recebem STAB de 2.0x.',
+	// 	onModifySTAB(_stab: any, source: any, target: any, move: any) {
+	// 		if (source.types && source.types.length === 2 && source.types[0] === source.types[1]) {
+	// 			if (source.hasAbility('adaptability')) return 2.5;
+	// 			return 2;
+	// 		}
+	// 	},
+	// },
+	// elitereduxinnates: {
+	// 	effectType: 'Rule',
+	// 	name: 'Elite Redux Innates',
+	// 	desc: 'Aplica inatas específicas baseadas na espécie do Pokémon ao entrar em campo.',
+	// 	onSwitchIn(pokemon: any) {
+	// 		if (pokemon.species.id === 'victiniprimal') {
+	// 			pokemon.addVolatile('dualstab');;
+	// 		}
+	// 		if (pokemon.species.id === 'mespritredux') {
+	// 			pokemon.addVolatile('dualstab');;
+	// 			pokemon.addVolatile('koraidon');;
+	// 		}
+	// 	},
 		
-	},
+	// },
 };
