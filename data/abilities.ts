@@ -12108,12 +12108,10 @@ export const Abilities = {
 		shortDesc: "Confuses foes & drops Atk/SpA. KOs trigger Mangekyō (Double Atk/SpA, Max Crit).",
 
 		onStart(pokemon) {
-			// Initialize state
 			if (pokemon.abilityState.mangekyo === undefined) {
 				pokemon.abilityState.mangekyo = false;
 			}
 
-			// Apply confusion immediately upon entering
 			for (const target of pokemon.side.foe.active) {
 				if (!target || target.fainted) continue;
 				if (!target.volatiles['confusion']) {
@@ -12123,7 +12121,6 @@ export const Abilities = {
 			}
 		},
 
-		// Trigger when a foe switches in
 		onFoeSwitchIn(target) {
 			if (!target.volatiles['confusion']) {
 				target.addVolatile('confusion');
@@ -12131,22 +12128,26 @@ export const Abilities = {
 			}
 		},
 
+		// Garante confusão também em substituições forçadas (por exemplo, após KO)
+		onFoeAfterSwitchInSelf(target) {
+			if (!target.volatiles['confusion']) {
+				target.addVolatile('confusion');
+				this.add('-message', `${target.name} enters the Genjutsu Domain!`);
+			}
+		},
+
 		onResidual(pokemon) {
-			// If Mangekyo is active, we stop the debuffs/confusion enforcement (optional based on interpretation, 
-			// but usually "changing forms" stops the old passive. Removing this check makes it do BOTH).
+			for (const target of pokemon.side.foe.active) {
+				if (!target || target.fainted) continue;
 
+				// Mantém qualquer inimigo ativo sempre confuso
+				if (!target.volatiles['confusion']) {
+					target.addVolatile('confusion');
+					this.add('-message', `${target.name} is lost in the illusion again!`);
+				}
 
-			if (!pokemon.abilityState.mangekyo) {
-				for (const target of pokemon.side.foe.active) {
-					if (!target || target.fainted) continue;
-
-					// 1. Re-apply confusion if missing
-					if (!target.volatiles['confusion']) {
-						target.addVolatile('confusion');
-						this.add('-message', `${target.name} is lost in the illusion again!`);
-					}
-
-					// 2. Lower Atk and SpA by 1 stage
+				// Debuff de Atk/SpA só antes do Mangekyō
+				if (!pokemon.abilityState.mangekyo) {
 					this.boost({ atk: -1, spa: -1 }, target, pokemon);
 				}
 			}
