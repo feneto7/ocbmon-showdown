@@ -12128,8 +12128,12 @@ export const Abilities = {
 			}
 		},
 
-		// Garante confusão também em substituições forçadas (por exemplo, após KO)
-		onFoeAfterSwitchInSelf(target) {
+		// Cobertura para qualquer entrada em campo, inclusive após desmaio
+		onAnySwitchIn(target) {
+			const owner = this.effectState.target;
+			if (!owner || owner.fainted) return;
+			if (target.side === owner.side) return;
+			if (target.fainted) return;
 			if (!target.volatiles['confusion']) {
 				target.addVolatile('confusion');
 				this.add('-message', `${target.name} enters the Genjutsu Domain!`);
