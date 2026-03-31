@@ -8110,7 +8110,9 @@ export const Abilities = {
 	pyroshells: {
 		onAfterMove(source, target, move) {
 			if (!move.flags["pulse"]) return;
-			if (!(move as any).succeeded) return;
+			if (source.moveThisTurnResult === false) return;
+			const targetFoe = source.side.foe.active.find(p => p && p.hp > 0);
+			if (!targetFoe) return;
 			const moveMutations = {
 				basePower: 50,
 				selfdestruct: undefined,
@@ -8118,7 +8120,7 @@ export const Abilities = {
 			(this.actions as any).runAdditionalMove(
 				Dex.moves.get("outburst"),
 				source,
-				target,
+				targetFoe,
 				moveMutations
 			);
 		},
@@ -8130,15 +8132,17 @@ export const Abilities = {
 	},
 	volcanorage: {
 		onAfterMove(source, target, move) {
-			if (!(move.type === "Fire")) { return; }
-			if (!(move as any).succeeded) return;
+			if (move.type !== "Fire") return;
+			if (source.moveThisTurnResult === false) return;
+			const targetFoe = source.side.foe.active.find(p => p && p.hp > 0);
+			if (!targetFoe) return;
 			const moveMutations = {
 				basePower: 50,
 			};
 			(this.actions as any).runAdditionalMove(
 				Dex.moves.get("eruption"),
 				source,
-				target,
+				targetFoe,
 				moveMutations
 			);
 		},
