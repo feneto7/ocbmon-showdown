@@ -12402,7 +12402,7 @@ export const Abilities = {
 		onStart(source) {
 			this.add('-activate', source, 'ability: Inversion');
 			const effect = this.field.addPseudoWeather('inverseroom', source, source.getAbility());
-			if (effect) {
+			if (effect && this.field.pseudoWeather['inverseroom']) {
 				// força duração de 3 turnos ao invés do padrão (5)
 				this.field.pseudoWeather['inverseroom'].duration = 3;
 			}
