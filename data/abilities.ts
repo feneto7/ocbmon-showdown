@@ -12489,4 +12489,100 @@ export const Abilities = {
 		gen: 9,
 	},
 
+	metronomepower: {
+		onAfterMove(source, target, move) {
+			const targetSlot = target.getSlot();
+			if (!move || !target) return;
+			if (source.ability !== 'metronomepower') return;
+			if (move.category === 'Status' && (move.id === 'metronome' || move.id === 'metronomeifitwasfunny')) return;
+			if (source.abilityState.hasMemed?.[targetSlot]) return;
+
+			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
+			source.abilityState.hasMemed[targetSlot] = true;
+
+			this.actions.useMove('metronome', source, {target});
+		},
+		onResidual(pokemon) {
+			pokemon.abilityState.hasMemed = undefined;
+		},
+		name: "Metronome Power",
+		rating: 4.5,
+		isNonstandard: "Future",
+	},
+	hyperspeen: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const SPEENMoves = [
+				'blazingtorque',
+				'combattorque',
+				'darkestlariat',
+				'icespinner',
+				'magicaltorque',
+				'mortalspin',
+				'noxioustorque',
+				'rapidspin',
+				'spinout',
+				'wickedtorque',
+				'firespin',
+				'gyroball',
+				'iceball',
+				'rollout',
+				'twister',
+			];
+			if (SPEENMoves.includes(move.id)) {
+				this.debug('Hyperspeen boost');
+				return this.chainModify(2);
+			}
+		},
+		name: "Hyperspeen",
+		isNonstandard: "Future",
+	},
+	mongoosesmalice: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (['Poison', 'Ghost'].includes(move.type)) {
+				this.debug('MM boost');
+				return this.chainModify(1.5);
+			}
+			if (['Fighting', 'Normal'].includes(move.type)) {
+				this.debug('MM "boost"');
+				return this.chainModify(0.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (['Poison', 'Ghost'].includes(move.type)) {
+				this.debug('MM boost');
+				return this.chainModify(1.5);
+			}
+			if (['Fighting', 'Normal'].includes(move.type)) {
+				this.debug('MM "boost"');
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Mongoose's Malice",
+		rating: 5,
+		isNonstandard: "Future",
+	},
+	degenerate: {
+		name: "Degenerate",
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
+			if (move.type === 'Normal' && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Dark';
+			}
+		},
+		onBasePowerPriority: 8,
+		onBasePower(basePower, pokemon, target, move) {
+			const validTypes = ['Dark', 'Normal'];
+			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
+			if (validTypes.includes(move.type) && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		rating: 4,
+		isNonstandard: "Future",
+	},
+
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
