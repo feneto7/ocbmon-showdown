@@ -30731,7 +30731,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Dark", "Steel"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 142, def: 73, spa: 69, spd: 109, spe: 64},
-		abilities: {0: "Illusion", 1: "Infiltrator", H: "Imposter", S: "Degenerate"},
+		abilities: {0: "Illusion", 1: "Infiltrator", H: "Degenerate"},
 		heightm: 5.2,
 		weightkg: 888,
 		color: "Black",
