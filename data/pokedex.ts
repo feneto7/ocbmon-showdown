@@ -30804,5 +30804,21 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	// 	eggGroups: ["Field"],
 	// 	gen: 0,
 	// },
+	weavileredux: {
+		num: 1229,
+		name: "Weavile-Redux",
+		types: ["Ground", "Dark"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 80, atk: 105, def: 70, spa: 60, spd: 70, spe: 125},
+		abilities: {0: "Sand Pit", 1: "Technician", H: "Hyper Aggressive"},
+		heightm: 1.1,
+		weightkg: 34,
+		color: "Brown",
+		prevo: "Sneasel-Redux",
+		evoType: "levelHold",
+		evoItem: "Razor Claw",
+		evoCondition: "at night",
+		eggGroups: ["Field"],
+	},
 
 };

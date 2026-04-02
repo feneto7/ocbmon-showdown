@@ -1064,5 +1064,27 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			this.add('-message', `[Safe Passage] A proteção terminou.`);
 		},
 	},
+	firescales: {
+		onSourceModifyDamage(this: any, damage: any, source: any, target: any, move: any) {
+			if (move.category === 'Special') {
+				return this.chainModify(0.5);
+			}
+		},
+	},
+	frostdragon: {
+		onAfterMove(this: any, source: any, target: any, move: any) {
+			if (!move || move.isExternal || move.callsMove) return;
+			
+			if (move.type === 'Dragon' || move.type === 'Ice') {
+				this.add('-ability', source, 'Frost Dragon');
+				
+				const blizzard = this.dex.getActiveMove('blizzard');
+				blizzard.basePower = 50;
+				blizzard.isExternal = true;
+				
+				this.actions.useMove(blizzard, source, { target: target });
+			}
+		},
+	},
 
 };

@@ -12584,5 +12584,81 @@ export const Abilities = {
 		rating: 4,
 		isNonstandard: "Future",
 	},
+	poseidonsdominion: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.foes()) {
+				if (!target || target.fainted || !target.isAdjacent(pokemon)) continue;
+
+				if (!activated) {
+					this.add('-ability', pokemon, "Poseidon's Dominion");
+					activated = true;
+				}
+
+				const move = this.dex.getActiveMove('whirlpool');
+				move.accuracy = true; 
+				move.isExternal = true; 
+				this.actions.useMove(move, pokemon, { target: target });
+			}
+		},
+		name: "Poseidon's Dominion",
+		rating: 3.5,
+		num: 981,
+	},
+	wildfire: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.foes()) {
+				if (!target || target.fainted || !target.isAdjacent(pokemon)) continue;
+				
+				if (!activated) {
+					this.add('-ability', pokemon, "Wildfire");
+					activated = true;
+				}
+				
+				const move = this.dex.getActiveMove('firespin');
+				move.isExternal = true; 
+				this.actions.useMove(move, pokemon, { target: target });
+			}
+		},
+		name: "Wildfire",
+		rating: 3.5,
+		num: 982,
+	},
+	petalshield: {
+		onStart(this: any, pokemon: any) {
+			this.boost({def: 3}, pokemon);
+		},
+		onDamaged(this: any, damage: any, target: any, source: any, effect: any) {
+			if (effect && effect.effectType === 'Move' && effect.id !== 'confused') {
+				this.boost({def: -1}, target);
+			}
+		},
+		name: "Petal Shield",
+		rating: 3.5,
+		num: 983,
+	},
+	sandpit: {
+		onStart(this: any, pokemon: any) {
+			let activated = false;
+			for (const target of pokemon.foes()) {
+				if (!target || target.fainted || !target.isAdjacent(pokemon)) continue;
+				
+				if (!activated) {
+					this.add('-ability', pokemon, "Sand Pit");
+					activated = true;
+				}
+				
+				const move = this.dex.getActiveMove('sandtomb'); 
+				move.isExternal = true; 
+				move.basePower = 20;
+				
+				this.actions.useMove(move, pokemon, { target: target });
+			}
+		},
+		name: "Sand Pit",
+		rating: 3.5,
+		num: 984,
+	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
