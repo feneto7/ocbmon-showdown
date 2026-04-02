@@ -7214,7 +7214,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Water"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 150, def: 90, spa: 180, spd: 160, spe: 90},
-		abilities: {0: "Primordial Sea"},
+		abilities: {0: "Raging Storm"},
 		heightm: 9.8,
 		weightkg: 430,
 		color: "Blue",
