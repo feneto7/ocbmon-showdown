@@ -1086,5 +1086,21 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			}
 		},
 	},
+	primordialseainnate: {
+		name: "Primordial Sea",
+		onStart(this: any, pokemon: any) {
+			this.field.setWeather('primordialsea');
+		},
+		onAnySwitchOut(this: any, pokemon: any) {
+			if (this.field.isWeather('primordialsea')) {
+				this.field.clearWeather();
+			}
+		},
+		onFaint(this: any, pokemon: any) {
+			if (this.field.isWeather('primordialsea')) {
+				this.field.clearWeather();
+			}
+		},
+	},
 
 };

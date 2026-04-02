@@ -3706,8 +3706,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Ao entrar em batalha, este Pokémon usa automaticamente o ataque Whirlpool em todos os oponentes adjacentes. Este ataque gerado pela habilidade não consome PP, ignora itens como Choice Band e possui precisão garantida.",
 		shortDesc: "Ataca os oponentes adjacentes com Whirlpool ao entrar em campo.",
 	},
-	wildfire: {
-		name: "Wildfire",
+	fogoselvagem: {
+		name: "Fogo Selvagem",
 		desc: "Ao entrar em batalha, este Pokémon usa automaticamente o ataque Fire Spin em todos os oponentes adjacentes. Este ataque gerado pela habilidade não consome PP, ignora itens como Choice Band e possui precisão garantida.",
 		shortDesc: "Ataca os oponentes adjacentes com Fire Spin ao entrar em campo.",
 	},
@@ -3721,4 +3721,9 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Ao entrar em batalha, este Pokémon usa automaticamente o ataque Sand Tomb (modificado para 20 de Base Power) em todos os oponentes adjacentes. Este ataque gerado pela habilidade não consome PP, ignora itens de escolha (Choice) e possui precisão garantida.",
 		shortDesc: "Ao entrar em campo, ataca os oponentes com um Sand Tomb de 20 BP.",
 	},
+	ragingstorm: {
+		name: "Raging Storm",
+		desc: "Se o clima for Rain Dance ou Primordial Sea, a estatística ofensiva mais alta deste Pokémon (Attack ou Special Attack) recebe um multiplicador de 1.5x durante o cálculo de dano. Se ambas as estatísticas forem iguais, o Attack receberá o bônus.",
+		shortDesc: "Aumenta o status ofensivo mais alto em 1.5x durante a chuva.",
+	}
 };

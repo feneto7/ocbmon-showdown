@@ -12605,14 +12605,14 @@ export const Abilities = {
 		rating: 3.5,
 		num: 981,
 	},
-	wildfire: {
+	fogoselvagem: {
 		onStart(pokemon) {
 			let activated = false;
 			for (const target of pokemon.foes()) {
 				if (!target || target.fainted || !target.isAdjacent(pokemon)) continue;
 				
 				if (!activated) {
-					this.add('-ability', pokemon, "Wildfire");
+					this.add('-ability', pokemon, "Fogo Selvagem");
 					activated = true;
 				}
 				
@@ -12621,17 +12621,19 @@ export const Abilities = {
 				this.actions.useMove(move, pokemon, { target: target });
 			}
 		},
-		name: "Wildfire",
+		name: "Fogo Selvagem",
 		rating: 3.5,
 		num: 982,
 	},
 	petalshield: {
 		onStart(this: any, pokemon: any) {
-			this.boost({def: 3}, pokemon);
+			this.boost({def: 3}, pokemon); 
 		},
 		onDamaged(this: any, damage: any, target: any, source: any, effect: any) {
 			if (effect && effect.effectType === 'Move' && effect.id !== 'confused') {
-				this.boost({def: -1}, target);
+				this.add('-ability', target, 'Petal Shield');
+				
+				this.boost({def: -1}, source, target);
 			}
 		},
 		name: "Petal Shield",
@@ -12659,6 +12661,35 @@ export const Abilities = {
 		name: "Sand Pit",
 		rating: 3.5,
 		num: 984,
+	},
+	ragingstorm: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(this: any, atk: any, pokemon: any) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				const baseAtk = pokemon.getStat('atk', false, true);
+				const baseSpA = pokemon.getStat('spa', false, true);
+
+				if (baseAtk >= baseSpA) {
+					this.debug('Raging Storm boost (Atk)');
+					return this.chainModify(1.5);
+				}
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(this: any, spa: any, pokemon: any) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				const baseAtk = pokemon.getStat('atk', false, true);
+				const baseSpA = pokemon.getStat('spa', false, true);
+				
+				if (baseSpA > baseAtk) {
+					this.debug('Raging Storm boost (SpA)');
+					return this.chainModify(1.5);
+				}
+			}
+		},
+		name: "Raging Storm",
+		rating: 4,
+		num: 985,
 	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;

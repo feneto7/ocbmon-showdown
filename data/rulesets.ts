@@ -3244,11 +3244,11 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			if (pokemon.species.id === 'gyaradeathmegax') {
 				pokemon.addVolatile('firescales');
 			}
-			if (pokemon.species.id === 'mespritredux') {
-				pokemon.addVolatile('koraidon');
-			}
 			if (pokemon.species.id === 'baxcaliburmega') {
 				pokemon.addVolatile('frostdragon');
+			}
+			if (pokemon.species.id === 'kyogreprimal') {
+				pokemon.addVolatile('primordialseainnate');
 			}
 		},
 		
