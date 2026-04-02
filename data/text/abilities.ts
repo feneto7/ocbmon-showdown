@@ -3701,4 +3701,24 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Enquanto este Pokémon estiver em campo, qualquer Pokémon que não seja do tipo Fantasma (Ghost) ou Sombrio (Dark) perde 1/4 (25%) do seu HP máximo no final de cada turno.",
 		shortDesc: "Pokémon não-Ghost e não-Dark perdem 25% de HP por turno.",
 	},
+	poseidonsdominion: {
+		name: "Poseidon's Dominion",
+		desc: "Ao entrar em batalha, este Pokémon usa automaticamente o ataque Whirlpool em todos os oponentes adjacentes. Este ataque gerado pela habilidade não consome PP, ignora itens como Choice Band e possui precisão garantida.",
+		shortDesc: "Ataca os oponentes adjacentes com Whirlpool ao entrar em campo.",
+	},
+	wildfire: {
+		name: "Wildfire",
+		desc: "Ao entrar em batalha, este Pokémon usa automaticamente o ataque Fire Spin em todos os oponentes adjacentes. Este ataque gerado pela habilidade não consome PP, ignora itens como Choice Band e possui precisão garantida.",
+		shortDesc: "Ataca os oponentes adjacentes com Fire Spin ao entrar em campo.",
+	},
+	petalshield: {
+		name: "Petal Shield",
+		desc: "Ao entrar em batalha, este Pokémon maximiza sua Defense, elevando-a para o estágio +6. Toda vez que este Pokémon receber dano direto de um ataque adversário, sua Defense cai em 1 estágio.",
+		shortDesc: "Maximiza a Def ao entrar em campo. Perde 1 estágio de Def ao receber um golpe.",
+	},
+	sandpit: {
+		name: "Sand Pit",
+		desc: "Ao entrar em batalha, este Pokémon usa automaticamente o ataque Sand Tomb (modificado para 20 de Base Power) em todos os oponentes adjacentes. Este ataque gerado pela habilidade não consome PP, ignora itens de escolha (Choice) e possui precisão garantida.",
+		shortDesc: "Ao entrar em campo, ataca os oponentes com um Sand Tomb de 20 BP.",
+	},
 };
