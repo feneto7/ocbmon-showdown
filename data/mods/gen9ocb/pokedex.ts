@@ -30579,7 +30579,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			def: 90,
 			spa: 135,
 			spd: 125,
-			spe: 92,
+			spe: 93,
 		},
 		eggGroups: ["Water 2"],
 		weightkg: 8,
