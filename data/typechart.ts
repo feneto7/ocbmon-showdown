@@ -175,12 +175,12 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 	// 		Bone: 0, Chaos: 2, Cosmic: 1, Divine: 2, Light: 1, Magic: 0, Ogre: 0, Plastic: 0, Shadow: 0, Time: 1, Void: 3, '???': 0,
 	// 	},
 	// },
-	// stellar: {
-	// 	damageTaken: {
-	// 		Bug: 0, Dark: 0, Dragon: 0, Electric: 0, Fairy: 0, Fighting: 0, Fire: 0, Flying: 0, Ghost: 0, Grass: 0, Ground: 0, Ice: 0, Normal: 0, Poison: 0, Psychic: 0, Rock: 0, Steel: 0, Stellar: 0, Water: 0,
-	// 		Bone: 0, Chaos: 0, Cosmic: 0, Divine: 0, Light: 0, Magic: 0, Ogre: 0, Plastic: 0, Shadow: 0, Time: 0, Void: 0, '???': 0,
-	// 	},
-	// },
+	stellar: {
+		damageTaken: {
+			Bug: 0, Dark: 0, Dragon: 0, Electric: 0, Fairy: 0, Fighting: 0, Fire: 0, Flying: 0, Ghost: 0, Grass: 0, Ground: 0, Ice: 0, Normal: 0, Poison: 0, Psychic: 0, Rock: 0, Steel: 0, Stellar: 0, Water: 0,
+			Bone: 0, Chaos: 0, Cosmic: 0, Divine: 0, Light: 0, Magic: 0, Ogre: 0, Plastic: 0, Shadow: 0, Time: 0, Void: 0, '???': 0,
+		},
+	},
 	'???': {
 		damageTaken: {
 			Bug: 0,

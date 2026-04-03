@@ -22426,6 +22426,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		types: ["Stellar"],
 		baseStats: {hp: 170, atk: 115, def: 110, spa: 150, spd: 110, spe: 65},
 		abilities: {0: "Wonder Skin", 1: "Magic Bounce", H: "Mirror Armor"},
+		requiredTeraType: "Stellar",
 		eggGroups: ["Undiscovered"],
 		weightkg: 0,
 		color: "Blue",
