@@ -4766,7 +4766,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	drainingkiss: {
 		num: 577,
 		accuracy: 100,
-		basePower: 50,
+		basePower: 75,
 		category: "Special",
 		name: "Draining Kiss",
 		pp: 10,
@@ -13678,15 +13678,15 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	},
 	mudshot: {
 		num: 341,
-		accuracy: 95,
-		basePower: 55,
+		accuracy: 100,
+		basePower: 40,
 		category: "Special",
 		name: "Mud Shot",
 		pp: 15,
-		priority: 0,
+		priority: 1,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
-			chance: 100,
+			chance: 10,
 			boosts: {
 				spe: -1,
 			},
@@ -15979,7 +15979,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		category: "Physical",
 		name: "Quick Attack",
 		pp: 30,
-		priority: 1,
+		priority: 2,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
 		secondary: null,
 		target: "normal",
@@ -18135,11 +18135,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	shockwave: {
 		num: 351,
 		accuracy: true,
-		basePower: 60,
+		basePower: 40,
 		category: "Special",
 		name: "Shock Wave",
 		pp: 20,
-		priority: 0,
+		priority: 2,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: null,
 		target: "normal",
@@ -21680,14 +21680,14 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	thundershock: {
 		num: 84,
 		accuracy: 100,
-		basePower: 40,
+		basePower: 80,
 		category: "Special",
 		name: "Thunder Shock",
 		pp: 30,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
-			chance: 10,
+			chance: 30,
 			status: 'par',
 		},
 		target: "normal",
@@ -24591,6 +24591,46 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "all",
 		type: "Electric",
+		condition: {
+			duration: 0,
+			durationCallback(this: any, source: any, effect: any) {
+				return this.random(2, 6); 
+			},
+			onStart(this: any, target: any, source: any, effect: any) {
+				this.add('-fieldstart', 'move: Tempest Storm (N)', '[of] ' + source);
+				this.effectState.source = source; 
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidual(this: any) {
+				this.add('-message', 'A Tempest Storm dispara raios pelo campo!');
+				
+				const weatherSource = this.effectState.source;
+				const move = this.dex.getActiveMove('thundershock');
+
+				for (const pokemon of this.getAllActive()) {
+					if (pokemon.fainted || !pokemon.hp) continue;
+
+					if (pokemon.hasType('Ground') || pokemon.hasAbility(['voltabsorb', 'lightningrod', 'motordrive'])) {
+						this.add('-immune', pokemon);
+						continue;
+					}
+
+					this.add('-anim', pokemon, "Thunder Shock", pokemon);
+
+					const attacker = weatherSource && !weatherSource.fainted ? weatherSource : pokemon;
+					
+					const customMove = { ...move, basePower: 80 } as ActiveMove;
+					const damage = this.actions.getDamage(attacker, pokemon, customMove);
+
+					if (typeof damage === 'number' && damage > 0) {
+						this.damage(damage, pokemon, weatherSource, '[from] move: Tempest Storm (N)');
+					}
+				}
+			},
+			onEnd(this: any) {
+				this.add('-fieldend', 'move: Tempest Storm (N)');
+			},
+		},
 	},
 	merculight: {
 		num: 964,

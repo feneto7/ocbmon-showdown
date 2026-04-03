@@ -9635,57 +9635,57 @@ export const Abilities = {
 		shortDesc: "Takes no damage and sets Mist if hit by water.",
 	},
 	luckyhalo: {
-		onStart(pokemon) {
-			pokemon.abilityState.luckyhaloEndured = false;
+        onStart(pokemon) {
+            pokemon.abilityState.luckyhaloEndured = false;
 
-			if (!pokemon.hasType('Fire')) {
-				if (pokemon.addType('Fire')) {
-					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Turbo Halo');
-					this.add('-message', `${pokemon.name} incandesceu sua aura e ganhou o tipo Fogo!`);
-				}
-			}
-			this.add('-ability', pokemon, 'Turbo Halo');
-			this.add('-message', `${pokemon.name} está irradiando uma chama que ignora habilidades!`);
-		},
-		onModifyMove(move) {
-			move.ignoreAbility = true;
-		},
-		onTryBoost(boost, target, source, effect) {
-			if (!source || target !== source) return;
-			let blocked = false;
-			let i: BoostID;
-			for (i in boost) {
-				if (boost[i]! < 0) {
-					delete boost[i];
-					blocked = true;
-				}
-			}
-			if (blocked && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-				this.add('-fail', target, 'unboost', '[from] ability: Lucky Halo', `[of] ${target}`);
-			}
-		},
-		onTryHit(pokemon, target, move) {
-			if (move.ohko) {
-				this.add('-immune', pokemon, '[from] ability: Lucky Halo');
-				return null;
-			}
-		},
-		onDamagePriority: -30,
-		onDamage(damage, target, source, effect) {
-			if (target.abilityState.luckyhaloEndured) return;
-			if (damage >= target.hp && effect && effect.effectType === 'Move') {
-				target.abilityState.luckyhaloEndured = true;
-				this.add('-activate', target, 'ability: Lucky Halo');
-				this.add('-message', `${target.name} sobreviveu ao golpe graças a sua habilidade!`);
-				return target.hp - 1;
-			}
-		},
-		flags: { breakable: 1 },
-		
-		name: "Lucky Halo",
-		rating: 5,
-		num: -1009,
-	},
+            if (!pokemon.hasType('Fire')) {
+                if (pokemon.addType('Fire')) {
+                    this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Lucky Halo');
+                    this.add('-message', `${pokemon.name} incandesceu sua aura e ganhou o tipo Fogo!`);
+                }
+            }
+            this.add('-ability', pokemon, 'Lucky Halo');
+            this.add('-message', `${pokemon.name} está irradiando uma chama que ignora habilidades!`);
+        },
+        onModifyMove(move) {
+            move.ignoreAbility = true;
+        },
+        onTryBoost(boost, target, source, effect) {
+            if (!source || target !== source) return;
+            let blocked = false;
+            let i: BoostID;
+            for (i in boost) {
+                if (boost[i]! < 0) {
+                    delete boost[i];
+                    blocked = true;
+                }
+            }
+            if (blocked && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+                this.add('-fail', target, 'unboost', '[from] ability: Lucky Halo', `[of] ${target}`);
+            }
+        },
+        onTryHit(pokemon, target, move) {
+            if (move.ohko) {
+                this.add('-immune', pokemon, '[from] ability: Lucky Halo');
+                return null;
+            }
+        },
+        onDamagePriority: -30,
+        onDamage(damage, target, source, effect) {
+            if (target.abilityState.luckyhaloEndured) return;
+            if (damage >= target.hp && effect && effect.effectType === 'Move') {
+                target.abilityState.luckyhaloEndured = true;
+                this.add('-activate', target, 'ability: Lucky Halo');
+                this.add('-message', `${target.name} sobreviveu ao golpe graças a sua habilidade!`);
+                return target.hp - 1;
+            }
+        },
+        flags: { breakable: 1 },
+        
+        name: "Lucky Halo",
+        rating: 5,
+        num: -1009,
+    },
 	
 	lumberjack: {
 		name: "Lumberjack",
@@ -12769,6 +12769,128 @@ export const Abilities = {
 		name: "Frenzied Phantom",
 		rating: 5,
 		num: 988,
+	},
+	hydra: {
+    onPrepareHit(source, target, move) {
+        if (move.category === 'Status' || move.multihit || move.flags['noparentalbond']) return;
+        if (isParentalBondBanned && isParentalBondBanned(move, source)) return;
+
+        const twoHeaded = [
+            "doduo", "weezing", "girafarig", "mawile", "zweilous", "doublade", 
+            "binacle", "vanilluxe", "scovillain", "mawileredux", "zweilousredux", 
+            "doduoredux", "weezinggalar", "klink", "doubladeredux",
+        ];
+        const threeHeaded = [
+            "dugtrio", "dugtrioalola", "magneton", "dodrio", "exeggute", "exeggutor", 
+            "exeggutoralola", "mawilemega", "combee", "magnezone", "barbaracle", 
+            "hydreigon", "wugtrio", "dodrioredux", "hydreigonredux", "ironjugulis", 
+            "sandyshocks", "mawilemegaredux", "shucklemega", "magnezonemega", 
+            "klinklang", "probopass", "klang", "hydrapple",
+        ];
+
+        if (twoHeaded.includes(source.species.id)) {
+            move.multihit = 2;
+            (move as any).multihitType = 'parentalbond';
+        } else if (threeHeaded.includes(source.species.id)) {
+            move.multihit = 3;
+            (move as any).multihitType = 'headed';
+        }
+    },
+
+    onSourceAfterFaint(length, target, source, effect) {
+        if (effect && effect.effectType === 'Move') {
+            this.boost({spa: length}, source);
+        }
+    },
+    name: "Hydra",
+    rating: 5,
+	num: 989,
+},
+miracleguard: {
+        onStart(pokemon) {
+            // Inicializa a variável de resistência a golpe fatal
+            pokemon.abilityState.miracleguardEndured = false;
+            this.add('-ability', pokemon, 'Miracle Guard');
+        },
+        onTryBoost(boost, target, source, effect) {
+            if (!source || target !== source) return;
+            let blocked = false;
+            let i: BoostID;
+            for (i in boost) {
+                if (boost[i]! < 0) {
+                    delete boost[i];
+                    blocked = true;
+                }
+            }
+            if (blocked && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+                this.add('-fail', target, 'unboost', '[from] ability: Miracle Guard', `[of] ${target}`);
+            }
+        },
+        onTryHit(pokemon, target, move) {
+            if (move.ohko) {
+                this.add('-immune', pokemon, '[from] ability: Miracle Guard');
+                return null;
+            }
+        },
+        onDamagePriority: -30,
+        onDamage(damage, target, source, effect) {
+            if (target.abilityState.miracleguardEndured) return;
+            if (damage >= target.hp && effect && effect.effectType === 'Move') {
+                target.abilityState.miracleguardEndured = true;
+                this.add('-activate', target, 'ability: Miracle Guard');
+                this.add('-message', `${target.name} sobreviveu ao golpe graças a sua habilidade!`);
+                return target.hp - 1;
+            }
+        },
+        flags: { breakable: 1 },
+        
+        name: "Miracle Guard",
+        rating: 4,
+        num: 990,
+    },
+	glacialrage: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (!move || move.type !== 'Ice' || source.fainted) return;
+			if (move.category === 'Status' && !target) target = source;
+			this.add('-activate', source, 'ability: Glacial Rage');
+			const blizzard = this.dex.getActiveMove('blizzard');
+			const customBlizzard = { ...blizzard, basePower: 50 } as ActiveMove;
+			this.add('-anim', source, "Blizzard", target);
+			for (const foe of source.foes()) {
+				if (foe.fainted || !foe.hp) continue;
+
+				if (!this.dex.getImmunity('Ice', foe)) {
+					this.add('-immune', foe);
+					continue;
+				}
+
+				const damage = this.actions.getDamage(source, foe, customBlizzard);
+				
+				if (typeof damage === 'number' && damage > 0) {
+					this.damage(damage, foe, source, '[from] ability: Glacial Rage');
+					
+					if (this.randomChance(1, 10)) {
+						foe.trySetStatus('frz', source);
+					}
+				}
+			}
+		},
+		name: "Glacial Rage",
+		rating: 4.5,
+		num: -1011,
+	},
+	tag: {
+		onAnySwitchOut(this: any, pokemon: any) {
+			const source = this.effectState.target;
+			if (pokemon.side !== source.side && source.hp > 0 && this.canMove(source)) {
+				this.add('-ability', source, 'Tag');
+				this.add('-message', `${source.name} atacou o Pokémon que estava fugindo!`);
+				this.actions.runMove('pursuit', source, pokemon);
+			}
+		},
+		name: "Tag",
+		rating: 3,
+		num: -1013,
 	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;

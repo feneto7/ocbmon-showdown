@@ -3741,4 +3741,24 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Impede que Pokémon adversários adjacentes troquem de lugar ou fujam da batalha. Além disso, movimentos que causam dano a um único alvo atingirão duas vezes (como Parental Bond), com o segundo acerto causando 25% do dano original.",
 		shortDesc: "Prende oponentes e ataca duas vezes.",
 	},
+	hydra: {
+		name: "Hydra",
+		desc: "Os ataques de dano deste Pokémon atingem 2 ou 3 vezes dependendo do número de cabeças de sua espécie (efeito Multi-Headed). O segundo e terceiro acertos têm seu dano e efeitos secundários ajustados. Além disso, o Special Attack deste Pokémon aumenta em 1 estágio toda vez que ele nocauteia um alvo com um de seus ataques (efeito Hubris).",
+		shortDesc: "Ataques batem 2 ou 3 vezes. +1 Sp. Atk ao nocautear alvo.",
+	},
+	miracleguard: {
+		name: "Miracle Guard",
+		desc: "Este Pokémon não pode sofrer queda de status causados por seus próprios movimentos. É imune a golpes de KO em 1-hit (OHKO). Além disso, ele é capaz de sobreviver a um ataque que seria fatal restando apenas 1 HP (este efeito funciona apenas uma vez enquanto o Pokémon estiver em campo).",
+		shortDesc: "Previne queda de status próprios. Imune a OHKO. Sobrevive a um golpe fatal com 1 HP.",
+	},
+	glacialrage: {
+		name: "Glacial Rage",
+		desc: "Após este Pokémon usar com sucesso um movimento do tipo Ice, ele imediatamente dispara um ataque subsequente contra os oponentes, equivalente a um Blizzard com 50 de Base Power. Este efeito atinge todos os adversários em campo e mantém a chance de 10% de causar congelamento (Freeze) inerente ao movimento Blizzard.",
+		shortDesc: "Após usar um golpe Ice, dispara um Blizzard de 50 BP nos oponentes.",
+	},
+	tag: {
+		name: "Tag",
+		desc: "Sempre que um Pokémon adversário tenta trocar de lugar, este Pokémon o ataca com um golpe de 20 de poder base antes da troca ocorrer.",
+		shortDesc: "Ataca oponentes que estão trocando com um dano de 20 BP.",
+	},
 };
