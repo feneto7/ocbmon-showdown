@@ -22420,6 +22420,17 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		evoLevel: 0,
 		evos: [],
 	},
+	terapagosprimal: {
+		name: "Terapagos-Primal",
+		num: 1024,
+		types: ["Stellar"],
+		baseStats: {hp: 170, atk: 115, def: 110, spa: 150, spd: 110, spe: 65},
+		abilities: {0: "Wonder Skin", 1: "Magic Bounce", H: "Mirror Armor"},
+		eggGroups: ["Undiscovered"],
+		weightkg: 0,
+		color: "Blue",
+		gen: 9,
+	},
 	ragingbolt: {
 		name: "RagingBolt",
 		num: 1021,

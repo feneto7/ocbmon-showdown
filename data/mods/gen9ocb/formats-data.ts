@@ -24,6 +24,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesDataTa
 	igris: { inherit: true, tier: "OU", isNonstandard: 'Custom' },
 	frostsu: { inherit: true, tier: "OU", isNonstandard: 'Custom' },
 	crawdauntless: { inherit: true, tier: "OU", isNonstandard: 'Custom' },
+	terapagosprimal: { inherit: true, tier: "OU", isNonstandard: 'Custom' },
 	bulbasaur: {
 		inherit: true,
 		tier: "OU",

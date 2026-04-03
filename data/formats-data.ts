@@ -24,6 +24,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	igris: { tier: "OU" },
 	frostsu: { tier: "OU" },
 	crawdauntless: { tier: "OU" },
+	terapagosprimal: { tier: "OU" },
 	bulbasaur: {
 		tier: "LC",
 		doublesTier: "LC",

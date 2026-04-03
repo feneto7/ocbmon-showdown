@@ -5138,6 +5138,21 @@ export const Abilities = {
 		rating: 3.5,
 		num: 308,
 	},
+	terastaltreasure: {
+		onSourceModifyDamage(damage, source, target, move) {
+			this.debug('Terastal Treasure damage reduction');
+			return this.chainModify(0.6);
+		},
+		onModifySpe(spe, pokemon) {
+			this.debug('Terastal Treasure speed drop');
+			return this.chainModify(0.8);
+		},
+		flags: {},
+		name: "Terastal Treasure",
+		rating: 3,
+		shortDesc: "Reduces damage taken by 40%, but lowers speed by 20%.",
+		num: -1001,
+	},
 	terashift: {
 		onSwitchInPriority: 2,
 		onSwitchIn(pokemon) {
@@ -5748,15 +5763,48 @@ export const Abilities = {
 	},
 	wonderskin: {
 		onModifyAccuracyPriority: 10,
-		onModifyAccuracy(accuracy, target, source, move) {
-			if (move.category === 'Status' && typeof accuracy === 'number') {
-				this.debug('Wonder Skin - setting accuracy to 50');
-				return 50;
+		onAnyPrepareHit(source, target, move) {
+			if (target !== this.effectState.target) return;
+			if (move.multihit && move.multihitType) {
+				this.debug('Wonder Skin - blocking multihit ability');
+				this.add('-ability', target, 'Wonder Skin');
+				this.add('-message', `${target.name}'s Wonder Skin blocks ability-based multihits!`);
+				delete move.multihit;
+				delete move.multihitType;
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			const ability = source.getAbility();
+			const boosters2x = ['hugepower', 'purepower'];
+			const boosters1_5x = [
+				'sharpness', 'toughclaws', 'sheerforce', 'technician', 'transistor', 'dragonsmaw',
+				'orichalcumpulse', 'hadronengine', 'rockypayload', 'steelworker', 'guts', 'flareboost',
+				'toxicboost', 'reckless', 'ironfist', 'megalauncher', 'punkrock', 'sandforce', 'analytic', 'stakeout',
+			];
+			const boosters1_33x = ['adaptability'];
+			
+			if (boosters2x.includes(ability.id)) {
+				this.debug('Wonder Skin - nullifying 2x boost');
+				this.add('-ability', target, 'Wonder Skin');
+				this.add('-message', `${target.name}'s Wonder Skin nullifies ${source.name}'s ${ability.name}!`);
+				return this.chainModify(0.5);
+			}
+			if (boosters1_5x.includes(ability.id)) {
+				this.debug('Wonder Skin - nullifying 1.5x boost');
+				this.add('-ability', target, 'Wonder Skin');
+				this.add('-message', `${target.name}'s Wonder Skin nullifies ${source.name}'s ${ability.name}!`);
+				return this.chainModify(0.67);
+			}
+			if (boosters1_33x.includes(ability.id)) {
+				this.debug('Wonder Skin - nullifying 1.33x boost');
+				this.add('-ability', target, 'Wonder Skin');
+				this.add('-message', `${target.name}'s Wonder Skin nullifies ${source.name}'s ${ability.name}!`);
+				return this.chainModify(0.75);
 			}
 		},
 		flags: { breakable: 1 },
 		name: "Wonder Skin",
-		rating: 2,
+		rating: 4,
 		num: 147,
 	},
 	zenmode: {
@@ -9435,6 +9483,7 @@ export const Abilities = {
 	},
 
 	prismaticfur: {
+		flags: { breakable: 1 },
 		onModifyDefPriority: 6,
 		onSourceModifyDamage(damage, source, target, move) {
 			return this.chainModify(0.5);
@@ -9457,6 +9506,7 @@ export const Abilities = {
 					"[from] ability: Prismatic Fur"
 				);
 			}
+			
 		},
 		// Color Change
 		onFoePrepareHit(source, target, move) {
@@ -12867,7 +12917,7 @@ miracleguard: {
 				const damage = this.actions.getDamage(source, foe, customBlizzard);
 				
 				if (typeof damage === 'number' && damage > 0) {
-					this.damage(damage, foe, source, '[from] ability: Glacial Rage');
+					this.damage(damage, foe, source, this.dex.abilities.get('glacialrage'));
 					
 					if (this.randomChance(1, 10)) {
 						foe.trySetStatus('frz', source);
