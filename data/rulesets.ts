@@ -3256,6 +3256,15 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			// if (pokemon.species.id === 'victiniprimal') {
 			// 	pokemon.addVolatile('turboblazeinnate');
 			// }
+			if (pokemon.species.id === 'palkiaorigin') {
+				pokemon.addVolatile('prismscales');
+			}
+			if (pokemon.species.id === 'vanilluxemega') {
+				pokemon.addVolatile('multiheadedinnate');
+			}
+			if (pokemon.species.id === 'meganiummega') {
+				pokemon.addVolatile('triageinnate');
+			}
 		},
 	},
 };

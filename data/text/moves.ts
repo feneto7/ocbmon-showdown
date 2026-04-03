@@ -8215,8 +8215,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	tempeststormn: {
 		name: "Tempest Storm (N)",
-		desc: "Invoca uma tempestade elétrica que cobre todo o campo por 2 a 5 turnos. No final de cada turno, todos os Pokémon em campo recebem dano equivalente a 1/8 de seus HPs máximos, simulando um Thundershock. Pokémon do tipo Ground ou com imunidades elétricas não sofrem este dano.",
-		shortDesc: "Machuca todos em campo no fim do turno (2-5 turnos).",
+		desc: "Cria uma tempestade elétrica que envolve o campo de batalha por 2 a 5 turnos. No final de cada turno, todos os Pokémon ativos no campo (exceto os imunes a Elétrico) são atingidos por um ataque equivalente a um Thunder Shock (80 de Base Power, dano Special). Este ataque residual tem 30% de chance de causar flinch (recuo) nos alvos no turno seguinte. O dano é calculado usando o Special Attack do Pokémon que invocou a tempestade.",
+		shortDesc: "Cria campo (2-5 turnos). No fim do turno, atinge todos com Thunder Shock (80 BP, 30% flinch).",
 	},
 	merculight: {
 		name: "Merculight",

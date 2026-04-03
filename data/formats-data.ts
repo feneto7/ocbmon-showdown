@@ -7504,7 +7504,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	weavileredux: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+	},
+	exeggutorredux: {
+		tier: "OU",
+		doublesTier: "DOU",
 	},
 
 };

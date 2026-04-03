@@ -1102,33 +1102,7 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			}
 		},
 	},
-	tempeststormn: {
-		name: 'Tempest Storm (N)',
-		duration: 0,
-		durationCallback(this: any, source: any, effect: any) {
-			return this.random(2, 6); 
-		},
-		onStart(this: any, target: any, source: any, effect: any) {
-			this.add('-fieldstart', 'move: Tempest Storm (N)', '[of] ' + source);
-		},
-		onFieldResidualOrder: 27,
-		onFieldResidual(this: any) {
-			this.add('-message', 'A Tempest Storm continua a disparar raios pelo campo!');
-			
-			for (const pokemon of this.getAllActive()) {
-				if (pokemon.fainted || !pokemon.hp) continue;
 
-				if (pokemon.hasType('Ground') || pokemon.hasAbility(['voltabsorb', 'lightningrod', 'motordrive'])) {
-					this.add('-immune', pokemon);
-					continue;
-				}
-				this.damage(pokemon.baseMaxhp / 8, pokemon);
-			}
-		},
-		onEnd(this: any) {
-			this.add('-fieldend', 'move: Tempest Storm (N)');
-		},
-	},
 	shadowtaginnate: {
 		name: "Shadow Tag",
 		onStart(this: any, pokemon: any) {
@@ -1199,6 +1173,57 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			
 			pokemon.side.removeSideCondition('caltrops');
 			this.add('-sideend', pokemon.side, 'move: Caltrops', '[of] ' + pokemon);
+		},
+	},
+	prismscales: {
+		onSourceModifyDamage(this: any, damage: any, source: any, target: any, move: any) {
+			if (move.category === 'Special') {
+				return this.chainModify(0.7);
+			}
+		},
+	},
+	multiheadedinnate: {
+		name: "Multi Headed",
+		onStart(this: any, pokemon: any) {
+			this.add('-activate', pokemon, 'ability: Multi Headed');
+		},
+		onPrepareHit(this: any, source: any, target: any, move: any) {
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['endeavor', 'fling', 'iceball', 'rollout', 'dragonpulse'].includes(move.id)) return;
+
+			const twoHeaded = [
+				"doduo", "weezing", "girafarig", "mawile", "zweilous", "doublade", "binacle", 
+				"vanilluxe", "scovillain", "mawileredux", "zweilousredux", "doduoredux", 
+				"weezinggalar", "klink", "doubladeredux"
+			];
+			const threeHeaded = [
+				"dugtrio", "dugtrioalola", "magneton", "dodrio", "exeggute", "exeggutor", 
+				"exeggutoralola", "mawilemega", "combee", "magnezone", "barbaracle", 
+				"hydreigon", "wugtrio", "dodrioredux", "hydreigonredux", "ironjugulis", 
+				"sandyshocks", "mawilemegaredux", "shucklemega", "magnezonemega", 
+				"klinklang", "probopass", "klang", "hydrapple"
+			];
+
+			if (twoHeaded.includes(source.species.id)) {
+				move.multihit = 2;
+				move.multihitType = "parentalbond";
+			} else if (threeHeaded.includes(source.species.id)) {
+				move.multihit = 3;
+				move.multihitType = "headed";
+			}
+		},
+		onBasePowerPriority: 7,
+	},
+	triageinnate: {
+		name: "Triage",
+		onStart(this: any, pokemon: any) {
+			this.add('-activate', pokemon, 'ability: Triage');
+		},
+		onModifyPriority(this: any, priority: any, pokemon: any, target: any, move: any) {
+			if (move.flags['heal']) {
+				this.debug('Triage dando prioridade +3');
+				return priority + 3;
+			}
 		},
 	},
 };
