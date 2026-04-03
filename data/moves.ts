@@ -23969,20 +23969,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 20,
 		priority: 0,
 		flags: {reflectable: 1, snatch: 1}, 
-		sideCondition: 'caltrops', 
-		condition: {
-			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Caltrops');
-			},
-			onEntryHazard(pokemon) {
-				if (pokemon.hasItem('heavydutyboots')) return;
-				if (!pokemon.isGrounded()) return;
-				if (pokemon.trySetStatus('bld', pokemon.side.foe.active[0])) {
-					pokemon.side.removeSideCondition('caltrops');
-					this.add('-sideend', pokemon.side, 'move: Caltrops', '[of] ' + pokemon);
-				}
-			},
-		},
+		sideCondition: 'caltrops',
 		secondary: null,
 		target: "foeSide", 
 		type: "Steel",

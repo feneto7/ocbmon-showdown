@@ -1129,31 +1129,76 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 	},
 	shadowtaginnate: {
 		name: "Shadow Tag",
-		onFoeTrapPokemon(this: any, pokemon: any) {
-			if (!pokemon.hasAbility('shadowtag') && !pokemon.volatiles['shadowtaginnate'] && pokemon.isAdjacent(this.effectState.target)) {
-				pokemon.tryTrap(true);
+		onStart(this: any, pokemon: any) {
+			this.add('-ability', pokemon, 'Shadow Tag');
+			
+			// Quando o seu Pokémon entra em campo, joga a "armadilha" nos inimigos presentes
+			for (const foe of pokemon.adjacentFoes()) {
+				foe.addVolatile('shadowtagtrap', pokemon);
 			}
 		},
-		onFoeMaybeTrapPokemon(this: any, pokemon: any, source: any) {
-			if (!source) source = this.effectState.target;
-			if (!source || !pokemon.isAdjacent(source)) return;
-			
-			if (!pokemon.hasAbility('shadowtag') && !pokemon.volatiles['shadowtaginnate']) {
-				pokemon.maybeTrapped = true;
+		onAnySwitchIn(this: any, pokemon: any) {
+			// Se um inimigo novo for mandado pro campo no meio da batalha, joga a armadilha nele
+			const source = this.effectState.target;
+			if (pokemon.isAdjacent(source)) {
+				pokemon.addVolatile('shadowtagtrap', source);
 			}
+		},
+	},
+
+	shadowtagtrap: {
+		name: "Shadow Tag Trap",
+		noCopy: true,
+		onTrapPokemon(this: any, pokemon: any) {
+			const source = this.effectState.source;
+			
+			if (!source || !source.isActive || !source.volatiles['shadowtaginnate']) {
+				pokemon.removeVolatile('shadowtagtrap');
+				return;
+			}
+			
+			if (pokemon.hasAbility('shadowtag') || pokemon.volatiles['shadowtaginnate']) return;
+			
+			pokemon.tryTrap(true);
+		},
+		onMaybeTrapPokemon(this: any, pokemon: any) {
+			const source = this.effectState.source;
+			if (!source || !source.isActive || !source.volatiles['shadowtaginnate']) return;
+			if (pokemon.hasAbility('shadowtag') || pokemon.volatiles['shadowtaginnate']) return;
+			
+			pokemon.maybeTrapped = true;
 		},
 	},
 	turboblazeinnate: {
 		name: "Turboblaze",
 		onStart(this: any, pokemon: any) {
-			// Faz a inata piscar na tela e manda a mensagem clássica do Turboblaze
 			this.add('-ability', pokemon, 'Turboblaze');
-			this.add('-message', `${pokemon.name} está irradiando uma aura flamejante!`);
+			
+			if (!pokemon.hasType('Fire')) {
+				if (pokemon.addType('Fire')) {
+					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Turboblaze');
+				}
+			}
 		},
-		onModifyMove(this: any, move: any, pokemon: any) {
-			// Esta é a linha mágica que faz o efeito do Mold Breaker/Turboblaze acontecer
+		onModifyMove(this: any, move: any) {
 			move.ignoreAbility = true;
 		},
 	},
-
+	caltrops: {
+		name: "Caltrops",
+		onSideStart(side) {
+			this.add('-sidestart', side, 'move: Caltrops');
+		},
+		onEntryHazard(pokemon) {
+			if (pokemon.hasItem('heavydutyboots')) return;
+			if (!pokemon.isGrounded()) return;
+			
+			this.add('-activate', pokemon, 'move: Caltrops');
+			
+			const statusApplied = pokemon.trySetStatus('bld', this.effectState.source);
+			
+			pokemon.side.removeSideCondition('caltrops');
+			this.add('-sideend', pokemon.side, 'move: Caltrops', '[of] ' + pokemon);
+		},
+	},
 };
