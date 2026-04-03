@@ -1169,21 +1169,21 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			pokemon.maybeTrapped = true;
 		},
 	},
-	turboblazeinnate: {
-		name: "Turboblaze",
-		onStart(this: any, pokemon: any) {
-			this.add('-activate', pokemon, 'ability: Turboblaze');
+	// turboblazeinnate: {
+	// 	name: "Turboblaze",
+	// 	onStart(this: any, pokemon: any) {
+	// 		this.add('-activate', pokemon, 'ability: Turboblaze');
 			
-			if (!pokemon.hasType('Fire')) {
-				if (pokemon.addType('Fire')) {
-					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] Turboblaze');
-				}
-			}
-		},
-		onModifyMove(this: any, move: any) {
-			move.ignoreAbility = true;
-		},
-	},
+	// 		if (!pokemon.hasType('Fire')) {
+	// 			if (pokemon.addType('Fire')) {
+	// 				this.add('-start', pokemon, 'typeadd', 'Fire', '[from] Turboblaze');
+	// 			}
+	// 		}
+	// 	},
+	// 	onModifyMove(this: any, move: any) {
+	// 		move.ignoreAbility = true;
+	// 	},
+	// },
 	caltrops: {
 		name: "Caltrops",
 		onSideStart(side) {

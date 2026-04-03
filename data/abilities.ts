@@ -9635,37 +9635,58 @@ export const Abilities = {
 		shortDesc: "Takes no damage and sets Mist if hit by water.",
 	},
 	luckyhalo: {
-		onBoost(this: any, boost: any, target: any, source: any, effect: any) {
-			if (source === target) {
-				let showMsg = false;
-				for (let i in boost) {
-					if (boost[i] < 0) {
-						delete boost[i];
-						showMsg = true;
-					}
-				}
-				if (showMsg) {
-					this.add("-fail", target, "unboost", "[from] ability: Lucky Halo", "[of] " + target);
+		onStart(pokemon) {
+			pokemon.abilityState.luckyhaloEndured = false;
+
+			if (!pokemon.hasType('Fire')) {
+				if (pokemon.addType('Fire')) {
+					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Turbo Halo');
+					this.add('-message', `${pokemon.name} incandesceu sua aura e ganhou o tipo Fogo!`);
 				}
 			}
+			this.add('-ability', pokemon, 'Turbo Halo');
+			this.add('-message', `${pokemon.name} está irradiando uma chama que ignora habilidades!`);
 		},
-		
-		onDamagePriority: -100,
-		onDamage(this: any, damage: any, target: any, source: any, effect: any) {
-			if (damage >= target.hp && !target.m.luckyHaloUsed && effect && effect.effectType === 'Move') {
-				target.m.luckyHaloUsed = true;
-				
-				this.add('-ability', target, 'Lucky Halo');
-				this.add('-message', `${target.name} sobreviveu ao nocaute usando seu Lucky Halo!`);
-				
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (!source || target !== source) return;
+			let blocked = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					delete boost[i];
+					blocked = true;
+				}
+			}
+			if (blocked && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+				this.add('-fail', target, 'unboost', '[from] ability: Lucky Halo', `[of] ${target}`);
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Lucky Halo');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.abilityState.luckyhaloEndured) return;
+			if (damage >= target.hp && effect && effect.effectType === 'Move') {
+				target.abilityState.luckyhaloEndured = true;
+				this.add('-activate', target, 'ability: Lucky Halo');
+				this.add('-message', `${target.name} sobreviveu ao golpe graças a sua habilidade!`);
 				return target.hp - 1;
 			}
 		},
+		flags: { breakable: 1 },
 		
 		name: "Lucky Halo",
-		rating: 4.5,
+		rating: 5,
 		num: -1009,
 	},
+	
 	lumberjack: {
 		name: "Lumberjack",
 		shortDesc: "1.5x damage to Grass types.",

@@ -3253,9 +3253,9 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			if (pokemon.species.id === 'giratinaorigin') {
 				pokemon.addVolatile('shadowtagtrap');
 			}
-			if (pokemon.species.id === 'victiniprimal') {
-				pokemon.addVolatile('turboblazeinnate');
-			}
+			// if (pokemon.species.id === 'victiniprimal') {
+			// 	pokemon.addVolatile('turboblazeinnate');
+			// }
 		},
 	},
 };
