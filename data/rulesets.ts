@@ -3250,7 +3250,12 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			if (pokemon.species.id === 'kyogreprimal') {
 				pokemon.addVolatile('primordialseainnate');
 			}
+			if (pokemon.species.id === 'giratinaorigin') {
+				pokemon.addVolatile('shadowtaginnate');
+			}
+			if (pokemon.species.id === 'victiniprimal') {
+				pokemon.addVolatile('turboblazeinnate');
+			}
 		},
-		
 	},
 };

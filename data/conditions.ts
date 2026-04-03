@@ -1102,5 +1102,58 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			}
 		},
 	},
+	tempeststormn: {
+		name: 'Tempest Storm (N)',
+		duration: 0,
+		durationCallback(this: any, source: any, effect: any) {
+			return this.random(2, 6); 
+		},
+		onStart(this: any, target: any, source: any, effect: any) {
+			this.add('-fieldstart', 'move: Tempest Storm (N)', '[of] ' + source);
+		},
+		onResidualOrder: 21,
+		onResidual(this: any) {
+			this.add('-message', 'A Tempest Storm continua a disparar raios pelo campo!');
+			
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon.hasType('Ground') || pokemon.hasAbility(['voltabsorb', 'lightningrod', 'motordrive'])) {
+					this.add('-immune', pokemon);
+					continue;
+				}
+				this.damage(pokemon.baseMaxhp / 8, pokemon);
+			}
+		},
+		onEnd(this: any) {
+			this.add('-fieldend', 'move: Tempest Storm (N)');
+		},
+	},
+	shadowtaginnate: {
+		name: "Shadow Tag",
+		onFoeTrapPokemon(this: any, pokemon: any) {
+			if (!pokemon.hasAbility('shadowtag') && !pokemon.volatiles['shadowtaginnate'] && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(this: any, pokemon: any, source: any) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			
+			if (!pokemon.hasAbility('shadowtag') && !pokemon.volatiles['shadowtaginnate']) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+	},
+	turboblazeinnate: {
+		name: "Turboblaze",
+		onStart(this: any, pokemon: any) {
+			// Faz a inata piscar na tela e manda a mensagem clássica do Turboblaze
+			this.add('-ability', pokemon, 'Turboblaze');
+			this.add('-message', `${pokemon.name} está irradiando uma aura flamejante!`);
+		},
+		onModifyMove(this: any, move: any, pokemon: any) {
+			// Esta é a linha mágica que faz o efeito do Mold Breaker/Turboblaze acontecer
+			move.ignoreAbility = true;
+		},
+	},
 
 };

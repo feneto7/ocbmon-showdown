@@ -1332,6 +1332,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 5,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, failcopycat: 1, failmimic: 1 },
+		onBasePower(this: any, basePower: any, pokemon: any, target: any) {
+			if (target.species.isMega) {
+				this.debug('Behemoth Bash boost contra Mega');
+				return this.chainModify(2);
+			}
+		},
+		overrideOffensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -1345,6 +1352,12 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 5,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, failcopycat: 1, failmimic: 1, slicing: 1 },
+		onBasePower(this: any, basePower: any, pokemon: any, target: any) {
+			if (target.species.isMega) {
+				this.debug('Behemoth Blade boost contra Mega');
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -1686,26 +1699,47 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fire",
 	},
 	bleakwindstorm: {
-		num: 846,
-		accuracy: 80,
+		num: 920,
+		accuracy: 90,
 		basePower: 100,
 		category: "Special",
 		name: "Bleakwind Storm",
-		pp: 10,
+		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
-		onModifyMove(move, pokemon, target) {
-			if (target && ['raindance', 'primordialsea'].includes(target.effectiveWeather())) {
-				move.accuracy = true;
+		flags: {protect: 1, mirror: 1, wind: 1},
+		
+		onModifyType(this: any, move: any, pokemon: any) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunlight':
+			case 'desolateland':
+				move.type = 'Fire';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Water';
+				break;
+			case 'sandstorm':
+				move.type = 'Rock';
+				break;
+			case 'hail':
+			case 'snow':
+				move.type = 'Ice';
+				break;
 			}
 		},
-		secondary: {
-			chance: 30,
-			boosts: {
-				spe: -1,
-			},
+		
+		onModifyMove(this: any, move: any, pokemon: any, target: any) {
+			if (pokemon.effectiveWeather()) {
+				move.accuracy = true; 
+			}
 		},
-		target: "allAdjacentFoes",
+
+		self: {
+			sideCondition: 'tailwind',
+		},
+		
+		secondary: null,
+		target: "normal",
 		type: "Flying",
 	},
 	blizzard: {
@@ -4865,6 +4899,12 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, failencore: 1, nosleeptalk: 1, failcopycat: 1, failmimic: 1, failinstruct: 1, noparentalbond: 1 },
+		onBasePower(this: any, basePower: any, pokemon: any, target: any) {
+			if (target.species.isMega) {
+				this.debug('Dynamax Cannon boost contra Mega');
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -16272,29 +16312,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	razorwind: {
 		num: 13,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 70,
 		category: "Special",
-		isNonstandard: "Past",
 		name: "Razor Wind",
 		pp: 10,
 		priority: 0,
-		flags: { charge: 1, protect: 1, mirror: 1, metronome: 1, nosleeptalk: 1, failinstruct: 1 },
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		},
+		flags: {protect: 1, mirror: 1, slicing: 1, wind: 1}, 
 		critRatio: 2,
+		
+		onEffectiveness(this: any, typeMod: any, target: any, type: any) {
+			if (type === 'Rock') return 1;
+		},
+		
+		onModifyPriority(this: any, priority: any, source: any, target: any, move: any) {
+			if (source.side.sideConditions['tailwind']) {
+				this.debug('Razor Wind priority boost from Tailwind');
+				return priority + 1;
+			}
+		},
+		
 		secondary: null,
-		target: "allAdjacentFoes",
-		type: "Normal",
-		contestType: "Cool",
+		target: "normal",
+		type: "Flying",
 	},
 	recover: {
 		num: 105,
@@ -24338,5 +24377,311 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
+	},
+	pureshot: {
+		num: 9839,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Pure Shot",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+	},
+	emberburst: {
+		num: 9840,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Ember Burst",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	hydroslap: {
+		num: 9841,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Hydro Slap",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	leafbolt: {
+		num: 9842,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Leaf Bolt",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	sparkshot: {
+		num: 9843,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Spark Shot",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	frostglare: {
+		num: 9844,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Frost Glare",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	spiritforce: {
+		num: 9845,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Spirit Force",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	venomdart: {
+		num: 9846,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Venom Dart",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+	},
+	sandblast: {
+		num: 9847,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Sand Blast",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+	},
+	galeshot: {
+		num: 9848,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Gale Shot",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	mindpulse: {
+		num: 9849,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Mind Pulse",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	bugbuzzlet: {
+		num: 9850,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Bug Buzzlet",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+	},
+	pebbletoss: {
+		num: 9851,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Pebble Toss",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
+	shadowflicker: {
+		num: 9852,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Shadow Flicker",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
+	draconicbeam: {
+		num: 9853,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Draconic Beam",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+	},
+	nightpulse: {
+		num: 9854,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Night Pulse",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	steelbolt: {
+		num: 9855,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Steel Bolt",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	pixieflick: {
+		num: 9856,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Pixie Flick",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	tempeststormn: {
+		num: 9857,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Tempest Storm (N)",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		pseudoWeather: 'tempeststormn',
+		secondary: null,
+		target: "all",
+		type: "Electric",
+	},
+	merculight: {
+		num: 964,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Merculight",
+		pp: 10,
+		priority: 4,
+		flags: {noassist: 1, failcopycat: 1},
+		stallingMove: true,
+		volatileStatus: 'merculight',
+		
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('par', target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('par', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
 	},
 };
