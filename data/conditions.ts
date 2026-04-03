@@ -1111,11 +1111,13 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		onStart(this: any, target: any, source: any, effect: any) {
 			this.add('-fieldstart', 'move: Tempest Storm (N)', '[of] ' + source);
 		},
-		onResidualOrder: 21,
-		onResidual(this: any) {
+		onFieldResidualOrder: 27,
+		onFieldResidual(this: any) {
 			this.add('-message', 'A Tempest Storm continua a disparar raios pelo campo!');
 			
 			for (const pokemon of this.getAllActive()) {
+				if (pokemon.fainted || !pokemon.hp) continue;
+
 				if (pokemon.hasType('Ground') || pokemon.hasAbility(['voltabsorb', 'lightningrod', 'motordrive'])) {
 					this.add('-immune', pokemon);
 					continue;
@@ -1132,13 +1134,11 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		onStart(this: any, pokemon: any) {
 			this.add('-ability', pokemon, 'Shadow Tag');
 			
-			// Quando o seu Pokémon entra em campo, joga a "armadilha" nos inimigos presentes
 			for (const foe of pokemon.adjacentFoes()) {
 				foe.addVolatile('shadowtagtrap', pokemon);
 			}
 		},
 		onAnySwitchIn(this: any, pokemon: any) {
-			// Se um inimigo novo for mandado pro campo no meio da batalha, joga a armadilha nele
 			const source = this.effectState.target;
 			if (pokemon.isAdjacent(source)) {
 				pokemon.addVolatile('shadowtagtrap', source);
@@ -1172,11 +1172,11 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 	turboblazeinnate: {
 		name: "Turboblaze",
 		onStart(this: any, pokemon: any) {
-			this.add('-ability', pokemon, 'Turboblaze');
+			this.add('-activate', pokemon, 'ability: Turboblaze');
 			
 			if (!pokemon.hasType('Fire')) {
 				if (pokemon.addType('Fire')) {
-					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Turboblaze');
+					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] Turboblaze');
 				}
 			}
 		},
