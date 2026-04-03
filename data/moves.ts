@@ -23160,27 +23160,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { def: 1 } },
 		contestType: "Tough",
 	},
-	wildboltstorm: {
-		num: 847,
-		accuracy: 80,
-		basePower: 100,
-		category: "Special",
-		name: "Wildbolt Storm",
-		pp: 10,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
-		onModifyMove(move, pokemon, target) {
-			if (target && ['raindance', 'primordialsea'].includes(target.effectiveWeather())) {
-				move.accuracy = true;
-			}
-		},
-		secondary: {
-			chance: 20,
-			status: 'par',
-		},
-		target: "allAdjacentFoes",
-		type: "Electric",
-	},
 	wildcharge: {
 		num: 528,
 		accuracy: 100,
@@ -24682,6 +24661,49 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		secondary: null,
 		target: "self",
+		type: "Electric",
+	},
+	wildboltstorm: {
+		num: 965,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Wildbolt Storm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		
+		onModifyType(this: any, move: any, pokemon: any) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunlight':
+			case 'desolateland':
+				move.type = 'Fire';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Water';
+				break;
+			case 'sandstorm':
+				move.type = 'Rock';
+				break;
+			case 'hail':
+			case 'snow':
+				move.type = 'Ice';
+				break;
+			}
+		},
+		
+		onModifyMove(this: any, move: any, pokemon: any, target: any) {
+			if (pokemon.effectiveWeather()) {
+				move.accuracy = true; 
+			}
+		},
+		onHit(this: any, target: any, source: any, move: any) {
+			this.field.setWeather('raindance');
+		},
+		
+		secondary: null,
+		target: "normal",
 		type: "Electric",
 	},
 };

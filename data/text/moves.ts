@@ -7856,8 +7856,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	wildboltstorm: {
 		name: "Wildbolt Storm",
-		desc: "Has a 20% chance to paralyze the target. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 80%.",
-		shortDesc: "20% chance to paralyze foe(s). Rain: can't miss.",
+		desc: "Ataca o inimigo com uma tempestade trovejante. Ao acertar com sucesso, este movimento invoca Rain Dance (Chuva) no campo. O tipo deste movimento muda dependendo do clima ativo no campo (Fogo no Sol, Água na Chuva, Gelo na Neve, Pedra na Tempestade de Areia).",
+		shortDesc: "Muda de tipo no clima. Invoca Chuva ao acertar.",
 	},
 	wildcharge: {
 		name: "Wild Charge",
@@ -8218,7 +8218,6 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Invoca uma tempestade elétrica que cobre todo o campo por 2 a 5 turnos. No final de cada turno, todos os Pokémon em campo recebem dano equivalente a 1/8 de seus HPs máximos, simulando um Thundershock. Pokémon do tipo Ground ou com imunidades elétricas não sofrem este dano.",
 		shortDesc: "Machuca todos em campo no fim do turno (2-5 turnos).",
 	},
-	
 	merculight: {
 		name: "Merculight",
 		desc: "Protege o usuário de todos os efeitos e ataques neste turno. Se um Pokémon usar um ataque de contato contra o usuário enquanto este escudo estiver ativo, o atacante ficará paralisado. A chance de sucesso deste movimento diminui pela metade se o último movimento usado com sucesso pelo usuário foi Merculight, Protect, Detect, Endure, Spiky Shield, King's Shield, Baneful Bunker, Obstruct ou Burning Bulwark.",
