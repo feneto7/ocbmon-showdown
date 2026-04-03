@@ -6863,20 +6863,25 @@ export const Abilities = {
 		num: 468,
 		gen: 9,
 	},
-	// Ao entrar, aplica Yawn nos oponentes adjacentes (como o move)
 	dreamwhimsy: {
-		onStart(pokemon) {
+		onStart(this: any, pokemon: any) {
 			if (this.suppressingAbility(pokemon)) return;
-			this.add('-ability', pokemon, 'Dream Whimsy');
+			
+			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
-				this.actions.useMove('yawn', pokemon, { target, sourceEffect: pokemon.getAbility() });
+				if (target.status || !target.runStatusImmunity('slp') || target.volatiles['yawn']) continue;
+
+				if (!activated) {
+					this.add('-ability', pokemon, 'Dream Whimsy');
+					activated = true;
+				}
+				
+				target.addVolatile('yawn', pokemon, pokemon.getAbility());
 			}
 		},
-		flags: {},
 		name: "Dream Whimsy",
 		rating: 3.5,
 		num: 469,
-		gen: 9,
 	},
 	shortcircuit: {
 		onModifyDamage(atk, attacker, defender, move) {
@@ -9630,54 +9635,36 @@ export const Abilities = {
 		shortDesc: "Takes no damage and sets Mist if hit by water.",
 	},
 	luckyhalo: {
-		onStart(pokemon) {
-			pokemon.abilityState.luckyhaloEndured = false;
-
-			if (!pokemon.hasType('Fire')) {
-				if (pokemon.addType('Fire')) {
-					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Turbo Halo');
-					this.add('-message', `${pokemon.name} incandesceu sua aura e ganhou o tipo Fogo!`);
+		onBoost(this: any, boost: any, target: any, source: any, effect: any) {
+			if (source === target) {
+				let showMsg = false;
+				for (let i in boost) {
+					if (boost[i] < 0) {
+						delete boost[i];
+						showMsg = true;
+					}
+				}
+				if (showMsg) {
+					this.add("-fail", target, "unboost", "[from] ability: Lucky Halo", "[of] " + target);
 				}
 			}
-			this.add('-ability', pokemon, 'Turbo Halo');
-			this.add('-message', `${pokemon.name} está irradiando uma chama que ignora habilidades!`);
 		},
-		onModifyMove(move) {
-			move.ignoreAbility = true;
-		},
-		onTryBoost(boost, target, source, effect) {
-			if (!source || target !== source) return;
-			let blocked = false;
-			let i: BoostID;
-			for (i in boost) {
-				if (boost[i]! < 0) {
-					delete boost[i];
-					blocked = true;
-				}
-			}
-			if (blocked && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-				this.add('-fail', target, 'unboost', '[from] ability: Lucky Halo', `[of] ${target}`);
-			}
-		},
-		onTryHit(pokemon, target, move) {
-			if (move.ohko) {
-				this.add('-immune', pokemon, '[from] ability: Lucky Halo');
-				return null;
-			}
-		},
-		onDamagePriority: -30,
-		onDamage(damage, target, source, effect) {
-			if (target.abilityState.luckyhaloEndured) return;
-			if (damage >= target.hp && effect && effect.effectType === 'Move') {
-				target.abilityState.luckyhaloEndured = true;
-				this.add('-activate', target, 'ability: Lucky Halo');
-				this.add('-message', `${target.name} sobreviveu ao golpe graças a sua habilidade!`);
+		
+		onDamagePriority: -100,
+		onDamage(this: any, damage: any, target: any, source: any, effect: any) {
+			if (damage >= target.hp && !target.m.luckyHaloUsed && effect && effect.effectType === 'Move') {
+				target.m.luckyHaloUsed = true;
+				
+				this.add('-ability', target, 'Lucky Halo');
+				this.add('-message', `${target.name} sobreviveu ao nocaute usando seu Lucky Halo!`);
+				
 				return target.hp - 1;
 			}
 		},
-		flags: { breakable: 1 },
+		
 		name: "Lucky Halo",
-		rating: 5,
+		rating: 4.5,
+		num: -1009,
 	},
 	lumberjack: {
 		name: "Lumberjack",
@@ -12690,6 +12677,77 @@ export const Abilities = {
 		name: "Raging Storm",
 		rating: 4,
 		num: 985,
+	},
+	rosegarden: {
+		onStart(this: any, pokemon: any) {
+			const foeSide = pokemon.side.foe;
+			const layers = foeSide.sideConditions['toxicspikes'] ? foeSide.sideConditions['toxicspikes'].layers : 0;
+			
+			if (layers < 2) {
+				this.add('-ability', pokemon, 'Rose Garden');
+				
+				foeSide.addSideCondition('toxicspikes', pokemon);
+				
+				if (layers === 0) {
+					foeSide.addSideCondition('toxicspikes', pokemon);
+				}
+			}
+		},
+		name: "Rose Garden",
+		rating: 4.5,
+		num: 986,
+	},
+	fluffiest: {
+		onSourceModifyDamage(this: any, damage: any, source: any, target: any, move: any) {
+			let mod = 1;
+			
+			if (move.type === 'Fire') mod *= 4;
+			if (move.flags['contact']) mod /= 4;
+			if (mod !== 1) {
+				this.debug('Fluffiest alterando o dano recebido');
+				return this.chainModify(mod);
+			}
+		},
+		name: "Fluffiest",
+		rating: 3,
+		num: 987,
+	},
+	frenziedphantom: {
+		onFoeTrapPokemon(this: any, pokemon: any) {
+			if (!pokemon.hasAbility(['shadowtag', 'frenziedphantom']) && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(this: any, pokemon: any, source: any) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.hasAbility(['shadowtag', 'frenziedphantom'])) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+		onPrepareHit(this: any, source: any, target: any, move: any) {
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
+			
+			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
+				move.multihit = 2;
+				move.multihitType = 'parentalbond';
+			}
+		},
+		onBasePowerPriority: 7,
+		onBasePower(this: any, basePower: any, pokemon: any, target: any, move: any) {
+			if (move.multihitType === 'parentalbond' && move.hit > 1) {
+				return this.chainModify(0.25); 
+			}
+		},
+		onSourceModifySecondaries(this: any, move: any, pokemon: any, target: any) {
+			if (move.multihitType === 'parentalbond' && move.id === 'secretpower' && move.hit < 2) {
+				return move.secondaries.filter((effect: any) => effect.volatileStatus === 'flinch');
+			}
+		},
+		name: "Frenzied Phantom",
+		rating: 5,
+		num: 988,
 	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;

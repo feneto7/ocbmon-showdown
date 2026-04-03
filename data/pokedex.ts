@@ -8981,7 +8981,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Ghost", "Dragon"],
 		gender: "N",
 		baseStats: {hp: 150, atk: 120, def: 100, spa: 120, spd: 100, spe: 90},
-		abilities: {0: "Levitate"},
+		abilities: {0: "Low Visibility"},
 		heightm: 6.9,
 		weightkg: 650,
 		color: "Black",

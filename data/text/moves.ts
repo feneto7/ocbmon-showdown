@@ -601,8 +601,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	bleakwindstorm: {
 		name: "Bleakwind Storm",
-		desc: "Has a 30% chance to lower the target's Speed by 1 stage. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 80%.",
-		shortDesc: "30% to lower foe(s) Speed by 1. Rain: can't miss.",
+		desc: "Ataca com ventos selvagens e uivantes. Ao acertar com sucesso, este movimento invoca Tailwind para a equipe do usuário por 4 turnos. O tipo deste movimento muda dependendo do clima ativo no campo (Fogo no Sol, Água na Chuva, Gelo na Neve, Pedra na Tempestade de Areia).",
+		shortDesc: "Muda de tipo no clima. Invoca Tailwind ao acertar.",
 	},
 	blizzard: {
 		name: "Blizzard",
@@ -5456,25 +5456,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	razorwind: {
 		name: "Razor Wind",
-		desc: "Has a higher chance for a critical hit. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Charges, then hits foe(s) turn 2. High crit ratio.",
-		gen4: {
-			desc: "Has a higher chance for a critical hit. This attack charges on the first turn and executes on the second.",
-		},
-		gen3: {
-			desc: "This attack charges on the first turn and executes on the second.",
-			shortDesc: "Charges, then hits foe(s) turn 2.",
-		},
-		gen2: {
-			desc: "Has a higher chance for a critical hit. This attack charges on the first turn and executes on the second.",
-			shortDesc: "Charges, then hits target turn 2. High crit ratio.",
-		},
-		gen1: {
-			desc: "This attack charges on the first turn and executes on the second.",
-			shortDesc: "Charges turn 1. Hits turn 2.",
-		},
-
-		prepare: "  [POKEMON] whipped up a whirlwind!",
+		desc: "Possui uma alta taxa de acerto crítico. O dano deste movimento é calculado como super efetivo contra Pokémon do tipo Rock. Se o efeito Tailwind estiver ativo no lado da equipe do usuário, este ataque recebe +1 de prioridade.",
+		shortDesc: "Super efetivo em Rock. +1 de prioridade em Tailwind. Alto crit.",
 	},
 	recover: {
 		name: "Recover",
@@ -8139,5 +8122,106 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Shadow Hammer",
 		desc: "O usuário atira seu corpo fantasmagórico com toda a força contra o inimigo. O usuário sofre dano de recuo equivalente a 33% (um terço) do dano causado ao alvo. Faz contato físico e é classificado como um golpe de martelo (Hammer-based), recebendo bônus de dano de habilidades como Big Pecks.",
 		shortDesc: "Sofre recuo igual a 33% do dano causado. Movimento de martelo.",
+	},
+	pureshot: {
+		name: "Pure Shot", 
+		desc: "Ataque de energia pura que atinge primeiro.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	emberburst: {
+		name: "Ember Burst", 
+		desc: "Uma explosão rápida de brasas precoces.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	hydroslap: {
+		name: "Hydro Slap", 
+		desc: "Um jato de água repentino e veloz.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	leafbolt: {
+		name: "Leaf Bolt", 
+		desc: "Dispara uma folha eletrificada com rapidez.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	sparkshot: {
+		name: "Spark Shot", 
+		desc: "Pequena descarga elétrica instantânea.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	frostglare: {
+		name: "Frost Glare", 
+		desc: "Um olhar gélido que congela o ar instantaneamente.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	spiritforce: {
+		name: "Spirit Force", 
+		desc: "Energia focada disparada antes do oponente agir.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	venomdart: {
+		name: "Venom Dart", 
+		desc: "Um dardo de veneno líquido disparado rapidamente.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	sandblast: {
+		name: "Sand Blast", 
+		desc: "Uma rajada de areia fina que surpreende o alvo.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	galeshot: {
+		name: "Gale Shot", 
+		desc: "Um mini-tornado que se forma instantaneamente.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	mindpulse: {
+		name: "Mind Pulse", 
+		desc: "Uma onda telepática de curto alcance e alta velocidade.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	bugbuzzlet: {
+		name: "Bug Buzzlet", 
+		desc: "Um zumbido ultrassónico disparado subitamente.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	pebbletoss: {
+		name: "Pebble Toss", 
+		desc: "Projeta fragmentos de rocha com energia cinética.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	shadowflicker: {
+		name: "Shadow Flicker", 
+		desc: "Uma sombra que ataca antes de ser percebida.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	draconicbeam: {
+		name: "Draconic Beam", 
+		desc: "Um feixe de energia dracónica disparado às pressas.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	nightpulse: {
+		name: "Night Pulse", 
+		desc: "Um pulso de trevas que surge do nada.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	steelbolt: {
+		name: "Steel Bolt", 
+		desc: "Um projétil de metal líquido disparado velozmente.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	pixieflick: {
+		name: "Pixie Flick", 
+		desc: "Um lampejo de luz mágica instantâneo.", 
+		shortDesc: "Geralmente ataca primeiro."
+	},
+	tempeststormn: {
+		name: "Tempest Storm (N)",
+		desc: "Invoca uma tempestade elétrica que cobre todo o campo por 2 a 5 turnos. No final de cada turno, todos os Pokémon em campo recebem dano equivalente a 1/8 de seus HPs máximos, simulando um Thundershock. Pokémon do tipo Ground ou com imunidades elétricas não sofrem este dano.",
+		shortDesc: "Machuca todos em campo no fim do turno (2-5 turnos).",
+	},
+	
+	merculight: {
+		name: "Merculight",
+		desc: "Protege o usuário de todos os efeitos e ataques neste turno. Se um Pokémon usar um ataque de contato contra o usuário enquanto este escudo estiver ativo, o atacante ficará paralisado. A chance de sucesso deste movimento diminui pela metade se o último movimento usado com sucesso pelo usuário foi Merculight, Protect, Detect, Endure, Spiky Shield, King's Shield, Baneful Bunker, Obstruct ou Burning Bulwark.",
+		shortDesc: "Protege de ataques. Contato: Paralisa o atacante.",
 	},
 };

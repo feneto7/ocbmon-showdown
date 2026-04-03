@@ -3725,5 +3725,20 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Raging Storm",
 		desc: "Se o clima for Rain Dance ou Primordial Sea, a estatística ofensiva mais alta deste Pokémon (Attack ou Special Attack) recebe um multiplicador de 1.5x durante o cálculo de dano. Se ambas as estatísticas forem iguais, o Attack receberá o bônus.",
 		shortDesc: "Aumenta o status ofensivo mais alto em 1.5x durante a chuva.",
-	}
+	},
+	fluffiest: {
+		name: "Fluffiest",
+		desc: "Reduz pela metade da metade (1/4) o dano recebido por ataques que fazem contato direto. No entanto, este Pokémon recebe o quádruplo (4x) de dano de ataques do tipo Fogo.",
+		shortDesc: "Recebe 1/4 de dano de golpes de contato, mas tem 4x de fraqueza a Fogo.",
+	},
+	rosegarden: {
+		name: "Rose Garden",
+		desc: "Assim que este Pokémon entra em campo, ele espalha instantaneamente duas camadas de Toxic Spikes no lado do campo adversário. Pokémon adversários que entrarem em campo sofrerão envenenamento grave (Badly Poisoned).",
+		shortDesc: "Coloca 2 camadas de Toxic Spikes no campo inimigo ao entrar.",
+	},
+	frenziedphantom: {
+		name: "Frenzied Phantom",
+		desc: "Impede que Pokémon adversários adjacentes troquem de lugar ou fujam da batalha. Além disso, movimentos que causam dano a um único alvo atingirão duas vezes (como Parental Bond), com o segundo acerto causando 25% do dano original.",
+		shortDesc: "Prende oponentes e ataca duas vezes.",
+	},
 };
