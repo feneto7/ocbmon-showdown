@@ -7394,6 +7394,7 @@ export const Abilities = {
 				"weezinggalar",
 				"klink",
 				"doubladeredux",
+				"vanilluxemega",
 			];
 			const threeHeaded = [
 				"dugtrio",
