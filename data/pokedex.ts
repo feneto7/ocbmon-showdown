@@ -6733,7 +6733,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Banette-Mega",
 		baseSpecies: "Banette",
 		forme: "Mega",
-		types: ["Ghost"],
+		types: ["Ghost", "Normal"],
 		baseStats: {hp: 84, atk: 165, def: 105, spa: 75, spd: 103, spe: 108},
 		abilities: {0: "Voodoo Jester"},
 		heightm: 1.2,
