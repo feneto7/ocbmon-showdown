@@ -6734,8 +6734,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		baseSpecies: "Banette",
 		forme: "Mega",
 		types: ["Ghost"],
-		baseStats: {hp: 64, atk: 165, def: 75, spa: 93, spd: 83, spe: 75},
-		abilities: {0: "Prankster"},
+		baseStats: {hp: 84, atk: 165, def: 105, spa: 75, spd: 103, spe: 108},
+		abilities: {0: "Voodoo Jester"},
 		heightm: 1.2,
 		weightkg: 13,
 		color: "Black",
@@ -8923,7 +8923,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Water", "Dragon"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 120, def: 120, spa: 170, spd: 140, spe: 140},
-		abilities: {0: "Drizzle", H: "Telepathy"},
+		abilities: {0: "Prism Showers", H: "Telepathy"},
 		heightm: 6.3,
 		weightkg: 660,
 		color: "Purple",
@@ -8981,7 +8981,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		types: ["Ghost", "Dragon"],
 		gender: "N",
 		baseStats: {hp: 150, atk: 140, def: 120, spa: 140, spd: 120, spe: 110},
-		abilities: {0: "Low Visibility"},
+		abilities: {0: "Phantom Fog"},
 		heightm: 6.9,
 		weightkg: 650,
 		color: "Black",
@@ -19366,7 +19366,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	// },
 	meganiummega: {
 		abilities: {
-			"0": "Grassy Surge",
+			"0": "Healing Grove",
 		},
 		baseStats: {
 			hp: 80,
@@ -22420,7 +22420,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		num: 1024,
 		types: ["Stellar"],
 		baseStats: {hp: 170, atk: 115, def: 110, spa: 150, spd: 110, spe: 65},
-		abilities: {0: "Wonder Skin", 1: "Magic Bounce", H: "Mirror Armor"},
+		abilities: {0: "Crystalline Shell", 1: "Magic Bounce", H: "Mirror Armor"},
 		eggGroups: ["Undiscovered"],
 		weightkg: 0,
 		color: "Blue",
@@ -28081,7 +28081,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Gyaradeath-Mega X",
 		num: 1041,
 		types: ["Ghost","Fire"],
-		abilities: {0: "Fire Scales", 1: "Infernal Rage", H: "Ethereal Rush"},
+		abilities: {0: "Pyre Scales"},
 		baseStats: {
 			hp: 95,
 			atk: 140,
@@ -28369,7 +28369,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Charizard-Mega Z",
 		num: 6,
 		types: ["Fire"],
-		abilities: {0: "Wildfire", 1: "Wildfire", H: "Wildfire"},
+		abilities: {0: "wildfirescales"},
 		baseStats: {
 			hp: 79,
 			atk: 94,
@@ -29632,7 +29632,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Vanilluxe-Mega",
 		num: 584,
 		types: ["Ice"],
-		abilities: {0: "Glacial Rage", 1: "Snow Cloak", H: "Mirror Armor"},
+		abilities: {0: "Glacial Hydra", 1: "Snow Cloak", H: "Mirror Armor"},
 		baseStats: {
 			hp: 71,
 			atk: 110,
@@ -29956,7 +29956,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Wigglytuff-Primal",
 		num: 40,
 		types: ["Normal","Fairy"],
-		abilities: {0: "Apple Enlightenment", 1: "Apple Enlightenment", H: "Apple Enlightenment"},
+		abilities: {0: "Arcane Enlightenment", 1: "Apple Enlightenment", H: "Apple Enlightenment"},
 		baseStats: {
 			hp: 120,
 			atk: 90,

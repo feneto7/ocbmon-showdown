@@ -5035,13 +5035,42 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	},
 	eeriespell: {
 		num: 826,
-		accuracy: 100,
+		accuracy: 110,
 		basePower: 80,
 		category: "Special",
 		name: "Eerie Spell",
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1 },
+		onModifyType(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.type = 'Fire';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Water';
+				break;
+			case 'sandstorm':
+				move.type = 'Rock';
+				break;
+			case 'hail':
+			case 'snow':
+				move.type = 'Ice';
+				break;
+			}
+		},
+		
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'eeriefog':
+				move.accuracy = true;
+				this.debug('Eerie Spell base power doubled and accuracy set to always hit by eerie fog');
+				break;
+			}
+		},
+
 		secondary: {
 			chance: 100,
 			onHit(target) {
@@ -5050,7 +5079,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				if (!move || move.isZ) return;
 				if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
 
-				const ppDeducted = target.deductPP(move.id, 3);
+				const ppDeducted = target.deductPP(move.id, 6);
 				if (!ppDeducted) return;
 				this.add('-activate', target, 'move: Eerie Spell', move.name, ppDeducted);
 			},

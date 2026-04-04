@@ -297,15 +297,5 @@ export const Conditions: { [id: string]: ModdedConditionData } = {
 			}
 		},
 	},
-	terapagosprimal: {
-		onSourceModifyDamage(damage, source, target, move) {
-			this.debug('Terastal Treasure damage reduction');
-			return this.chainModify(0.6);
-		},
-		onModifySpe(spe, pokemon) {
-			this.debug('Terastal Treasure speed drop');
-			return this.chainModify(0.8);
-		},
-	},
 
 };

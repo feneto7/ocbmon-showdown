@@ -3238,32 +3238,11 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 		name: 'Elite Redux Innates',
 		desc: 'Aplica inatas específicas baseadas na espécie do Pokémon ao entrar em campo.',
 		onSwitchIn(pokemon: any) {
-			if (pokemon.species.id === 'charizardmegaz') {
-				pokemon.addVolatile('firescales');
-			}
-			if (pokemon.species.id === 'gyaradeathmegax') {
-				pokemon.addVolatile('firescales');
-			}
 			if (pokemon.species.id === 'baxcaliburmega') {
 				pokemon.addVolatile('frostdragon');
 			}
 			if (pokemon.species.id === 'kyogreprimal') {
 				pokemon.addVolatile('primordialseainnate');
-			}
-			if (pokemon.species.id === 'giratinaorigin') {
-				pokemon.addVolatile('shadowtagtrap');
-			}
-			// if (pokemon.species.id === 'victiniprimal') {
-			// 	pokemon.addVolatile('turboblazeinnate');
-			// }
-			if (pokemon.species.id === 'palkiaorigin') {
-				pokemon.addVolatile('prismscales');
-			}
-			if (pokemon.species.id === 'vanilluxemega') {
-				pokemon.addVolatile('multiheadedinnate');
-			}
-			if (pokemon.species.id === 'meganiummega') {
-				pokemon.addVolatile('triageinnate');
 			}
 		},
 	},
