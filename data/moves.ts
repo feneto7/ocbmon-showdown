@@ -5035,8 +5035,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	},
 	eeriespell: {
 		num: 826,
-		accuracy: 110,
-		basePower: 80,
+		accuracy: 80,
+		basePower: 110,
 		category: "Special",
 		name: "Eerie Spell",
 		pp: 5,

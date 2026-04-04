@@ -1831,7 +1831,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	eeriespell: {
 		name: "Eerie Spell",
 		desc: "If this move is successful and the user has not fainted, the target loses 3 PP from its last move.",
-		shortDesc: "Removes 3 PP from the target's last move.",
+		shortDesc: "Removes 6 PP from the target's last move.",
 
 		activate: "#spite",
 	},
