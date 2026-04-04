@@ -11164,7 +11164,6 @@ export const Abilities = {
 					pkmn.showCure = false;
 				}
 			}
-			flags: { breakable: 1 },
 		},
 		onSwitchOut(pokemon) {
 			if (!pokemon.foes().some(it => it.hasAbility("permanence"))) {
@@ -11190,6 +11189,7 @@ export const Abilities = {
 			// (once you know a Pokemon has Natural Cure, its cures are always known)
 			if (!pokemon.showCure) pokemon.showCure = undefined;
 		},
+		flags: { breakable: 1 },
 	},
 	sandguard: {
 		name: "Sand Guard",
