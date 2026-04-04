@@ -8293,25 +8293,18 @@ export const Abilities = {
 		gen: 8,
 	},
 	lowblow: {
-		onStart(pokemon) {
+		onStart(this: any, pokemon: any) {
 			const target = pokemon.adjacentFoes()[0];
-			if (!target) return;
-			(this.actions as any).runAdditionalMove(
-				Dex.moves.get("feintattack"),
-				pokemon,
-				target,
-				{
-					onDamagePriority: -20,
-					onDamage: (damage: number, moveTarget: Pokemon) => {
-						if (damage >= moveTarget.hp) return moveTarget.hp - 1;
-					},
-				},
-			);
+			if (!target || target.fainted) return;
+
+			this.add('-ability', pokemon, 'Low Blow');
+			this.add('-message', `${pokemon.name} desferiu um golpe baixo na entrada!`);
+			
+			this.actions.useMove('feintattack', pokemon, target, pokemon.getAbility());
 		},
 		name: "Low Blow",
 		rating: 3,
 		num: 408,
-		gen: 8,
 	},
 	nosferatu: {
 		onModifyDamage(basePower, attacker, defender, move) {
@@ -9141,25 +9134,18 @@ export const Abilities = {
 		gen: 8,
 	},
 	cheaptactics: {
-		onStart(pokemon) {
+		onStart(this: any, pokemon: any) {
 			const target = pokemon.adjacentFoes()[0];
-			if (!target) return;
-			(this.actions as any).runAdditionalMove(
-				Dex.moves.get("scratch"),
-				pokemon,
-				target,
-				{
-					onDamagePriority: -20,
-					onDamage: (damage: number, moveTarget: Pokemon) => {
-						if (damage >= moveTarget.hp) return moveTarget.hp - 1;
-					},
-				},
-			);
+			if (!target || target.fainted) return;
+
+			this.add('-ability', pokemon, 'Cheap Tactics');
+			this.add('-message', `${pokemon.name} usou uma tática barata!`);
+			
+			this.actions.useMove('scratch', pokemon, target);
 		},
 		name: "Cheap Tactics",
 		rating: 3,
 		num: 441,
-		gen: 8,
 	},
 	coward: {
 		onStart(pokemon) {
@@ -9759,6 +9745,7 @@ export const Abilities = {
 				this.dex.abilities.get("furnace")
 			);
 		},
+		flags: { breakable: 1 },
 	},
 	ragingmoth: {
 		name: "Raging Moth",
@@ -9801,6 +9788,7 @@ export const Abilities = {
 
 			this.field.setWeather("hail");
 		},
+		flags: { breakable: 1 },
 	},
 	/**
 	 * New voodoo power ability which sets the bleed condition with a 30% chance on hit by special attack.
@@ -9848,6 +9836,7 @@ export const Abilities = {
 				this.dex.abilities.get("voodoopower")
 			);
 		},
+		flags: { breakable: 1 },
 	},
 	spikearmor: {
 		name: "Spike Armor",
@@ -9880,6 +9869,7 @@ export const Abilities = {
 				);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	kunoichisblade: {
 		name: "Kunoichi's Blade",
@@ -10078,6 +10068,7 @@ export const Abilities = {
 				this.add("-heal", source, source.getHealth, "[silent]");
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	superhotgoo: {
 		name: "Super Hot Goo",
@@ -10096,6 +10087,7 @@ export const Abilities = {
 				// }
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	nika: {
 		name: "Nika",
@@ -10470,24 +10462,23 @@ export const Abilities = {
 		},
 	},
 	phantomthief: {
-		name: "Phantom Thief",
-		shortDesc: "Uses 40BP Spectral Thief on switch-in.",
-		onStart(pokemon) {
+		onStart(this: any, pokemon: any) {
 			const target = pokemon.adjacentFoes()[0];
-			if (!target) return;
-			(this.actions as any).runAdditionalMove(
-				Dex.moves.get("spectralthief"),
-				pokemon,
-				target,
-				{
-					basePower: 40,
-					onDamagePriority: -20,
-					onDamage: (damage: number, moveTarget: Pokemon) => {
-						if (damage >= moveTarget.hp) return moveTarget.hp - 1;
-					},
-				},
-			);
+			if (!target || target.fainted) return;
+
+			this.add('-ability', pokemon, 'Phantom Thief');
+			this.add('-message', `${pokemon.name} está tentando roubar a cena!`);
+			
+			this.actions.useMove('spectralthief', pokemon, target);
 		},
+		onBasePowerPriority: 21,
+		onBasePower(this: any, basePower: any, pokemon: any, target: any, move: any) {
+			if (move.id === 'spectralthief' && this.effectState.target) {
+				return this.chainModify([1638, 4096]);
+			}
+		},
+		name: "Phantom Thief",
+		rating: 4,
 	},
 	devourer: {
 		name: "Devourer",
@@ -10524,6 +10515,7 @@ export const Abilities = {
 				this.boost({ spd: 1 }, target, target);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	spiteful: {
 		name: "Spiteful",
@@ -10537,6 +10529,7 @@ export const Abilities = {
 				}
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	twostep: {
 		name: "Two Step",
@@ -10568,6 +10561,7 @@ export const Abilities = {
 				move.overrideOffensiveStat = "spe";
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	saltcircle: {
 		name: "Salt Circle",
@@ -10937,6 +10931,7 @@ export const Abilities = {
 				ability: this.dex.abilities.get("yukionna"),
 			});
 		},
+		flags: { breakable: 1 },
 	},
 	doombringer: {
 		name: "Doombringer",
@@ -10978,6 +10973,7 @@ export const Abilities = {
 				ability: this.dex.abilities.get("freezinpoint"),
 			});
 		},
+		flags: { breakable: 1 },
 	},
 	peacefulslumber: {
 		name: "Peaceful Slumber",
@@ -11048,6 +11044,7 @@ export const Abilities = {
 				this.boost({ spa: 1 }, target, target);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	superstrain: {
 		name: "Super Strain",
@@ -11167,6 +11164,7 @@ export const Abilities = {
 					pkmn.showCure = false;
 				}
 			}
+			flags: { breakable: 1 },
 		},
 		onSwitchOut(pokemon) {
 			if (!pokemon.foes().some(it => it.hasAbility("permanence"))) {
@@ -11334,6 +11332,7 @@ export const Abilities = {
 				source.addVolatile("infestation", target);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	frostburn: {
 		name: "Frost Burn",
@@ -11606,6 +11605,7 @@ export const Abilities = {
 				}
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	contempt: {
 		name: "Contempt",
@@ -11734,6 +11734,7 @@ export const Abilities = {
 				}
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	malicious: {
 		name: "Malicious",
@@ -11767,6 +11768,7 @@ export const Abilities = {
 				}
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	radiojam: {
 		name: "Radio Jam",
@@ -11994,6 +11996,7 @@ export const Abilities = {
 				return this.chainModify(0.75);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	sharingiscaring: {
 		name: "Sharing is Caring",
@@ -12012,6 +12015,7 @@ export const Abilities = {
 				this.boost(boost, pokemon, this.effectState.target, effect, false, false);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	sharpedges: {
 		name: "Sharp Edges",
@@ -12022,6 +12026,7 @@ export const Abilities = {
 				this.damage(source.baseMaxhp / 6, source, target);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	rapidresponse: {
 		name: "Rapid Response",
@@ -12065,6 +12070,7 @@ export const Abilities = {
 				return this.chainModify(0.5);
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	illwill: {
 		name: "Ill Will",
@@ -12083,6 +12089,7 @@ export const Abilities = {
 				});
 			}
 		},
+		flags: { breakable: 1 },
 	},
 	momentum: {
 		name: "Momentum",
@@ -12164,6 +12171,7 @@ export const Abilities = {
 		onFoeModifyCritRatio(critRatio) {
 			return 5; // Garante crítico
 		},
+		flags: { breakable: 1 },
 	},
 
 	genjutsudomain: {
@@ -12266,6 +12274,7 @@ export const Abilities = {
 				return 5; // Guaranteed crit
 			}
 		},
+		flags: { breakable: 1 },
 	},
 
 	substitutionjutsu: {
@@ -12273,74 +12282,55 @@ export const Abilities = {
 		shortDesc: "If hit by >50% HP dmg, creates reinforced Sub (max 2). Subzero Slammer transforms.",
 
 		onDamage(damage, target, source, effect) {
-			// 1. Basic Checks: Must be a move, target cannot already have a Substitute
 			if (effect.effectType !== 'Move') return;
 			if (target.volatiles['substitute']) return;
 
-			// 2. Initialize and Check Usage Limit (Max 2 times per battle)
 			if (!target.abilityState.substitutionActivations) target.abilityState.substitutionActivations = 0;
 			if (target.abilityState.substitutionActivations >= 2) return;
 
 			const maxHP = target.maxhp;
 
-			// 3. Trigger Condition: Damage must be >= 50% of Max HP
-			// REMOVED: && this.randomChance(1, 2) -> Now it is guaranteed.
 			if (damage >= maxHP / 2) {
 				target.abilityState.substitutionActivations++;
 
 				this.add('-ability', target, 'Substitution Jutsu');
 				this.add('-message', `${target.name} performs a Substitution Jutsu! (Uses left: ${2 - target.abilityState.substitutionActivations})`);
 
-				// 4. Create the Substitute
 				target.addVolatile('substitute');
 
-				// 5. Reinforce the Substitute (50% HP instead of standard 25%)
 				const sub = target.volatiles['substitute'];
 				if (sub) {
 					(sub as any).hp = Math.floor(maxHP / 2);
 					this.add('-message', `A reinforced clone appears with ${Math.floor(maxHP / 2)} HP!`);
 				}
-
-				// 6. Reduce the incoming damage to 25%
 				return Math.floor(maxHP / 4);
 			}
 		},
 
 		onAfterMove(source, target, move) {
-			// 1. Check for Subzero Slammer and prevent loop if already transformed
 			if (move.id !== 'subzeroslammer') return;
 			if (source.species.name === 'Frostsu-Cold') return;
-
 			this.add('-ability', source, 'Substitution Jutsu');
 			this.add('-message', `${source.name} is enveloped by absolute zero!`);
-
-			// 2. Transformation Logic
 			source.formeChange('Frostsu-Cold', this.effect, true);
-
-			// 3. Reset Stats and Status
 			source.clearStatus();
 			source.clearBoosts();
-
-			// 4. Clear Volatiles
 			const volatilesToKeep = ['dynamax'];
 			for (const volatile of Object.keys(source.volatiles)) {
 				if (!volatilesToKeep.includes(volatile)) {
 					source.removeVolatile(volatile);
 				}
 			}
-
-			// 5. Full Heal
 			source.heal(source.maxhp);
 			this.add('-heal', source, source.getHealth, '[silent]');
 			this.add('-message', `${source.name} transformed into Frostsu-Cold!`);
 		},
+		flags: { breakable: 1 },
 	},
 
 	hyouton: {
 		name: "Hyouton",
 		shortDesc: "Summons Hail. Water moves become Ice. Fire moves fail. Opponents' Speed is reduced. Ice moves never miss.",
-
-		// Summon Hail on entry
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Hyouton');
 
@@ -12348,15 +12338,11 @@ export const Abilities = {
 				this.field.setWeather('hail', pokemon);
 			}
 		},
-
-		// Reapply Hail every turn if removed
 		onResidual(pokemon) {
 			if (this.field.weather !== 'hail') {
 				this.field.setWeather('hail', pokemon);
 			}
 		},
-
-		// Water → Ice + Ice moves never miss
 		onModifyMove(move) {
 			if (move.type === 'Water') {
 				move.type = 'Ice';
@@ -12366,22 +12352,19 @@ export const Abilities = {
 				move.accuracy = true;
 			}
 		},
-
-
 		onTryMove(pokemon, target, move) {
 			if (move.type === 'Fire') {
 				this.add('-immune', target, '[from] ability: Hyouton');
 				return false;
 			}
 		},
-
-		// Hidden Speed reduction
 		onAnyModifySpe(spe, pokemon) {
 			const source = this.effectState.target;
 			if (!source || pokemon === source) return;
 
 			return this.chainModify(0.2);
 		},
+		flags: { breakable: 1 },
 	},
 
 
@@ -12437,7 +12420,7 @@ export const Abilities = {
 		onModifyMove(move) {
 			move.ignoreAbility = true;
 		},
-
+		flags: { breakable: 1 },
 		name: "Crimson Blade of Shadows",
 	},
 
@@ -12619,6 +12602,7 @@ export const Abilities = {
 				return this.chainModify(0.5);
 			}
 		},
+		flags: { breakable: 1 },
 		name: "Mongoose's Malice",
 		rating: 5,
 		isNonstandard: "Future",
@@ -12655,7 +12639,6 @@ export const Abilities = {
 				}
 
 				const move = this.dex.getActiveMove('whirlpool');
-				move.accuracy = true; 
 				move.isExternal = true; 
 				this.actions.useMove(move, pokemon, { target: target });
 			}
@@ -12695,6 +12678,7 @@ export const Abilities = {
 				this.boost({def: -1}, source, target);
 			}
 		},
+		flags: { breakable: 1 },
 		name: "Petal Shield",
 		rating: 3.5,
 		num: 983,
@@ -12780,6 +12764,7 @@ export const Abilities = {
 				return this.chainModify(mod);
 			}
 		},
+		flags: { breakable: 1 },
 		name: "Fluffiest",
 		rating: 3,
 		num: 987,
@@ -12821,7 +12806,7 @@ export const Abilities = {
 		rating: 5,
 		num: 988,
 	},
-	hydra: {
+	hydrastrike: {
     onPrepareHit(source, target, move) {
         if (move.category === 'Status' || move.multihit || move.flags['noparentalbond']) return;
         if (isParentalBondBanned && isParentalBondBanned(move, source)) return;
@@ -12853,7 +12838,7 @@ export const Abilities = {
             this.boost({spa: length}, source);
         }
     },
-    name: "Hydra",
+    name: "Hydra Strike",
     rating: 5,
 	num: 989,
 },
