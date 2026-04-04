@@ -3741,7 +3741,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Impede que Pokémon adversários adjacentes troquem de lugar ou fujam da batalha. Além disso, movimentos que causam dano a um único alvo atingirão duas vezes (como Parental Bond), com o segundo acerto causando 25% do dano original.",
 		shortDesc: "Prende oponentes e ataca duas vezes.",
 	},
-	hydra: {
+	hydrastrike: {
 		name: "Hydra",
 		desc: "Os ataques de dano deste Pokémon atingem 2 ou 3 vezes dependendo do número de cabeças de sua espécie (efeito Multi-Headed). O segundo e terceiro acertos têm seu dano e efeitos secundários ajustados. Além disso, o Special Attack deste Pokémon aumenta em 1 estágio toda vez que ele nocauteia um alvo com um de seus ataques (efeito Hubris).",
 		shortDesc: "Ataques batem 2 ou 3 vezes. +1 Sp. Atk ao nocautear alvo.",
