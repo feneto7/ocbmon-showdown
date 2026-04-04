@@ -3761,4 +3761,44 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Sempre que um Pokémon adversário tenta trocar de lugar, este Pokémon o ataca com um golpe de 20 de poder base antes da troca ocorrer.",
 		shortDesc: "Ataca oponentes que estão trocando com um dano de 20 BP.",
 	},
+	voodoojester: {
+		name: "Voodoo Jester",
+		desc: "Esta habilidade combina os efeitos de Prankster e Soul Linker. Os movimentos da categoria Status deste Pokémon recebem +1 de prioridade. Além disso, o Pokémon possui uma ligação de almas com o campo: sempre que ele sofre dano de um ataque direto e sobrevive, uma quantidade igual de dano é refletida de volta para o atacante.",
+		shortDesc: "Status ganham prioridade +1. O dano direto recebido é refletido para o atacante.",
+	},
+	healinggrove: {
+		name: "Healing Grove",
+		desc: "Esta habilidade combina os efeitos de Grassy Surge e Triage. Ao entrar em batalha, o Pokémon invoca instantaneamente o Grassy Terrain (Terreno Gramado) por 5 turnos. Além disso, todos os movimentos de cura (incluindo os de dreno) utilizados por ele recebem +3 de prioridade.",
+		shortDesc: "Invoca Grassy Terrain na entrada. Movimentos de cura ganham prioridade +3.",
+	},
+	crystallineshell: {
+		name: "Crystalline Shell",
+		desc: "Combina Wonder Skin e Terastal Treasure. O dano de ataques diretos recebidos é reduzido em 40%, e a Velocidade do usuário é reduzida em 20%. Além disso, bloqueia golpes múltiplos causados por habilidades adversárias e anula os multiplicadores de dano de habilidades inimigas (como Huge Power ou Tough Claws).",
+		shortDesc: "Reduz dano recebido e anula boosts de hab. inimiga. Velocidade -20%.",
+	},
+	phantomfog: {
+		name: "Phantom Fog",
+		desc: "Esta habilidade combina os efeitos de Low Visibility e Shadow Tag. Ao entrar em campo, o Pokémon invoca instantaneamente a condição climática Eerie Fog (Névoa Assustadora). Além disso, os oponentes adjacentes ficam perdidos na névoa e não podem ser trocados ou fugir da batalha, a menos que possuam habilidades idênticas ou sejam do tipo Fantasma.",
+		shortDesc: "Invoca Eerie Fog na entrada. Impede a fuga de oponentes adjacentes.",
+	},
+	glacialhydra: {
+		name: "Glacial Hydra",
+		desc: "Combina Multi Headed e Glacial Rage. Os ataques diretos do usuário atingem de 2 a 3 vezes, dependendo da espécie (hits extras causam 25% de dano). Além disso, sempre que o usuário utiliza com sucesso um movimento do tipo Ice (Gelo), ele conjura um Blizzard (Nevasca) de 50 de Poder Base contra todos os oponentes, que tem 10% de chance de congelar.",
+		shortDesc: "Bate múltiplas vezes. Usar golpes de Gelo dispara um Blizzard de 50 BP.",
+	},
+	prismshowers: {
+		name: "Prism Showers",
+		desc: "Esta habilidade combina os efeitos de Drizzle e Prism Scales. Ao entrar em campo, o Pokémon invoca chuva (Rain Dance) por 5 turnos. Além disso, qualquer dano recebido de movimentos da categoria Especial (Special) é reduzido em 30%.",
+		shortDesc: "Invoca chuva ao entrar. Reduz o dano de ataques Especiais em 30%.",
+	},
+	pyrescales: {
+		name: "Pyre Scales",
+		desc: "Combina os efeitos de Fire Scales e Funeral Pyre. Qualquer dano recebido de movimentos da categoria Especial (Special) é reduzido pela metade. Além disso, ao final de cada turno, todos os Pokémon em campo que não sejam do tipo Fantasma (Ghost) ou Sombrio (Dark) perdem 1/4 do seu HP máximo.",
+		shortDesc: "Recebe 50% de dano Especial. Fim do turno: não-Ghost/Dark perdem 1/4 do HP.",
+	},
+	arcaneenlightenment: {
+		name: "Arcane Enlightenment",
+		desc: "Esta habilidade combina Arcane Force e Apple Enlightenment. Todos os ataques do usuário recebem bônus de STAB (Same-Type Attack Bonus) e causam 10% a mais de dano se forem super efetivos. Além disso, o usuário recebe apenas metade do dano de ataques Físicos (Physical) e é imune a danos indiretos (como envenenamento, queimaduras, clima e hazards).",
+		shortDesc: "Ataques ganham STAB e +10% se SE. Dano Físico recebido é 50%. Imune a dano indireto.",
+	},
 };

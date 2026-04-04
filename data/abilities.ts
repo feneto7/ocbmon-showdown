@@ -12913,7 +12913,7 @@ miracleguard: {
 		},
 		name: "Glacial Rage",
 		rating: 4.5,
-		num: -1011,
+		num: 991,
 	},
 	tag: {
 		onAnySwitchOut(this: any, pokemon: any) {
@@ -12926,7 +12926,343 @@ miracleguard: {
 		},
 		name: "Tag",
 		rating: 3,
-		num: -1013,
+		num: 992,
+	},
+	handbarnacles: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Hand Barnacles');
+			if (!pokemon.hasType('Water')) {
+				if (pokemon.addType('Water')) {
+					this.add('-start', pokemon, 'typeadd', 'Water', '[from] ability: Hand Barnacles');
+				}
+			}
+		},
+		onPrepareHit(source, target, move) {
+			if (typeof isParentalBondBanned === 'function' && isParentalBondBanned(move, source)) return;
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+
+			const twoHeaded = [
+				"doduo", "weezing", "girafarig", "mawile", "zweilous", "doublade", "binacle", 
+				"vanilluxe", "scovillain", "mawileredux", "zweilousredux", "doduoredux", 
+				"weezinggalar", "klink", "doubladeredux", "vanilluxemega",
+			];
+			const threeHeaded = [
+				"dugtrio", "dugtrioalola", "magneton", "dodrio", "exeggute", "exeggutor", 
+				"exeggutoralola", "mawilemega", "combee", "magnezone", "barbaracle", 
+				"hydreigon", "wugtrio", "dodrioredux", "hydreigonredux", "ironjugulis", 
+				"sandyshocks", "mawilemegaredux", "shucklemega", "magnezonemega", 
+				"klinklang", "probopass", "klang", "hydrapple",
+			];
+
+			if (twoHeaded.includes(source.species.id)) {
+				move.multihit = 2;
+				move.multihitType = "parentalbond";
+			}
+			if (threeHeaded.includes(source.species.id)) {
+				move.multihit = 3;
+				(move as { multihitType?: string; }).multihitType = "headed";
+			}
+		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			const mht = (move as { multihitType?: string; }).multihitType;
+			if (mht !== "headed" && mht !== "parentalbond") return;
+			if (!secondaries) return;
+			if (move.hit <= 1) return;
+			
+			return secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
+		},
+		name: "Hand Barnacles",
+		rating: 4.5,
+		num: 993,
+	},
+	voodoojester: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true;
+				return priority + 1;
+			}
+		},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (target.hp > 0) {
+				this.damage(damage, source, target);
+			}
+		},
+		onFoeDamagingHit(damage, target, source, move) {
+			if (target.hp > 0) {
+				this.damage(damage, source, target);
+			}
+		},
+
+		flags: {},
+		name: "Voodoo Jester",
+		rating: 4.5,
+		num: 994,
+	},
+	healinggrove: {
+		onStart(source) {
+			this.field.setTerrain('grassyterrain');
+		},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.flags['heal']) {
+				this.debug('Healing Grove dando prioridade +3');
+				return priority + 3;
+			}
+		},
+
+		flags: {},
+		name: "Healing Grove",
+		rating: 4.5,
+		num: 995,
+	},
+	crystallineshell: {
+		onModifyAccuracyPriority: 10,
+		onAnyPrepareHit(source, target, move) {
+			if (target !== this.effectState.target) return;
+			if (move.multihit && move.multihitType) {
+				this.debug('Crystalline Shell - blocking multihit ability');
+				this.add('-ability', target, 'Crystalline Shell');
+				this.add('-message', `A Crystalline Shell de ${target.name} bloqueou o ataque múltiplo!`);
+				delete move.multihit;
+				delete move.multihitType;
+			}
+		},
+		
+		onSourceModifyDamage(damage, source, target, move) {
+			let modifier = 0.6; 
+			
+			const ability = source.getAbility();
+			const boosters2x = ['hugepower', 'purepower'];
+			const boosters1_5x = [
+				'sharpness', 'toughclaws', 'sheerforce', 'technician', 'transistor', 'dragonsmaw',
+				'orichalcumpulse', 'hadronengine', 'rockypayload', 'steelworker', 'guts', 'flareboost',
+				'toxicboost', 'reckless', 'ironfist', 'megalauncher', 'punkrock', 'sandforce', 'analytic', 'stakeout',
+			];
+			const boosters1_33x = ['adaptability'];
+			
+			// Se o oponente tiver uma habilidade de boost, anula o bônus multiplicando inversamente
+			if (boosters2x.includes(ability.id)) {
+				this.add('-ability', target, 'Crystalline Shell');
+				this.add('-message', `A Crystalline Shell de ${target.name} anulou a habilidade ${ability.name} de ${source.name}!`);
+				modifier *= 0.5;
+			} else if (boosters1_5x.includes(ability.id)) {
+				this.add('-ability', target, 'Crystalline Shell');
+				this.add('-message', `A Crystalline Shell de ${target.name} anulou a habilidade ${ability.name} de ${source.name}!`);
+				modifier *= 0.67;
+			} else if (boosters1_33x.includes(ability.id)) {
+				this.add('-ability', target, 'Crystalline Shell');
+				this.add('-message', `A Crystalline Shell de ${target.name} anulou a habilidade ${ability.name} de ${source.name}!`);
+				modifier *= 0.75;
+			}
+			
+			this.debug('Crystalline Shell damage reduction applied');
+			return this.chainModify(modifier);
+		},
+		onModifySpe(spe, pokemon) {
+			this.debug('Crystalline Shell speed drop');
+			return this.chainModify(0.8); 
+		},
+
+		flags: { breakable: 1 },
+		name: "Crystalline Shell",
+		rating: 4.5,
+		num: 996,
+	},
+	phantomfog: {
+		onStart(source) {
+			if (this.suppressingAbility(source)) return;
+			this.add('-activate', source, 'ability: Phantom Fog');
+			this.field.setWeather('eeriefog', source, source.getAbility());
+		},
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.hasAbility('phantomfog') && !pokemon.hasAbility('shadowtag') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.hasAbility('phantomfog') && !pokemon.hasAbility('shadowtag')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+
+		flags: {},
+		name: "Phantom Fog",
+		rating: 5,
+		num: -1018,
+	},
+	glacialhydra: {
+		onPrepareHit(source, target, move) {
+			if (typeof isParentalBondBanned === 'function' && isParentalBondBanned(move, source)) return;
+			
+			const twoHeaded = [
+				"doduo", "weezing", "girafarig", "mawile", "zweilous", "doublade", "binacle",
+				"vanilluxe", "scovillain", "mawileredux", "zweilousredux", "doduoredux",
+				"weezinggalar", "klink", "doubladeredux", "vanilluxemega",
+			];
+			const threeHeaded = [
+				"dugtrio", "dugtrioalola", "magneton", "dodrio", "exeggute", "exeggutor",
+				"exeggutoralola", "mawilemega", "combee", "magnezone", "barbaracle",
+				"hydreigon", "wugtrio", "dodrioredux", "hydreigonredux", "ironjugulis",
+				"sandyshocks", "mawilemegaredux", "shucklemega", "magnezonemega",
+				"klinklang", "probopass", "klang", "hydrapple",
+			];
+			
+			if (twoHeaded.includes(source.species.id)) {
+				move.multihit = 2;
+				move.multihitType = "parentalbond";
+			}
+			if (threeHeaded.includes(source.species.id)) {
+				move.multihit = 3;
+				(move as { multihitType?: string; }).multihitType = "headed";
+			}
+		},
+		onBasePowerPriority: 7,
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			const mht = (move as { multihitType?: string; }).multihitType;
+			if (mht !== "headed" && mht !== "parentalbond") return;
+			if (!secondaries || move.hit <= 1) return;
+			
+			return secondaries.filter((effect) => effect.volatileStatus !== "flinch" || effect.ability || effect.kingsrock);
+		},
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (!move || move.type !== 'Ice' || source.fainted) return;
+			if (move.category === 'Status' && !target) target = source;
+			
+			this.add('-activate', source, 'ability: Glacial Hydra');
+			const blizzard = this.dex.getActiveMove('blizzard');
+			const customBlizzard = { ...blizzard, basePower: 50 } as ActiveMove;
+			this.add('-anim', source, "Blizzard", target);
+			
+			for (const foe of source.foes()) {
+				if (foe.fainted || !foe.hp) continue;
+
+				if (!this.dex.getImmunity('Ice', foe)) {
+					this.add('-immune', foe);
+					continue;
+				}
+
+				const damage = this.actions.getDamage(source, foe, customBlizzard);
+				
+				if (typeof damage === 'number' && damage > 0) {
+					this.damage(damage, foe, source, this.dex.abilities.get('glacialhydra'));
+					
+					if (this.randomChance(1, 10)) {
+						foe.trySetStatus('frz', source);
+					}
+				}
+			}
+		},
+
+		name: "Glacial Hydra",
+		rating: 5,
+		num: 997,
+	},
+	wildfirescales: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.foes()) {
+				if (!target || target.fainted || !target.isAdjacent(pokemon)) continue;
+				
+				if (!activated) {
+					this.add('-ability', pokemon, 'Wildfire Scales');
+					activated = true;
+				}
+				
+				const move = this.dex.getActiveMove('firespin');
+				move.isExternal = true; 
+				this.actions.useMove(move, pokemon, { target: target });
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === "Special") {
+				this.debug('Wildfire Scales special damage reduction');
+				return this.chainModify(0.5);
+			}
+		},
+
+		flags: { breakable: 1 },
+		name: "Wildfire Scales",
+		rating: 4.5,
+		num: 998,
+	},
+	prismshowers: {
+		onStart(source) {
+			if (source.species.id === 'kyogre' && source.item === 'blueorb') return;
+			this.field.setWeather('raindance');
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === "Special") {
+				this.debug('Prism Showers special damage reduction');
+				return this.chainModify(0.7); // 0.7x = 30% de redução
+			}
+		},
+
+		flags: { breakable: 1 },
+		name: "Prism Showers",
+		rating: 4.5,
+		num: 999,
+	},
+	pyrescales: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === "Special") {
+				this.debug('Pyre Scales special damage reduction');
+				return this.chainModify(0.5);
+			}
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of this.getAllActive()) {
+				if (!target.hp) continue;
+				if (target === pokemon) continue;
+				
+				if (!target.hasType('Ghost') && !target.hasType('Dark')) {
+					this.add('-message', `${target.name} está sendo consumido pelas chamas fúnebres!`);
+					this.damage(Math.max(1, Math.floor(target.maxhp / 4)), target, pokemon);
+				}
+			}
+		},
+
+		flags: { breakable: 1 },
+		name: "Pyre Scales",
+		rating: 5,
+		num: 1000,
+	},
+	arcaneenlightenment: {
+		onModifyMove(move) {
+			move.forceSTAB = true;
+		},
+
+		onModifyDamage(damage, source, target, move) {
+			if (target.runEffectiveness(move) > 0) {
+				this.debug('Arcane Enlightenment super effective boost');
+				return this.chainModify(1.1);
+			}
+		},
+
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === "Physical") {
+				this.debug('Arcane Enlightenment physical damage reduction');
+				return this.chainModify(0.5);
+			}
+		},
+
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== "Move") {
+				if (effect.effectType === "Ability") { 
+					this.add("-activate", source, "ability: " + effect.name); 
+				}
+				return false;
+			}
+		},
+
+		flags: { breakable: 1 },
+		name: "Arcane Enlightenment",
+		rating: 5,
+		num: 1001,
 	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
