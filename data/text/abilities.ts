@@ -3801,4 +3801,9 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Esta habilidade combina Arcane Force e Apple Enlightenment. Todos os ataques do usuário recebem bônus de STAB (Same-Type Attack Bonus) e causam 10% a mais de dano se forem super efetivos. Além disso, o usuário recebe apenas metade do dano de ataques Físicos (Physical) e é imune a danos indiretos (como envenenamento, queimaduras, clima e hazards).",
 		shortDesc: "Ataques ganham STAB e +10% se SE. Dano Físico recebido é 50%. Imune a dano indireto.",
 	},
+	thunderstormaspect: {
+		name: "Thunderstorm Aspect",
+		desc: "Esta habilidade invoca instantaneamente chuva (Rain Dance) e Terreno Elétrico (Electric Terrain) ao entrar em campo. Além disso, o Pokémon é imune a movimentos do tipo Elétrico. Ao ser atingido por um, ele absorve a energia e aumenta o seu atributo (stat) mais alto em 1 estágio.",
+		shortDesc: "Invoca Chuva e Electric Terrain. Imune a Elétrico; se atingido, +1 no maior atributo.",
+	},
 };

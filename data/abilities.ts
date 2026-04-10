@@ -6200,14 +6200,17 @@ export const Abilities = {
 		gen: 8,
 	},
 	ancientidol: {
-		onModifyMove(move) {
-			if (move.category === "Physical") {
-				move.overrideOffensiveStat = "def";
-			}
-			if (move.category === "Special") {
-				move.overrideOffensiveStat = "spd";
-			}
+		onModifyAtkPriority: 100,
+		onModifyAtk(atk, source, target, move) {
+			this.debug('Ancient Idol substituindo Atk por Def');
+			return source.getStat('def', false, false);
 		},
+		onModifySpAPriority: 100,
+		onModifySpA(spa, source, target, move) {
+			this.debug('Ancient Idol substituindo SpA por SpD');
+			return source.getStat('spd', false, false);
+		},
+
 		name: "Ancient Idol",
 		rating: 3,
 		num: 316,
@@ -13263,6 +13266,36 @@ miracleguard: {
 		name: "Arcane Enlightenment",
 		rating: 5,
 		num: 1001,
+	},
+	thunderstormaspect: {
+		onStart(source) {
+			this.field.setWeather('raindance');
+			this.field.setTerrain('electricterrain');
+		},
+
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				let statName = 'atk';
+				let bestStat = 0;
+				let s: StatIDExceptHP;
+				for (s in target.storedStats) {
+					if (target.storedStats[s] > bestStat) {
+						statName = s;
+						bestStat = target.storedStats[s];
+					}
+				}
+				if (!this.boost({[statName]: 1}, target, target)) {
+					this.add('-immune', target, '[from] ability: Thunderstorm Aspect');
+				}
+				
+				return null;
+			}
+		},
+
+		flags: { breakable: 1 },
+		name: "Thunderstorm Aspect",
+		rating: 5,
+		num: 1002,
 	},
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
