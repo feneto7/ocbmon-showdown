@@ -8186,5 +8186,17 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 9,
 		isNonstandard: "Past",
 	},
+	moltresite: {
+		name: "Moltresite",
+		spritenum: 586,
+		megaStone: { "Moltres-Ex": "Moltres-Mega" },
+		itemUser: ["Moltres-Ex"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 9778,
+		gen: 9,
+		isNonstandard: "Past",
+	},
 };
 

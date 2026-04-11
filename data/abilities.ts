@@ -13297,5 +13297,19 @@ miracleguard: {
 		rating: 5,
 		num: 1002,
 	},
+	relentlessshield: {
+		onStart(pokemon) {
+			if (pokemon.shieldBoost) return;
+			pokemon.shieldBoost = true;
+			this.boost({ def: 1 }, pokemon);
+		},
+		onDamagingHit(damage, target, source, effect) {
+			this.boost({def: 1});
+		},
+
+		flags: {},
+		name: "Relentless Shield",
+		rating: 4.5,
+		num: 1003,
 
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
