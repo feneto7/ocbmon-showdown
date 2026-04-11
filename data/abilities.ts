@@ -13311,5 +13311,6 @@ miracleguard: {
 		name: "Relentless Shield",
 		rating: 4.5,
 		num: 1003,
-
+	},
+	
 } as import('../sim/dex-abilities').ModdedAbilityDataTable;
