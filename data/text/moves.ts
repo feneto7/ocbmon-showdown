@@ -8223,4 +8223,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Protege o usuário de todos os efeitos e ataques neste turno. Se um Pokémon usar um ataque de contato contra o usuário enquanto este escudo estiver ativo, o atacante ficará paralisado. A chance de sucesso deste movimento diminui pela metade se o último movimento usado com sucesso pelo usuário foi Merculight, Protect, Detect, Endure, Spiky Shield, King's Shield, Baneful Bunker, Obstruct ou Burning Bulwark.",
 		shortDesc: "Protege de ataques. Contato: Paralisa o atacante.",
 	},
+	drainbrain: {
+		name: "Drain Brain",
+		desc: "Lowers the target's Special Attack by 1 stage. The user restores its HP equal to the target's Special Attack stat calculated with its stat stage before this move was used. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. Fails if the target's Special Attack stat stage is -6.",
+		shortDesc: "User heals HP=target's Spa stat. Lowers Spa by 1.",
+	},
 };
