@@ -3806,4 +3806,9 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Esta habilidade invoca instantaneamente chuva (Rain Dance) e Terreno Elétrico (Electric Terrain) ao entrar em campo. Além disso, o Pokémon é imune a movimentos do tipo Elétrico. Ao ser atingido por um, ele absorve a energia e aumenta o seu atributo (stat) mais alto em 1 estágio.",
 		shortDesc: "Invoca Chuva e Electric Terrain. Imune a Elétrico; se atingido, +1 no maior atributo.",
 	},
+	relentlessshield: {
+		name: "Relentless Shield",
+		desc: "Esta habilidade combina os efeitos de Dauntless Shield e Stamina. Ao entrar em batalha, o atributo de Defesa deste Pokémon aumenta em 1 estágio. Além disso, sempre que ele for atingido por um movimento que cause dano direto, sua Defesa aumenta em mais 1 estágio.",
+		shortDesc: "Aumenta a Defesa em +1 ao entrar em campo e sempre que receber dano direto.",
+	},
 };
