@@ -325,7 +325,7 @@ export const Abilities = {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
 				if (target.status === 'slp' || target.hasAbility('comatose')) {
-					this.damage(target.baseMaxhp / 8, target, pokemon);
+					this.damage(target.baseMaxhp / 4, target, pokemon);
 				}
 			}
 		},

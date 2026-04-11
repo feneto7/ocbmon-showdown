@@ -118,15 +118,15 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	baddreams: {
 		name: "Bad Dreams",
-		desc: "Causes opposing Pokemon to lose 1/8 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
-		shortDesc: "Causes sleeping foes to lose 1/8 of their max HP at the end of each turn.",
+		desc: "Causes opposing Pokemon to lose 1/4 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
+		shortDesc: "Causes sleeping foes to lose 1/4 of their max HP at the end of each turn.",
 		gen6: {
-			desc: "Causes adjacent opposing Pokemon to lose 1/8 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
-			shortDesc: "Causes sleeping adjacent foes to lose 1/8 of their max HP at the end of each turn.",
+			desc: "Causes adjacent opposing Pokemon to lose 1/4 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
+			shortDesc: "Causes sleeping adjacent foes to lose 1/4 of their max HP at the end of each turn.",
 		},
 		gen4: {
-			desc: "Causes opposing Pokemon to lose 1/8 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
-			shortDesc: "Causes sleeping foes to lose 1/8 of their max HP at the end of each turn.",
+			desc: "Causes opposing Pokemon to lose 1/4 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
+			shortDesc: "Causes sleeping foes to lose 1/4 of their max HP at the end of each turn.",
 		},
 
 		damage: "  [POKEMON] is tormented!",
