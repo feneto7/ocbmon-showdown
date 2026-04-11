@@ -24754,4 +24754,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Electric",
 	},
+	drainbrain: {
+		num: 668,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Drain Brain",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, reflectable: 1, mirror: 1, heal: 1, metronome: 1 },
+		onHit(target, source) {
+			if (target.boosts.spa === -6) return false;
+			const spa = target.getStat('spa', false, true);
+			const success = this.boost({ spa: -1 }, target, source, null, false, true);
+			return !!(this.heal(spa, source, target) || success);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: { boost: { spd: 1 } },
+		contestType: "Cute",
+	},
 };
